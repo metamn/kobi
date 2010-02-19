@@ -35,9 +35,22 @@ Rails::Initializer.run do |config|
 
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
-  config.time_zone = 'UTC'
+  config.time_zone = 'Bucharest'
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+  
+  config.action_mailer.delivery_method = :smtp
 end
+
+ActionMailer::Base.smtp_settings = {  
+  :enable_starttls_auto => true,
+  :address => "smtp.gmail.com",  
+  :port => 587,  
+  :user_name => "hello.kobi@gmail.com",  
+  :password => "mchrro10",  
+  :authentication => :plain 
+} 
+
+
