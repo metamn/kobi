@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => 'dashboard'
   
-  map.devise_for :users, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'new'}
+  map.devise_for :users, :as => 'account', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'new'}
   
   
   
