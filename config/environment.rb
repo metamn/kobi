@@ -22,7 +22,7 @@ Rails::Initializer.run do |config|
   config.gem "warden", :version => "0.9.3"
   config.gem "devise", :version => "1.0.2"
   config.gem "haml", :lib => "haml", :version => ">=2.2.0"
-  config.gem "chriseppstein-compass", :source => "http://gems.github.com/", :lib => "compass"
+  config.gem "compass", :lib => "compass"
   config.gem 'formtastic'
 
 
