@@ -1,4 +1,47 @@
+@import screen.sass
+
+.container
+  :width 99%
+  
+!grayblue = #E5ECF9
+!lightblue = #9BBBFA
+
 body
-  .container
-    :width 99%
+  +container
+  
+  #header
+    +column(24, last)
+  
+  #content
+    +column(24, last)
+    
+    .logo-container 
+      :margin-top 10em  
+      
+      .logo
+        :background = !lightblue
+        
+        h1
+          :margin 0
+          :padding .5em
+      
+    .login-container, .logo-container
+      +column(8, last)
+      +prepend(8)  
+      
+      .login
+        +box
+        
+        #user_email, #user_password
+          :width 70%
+    
+  #footer
+    +column(24, last)
+    
+    p
+      :margin-left 58%
+      
+      .highlight
+        :background = !lightblue
+        :padding .2em
   
