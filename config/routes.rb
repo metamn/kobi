@@ -1,8 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.devise_for :users
-  
   map.root :controller => 'dashboard'
+  
+  map.devise_for :users, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'new'}
+  
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
 
