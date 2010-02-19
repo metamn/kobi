@@ -1,0 +1,18 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+  = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+  = stylesheet_link_tag 'print.css', :media => 'print'
+  /[if IE]
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+  
+    
+  = stylesheet_link_tag 'application', :media => 'screen, projection'
+  %body
+    .container
+      %header
+        header here
+      %content
+        = yield
+      %footer
+        footer here
