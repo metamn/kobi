@@ -3,17 +3,17 @@
   %head
     %title
       Kobi 
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+  = javascript_include_tag "application"
+  
   = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
   = stylesheet_link_tag 'print.css', :media => 'print'
   /[if IE]
-    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
-  
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'  
   = stylesheet_link_tag 'formtastic', :media => 'screen, projection'
   
   = stylesheet_link_tag 'application', :media => 'screen, projection'
-  %body.dashboard   
-    #flash
-      = render :partial => "shared/flash_messages" 
+  %body.dashboard       
     #header
       = render :partial => "shared/header"
     #content

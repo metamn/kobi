@@ -5815,3 +5815,1536 @@ Rendering dashboard/index
 Rendered shared/_flash_messages (0.2ms)
 Rendered shared/_header (4.6ms)
 Completed in 30ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:42:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (2.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+NameError (undefined local variable or method `locked_at' for #<User:0xb74b3f04>):
+  devise (1.0.2) lib/devise/models/lockable.rb:56:in `locked?'
+  devise (1.0.2) lib/devise/models/lockable.rb:76:in `active?'
+  devise (1.0.2) lib/devise/hooks/activatable.rb:3
+  warden (0.9.3) lib/warden/hooks.rb:14:in `call'
+  warden (0.9.3) lib/warden/hooks.rb:14:in `_run_callbacks'
+  warden (0.9.3) lib/warden/hooks.rb:9:in `each'
+  warden (0.9.3) lib/warden/hooks.rb:9:in `_run_callbacks'
+  warden (0.9.3) lib/warden/manager.rb:53:in `_run_callbacks'
+  warden (0.9.3) lib/warden/proxy.rb:144:in `set_user'
+  warden (0.9.3) lib/warden/proxy.rb:161:in `user'
+  warden (0.9.3) lib/warden/proxy.rb:248:in `_perform_authentication'
+  warden (0.9.3) lib/warden/proxy.rb:99:in `authenticate!'
+  devise (1.0.2) lib/devise/controllers/helpers.rb:181:in `authenticate_user!'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (60.3ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:44:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (1.6ms)
+Rendered shared/_header (4.6ms)
+Completed in 202ms (View: 114, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 17:44:31) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:44:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 17:44:31) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (2.2ms)
+Completed in 54ms (View: 36, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-02-20 17:44:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 45ms (View: 31, DB: 0) | 200 OK [http://localhost/cont/creare]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:44:41) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 142ms (View: 122, DB: 2) | 200 OK [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:45:42) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = E'') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 83ms (View: 56, DB: 2) | 200 OK [http://localhost/cont]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:46:54) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 65ms (View: 44, DB: 2) | 200 OK [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:47:17) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = E'cs') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 130ms (View: 38, DB: 2) | 200 OK [http://localhost/cont]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:47:37) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ali"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = E'ali') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = E'cs') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 67ms (View: 33, DB: 2) | 200 OK [http://localhost/cont]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:47:55) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ali@test.com"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = E'ali@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = E'cs') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "users" ("encrypted_password", "name", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES(E'fd3dffbab40e8e6350c3ea21f7bc1d74cb04ca22', E'cs', '2010-02-20 15:47:55.765396', '2010-02-20 15:47:55.765295', NULL, '2010-02-20 15:47:55.765396', NULL, NULL, E'PI1I8Qlfm5Ps5nBOtjRz', NULL, NULL, NULL, E'U5oNHaAmrURPxqdSDDop', NULL, NULL, E'ali@test.com', NULL) RETURNING "id"[0m
+Sent mail to ali@test.com
+
+Date: Sat, 20 Feb 2010 17:47:55 +0200
+From: hello.kobi@gmail.com
+To: ali@test.com
+Subject: Confirmare cont
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Welcome ali@test.com!
+
+You can confirm your account through the link below:
+
+<a href="http://localhost:3000/cont/confirmare?confirmation_token=U5oNHaAmrURPxqdSDDop">Confirm my account</a>
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 15:47:59.176999', "sign_in_count" = 1, "current_sign_in_at" = '2010-02-20 15:47:59.175635', "current_sign_in_ip" = E'127.0.0.1', "last_sign_in_at" = '2010-02-20 15:47:59.175635', "last_sign_in_ip" = E'127.0.0.1' WHERE "id" = 4[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 3439ms (DB: 5) | 302 Found [http://localhost/cont]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:47:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#edit (for 127.0.0.1 at 2010-02-20 17:48:02) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"registrations"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (5.5ms)
+Completed in 44ms (View: 23, DB: 2) | 200 OK [http://localhost/cont/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 17:48:24) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (2.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 32ms (DB: 3) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:48:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 17:48:24) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 34ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 17:48:32) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"ali@test.com"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'ali@test.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 15:48:32.942447', "sign_in_count" = 2, "current_sign_in_at" = '2010-02-20 15:48:32.941622' WHERE "id" = 4[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:48:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 25ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#edit (for 127.0.0.1 at 2010-02-20 17:48:35) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"registrations"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (5.5ms)
+Completed in 35ms (View: 16, DB: 2) | 200 OK [http://localhost/cont/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#update (for 127.0.0.1 at 2010-02-20 17:48:43) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"ali", "current_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ali@test.com"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (1.0ms)
+Completed in 41ms (View: 20, DB: 2) | 200 OK [http://localhost/cont]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#update (for 127.0.0.1 at 2010-02-20 17:48:52) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"ali", "current_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"ali@test.com"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'ali@test.com' AND "users".id <> 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'ali' AND "users".id <> 4) LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 15:48:52.333641', "name" = E'ali' WHERE "id" = 4[0m
+  [4;36;1mSQL (18.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 49ms (DB: 22) | 302 Found [http://localhost/cont]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:48:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.4ms)
+Rendered shared/_header (0.6ms)
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 17:48:55) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:48:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 17:48:55) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 32ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 17:49:03) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 40ms (View: 12, DB: 3) | 200 OK [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 17:49:08) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 15:49:08.061041', "sign_in_count" = 13, "current_sign_in_at" = '2010-02-20 15:49:08.060237', "last_sign_in_at" = '2010-02-20 14:36:23.283354' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:49:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 24ms (View: 3, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#edit (for 127.0.0.1 at 2010-02-20 17:49:10) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"registrations"}
+  [4;36;1mUser Load (2.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (5.3ms)
+Completed in 36ms (View: 15, DB: 3) | 200 OK [http://localhost/cont/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#update (for 127.0.0.1 at 2010-02-20 17:49:15) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs", "current_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (1.0ms)
+Completed in 40ms (View: 20, DB: 2) | 200 OK [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#update (for 127.0.0.1 at 2010-02-20 17:49:22) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs", "current_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = E'cs@clair.ro' AND "users".id <> 2) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = E'cs' AND "users".id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 15:49:23.019800', "name" = E'cs' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 30ms (DB: 4) | 302 Found [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:49:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.5ms)
+Completed in 22ms (View: 3, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 17:49:26) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:49:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 17:49:26) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 35ms (View: 16, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-02-20 17:49:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 38ms (View: 25, DB: 0) | 200 OK [http://localhost/cont/creare]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:49:33) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"test", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'test') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 175ms (View: 44, DB: 2) | 200 OK [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:49:54) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'test2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'cs') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 51ms (View: 29, DB: 2) | 200 OK [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:50:05) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs99.", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'test2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'cs99.') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 52ms (View: 30, DB: 2) | 200 OK [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:50:14) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'test2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 131ms (View: 109, DB: 2) | 200 OK [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-20 17:50:22) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"jj&", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'test2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'jj&') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 50ms (View: 28, DB: 2) | 200 OK [http://localhost/cont]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 17:54:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 35ms (View: 20, DB: 0) | 200 OK [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 17:54:53) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 15:54:53.870614', "sign_in_count" = 14, "current_sign_in_at" = '2010-02-20 15:54:53.869794', "last_sign_in_at" = '2010-02-20 15:49:08.060237' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:54:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 23ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#edit (for 127.0.0.1 at 2010-02-20 17:54:57) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"registrations"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (0.7ms)
+Completed in 50ms (View: 31, DB: 2) | 200 OK [http://localhost/cont/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#edit (for 127.0.0.1 at 2010-02-20 17:55:29) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"registrations"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (0.8ms)
+Completed in 130ms (View: 111, DB: 2) | 200 OK [http://localhost/cont/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#update (for 127.0.0.1 at 2010-02-20 17:55:43) [PUT]
+  Parameters: {"commit"=>"Modificare cont", "action"=>"update", "_method"=>"put", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs", "current_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (0.8ms)
+Completed in 50ms (View: 30, DB: 2) | 200 OK [http://localhost/cont]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#update (for 127.0.0.1 at 2010-02-20 17:55:53) [PUT]
+  Parameters: {"commit"=>"Modificare cont", "action"=>"update", "_method"=>"put", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"registrations", "user"=>{"name"=>"cs", "current_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'cs@clair.ro' AND "users".id <> 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'cs' AND "users".id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 15:55:53.628530', "encrypted_password" = E'0f45e3479d18080c0035ddc30aeab61b74d5fdc6', "password_salt" = E'xDj0ufTHtEJfeOVdZTr5' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 33ms (DB: 4) | 302 Found [http://localhost/cont]
+  [4;35;1mSQL (2.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:55:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 22ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 17:55:58) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:55:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 17:55:59) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 38ms (View: 16, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 17:56:05) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (2.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 15:56:05.705585', "sign_in_count" = 15, "current_sign_in_at" = '2010-02-20 15:56:05.704782', "last_sign_in_at" = '2010-02-20 15:54:53.869794' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 33ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.7ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:56:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 25ms (View: 4, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 17:56:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (0.6ms)
+Completed in 26ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:02:08) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:02:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:02:08) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 34ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:02:14) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:02:14.545338', "sign_in_count" = 16, "current_sign_in_at" = '2010-02-20 16:02:14.544492', "last_sign_in_at" = '2010-02-20 15:56:05.704782' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:02:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 32ms (View: 13, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:03:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (1.7ms)
+Rendered shared/_header (0.8ms)
+Completed in 29ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:03:40) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 27ms (DB: 3) | 302 Found [http://localhost/cont/iesire]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:03:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:03:40) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 34ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:03:44) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 16:03:44.917565', "sign_in_count" = 17, "current_sign_in_at" = '2010-02-20 16:03:44.916723', "last_sign_in_at" = '2010-02-20 16:02:14.544492' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 28ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:03:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 22ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:06:05) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:06:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:06:05) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (1.1ms)
+Completed in 40ms (View: 21, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:06:11) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 16:06:11.409150', "sign_in_count" = 18, "current_sign_in_at" = '2010-02-20 16:06:11.408329', "last_sign_in_at" = '2010-02-20 16:03:44.916723' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:06:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.5ms)
+Completed in 22ms (View: 3, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:07:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (0.6ms)
+Completed in 32ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:07:52) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 98ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:07:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:07:52) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 108ms (View: 90, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:07:57) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:07:57.715970', "sign_in_count" = 19, "current_sign_in_at" = '2010-02-20 16:07:57.715131', "last_sign_in_at" = '2010-02-20 16:06:11.408329' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:07:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (2.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.4ms)
+Rendered shared/_header (0.6ms)
+Completed in 97ms (View: 76, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:10:23) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:10:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:10:23) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.9ms)
+Completed in 113ms (View: 16, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:10:28) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:10:28.747372', "sign_in_count" = 20, "current_sign_in_at" = '2010-02-20 16:10:28.746567', "last_sign_in_at" = '2010-02-20 16:07:57.715131' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:10:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:11:09) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:11:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:11:10) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 33ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:11:14) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:11:14.259131', "sign_in_count" = 21, "current_sign_in_at" = '2010-02-20 16:11:14.258102', "last_sign_in_at" = '2010-02-20 16:10:28.746567' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 32ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:11:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 22ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:12:06) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:12:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:12:07) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 36ms (View: 17, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:12:11) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:12:11.629544', "sign_in_count" = 22, "current_sign_in_at" = '2010-02-20 16:12:11.628720', "last_sign_in_at" = '2010-02-20 16:11:14.258102' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 28ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:12:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:12:34) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:12:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:12:34) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 33ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:12:37) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 36ms (View: 12, DB: 2) | 200 OK [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:12:43) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 16:12:43.733089', "sign_in_count" = 23, "current_sign_in_at" = '2010-02-20 16:12:43.732289', "last_sign_in_at" = '2010-02-20 16:12:11.628720' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:12:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:13:12) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:13:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:13:12) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 36ms (View: 17, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:13:18) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 16:13:18.150371', "sign_in_count" = 24, "current_sign_in_at" = '2010-02-20 16:13:18.149476', "last_sign_in_at" = '2010-02-20 16:12:43.732289' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 30ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:13:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 22ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:14:24) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:14:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:14:24) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 35ms (View: 16, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:14:29) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 16:14:29.667653', "sign_in_count" = 25, "current_sign_in_at" = '2010-02-20 16:14:29.666840', "last_sign_in_at" = '2010-02-20 16:13:18.149476' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:14:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.4ms)
+Rendered shared/_header (0.6ms)
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:14:49) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:14:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:14:49) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 35ms (View: 17, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:14:55) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-20 16:14:55.048843', "sign_in_count" = 26, "current_sign_in_at" = '2010-02-20 16:14:55.047990', "last_sign_in_at" = '2010-02-20 16:14:29.666840' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 30ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:14:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.5ms)
+Completed in 22ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:18:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (0.5ms)
+Completed in 22ms (View: 3, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:18:18) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:18:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:18:19) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 34ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:18:24) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:18:24.049286', "sign_in_count" = 27, "current_sign_in_at" = '2010-02-20 16:18:24.048366', "last_sign_in_at" = '2010-02-20 16:14:55.047990' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:18:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.6ms)
+Completed in 23ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:21:14) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:21:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:21:14) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 33ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:21:20) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:21:20.981506', "sign_in_count" = 28, "current_sign_in_at" = '2010-02-20 16:21:20.980644', "last_sign_in_at" = '2010-02-20 16:18:24.048366' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 98ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:21:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (0.5ms)
+Completed in 22ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:22:41) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 28ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:22:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:22:41) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 35ms (View: 17, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:22:50) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:22:50.617254', "sign_in_count" = 29, "current_sign_in_at" = '2010-02-20 16:22:50.616351', "last_sign_in_at" = '2010-02-20 16:21:20.980644' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:22:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.4ms)
+Rendered shared/_header (0.6ms)
+Completed in 23ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:30:27) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:30:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:30:28) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 33ms (View: 15, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:30:33) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:30:33.718808', "sign_in_count" = 30, "current_sign_in_at" = '2010-02-20 16:30:33.717949', "last_sign_in_at" = '2010-02-20 16:22:50.616351' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 30ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:30:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (5.4ms)
+Completed in 38ms (View: 20, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-02-20 18:31:58) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:31:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-20 18:31:58) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 33ms (View: 14, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-20 18:32:06) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"3CZCf4J9IPRcJOQZ9i6r1Ulc1aqwqLnGxKmyDRrrpvM=", "controller"=>"sessions", "user"=>{"password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-20 16:32:06.135932', "sign_in_count" = 31, "current_sign_in_at" = '2010-02-20 16:32:06.135112', "last_sign_in_at" = '2010-02-20 16:30:33.717949' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 29ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-20 18:32:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (1.4ms)
+Completed in 93ms (View: 75, DB: 2) | 200 OK [http://localhost/]

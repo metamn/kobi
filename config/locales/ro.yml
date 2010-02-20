@@ -28,4 +28,5 @@ ro:
       create: Inregistrare cont
       password: Resetare parola
       confirm: Re-trimitere email de confirmare
+      modify: Modificare cont
       

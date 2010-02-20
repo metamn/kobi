@@ -21,7 +21,8 @@
     %li 
       = link_to "Iesire", destroy_session_path(current_user)
       
-
+#flash
+  = render :partial => "shared/flash_messages" 
   
   
 

@@ -24,6 +24,7 @@ ro:
       signed_up: 'Inregistrare cont cu succes.'
       updated: 'Modificare cont cu success.'
       destroyed: 'La revedere. Contuls Dvs. a fost suspendat cu success. Speram sa va revedem.'
+      modify: "Modificare cont"
     unlocks:
       link: "Nu ati primit instructiunile de deblocare al contului"
       send_instructions: 'In urmatoarele minute veti primi un email cu instructiuni pentru deblocarea contului.'
