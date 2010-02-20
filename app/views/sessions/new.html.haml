@@ -1,15 +1,16 @@
-.logo-container
-  .logo
-    %h1
-      Kobi
-.login-container
-  .login
-    - semantic_form_for resource_name, resource, :url => session_path(resource_name) do |f|
-      - f.inputs do
-        = f.input :email
-        = f.input :password    
-      - f.buttons do
-        = f.commit_button
-      
+- content_for :title do
+  = t 'devise.sessions.link'
 
-    = render :partial => "shared/devise_links"
+- semantic_form_for resource_name, resource, :url => session_path(resource_name) do |f|
+  - f.error_messages
+  - if flash[:alert] 
+    %p.error
+      =flash[:alert]
+  - f.inputs do
+    = f.input :email
+    = f.input :password    
+  - f.buttons do
+    = f.commit_button :login
+  
+
+= render :partial => "shared/devise_links"

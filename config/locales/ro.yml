@@ -1,2 +1,31 @@
 ro:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        name: Nume utilizator
+        email: Adresa email
+        password: Parola
+        password_confirmation: Confirmare parola
+    errors:
+      messages:
+        blank: Nu poate sa fie gol
+        too_short: Prea scurt
+        too_long: Prea lung
+        wrong_length: Are lungimea incorecta
+        taken: Deja este folosit
+        invalid: Nu este valid
+      models:
+        user:
+          attributes:
+            password:
+              confirmation: Confirmare parola incorecta  
+            
+  
+  formtastic:
+    actions:
+      login: Intrare in cont
+      logout: Iesire din cont
+      create: Inregistrare cont
+      password: Resetare parola
+      confirm: Re-trimitere email de confirmare
+      

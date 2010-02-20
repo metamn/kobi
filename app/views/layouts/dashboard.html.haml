@@ -1,0 +1,24 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+    %title
+      Kobi 
+  = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+  = stylesheet_link_tag 'print.css', :media => 'print'
+  /[if IE]
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+  
+  = stylesheet_link_tag 'formtastic', :media => 'screen, projection'
+  
+  = stylesheet_link_tag 'application', :media => 'screen, projection'
+  %body.dashboard   
+    #flash
+      = render :partial => "shared/flash_messages" 
+    #header
+      = render :partial => "shared/header"
+    #content
+      = yield
+    
+    #footer
+      %p         
+        hello.kobi@gmail.com

@@ -1,3 +1,4 @@
+
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
 Devise.setup do |config|
@@ -48,7 +49,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :lockable
   # Number of authentication tries before locking an account.
-  config.maximum_attempts = 10
+  config.maximum_attempts = 1
 
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email

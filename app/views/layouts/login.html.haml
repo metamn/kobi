@@ -1,0 +1,32 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+  %title
+    Kobi 
+  = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+  = stylesheet_link_tag 'print.css', :media => 'print'
+  /[if IE]
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+  
+  = stylesheet_link_tag 'formtastic', :media => 'screen, projection'
+  
+  = stylesheet_link_tag 'application', :media => 'screen, projection'
+  %body.login    
+    #header
+     
+    #content
+      .logo-container
+        .logo
+          %h1
+            Kobi
+            %span.title
+              = yield :title
+
+      .form-container
+        .form
+          = yield
+    
+    #footer
+      %p         
+        %span.highlight
+          hello.kobi@gmail.com

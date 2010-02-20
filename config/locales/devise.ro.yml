@@ -2,34 +2,34 @@ ro:
   devise:
     sessions:
       link: 'Intrare in cont'
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
-      unauthenticated: 'You need to sign in or sign up before continuing.'
-      unconfirmed: 'You have to confirm your account before continuing.'
-      locked: 'Your account is locked.'
-      invalid: 'Invalid email or password.'
-      invalid_token: 'Invalid authentication token.'
-      timeout: 'Your session expired, please sign in again to continue.'
-      inactive: 'Your account was not activated yet.'
+      signed_in: 'Intrare in cont cu succes.'
+      signed_out: 'Iesire din cont cu success.'
+      unauthenticated: 'Trebuie sa va autentificati sau sa va inregistrati mai intai.'
+      unconfirmed: 'Trebuie sa confirmati adresa email mai intai.'
+      locked: 'Contul Dvs. este blocat.'
+      invalid: 'Parola sau adresa email este incorecta.'
+      invalid_token: 'Codul de autentificare este invalid.'
+      timeout: 'Sesiunea Dvs a expirat, va rugam intrati in cont din nou pentru a continua.'
+      inactive: 'Contul Dvs. nu a fost activat inca.'
     passwords:
-      link: 'Forgot password?'
-      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
-      updated: 'Your password was changed successfully. You are now signed in.'
+      link: 'Ati uitat parola?'
+      send_instructions: 'In urmatoarele minute veti primi un email cu instructiuni de resetare a parolei.'
+      updated: 'Parola Dvs. a fost schimbata cu succes. Intrare in cont cu succes.'
     confirmations:
-      link: "Didn't receive confirmation instructions?"
-      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
-      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+      link: "Nu ati primit email-ul de confirmare?"
+      send_instructions: 'In urmatoarele minute veti primi un email pentru activarea contului.'
+      confirmed: 'Contul Dvs. a fost activat cu succes. Intrare in cont cu success.'
     registrations:
-      link: 'Sign up'
-      signed_up: 'You have signed up successfully.'
-      updated: 'You updated your account successfully.'
-      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+      link: 'Inregistrare cont'
+      signed_up: 'Inregistrare cont cu succes.'
+      updated: 'Modificare cont cu success.'
+      destroyed: 'La revedere. Contuls Dvs. a fost suspendat cu success. Speram sa va revedem.'
     unlocks:
-      link: "Didn't receive unlock instructions?"
-      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
-      unlocked: 'Your account was successfully unlocked. You are now signed in.'
+      link: "Nu ati primit instructiunile de deblocare al contului"
+      send_instructions: 'In urmatoarele minute veti primi un email cu instructiuni pentru deblocarea contului.'
+      unlocked: 'Contul Dvs. a fost deblocat cu succes. Intrare in cont cu success.'
     mailer:
-      confirmation_instructions: 'Confirmation instructions'
-      reset_password_instructions: 'Reset password instructions'
-      unlock_instructions: 'Unlock Instructions'
+      confirmation_instructions: 'Confirmare cont'
+      reset_password_instructions: 'Resetare parola'
+      unlock_instructions: 'Deblocare cont'
 

@@ -1,12 +1,16 @@
 @import screen.sass
 
-.container
-  :width 99%
   
 !grayblue = #E5ECF9
 !lightblue = #9BBBFA
 
-body
+
+
+
+-# Login
+-# -------------------------------
+
+body.login
   +container
   
   #header
@@ -24,17 +28,27 @@ body
         h1
           :margin 0
           :padding .5em
+          
+          .title 
+            :font-size small
+            :float right
       
-    .login-container, .logo-container
+    .form-container, .logo-container
       +column(8, last)
       +prepend(8)  
       
-      .login
+      .form
         +box
         
-        #user_email, #user_password
-          :width 70%
-    
+        .error 
+          :padding .5em
+          :margin-bottom 1em
+          
+        #user_name, #user_email, #user_password, #user_password_confirmation
+          :width 70%          
+          :font-size large
+          :padding .2em 0
+        
   #footer
     +column(24, last)
     
@@ -44,4 +58,77 @@ body
       .highlight
         :background = !lightblue
         :padding .2em
+  
+  
+        
+
+-# Dashboard
+-# -------------------------------
+body.dashboard
+  +container  
+  :width 100%
+  
+  #flash
+    +column(24, last)
+    :text-align center
+    :z-index 1
+  
+  #header
+    +column(24, last)
+    :background = !lightblue
+    :padding 1em 1em 0
+    
+    
+    #logo 
+      +column(6, last)    
+      
+      h1
+        :margin-bottom 0
+        a
+          :text-decoration none  
+      
+    #menu
+      +column(12, last)
+      :font-size larger
+      :margin-top 1em
+      
+      ul
+        +horizontal-list
+        :float right
+        :margin-right 1em
+      
+    #account
+      +column(6, last)
+      :margin-top 1.5em
+      
+      ul
+        +horizontal-list
+        :float right
+        :margin-right 1em
+  
+  #content
+    +column(24, last)
+  
+  #footer
+    +column(24, last)
+    :margin-top 3em
+    :border-top = 1px solid !lightblue
+    
+    p
+      :float right
+      :margin-right 1em
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   

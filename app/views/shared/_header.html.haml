@@ -1,0 +1,27 @@
+#logo
+  %h1
+    = link_to "Kobi", root_path
+    
+#menu
+  %ul
+    %li
+      = link_to "Cheltuieli", root_path
+      &nbsp;&bull;&nbsp;
+    %li
+      = link_to "Venituri", root_path
+      &nbsp;&bull;&nbsp;
+    %li
+      = link_to "Statistici", root_path 
+
+#account
+  %ul
+    %li
+      = link_to "Cont", edit_registration_path(current_user)
+      &nbsp;&bull;&nbsp;
+    %li 
+      = link_to "Iesire", destroy_session_path(current_user)
+      
+
+  
+  
+

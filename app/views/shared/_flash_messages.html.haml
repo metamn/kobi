@@ -1,0 +1,4 @@
+- [:notice, :alert, :success, :error].each do |key|
+  - if flash[key]
+    %div{:class => "flash #{key}"}      
+      = flash[key]

@@ -6,9 +6,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log
-  filter_parameter_logging :password
+  filter_parameter_logging :password, :password_confirmation
   
   # Authentication is manadatory for everybody => Login page is the main page
   before_filter :authenticate_user!
+  
+  # Setting layouts
+  layout "login"
 
 end
