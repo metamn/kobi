@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
   
   # Validations
   validates_presence_of :name
   validates_uniqueness_of :name
-  validates_format_of :name, :with => /^[\d\w-]+$/i, :message => "Poate contine numai caracterele a-zA-Z0-9"
+  validates_format_of :name, :with => /^[\d\w\s-]+$/i, :message => "Poate contine numai caracterele a..z, A..Z, 0..9, spatiu si -"
 end

@@ -6,7 +6,7 @@ Devise.setup do |config|
   config.mailer_sender = "hello.kobi@gmail.com"
   
   # Configure the content type of DeviseMailer mails (defaults to text/html")
-  config.mailer_content_type = "text/plain"
+  #config.mailer_content_type = "text/plain"
 
   # ==> Configuration for :authenticatable
   # Invoke `rake secret` and use the printed value to setup a pepper to generate
@@ -49,7 +49,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :lockable
   # Number of authentication tries before locking an account.
-  config.maximum_attempts = 1
+  config.maximum_attempts = 10
 
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email

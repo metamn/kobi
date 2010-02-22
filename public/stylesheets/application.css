@@ -2136,7 +2136,15 @@ div.last {
 
 
 
-/* line 13, ../../app/stylesheets/application.sass */
+
+
+/* line 15, ../../app/stylesheets/application.sass */
+body {
+  overflow: auto !important; }
+
+
+
+/* line 24, ../../app/stylesheets/application.sass */
 body.login {
   min-width: 950px;
   width: 80%;
@@ -2146,35 +2154,35 @@ body.login {
   /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.login {
     display: block; }
-  /* line 16, ../../app/stylesheets/application.sass */
+  /* line 27, ../../app/stylesheets/application.sass */
   body.login #header {
     display: inline;
     float: left;
     overflow: hidden;
     width: 100%;
     margin-right: 0; }
-  /* line 19, ../../app/stylesheets/application.sass */
+  /* line 30, ../../app/stylesheets/application.sass */
   body.login #content {
     display: inline;
     float: left;
     overflow: hidden;
     width: 100%;
     margin-right: 0; }
-    /* line 22, ../../app/stylesheets/application.sass */
+    /* line 33, ../../app/stylesheets/application.sass */
     body.login #content .logo-container {
       margin-top: 10em; }
-      /* line 25, ../../app/stylesheets/application.sass */
+      /* line 36, ../../app/stylesheets/application.sass */
       body.login #content .logo-container .logo {
         background: #9bbbfa; }
-        /* line 28, ../../app/stylesheets/application.sass */
+        /* line 39, ../../app/stylesheets/application.sass */
         body.login #content .logo-container .logo h1 {
           margin: 0;
           padding: .5em; }
-          /* line 32, ../../app/stylesheets/application.sass */
+          /* line 43, ../../app/stylesheets/application.sass */
           body.login #content .logo-container .logo h1 .title {
             font-size: small;
             float: right; }
-    /* line 36, ../../app/stylesheets/application.sass */
+    /* line 47, ../../app/stylesheets/application.sass */
     body.login #content .form-container, body.login #content .logo-container {
       display: inline;
       float: left;
@@ -2182,38 +2190,42 @@ body.login {
       width: 33%;
       margin-right: 0;
       padding-left: 33%; }
-      /* line 40, ../../app/stylesheets/application.sass */
+      /* line 51, ../../app/stylesheets/application.sass */
       body.login #content .form-container .form, body.login #content .logo-container .form {
         padding: 1.5em;
         margin-bottom: 1.5em;
         background: #E5ECF9; }
-        /* line 43, ../../app/stylesheets/application.sass */
-        body.login #content .form-container .form .error, body.login #content .logo-container .form .error {
+        /* line 54, ../../app/stylesheets/application.sass */
+        body.login #content .form-container .form p, body.login #content .logo-container .form p {
           padding: .5em;
           margin-bottom: 1em; }
-        /* line 47, ../../app/stylesheets/application.sass */
+        /* line 58, ../../app/stylesheets/application.sass */
         body.login #content .form-container .form #user_name, body.login #content .form-container .form #user_email, body.login #content .form-container .form #user_password, body.login #content .form-container .form #user_password_confirmation, body.login #content .form-container .form #user_current_password, body.login #content .logo-container .form #user_name, body.login #content .logo-container .form #user_email, body.login #content .logo-container .form #user_password, body.login #content .logo-container .form #user_password_confirmation, body.login #content .logo-container .form #user_current_password {
           width: 70%;
           font-size: large;
           padding: .2em 0; }
-  /* line 52, ../../app/stylesheets/application.sass */
+        /* line 63, ../../app/stylesheets/application.sass */
+        body.login #content .form-container .form label, body.login #content .logo-container .form label {
+          font-size: small;
+          font-weight: normal; }
+  /* line 69, ../../app/stylesheets/application.sass */
   body.login #footer {
     display: inline;
     float: left;
     overflow: hidden;
     width: 100%;
     margin-right: 0; }
-    /* line 55, ../../app/stylesheets/application.sass */
+    /* line 72, ../../app/stylesheets/application.sass */
     body.login #footer p {
       margin-left: 58%; }
-      /* line 58, ../../app/stylesheets/application.sass */
+      /* line 75, ../../app/stylesheets/application.sass */
       body.login #footer p .highlight {
         background: #9bbbfa;
         padding: .2em; }
 
 
 
-/* line 67, ../../app/stylesheets/application.sass */
+/* line 84, ../../app/stylesheets/application.sass */
 body.dashboard {
   min-width: 950px;
   width: 80%;
@@ -2224,22 +2236,22 @@ body.dashboard {
   /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.dashboard {
     display: block; }
-  /* line 71, ../../app/stylesheets/application.sass */
+  /* line 88, ../../app/stylesheets/application.sass */
   body.dashboard #flash {
     position: relative;
     float: right;
     z-index: 1;
     top: -4em;
     margin-right: 1em; }
-    /* line 78, ../../app/stylesheets/application.sass */
+    /* line 95, ../../app/stylesheets/application.sass */
     body.dashboard #flash .flash {
       margin: 0;
       border: none;
       padding: .2em 1em; }
-    /* line 82, ../../app/stylesheets/application.sass */
+    /* line 99, ../../app/stylesheets/application.sass */
     body.dashboard #flash .close {
       cursor: pointer; }
-  /* line 85, ../../app/stylesheets/application.sass */
+  /* line 102, ../../app/stylesheets/application.sass */
   body.dashboard #header {
     display: inline;
     float: left;
@@ -2247,21 +2259,22 @@ body.dashboard {
     width: 100%;
     margin-right: 0;
     background: #9bbbfa;
-    padding: 1em 1em 0; }
-    /* line 91, ../../app/stylesheets/application.sass */
+    padding: 1em 0; }
+    /* line 108, ../../app/stylesheets/application.sass */
     body.dashboard #header #logo {
       display: inline;
       float: left;
       overflow: hidden;
       width: 25%;
       margin-right: 0; }
-      /* line 94, ../../app/stylesheets/application.sass */
+      /* line 111, ../../app/stylesheets/application.sass */
       body.dashboard #header #logo h1 {
-        margin-bottom: 0; }
-        /* line 96, ../../app/stylesheets/application.sass */
+        margin-bottom: 0;
+        margin-left: .1em; }
+        /* line 114, ../../app/stylesheets/application.sass */
         body.dashboard #header #logo h1 a {
           text-decoration: none; }
-    /* line 99, ../../app/stylesheets/application.sass */
+    /* line 117, ../../app/stylesheets/application.sass */
     body.dashboard #header #menu {
       display: inline;
       float: left;
@@ -2270,7 +2283,7 @@ body.dashboard {
       margin-right: 0;
       font-size: larger;
       margin-top: 1em; }
-      /* line 104, ../../app/stylesheets/application.sass */
+      /* line 122, ../../app/stylesheets/application.sass */
       body.dashboard #header #menu ul {
         margin: 0;
         padding: 0;
@@ -2298,7 +2311,7 @@ body.dashboard {
           /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
           body.dashboard #header #menu ul li.last {
             padding-right: 0px; }
-    /* line 109, ../../app/stylesheets/application.sass */
+    /* line 127, ../../app/stylesheets/application.sass */
     body.dashboard #header #account {
       display: inline;
       float: left;
@@ -2306,7 +2319,7 @@ body.dashboard {
       width: 25%;
       margin-right: 0;
       margin-top: 1.5em; }
-      /* line 113, ../../app/stylesheets/application.sass */
+      /* line 131, ../../app/stylesheets/application.sass */
       body.dashboard #header #account ul {
         margin: 0;
         padding: 0;
@@ -2334,14 +2347,14 @@ body.dashboard {
           /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
           body.dashboard #header #account ul li.last {
             padding-right: 0px; }
-  /* line 118, ../../app/stylesheets/application.sass */
+  /* line 136, ../../app/stylesheets/application.sass */
   body.dashboard #content {
     display: inline;
     float: left;
     overflow: hidden;
     width: 100%;
     margin-right: 0; }
-  /* line 121, ../../app/stylesheets/application.sass */
+  /* line 139, ../../app/stylesheets/application.sass */
   body.dashboard #footer {
     display: inline;
     float: left;
@@ -2350,7 +2363,7 @@ body.dashboard {
     margin-right: 0;
     margin-top: 3em;
     border-top: 1px solid #9bbbfa; }
-    /* line 126, ../../app/stylesheets/application.sass */
+    /* line 144, ../../app/stylesheets/application.sass */
     body.dashboard #footer p {
       float: right;
       margin-right: 1em; }

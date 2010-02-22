@@ -1,8 +1,19 @@
 @import screen.sass
 
+
+
+-# Colores
+-# -------------------------------
+
   
 !grayblue = #E5ECF9
 !lightblue = #9BBBFA
+
+
+-# General
+-# -------------------------------
+body
+  :overflow auto !important
 
 
 
@@ -40,7 +51,7 @@ body.login
       .form
         +box
         
-        .error 
+        p  
           :padding .5em
           :margin-bottom 1em
           
@@ -48,6 +59,12 @@ body.login
           :width 70%          
           :font-size large
           :padding .2em 0
+          
+        label
+          :font-size small
+          :font-weight normal
+          
+        
         
   #footer
     +column(24, last)
@@ -85,7 +102,7 @@ body.dashboard
   #header
     +column(24, last)
     :background = !lightblue
-    :padding 1em 1em 0
+    :padding 1em 0
     
     
     #logo 
@@ -93,6 +110,7 @@ body.dashboard
       
       h1
         :margin-bottom 0
+        :margin-left .1em
         a
           :text-decoration none  
       

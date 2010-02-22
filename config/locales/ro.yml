@@ -6,6 +6,7 @@ ro:
         email: Adresa email
         password: Parola
         password_confirmation: Confirmare parola
+        remember_me: Tine ma minte
     errors:
       messages:
         blank: Nu poate sa fie gol
@@ -27,6 +28,7 @@ ro:
       logout: Iesire din cont
       create: Inregistrare cont
       password: Resetare parola
+      password_change: Schimbare parola
       confirm: Re-trimitere email de confirmare
       modify: Modificare cont
       

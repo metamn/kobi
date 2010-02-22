@@ -3,12 +3,19 @@
 
 - semantic_form_for resource_name, resource, :url => session_path(resource_name) do |f|
   - f.error_messages
-  - if flash[:alert] 
+  - if flash[:notice] 
+    %p.notice
+      =flash[:notice]
+  - elsif flash[:alert] 
     %p.error
-      =flash[:alert]
+      =flash[:alert]      
+    
   - f.inputs do
     = f.input :email
     = f.input :password    
+    - if devise_mapping.rememberable?
+      = f.input :remember_me, :as => :boolean
+      
   - f.buttons do
     = f.commit_button :login
   

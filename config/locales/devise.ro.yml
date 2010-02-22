@@ -15,6 +15,7 @@ ro:
       link: 'Ati uitat parola?'
       send_instructions: 'In urmatoarele minute veti primi un email cu instructiuni de resetare a parolei.'
       updated: 'Parola Dvs. a fost schimbata cu succes. Intrare in cont cu succes.'
+      change: 'Schimbare parola'
     confirmations:
       link: "Nu ati primit email-ul de confirmare?"
       send_instructions: 'In urmatoarele minute veti primi un email pentru activarea contului.'
@@ -33,4 +34,4 @@ ro:
       confirmation_instructions: 'Confirmare cont'
       reset_password_instructions: 'Resetare parola'
       unlock_instructions: 'Deblocare cont'
-
+    

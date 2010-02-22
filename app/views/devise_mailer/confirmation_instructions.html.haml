@@ -1,0 +1,46 @@
+%p
+  Bine ati ajuns!
+  
+%p
+  Multumim frumos pentru inregistrare.
+  %br
+  %ul
+    %li
+      Nume utilizator:
+      %b        
+        = @resource.name
+    %li
+      Adresa email:
+      %b
+      = @resource.email 
+
+%br
+
+%p
+  Contul Dvs. creat pe 
+  = link_to "Kobi.ro", "http://kobi.ro"
+  va fi activat dupa confirmarea adresei Dvs. de email.
+
+%p
+  Activarea se face printr-un click la 
+  = link_to "aceasta adresa", confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) 
+  (
+  = confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)
+  )
+
+%br
+
+%p
+  %b
+    IMPORTANT!
+  %br
+  Kobi nu va trimite niciodata emailuri pentru schimbarea parolei sau al datelor personale.
+  Toate actiunile de acest gen trebuie sa fie initiate de catre Dvs. intr-un mod explicit pe 
+  = link_to "Kobi.ro", "http://kobi.ro"
+  %br
+  Daca totusi primiti emailuri de acest gen neinitiate de Dvs. va rugam sa-l ignorati, probabil sunt tentative malicioase.
+
+%p
+  Va multumim,
+  %br
+  echipa Kobi.

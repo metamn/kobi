@@ -1,0 +1,26 @@
+%p
+  Hello,
+    %b
+      = @resource.name
+
+%br
+      
+%p
+  Contul Dvs. pe 
+  = link_to "Kobi.ro", "http://kobi.ro"
+  a fost blocat pentru un numar excesiv de incercari gresite de intrare in cont.
+  
+%p
+  Pentru deblocare contului va rugam accesati
+  = link_to "aceasta adresa", unlock_url(@resource, :unlock_token => @resource.unlock_token)
+  (
+  = unlock_url(@resource, :unlock_token => @resource.unlock_token)
+  )
+  
+%br
+
+%p
+  Numai bine,
+  %br
+  echipa Kobi
+  
