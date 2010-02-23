@@ -10760,3 +10760,247 @@ Rendering template within layouts/login
 Rendering sessions/new
 Rendered shared/_devise_links (0.9ms)
 Completed in 114ms (View: 100, DB: 0) | 200 OK [http://localhost/cont/intrare]
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (29.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Delete all (1.2ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (3)) [0m
+  [4;35;1mUser Delete all (0.6ms)[0m   [0mDELETE FROM "users" WHERE ("id" IN (4)) [0m
+  [4;36;1mUser Delete all (0.9ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (14)) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-23 11:54:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (13.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-23 11:54:51) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ; if controller_name != 'sessions' ;@output_buffer << ('
+'.html_safe!);@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.sessions.link'), new_session_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.registerable? && controller_name != 'registrations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.registrations.link'), new_registration_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.recoverable? && controller_name != 'passwords' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.passwords.link'), new_password_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.confirmable? && controller_name != 'confirmations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.confirmations.link'), new_confirmation_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.lockable? && controller_name != 'unlocks' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.unlocks.link'), new_unlock_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_devise_links (61.8ms)
+Completed in 589ms (View: 231, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-02-23 11:54:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 76ms (View: 62, DB: 0) | 200 OK [http://localhost/cont/creare]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-23 11:55:06) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"RE/afZGOZ115hExufLO5UYKdJvf+uxXg0gd7G+WwXv4=", "controller"=>"registrations", "user"=>{"name"=>"teszt", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"rubycs@clair.ro"}}
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = E'rubycs@clair.ro') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = E'teszt') LIMIT 1[0m
+  [4;36;1mSQL (61.8ms)[0m   [0;1mINSERT INTO "users" ("encrypted_password", "name", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES(E'b66d7bcb42f289b063b6515cf3b47321eebf99ac', E'teszt', '2010-02-23 09:55:06.392788', '2010-02-23 09:55:06.213880', NULL, '2010-02-23 09:55:06.392788', NULL, NULL, E'avAdQs19SeREkAkwT4BC', NULL, NULL, NULL, E'Z86iQXkyZE7FJwlrep3X', NULL, NULL, E'rubycs@clair.ro', NULL) RETURNING "id"[0m
+Sent mail to rubycs@clair.ro
+
+Date: Tue, 23 Feb 2010 11:55:06 +0200
+From: hello.kobi@gmail.com
+To: rubycs@clair.ro
+Subject: Confirmare cont
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Bine ati ajuns!
+</p>
+<p>
+  Multumim frumos pentru inregistrare.
+  <br />
+  <ul>
+    <li>
+      Nume utilizator:
+      <b>
+        teszt
+      </b>
+    </li>
+    <li>
+      Adresa email:
+      <b></b>
+      rubycs@clair.ro
+    </li>
+  </ul>
+</p>
+<br />
+<p>
+  Contul Dvs. creat pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  va fi activat dupa confirmarea adresei Dvs. de email.
+</p>
+<p>
+  Activarea se face printr-un click la
+  <a href="http://localhost:3000/cont/confirmare?confirmation_token=Z86iQXkyZE7FJwlrep3X">aceasta adresa</a>
+  (
+  http://localhost:3000/cont/confirmare?confirmation_token=Z86iQXkyZE7FJwlrep3X
+  )
+</p>
+<br />
+<p>
+  <b>
+    IMPORTANT!
+  </b>
+  <br />
+  Kobi nu va trimite niciodata emailuri pentru schimbarea parolei sau al datelor personale.
+  Toate actiunile de acest gen trebuie sa fie initiate de catre Dvs. intr-un mod explicit pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  <br />
+  Daca totusi primiti emailuri de acest gen neinitiate de Dvs. va rugam sa-l ignorati, probabil sunt tentative malicioase.
+</p>
+<p>
+  Va multumim,
+  <br />
+  echipa Kobi.
+</p>
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  devise (1.0.2) lib/devise/models/confirmable.rb:60:in `send_confirmation_instructions'
+  devise (1.0.2) app/controllers/registrations_controller.rb:17:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (77.3ms)
+Rendered rescues/_request_and_response (2.7ms)
+Rendering rescues/layout (internal_server_error)
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-02-23 12:10:36) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"RE/afZGOZ115hExufLO5UYKdJvf+uxXg0gd7G+WwXv4=", "controller"=>"registrations", "user"=>{"name"=>"teszt", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"rubycs@clair.ro"}}
+
+NameError (uninitialized constant RegistrationsController):
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (108.6ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+** Erubis 2.6.5
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-02-23 12:11:18) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"RE/afZGOZ115hExufLO5UYKdJvf+uxXg0gd7G+WwXv4=", "controller"=>"registrations", "user"=>{"name"=>"teszt", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"rubycs@clair.ro"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'rubycs@clair.ro') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'teszt') LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "name", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES(E'8cf44a45121f934fccb9bcc79e908a65a1f99832', E'teszt', '2010-02-23 10:11:18.168150', '2010-02-23 10:11:18.115200', NULL, '2010-02-23 10:11:18.168150', NULL, NULL, E'NpkH7BncvSm19hskZ3YZ', NULL, NULL, NULL, E'jVqMt1Q6HE07tnZ_IYAT', NULL, NULL, E'rubycs@clair.ro', NULL) RETURNING "id"[0m
+Sent mail to rubycs@clair.ro
+
+Date: Tue, 23 Feb 2010 12:11:18 +0200
+From: hello.kobi@gmail.com
+To: rubycs@clair.ro
+Subject: Confirmare cont
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Bine ati ajuns!
+</p>
+<p>
+  Multumim frumos pentru inregistrare.
+  <br />
+  <ul>
+    <li>
+      Nume utilizator:
+      <b>
+        teszt
+      </b>
+    </li>
+    <li>
+      Adresa email:
+      <b></b>
+      rubycs@clair.ro
+    </li>
+  </ul>
+</p>
+<br />
+<p>
+  Contul Dvs. creat pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  va fi activat dupa confirmarea adresei Dvs. de email.
+</p>
+<p>
+  Activarea se face printr-un click la
+  <a href="http://localhost:3000/cont/confirmare?confirmation_token=jVqMt1Q6HE07tnZ_IYAT">aceasta adresa</a>
+  (
+  http://localhost:3000/cont/confirmare?confirmation_token=jVqMt1Q6HE07tnZ_IYAT
+  )
+</p>
+<br />
+<p>
+  <b>
+    IMPORTANT!
+  </b>
+  <br />
+  Kobi nu va trimite niciodata emailuri pentru schimbarea parolei sau al datelor personale.
+  Toate actiunile de acest gen trebuie sa fie initiate de catre Dvs. intr-un mod explicit pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  <br />
+  Daca totusi primiti emailuri de acest gen neinitiate de Dvs. va rugam sa-l ignorati, probabil sunt tentative malicioase.
+</p>
+<p>
+  Va multumim,
+  <br />
+  echipa Kobi.
+</p>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  devise (1.0.2) lib/devise/models/confirmable.rb:60:in `send_confirmation_instructions'
+  devise (1.0.2) app/controllers/registrations_controller.rb:17:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (67.0ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)

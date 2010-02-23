@@ -19,3 +19,13 @@ config.action_mailer.raise_delivery_errors = true
 # For Devise
 config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
+# For Gmail
+ActionMailer::Base.smtp_settings = {  
+  :enable_starttls_auto => true,
+  :address => "smtp.gmail.com",  
+  :port => 587,  
+  :user_name => "hello.kobi@gmail.com",  
+  :password => "mchrro10",  
+  :authentication => :plain 
+} 
+
