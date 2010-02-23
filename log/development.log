@@ -11109,3 +11109,78 @@ Rendering template within layouts/login
 Rendering sessions/new
 Rendered shared/_devise_links (0.8ms)
 Completed in 60ms (View: 27, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+** Erubis 2.6.5
+** Erubis 2.6.5
+** Erubis 2.6.5
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (24.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (316.9ms)[0m   [0;1mDROP DATABASE IF EXISTS "kobi_test"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (2569.1ms)[0m   [0;1mCREATE DATABASE "kobi_test" ENCODING = 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (31.1ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) NOT NULL, "encrypted_password" character varying(40) NOT NULL, "password_salt" character varying(255) NOT NULL, "confirmation_token" character varying(20), "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "reset_password_token" character varying(20), "remember_token" character varying(20), "remember_created_at" timestamp, "sign_in_count" integer, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_name" ON "users" ("name")[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (4.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100219132406')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100219102133')[0m
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (110.6ms)[0m   [0;1mDROP DATABASE IF EXISTS "kobi_test"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (634.8ms)[0m   [0;1mCREATE DATABASE "kobi_test" ENCODING = 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (25.8ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) NOT NULL, "encrypted_password" character varying(40) NOT NULL, "password_salt" character varying(255) NOT NULL, "confirmation_token" character varying(20), "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "reset_password_token" character varying(20), "remember_token" character varying(20), "remember_created_at" timestamp, "sign_in_count" integer, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (18.4ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_name" ON "users" ("name")[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (4.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100219132406')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100219102133')[0m
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (110.8ms)[0m   [0;1mDROP DATABASE IF EXISTS "kobi_test"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET search_path TO public[0m
+  [4;36;1mSQL (972.1ms)[0m   [0;1mCREATE DATABASE "kobi_test" ENCODING = 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (24.2ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) NOT NULL, "encrypted_password" character varying(40) NOT NULL, "password_salt" character varying(255) NOT NULL, "confirmation_token" character varying(20), "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "reset_password_token" character varying(20), "remember_token" character varying(20), "remember_created_at" timestamp, "sign_in_count" integer, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp, "name" character varying(255)) [0m
+  [4;36;1mSQL (6.1ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_name" ON "users" ("name")[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (3.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100219132406')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100219102133')[0m

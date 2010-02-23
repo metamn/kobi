@@ -1,0 +1,32 @@
+require 'autotest/redgreen'
+require 'autotest/timestamp'
+ 
+module Autotest::GnomeNotify
+  def self.notify title, msg, img
+    system "notify-send '#{title}' '#{msg}' -i #{img} -t 2000"
+  end
+ 
+  Autotest.add_hook :ran_command do |at|
+    image_root = "~/.autotest_images"
+    r = results = [at.results].flatten.join("\n")
+    results.gsub!(/\\e\[\d+m/,'')
+    output = results.slice(/(\d+)\sexamples?,\s(\d+)\sfailures?/)
+    puts output.inspect
+    if output
+      if $~[2].to_i &gt; 0
+        notify "FAIL", "#{output}", "#{image_root}/fail.png"
+      else
+        notify "Pass", "#{output}", "#{image_root}/pass.png"
+      end
+    else
+      notify "FAIL", "You must have a non-rspec error in your code.\n Check the autotest log for details.", "#{image_root}/fail.png"
+    end
+  end
+ 
+end
+ 
+ 
+Autotest.add_hook :initialize do |at|
+  # Ignore files in tmp/
+  at.add_exception %r%^\./tmp%
+end 
