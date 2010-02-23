@@ -69,8 +69,10 @@ body.login
   #footer
     +column(24, last)
     
-    p
-      :margin-left 58%
+    .footer-container
+      +column(8, last)
+      +prepend(8)
+      :text-align right
       
       .highlight
         :background = !lightblue

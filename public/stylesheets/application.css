@@ -2216,16 +2216,22 @@ body.login {
     width: 100%;
     margin-right: 0; }
     /* line 72, ../../app/stylesheets/application.sass */
-    body.login #footer p {
-      margin-left: 58%; }
-      /* line 75, ../../app/stylesheets/application.sass */
-      body.login #footer p .highlight {
+    body.login #footer .footer-container {
+      display: inline;
+      float: left;
+      overflow: hidden;
+      width: 33%;
+      margin-right: 0;
+      padding-left: 33%;
+      text-align: right; }
+      /* line 77, ../../app/stylesheets/application.sass */
+      body.login #footer .footer-container .highlight {
         background: #9bbbfa;
         padding: .2em; }
 
 
 
-/* line 84, ../../app/stylesheets/application.sass */
+/* line 86, ../../app/stylesheets/application.sass */
 body.dashboard {
   min-width: 950px;
   width: 80%;
@@ -2236,22 +2242,22 @@ body.dashboard {
   /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body.dashboard {
     display: block; }
-  /* line 88, ../../app/stylesheets/application.sass */
+  /* line 90, ../../app/stylesheets/application.sass */
   body.dashboard #flash {
     position: relative;
     float: right;
     z-index: 1;
     top: -4em;
     margin-right: 1em; }
-    /* line 95, ../../app/stylesheets/application.sass */
+    /* line 97, ../../app/stylesheets/application.sass */
     body.dashboard #flash .flash {
       margin: 0;
       border: none;
       padding: .2em 1em; }
-    /* line 99, ../../app/stylesheets/application.sass */
+    /* line 101, ../../app/stylesheets/application.sass */
     body.dashboard #flash .close {
       cursor: pointer; }
-  /* line 102, ../../app/stylesheets/application.sass */
+  /* line 104, ../../app/stylesheets/application.sass */
   body.dashboard #header {
     display: inline;
     float: left;
@@ -2260,21 +2266,21 @@ body.dashboard {
     margin-right: 0;
     background: #9bbbfa;
     padding: 1em 0; }
-    /* line 108, ../../app/stylesheets/application.sass */
+    /* line 110, ../../app/stylesheets/application.sass */
     body.dashboard #header #logo {
       display: inline;
       float: left;
       overflow: hidden;
       width: 25%;
       margin-right: 0; }
-      /* line 111, ../../app/stylesheets/application.sass */
+      /* line 113, ../../app/stylesheets/application.sass */
       body.dashboard #header #logo h1 {
         margin-bottom: 0;
         margin-left: .1em; }
-        /* line 114, ../../app/stylesheets/application.sass */
+        /* line 116, ../../app/stylesheets/application.sass */
         body.dashboard #header #logo h1 a {
           text-decoration: none; }
-    /* line 117, ../../app/stylesheets/application.sass */
+    /* line 119, ../../app/stylesheets/application.sass */
     body.dashboard #header #menu {
       display: inline;
       float: left;
@@ -2283,7 +2289,7 @@ body.dashboard {
       margin-right: 0;
       font-size: larger;
       margin-top: 1em; }
-      /* line 122, ../../app/stylesheets/application.sass */
+      /* line 124, ../../app/stylesheets/application.sass */
       body.dashboard #header #menu ul {
         margin: 0;
         padding: 0;
@@ -2311,7 +2317,7 @@ body.dashboard {
           /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
           body.dashboard #header #menu ul li.last {
             padding-right: 0px; }
-    /* line 127, ../../app/stylesheets/application.sass */
+    /* line 129, ../../app/stylesheets/application.sass */
     body.dashboard #header #account {
       display: inline;
       float: left;
@@ -2319,7 +2325,7 @@ body.dashboard {
       width: 25%;
       margin-right: 0;
       margin-top: 1.5em; }
-      /* line 131, ../../app/stylesheets/application.sass */
+      /* line 133, ../../app/stylesheets/application.sass */
       body.dashboard #header #account ul {
         margin: 0;
         padding: 0;
@@ -2347,14 +2353,14 @@ body.dashboard {
           /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
           body.dashboard #header #account ul li.last {
             padding-right: 0px; }
-  /* line 136, ../../app/stylesheets/application.sass */
+  /* line 138, ../../app/stylesheets/application.sass */
   body.dashboard #content {
     display: inline;
     float: left;
     overflow: hidden;
     width: 100%;
     margin-right: 0; }
-  /* line 139, ../../app/stylesheets/application.sass */
+  /* line 141, ../../app/stylesheets/application.sass */
   body.dashboard #footer {
     display: inline;
     float: left;
@@ -2363,7 +2369,7 @@ body.dashboard {
     margin-right: 0;
     margin-top: 3em;
     border-top: 1px solid #9bbbfa; }
-    /* line 144, ../../app/stylesheets/application.sass */
+    /* line 146, ../../app/stylesheets/application.sass */
     body.dashboard #footer p {
       float: right;
       margin-right: 1em; }
