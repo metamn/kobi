@@ -149,11 +149,43 @@ body.dashboard
     
     
     
+-# Expenses
+-# -------------------------------    
+
+body
+  #new_expense
+    +column(24, last)        
     
+    .inputs   
+      +column(12, last)  
+      
+      ol
+        +horizontal-list
+      
+        #expense_date_input
+          +column(12, last)
+          
+          label
+            :color gray
+            
+          input
+            :color gray  
+        
+        #expense_amount_input 
+          +column(11, last)
     
+    .buttons
+      +column(1, last)
+      :padding 0
+      
+  #expenses
     
-    
-    
+    .item
+      +column(24, last)
+      
+      .column
+        :width 25%  
+   
     
     
     

@@ -1,44 +1,8 @@
+# Romanian translations for Ruby on Rails 
+# by Catalin Ilinca (me@talin.ro)
+# updated by kfl62 (bogus keys are now commented)
+
 ro:
-  activerecord:
-    models:
-      expense: Cheltuieli
-    attributes:
-      user:
-        name: Nume utilizator
-        email: Adresa email
-        password: Parola
-        password_confirmation: Confirmare parola
-        remember_me: Tine ma minte
-      expense:
-        date: Data
-        amount: Suma
-    errors:
-      messages:
-        blank: Nu poate sa fie gol
-        too_short: Prea scurt
-        too_long: Prea lung
-        wrong_length: Are lungimea incorecta
-        taken: Deja este folosit
-        invalid: Nu este valid
-      models:
-        user:
-          attributes:
-            password:
-              confirmation: Confirmare parola incorecta  
-            
-  
-  formtastic:
-    actions:
-      login: Intrare in cont
-      logout: Iesire din cont
-      create: Inregistrare cont
-      password: Resetare parola
-      password_change: Schimbare parola
-      confirm: Re-trimitere email de confirmare
-      modify: Modificare cont
-      add: +
-      
-      
   date:
     formats:
       default: "%d-%m-%Y"
@@ -46,8 +10,8 @@ ro:
       long: "%d %B %Y"
 #      only_day: "%e"
 
-    day_names: [Duminica, Luni, Marti, Miercuri, Joi, Vineri, Sambata]
-    abbr_day_names: [Dum, Lun, Mar, Mie, Joi, Vin, Sam]
+    day_names: [Duminică, Luni, Marți, Miercuri, Joi, Vineri, Sâmbată]
+    abbr_day_names: [Dum, Lun, Mar, Mie, Joi, Vin, Sâm]
     month_names: [~, Ianuarie, Februarie, Martie, Aprilie, Mai, Iunie, Iulie, August, Septembrie, Octombrie, Noiembrie, Decembrie]
     abbr_month_names: [~, Ian, Feb, Mar, Apr, Mai, Iun, Iul, Aug, Sep, Oct, Noi, Dec]
     order: [ :day, :month, :year ]
@@ -148,4 +112,41 @@ ro:
           mb: "MB"
           gb: "GB"
           tb: "TB"
-
+       
+  activerecord:
+    errors:
+      template:
+        header: 
+          one: "Nu am putut salva acest model {{model}}: 1 eroare"
+          other: "Nu am putut salva acest {{model}}: {{count}} erori."
+        body: "Încearcă să corectezi urmatoarele câmpuri:"
+      messages:
+        inclusion: "nu este inclus în listă"
+        exclusion: "este rezervat"
+        invalid: "este invalid"
+        confirmation: "nu este confirmat"
+        accepted: "trebuie dat acceptul"
+        empty: "nu poate fi gol"
+        blank: "nu poate fi gol"
+        too_long: "este prea lung (se pot folosi maximum {{count}} caractere)"
+        too_short: "este pre scurt (minumim de caractere este {{count}})"
+        wrong_length: "nu are lungimea corectă (trebuie să aiba {{count}} caractere)"
+        taken: "este deja folosit"
+        not_a_number: "nu este un număr"
+        greater_than: "trebuie să fie mai mare decât {{count}}"
+        greater_than_or_equal_to: "trebuie să fie mai mare sau egal cu {{count}}"
+        equal_to: "trebuie să fie egal cu {{count}}"
+        less_than: "trebuie să fie mai mic decât {{count}}"
+        less_than_or_equal_to: "trebuie să fie mai mic sau egal cu {{count}}"
+        odd: "trebuie să fie par"
+        even: "trebuie să fie impar"
+        record_invalid: "Validare nereuşită {{errors}}"
+  support:
+    array:
+#        sentence_connector: "și"
+      words_connector: ", "
+      two_words_connector: " şi "
+      last_word_connector: " şi "
+    select:
+      # default value for :prompt => true in FormOptionsHelper
+      prompt: "Alegeţi"

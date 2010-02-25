@@ -13306,3 +13306,1099 @@ Rendering template within layouts/login
 Rendering sessions/new
 Rendered shared/_devise_links (0.8ms)
 Completed in 37ms (View: 18, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-25 13:14:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (220.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-25 13:14:20) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ; if controller_name != 'sessions' ;@output_buffer << ('
+'.html_safe!);@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.sessions.link'), new_session_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.registerable? && controller_name != 'registrations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.registrations.link'), new_registration_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.recoverable? && controller_name != 'passwords' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.passwords.link'), new_password_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.confirmable? && controller_name != 'confirmations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.confirmations.link'), new_confirmation_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.lockable? && controller_name != 'unlocks' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.unlocks.link'), new_unlock_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_devise_links (80.2ms)
+Completed in 678ms (View: 313, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-25 13:14:29) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"Am+WsrufU0uE0HDAx4+M6LO/OH7Mvat5gu98SNSPuJU=", "controller"=>"sessions", "user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;35;1mUser Load (2.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-02-25 11:14:30.246135', "remember_token" = E'4ulyH6Ojh21Yjb_pBwNW', "remember_created_at" = '2010-02-25 11:14:30.068285' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-02-25 11:14:30.386035', "sign_in_count" = 52, "current_sign_in_at" = '2010-02-25 11:14:30.384350', "last_sign_in_at" = '2010-02-24 15:56:11.408175' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 537ms (DB: 7) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-25 13:14:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+ __in_erb_template=true 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_flash_messages (16.6ms)
+Rendered shared/_header (28.3ms)
+Completed in 131ms (View: 111, DB: 2) | 200 OK [http://localhost/]
+** Erubis 2.6.5
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to DeviseCreateUsers (20100219102133)
+Migrating to DeviseAddUserName (20100219132406)
+Migrating to CreateExpenses (20100225112338)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (254.5ms)[0m   [0;1mCREATE TABLE "expenses" ("id" serial primary key, "date" timestamp, "amount" decimal, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (15.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100225112338')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+** Erubis 2.6.5
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-25 13:27:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+ __in_erb_template=true 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_flash_messages (1.7ms)
+Rendered shared/_header (11.5ms)
+Completed in 124ms (View: 39, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 13:27:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/expenses
+Rendering expenses/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<h1>Listing expenses</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Amount</th>
+  </tr>
+
+'.html_safe!); @expenses.each do |expense| 
+@output_buffer << ('  <tr>
+    <td>'.html_safe!);@output_buffer << ((h expense.date ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << ((h expense.amount ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Show', expense ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Edit', edit_expense_path(expense) ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete ).to_s);@output_buffer << ('</td>
+  </tr>
+'.html_safe!); end 
+@output_buffer << ('</table>
+
+<br />
+
+'.html_safe!);@output_buffer << (( link_to 'New expense', new_expense_path ).to_s);@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Expenses: '.html_safe!);@output_buffer << (( controller.action_name ).to_s);@output_buffer << ('</title>
+  '.html_safe!);@output_buffer << (( stylesheet_link_tag 'scaffold' ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('</head>
+<body>
+
+<p style="color: green">'.html_safe!);@output_buffer << (( flash[:notice] ).to_s);@output_buffer << ('</p>
+
+'.html_safe!);@output_buffer << (( yield ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('
+</body>
+</html>
+'.html_safe!);@output_buffer.to_sEND
+Completed in 115ms (View: 17, DB: 3) | 200 OK [http://localhost/expenses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 13:28:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.0ms)
+Completed in 27ms (View: 4, DB: 3) | 200 OK [http://localhost/expenses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 13:31:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (10.6ms)
+Completed in 43ms (View: 18, DB: 3) | 200 OK [http://localhost/expenses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 13:31:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (5.6ms)
+Completed in 31ms (View: 8, DB: 3) | 200 OK [http://localhost/expenses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 13:32:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (9.7ms)
+Completed in 40ms (View: 17, DB: 3) | 200 OK [http://localhost/expenses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 13:33:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<h1>New expense</h1>
+
+'.html_safe!); form_for(@expense) do |f| 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( f.error_messages ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('
+  <p>
+    '.html_safe!);@output_buffer << (( f.label :date ).to_s);@output_buffer << ('<br />
+    '.html_safe!);@output_buffer << (( f.datetime_select :date ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('  </p>
+  <p>
+    '.html_safe!);@output_buffer << (( f.label :amount ).to_s);@output_buffer << ('<br />
+    '.html_safe!);@output_buffer << (( f.text_field :amount ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('  </p>
+  <p>
+    '.html_safe!);@output_buffer << (( f.submit 'Create' ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('  </p>
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!);@output_buffer << (( link_to 'Back', expenses_path ).to_s);@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+
+ActionView::TemplateError (undefined method `-' for "translation missing: ro, date, order":String) on line #9 of app/views/expenses/new.html.erb:
+6:   <p>
+7:     <%= f.label :date %><br />
+8:     <%= f.datetime_select :date %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :amount %><br />
+12:     <%= f.text_field :amount %>
+
+    app/views/expenses/new.html.erb:9
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/expenses/new.html.erb:4
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/expenses_controller.rb:31:in `new'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 13:36:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 60ms (View: 35, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 13:37:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.3ms)
+Completed in 133ms (View: 109, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 13:39:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+
+ActionView::TemplateError (undefined method `ammount' for #<Expense:0xb6da693c>) on line #6 of app/views/expenses/new.html.haml:
+3:   
+4: - semantic_form_for @expense do |f|
+5:   - f.error_messages
+6:   = f.inputs :date, :ammount      
+7:   = f.buttons :commit
+
+    formtastic (0.9.7) rails/./lib/formtastic.rb:529:in `send'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:529:in `basic_input_helper'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:534:in `string_input'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:1121:in `send'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:1121:in `inline_input_for'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:97:in `send'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:97:in `input'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:96:in `map'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:96:in `input'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:267:in `inputs'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:267:in `collect'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:267:in `inputs'
+    app/views/expenses/new.html.haml:6:in `_run_haml_app47views47expenses47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:1650:in `semantic_form_for'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:1609:in `with_custom_field_error_proc'
+    formtastic (0.9.7) rails/./lib/formtastic.rb:1649:in `semantic_form_for'
+    app/views/expenses/new.html.haml:4:in `_run_haml_app47views47expenses47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/expenses_controller.rb:31:in `new'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (167.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 13:39:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.4ms)
+Completed in 133ms (View: 110, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-02-25 13:39:58) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"1", "date(3i)"=>"25", "amount"=>"12", "date(4i)"=>"13", "date(5i)"=>"37"}, "action"=>"create", "authenticity_token"=>"Am+WsrufU0uE0HDAx4+M6LO/OH7Mvat5gu98SNSPuJU=", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date") VALUES('2010-02-25 11:39:58.065257', '2010-02-25 11:39:58.065257', 12.0, '2010-01-25 11:37:00.000000') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/1
+Completed in 71ms (DB: 3) | 302 Found [http://localhost/expenses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#show (for 127.0.0.1 at 2010-02-25 13:39:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 1) [0m
+Rendering template within layouts/dashboard
+Rendering expenses/show
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<p>
+  <b>Date:</b>
+  '.html_safe!);@output_buffer << ((h @expense.date ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('</p>
+
+<p>
+  <b>Amount:</b>
+  '.html_safe!);@output_buffer << ((h @expense.amount ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('</p>
+
+
+'.html_safe!);@output_buffer << (( link_to 'Edit', edit_expense_path(@expense) ).to_s);@output_buffer << (' |
+'.html_safe!);@output_buffer << (( link_to 'Back', expenses_path ).to_s);@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (6.1ms)
+Completed in 42ms (View: 16, DB: 2) | 200 OK [http://localhost/expenses/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 13:40:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (5.6ms)
+Completed in 38ms (View: 15, DB: 3) | 200 OK [http://localhost/expenses]
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-02-25 13:42:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (9.3ms)
+Completed in 35ms (View: 16, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 13:42:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.3ms)
+Completed in 128ms (View: 105, DB: 2) | 200 OK [http://localhost/expenses/new]
+** Erubis 2.6.5
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to DeviseCreateUsers (20100219102133)
+Migrating to DeviseAddUserName (20100219132406)
+Migrating to CreateExpenses (20100225112338)
+Migrating to ModifyExpenses (20100225114427)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (27.3ms)[0m   [0;1mALTER TABLE "expenses" DROP "date"[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "expenses" ADD COLUMN "date" date[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100225114427')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 13:46:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (1.8ms)
+Rendered shared/_header (10.7ms)
+Completed in 141ms (View: 52, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:01:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.3ms)
+Completed in 50ms (View: 25, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:05:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (3.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (2.0ms)
+Completed in 92ms (View: 46, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:07:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 47ms (View: 23, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:10:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 56ms (View: 30, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:11:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 47ms (View: 23, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:14:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 50ms (View: 26, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:15:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.3ms)
+Completed in 56ms (View: 31, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:15:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 57ms (View: 29, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:15:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 51ms (View: 27, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-02-25 14:17:56) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"2", "date(3i)"=>"25", "amount"=>""}, "action"=>"create", "authenticity_token"=>"Am+WsrufU0uE0HDAx4+M6LO/OH7Mvat5gu98SNSPuJU=", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date") VALUES('2010-02-25 12:17:56.436140', '2010-02-25 12:17:56.436140', NULL, '2010-02-25') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/2
+Completed in 36ms (DB: 3) | 302 Found [http://localhost/expenses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#show (for 127.0.0.1 at 2010-02-25 14:17:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 2) [0m
+Rendering template within layouts/dashboard
+Rendering expenses/show
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<p>
+  <b>Date:</b>
+  '.html_safe!);@output_buffer << ((h @expense.date ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('</p>
+
+<p>
+  <b>Amount:</b>
+  '.html_safe!);@output_buffer << ((h @expense.amount ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('</p>
+
+
+'.html_safe!);@output_buffer << (( link_to 'Edit', edit_expense_path(@expense) ).to_s);@output_buffer << (' |
+'.html_safe!);@output_buffer << (( link_to 'Back', expenses_path ).to_s);@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (7.0ms)
+Completed in 42ms (View: 17, DB: 2) | 200 OK [http://localhost/expenses/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 14:18:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<h1>Listing expenses</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Amount</th>
+  </tr>
+
+'.html_safe!); @expenses.each do |expense| 
+@output_buffer << ('  <tr>
+    <td>'.html_safe!);@output_buffer << ((h expense.date ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << ((h expense.amount ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Show', expense ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Edit', edit_expense_path(expense) ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete ).to_s);@output_buffer << ('</td>
+  </tr>
+'.html_safe!); end 
+@output_buffer << ('</table>
+
+<br />
+
+'.html_safe!);@output_buffer << (( link_to 'New expense', new_expense_path ).to_s);@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (7.4ms)
+Completed in 53ms (View: 28, DB: 3) | 200 OK [http://localhost/expenses]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:18:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.3ms)
+Completed in 126ms (View: 24, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:19:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 52ms (View: 28, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:22:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 135ms (View: 109, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:22:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 47ms (View: 23, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:23:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 46ms (View: 22, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:25:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<h1>Listing expenses</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Amount</th>
+  </tr>
+
+'.html_safe!); @expenses.each do |expense| 
+@output_buffer << ('  <tr>
+    <td>'.html_safe!);@output_buffer << ((h expense.date ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << ((h expense.amount ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Show', expense ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Edit', edit_expense_path(expense) ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete ).to_s);@output_buffer << ('</td>
+  </tr>
+'.html_safe!); end 
+@output_buffer << ('</table>
+
+<br />
+
+'.html_safe!);@output_buffer << (( link_to 'New expense', new_expense_path ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered expenses/_index (3.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 62ms (View: 37, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-02-25 14:26:11) [POST]
+  Parameters: {"commit"=>"+", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"2", "date(3i)"=>"25", "amount"=>"66"}, "action"=>"create", "authenticity_token"=>"Am+WsrufU0uE0HDAx4+M6LO/OH7Mvat5gu98SNSPuJU=", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date") VALUES('2010-02-25 12:26:11.098023', '2010-02-25 12:26:11.098023', 66.0, '2010-02-25') RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/3
+Completed in 105ms (DB: 3) | 302 Found [http://localhost/expenses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#show (for 127.0.0.1 at 2010-02-25 14:26:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 3) [0m
+Rendering template within layouts/dashboard
+Rendering expenses/show
+Rendered shared/_flash_messages (0.4ms)
+Rendered shared/_header (7.3ms)
+Completed in 37ms (View: 12, DB: 2) | 200 OK [http://localhost/expenses/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 14:26:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (7.6ms)
+Completed in 54ms (View: 28, DB: 3) | 200 OK [http://localhost/expenses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#destroy (for 127.0.0.1 at 2010-02-25 14:26:33) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"Am+WsrufU0uE0HDAx4+M6LO/OH7Mvat5gu98SNSPuJU=", "id"=>"1", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.6ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mExpense Destroy (0.3ms)[0m   [0;1mDELETE FROM "expenses" WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/expenses
+Completed in 56ms (DB: 4) | 302 Found [http://localhost/expenses/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 14:26:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (7.1ms)
+Completed in 48ms (View: 23, DB: 2) | 200 OK [http://localhost/expenses]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#destroy (for 127.0.0.1 at 2010-02-25 14:26:38) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"Am+WsrufU0uE0HDAx4+M6LO/OH7Mvat5gu98SNSPuJU=", "id"=>"2", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mExpense Destroy (0.2ms)[0m   [0mDELETE FROM "expenses" WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/expenses
+Completed in 33ms (DB: 3) | 302 Found [http://localhost/expenses/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#index (for 127.0.0.1 at 2010-02-25 14:26:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/index
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (7.2ms)
+Completed in 42ms (View: 17, DB: 3) | 200 OK [http://localhost/expenses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:26:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (1.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 130ms (View: 27, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:29:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (1.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 55ms (View: 26, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-02-25 14:30:02) [POST]
+  Parameters: {"commit"=>"+", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"2", "date(3i)"=>"25", "amount"=>"12"}, "action"=>"create", "authenticity_token"=>"Am+WsrufU0uE0HDAx4+M6LO/OH7Mvat5gu98SNSPuJU=", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date") VALUES('2010-02-25 12:30:02.384463', '2010-02-25 12:30:02.384463', 12.0, '2010-02-25') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 35ms (DB: 3) | 302 Found [http://localhost/expenses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:30:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (3.2ms)
+Rendered shared/_flash_messages (0.3ms)
+Rendered shared/_header (1.4ms)
+Completed in 50ms (View: 25, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:32:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<h1>Listing expenses</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Amount</th>
+  </tr>
+
+'.html_safe!); @expenses.each do |expense| 
+@output_buffer << ('  <tr>
+    <td>'.html_safe!);@output_buffer << ((h expense.date ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << ((h expense.amount ).to_s);@output_buffer << ('</td>    
+    <td>'.html_safe!);@output_buffer << (( link_to 'Edit', edit_expense_path(expense) ).to_s);@output_buffer << ('</td>
+    <td>'.html_safe!);@output_buffer << (( link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete ).to_s);@output_buffer << ('</td>
+  </tr>
+'.html_safe!); end 
+@output_buffer << ('</table>
+
+'.html_safe!);@output_buffer.to_sEND
+Rendered expenses/_index (3.2ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 76ms (View: 51, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-02-25 14:32:36) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 3) [0m
+Rendering template within layouts/dashboard
+Rendering expenses/edit
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ;@output_buffer << ('<h1>Editing expense</h1>
+
+'.html_safe!); form_for(@expense) do |f| 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( f.error_messages ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('
+  <p>
+    '.html_safe!);@output_buffer << (( f.label :date ).to_s);@output_buffer << ('<br />
+    '.html_safe!);@output_buffer << (( f.datetime_select :date ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('  </p>
+  <p>
+    '.html_safe!);@output_buffer << (( f.label :amount ).to_s);@output_buffer << ('<br />
+    '.html_safe!);@output_buffer << (( f.text_field :amount ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('  </p>
+  <p>
+    '.html_safe!);@output_buffer << (( f.submit 'Update' ).to_s);@output_buffer << ('
+'.html_safe!);@output_buffer << ('  </p>
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!);@output_buffer << (( link_to 'Show', @expense ).to_s);@output_buffer << (' |
+'.html_safe!);@output_buffer << (( link_to 'Back', expenses_path ).to_s);@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 57ms (View: 31, DB: 2) | 200 OK [http://localhost/expenses/3/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:37:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (6.2ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 56ms (View: 32, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:38:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (4.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 56ms (View: 31, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:39:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (2.5ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 132ms (View: 108, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:39:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (2.4ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 52ms (View: 26, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:43:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (2.4ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 50ms (View: 25, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:43:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (2.4ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 137ms (View: 113, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:43:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (2.5ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.1ms)
+Completed in 51ms (View: 26, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:44:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (2.3ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 49ms (View: 25, DB: 2) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:45:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (2.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.2ms)
+Completed in 141ms (View: 28, DB: 3) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-02-25 14:47:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.3ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+Rendered expenses/_index (6.6ms)
+Rendered shared/_flash_messages (0.2ms)
+Rendered shared/_header (1.0ms)
+Completed in 58ms (View: 33, DB: 2) | 200 OK [http://localhost/expenses/new]

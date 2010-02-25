@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2010-02-25 13:23:38
+  amount: 9.99
+
+two:
+  date: 2010-02-25 13:23:38
+  amount: 9.99

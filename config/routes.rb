@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :expenses
+
   
   map.root :controller => 'dashboard'
   

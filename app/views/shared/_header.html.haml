@@ -5,13 +5,7 @@
 #menu
   %ul
     %li
-      = link_to "Cheltuieli", root_path
-      &nbsp;&bull;&nbsp;
-    %li
-      = link_to "Venituri", root_path
-      &nbsp;&bull;&nbsp;
-    %li
-      = link_to "Statistici", root_path 
+      = link_to t('activerecord.models.expense'), new_expense_path      
 
 #account
   %ul

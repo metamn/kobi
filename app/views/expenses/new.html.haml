@@ -1,0 +1,12 @@
+%h3
+  Cheltuieli
+  
+- semantic_form_for @expense do |f|
+  - f.error_messages
+  - f.inputs do
+    = f.input :date, :label => false
+    = f.input :amount, :label => false
+  - f.buttons do
+    = f.commit_button :add 
+    
+= render :partial => "expenses/index"

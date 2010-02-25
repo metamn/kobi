@@ -1,0 +1,18 @@
+#expenses
+  .item
+    .column
+      = t('activerecord.attributes.expense.date')
+    .column
+      = t('activerecord.attributes.expense.amount')
+    .column
+      &nbsp;
+  - @expenses.each do |expense|
+    .item 
+      .column
+        = expense.date
+      .column
+        = expense.amount
+      .column
+        = link_to 'Edit', edit_expense_path(expense)
+        = link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete
+      
