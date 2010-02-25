@@ -1,16 +1,18 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+// Jquery + Protoype conflict solver
+$j = jQuery.noConflict();
 
-$(document).ready(function(){
+$j(document).ready(function(){
   
   // Close flash messages on dashboard
-  $('#flash .close').click(function(event) {
-    $('#flash').slideUp('slow');
+  $j('#flash .close').click(function(event) {
+    $j('#flash').slideUp('slow');
   });
   
   // Close flash message on dashboard after 3 sec
-  $('#flash').delay(3000).slideUp('slow');
+  $j('#flash').delay(3000).slideUp('slow');
   
 });
 

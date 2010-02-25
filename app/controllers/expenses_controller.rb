@@ -1,5 +1,6 @@
 class ExpensesController < ApplicationController
-  layout "dashboard"
+  layout "dashboard", :except => [:edit]
+  
   
   # GET /expenses
   # GET /expenses.xml

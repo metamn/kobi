@@ -13,6 +13,7 @@
       .column
         = expense.amount
       .column
-        = link_to 'Edit', edit_expense_path(expense)
+        = link_to_remote 'Edit', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update"
         = link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete
+    #ajax-update
       

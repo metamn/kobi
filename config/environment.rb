@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "compass", :source => "http://gemcutter.org"
   config.gem 'formtastic'
+  config.gem "acts-as-taggable-on"
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).
