@@ -1,4 +1,4 @@
-require 'autotest/redgreen'
+require 'redgreen/autotest'
 require 'autotest/timestamp'
  
 module Autotest::GnomeNotify

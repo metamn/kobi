@@ -52,3 +52,8 @@ Cucumber::Rails::World.use_transactional_fixtures = true
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
+class ActionController::TestCase
+    include Devise::TestHelpers
+  end
+
+
