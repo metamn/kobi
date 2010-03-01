@@ -15,10 +15,10 @@
   = stylesheet_link_tag 'formtastic', :media => 'screen, projection'
   
   = stylesheet_link_tag 'application', :media => 'screen, projection'
-  %body.dashboard       
+  %body.dashboard 
     #header
       = render :partial => "shared/header"
-    #content
+    #content{:class => controller.controller_name}       
       = yield
     
     #footer

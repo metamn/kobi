@@ -9,13 +9,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100225130407) do
+ActiveRecord::Schema.define(:version => 20100301215525) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "ancestry"
+  end
+
+  add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
 
   create_table "expenses", :force => true do |t|
     t.decimal  "amount"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "date"
+    t.string   "tags_saved"
+    t.string   "category_saved"
+    t.integer  "category_id"
   end
 
   create_table "taggings", :force => true do |t|

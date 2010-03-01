@@ -2377,80 +2377,69 @@ body.dashboard {
 
 
 /* line 156, ../../app/stylesheets/application.sass */
-body #new_expense {
+#content.expenses ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  display: inline-block; }
+  /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+  #content.expenses ul {
+    display: block; }
+  /* line 50, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+  #content.expenses ul li {
+    list-style-type: none;
+    margin-left: 0px;
+    white-space: nowrap;
+    display: inline;
+    float: left;
+    padding-left: 4px;
+    padding-right: 4px; }
+    /* line 40, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+    #content.expenses ul li.first {
+      padding-left: 0px; }
+    /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+    #content.expenses ul li.last {
+      padding-right: 0px; }
+  /* line 159, ../../app/stylesheets/application.sass */
+  #content.expenses ul li {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 16%;
+    margin-right: 0.833em; }
+/* line 162, ../../app/stylesheets/application.sass */
+#content.expenses #new_expense {
   display: inline;
   float: left;
   overflow: hidden;
   width: 100%;
   margin-right: 0; }
-  /* line 159, ../../app/stylesheets/application.sass */
-  body #new_expense .inputs {
-    display: inline;
-    float: left;
-    overflow: hidden;
-    width: 50%;
-    margin-right: 0; }
-    /* line 162, ../../app/stylesheets/application.sass */
-    body #new_expense .inputs ol {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      overflow: hidden;
-      display: inline-block; }
-      /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
-      body #new_expense .inputs ol {
-        display: block; }
-      /* line 50, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
-      body #new_expense .inputs ol li {
-        list-style-type: none;
-        margin-left: 0px;
-        white-space: nowrap;
-        display: inline;
-        float: left;
-        padding-left: 4px;
-        padding-right: 4px; }
-        /* line 40, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
-        body #new_expense .inputs ol li.first {
-          padding-left: 0px; }
-        /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
-        body #new_expense .inputs ol li.last {
-          padding-right: 0px; }
-      /* line 165, ../../app/stylesheets/application.sass */
-      body #new_expense .inputs ol #expense_date_input {
-        display: inline;
-        float: left;
-        overflow: hidden;
-        width: 50%;
-        margin-right: 0; }
-        /* line 168, ../../app/stylesheets/application.sass */
-        body #new_expense .inputs ol #expense_date_input label {
-          color: gray; }
-        /* line 171, ../../app/stylesheets/application.sass */
-        body #new_expense .inputs ol #expense_date_input input {
-          color: gray; }
-      /* line 174, ../../app/stylesheets/application.sass */
-      body #new_expense .inputs ol #expense_amount_input {
-        display: inline;
-        float: left;
-        overflow: hidden;
-        width: 45%;
-        margin-right: 0; }
-  /* line 177, ../../app/stylesheets/application.sass */
-  body #new_expense .buttons {
+  /* line 167, ../../app/stylesheets/application.sass */
+  #content.expenses #new_expense ul li #expense_amount {
+    width: 50%; }
+  /* line 170, ../../app/stylesheets/application.sass */
+  #content.expenses #new_expense ul li #expense_tags_saved {
+    width: 90%; }
+  /* line 173, ../../app/stylesheets/application.sass */
+  #content.expenses #new_expense ul li .button {
     display: inline;
     float: left;
     overflow: hidden;
     width: 4%;
-    margin-right: 0;
-    padding: 0; }
-/* line 183, ../../app/stylesheets/application.sass */
-body #expenses .item {
+    margin-right: 0; }
+/* line 176, ../../app/stylesheets/application.sass */
+#content.expenses #expenses {
   display: inline;
   float: left;
   overflow: hidden;
   width: 100%;
   margin-right: 0; }
-  /* line 186, ../../app/stylesheets/application.sass */
-  body #expenses .item .column {
-    width: 25%; }
+  /* line 179, ../../app/stylesheets/application.sass */
+  #content.expenses #expenses .header, #content.expenses #expenses .items, #content.expenses #expenses .item {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    margin-right: 0; }

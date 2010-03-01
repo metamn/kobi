@@ -1,0 +1,23 @@
+- form_for(@category) do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+    
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  
+  - unless @category_parents.blank?
+    %p  
+      = f.label :ancestry
+      %br
+      = select :category, :ancestry, @category_parents.collect {|c| [c.name, c.id]}, {:include_blank => true}
+    
+  
+  = f.submit 'Update'
+
+= link_to 'Show', @category |
+= link_to 'Back', categories_path 

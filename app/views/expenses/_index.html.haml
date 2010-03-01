@@ -1,19 +1,26 @@
 #expenses
-  .item
-    .column
+  %ul.header
+    %li.date
       = t('activerecord.attributes.expense.date')
-    .column
+    %li.amount
       = t('activerecord.attributes.expense.amount')
-    .column
-      &nbsp;
-  - @expenses.each do |expense|
-    .item 
-      .column
-        = expense.date
-      .column
-        = expense.amount
-      .column
-        = link_to_remote 'Edit', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update"
-        = link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete
-    #ajax-update
+    %li.category
+      = t('activerecord.attributes.expense.category')
+    %li.tags
+      = t('activerecord.attributes.expense.tags')
+  %ul.items  
+    - @expenses.each do |expense|
+      .item
+        %li.date
+          = expense.date
+        %li.amount
+          = expense.amount
+        %li.category
+          = expense.category.name
+        %li.tags
+          = expense.tags_saved
+        %li.buttons
+          = link_to_remote 'Edit', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update"
+          = link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete
+        #ajax-update
       
