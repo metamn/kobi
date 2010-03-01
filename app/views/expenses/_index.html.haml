@@ -20,7 +20,7 @@
         %li.tags
           = expense.tags_saved
         %li.buttons
-          = link_to_remote 'Edit', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update"
-          = link_to 'Destroy', expense, :confirm => 'Are you sure?', :method => :delete
+          = link_to_remote 'M', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update"
+          = link_to 'S', expense, :confirm => 'Are you sure?', :method => :delete
         #ajax-update
       

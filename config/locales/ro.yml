@@ -12,6 +12,8 @@ ro:
       expense:
         date: Data
         amount: Suma
+        category: Categorie
+        tags: Etichete
     errors:
       messages:
         blank: Nu poate sa fie gol

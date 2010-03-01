@@ -1,3 +1,14 @@
+#account
+  %ul
+    %li
+      = current_user.name
+      &nbsp;&bull;&nbsp;
+    %li
+      = link_to "Cont", edit_registration_path(current_user)
+      &nbsp;&bull;&nbsp;
+    %li 
+      = link_to "Iesire", destroy_session_path(current_user)
+
 #logo
   %h1
     = link_to "Kobi", root_path
@@ -7,16 +18,9 @@
     %li
       = link_to t('activerecord.models.expense'), new_expense_path      
 
-#account
+#menu2
   %ul
     %li
-      = link_to "Cont", edit_registration_path(current_user)
-      &nbsp;&bull;&nbsp;
-    %li 
-      = link_to "Iesire", destroy_session_path(current_user)
-      
-#flash
-  = render :partial => "shared/flash_messages" 
-  
-  
+      = link_to "Ajutor", "http://blog.kobi.ro"      
+     
 

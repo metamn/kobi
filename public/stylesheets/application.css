@@ -2244,20 +2244,21 @@ body.dashboard {
     display: block; }
   /* line 90, ../../app/stylesheets/application.sass */
   body.dashboard #flash {
-    position: relative;
-    float: right;
-    z-index: 1;
-    top: -4em;
-    margin-right: 1em; }
-    /* line 97, ../../app/stylesheets/application.sass */
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    margin-right: 0;
+    text-align: center; }
+    /* line 94, ../../app/stylesheets/application.sass */
     body.dashboard #flash .flash {
       margin: 0;
       border: none;
       padding: .2em 1em; }
-    /* line 101, ../../app/stylesheets/application.sass */
+    /* line 98, ../../app/stylesheets/application.sass */
     body.dashboard #flash .close {
       cursor: pointer; }
-  /* line 104, ../../app/stylesheets/application.sass */
+  /* line 101, ../../app/stylesheets/application.sass */
   body.dashboard #header {
     display: inline;
     float: left;
@@ -2265,67 +2266,15 @@ body.dashboard {
     width: 100%;
     margin-right: 0;
     background: #9bbbfa;
-    padding: 1em 0; }
-    /* line 110, ../../app/stylesheets/application.sass */
-    body.dashboard #header #logo {
-      display: inline;
-      float: left;
-      overflow: hidden;
-      width: 25%;
-      margin-right: 0; }
-      /* line 113, ../../app/stylesheets/application.sass */
-      body.dashboard #header #logo h1 {
-        margin-bottom: 0;
-        margin-left: .1em; }
-        /* line 116, ../../app/stylesheets/application.sass */
-        body.dashboard #header #logo h1 a {
-          text-decoration: none; }
-    /* line 119, ../../app/stylesheets/application.sass */
-    body.dashboard #header #menu {
-      display: inline;
-      float: left;
-      overflow: hidden;
-      width: 50%;
-      margin-right: 0;
-      font-size: larger;
-      margin-top: 1em; }
-      /* line 124, ../../app/stylesheets/application.sass */
-      body.dashboard #header #menu ul {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        overflow: hidden;
-        display: inline-block;
-        float: right;
-        margin-right: 1em; }
-        /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
-        body.dashboard #header #menu ul {
-          display: block; }
-        /* line 50, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
-        body.dashboard #header #menu ul li {
-          list-style-type: none;
-          margin-left: 0px;
-          white-space: nowrap;
-          display: inline;
-          float: left;
-          padding-left: 4px;
-          padding-right: 4px; }
-          /* line 40, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
-          body.dashboard #header #menu ul li.first {
-            padding-left: 0px; }
-          /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
-          body.dashboard #header #menu ul li.last {
-            padding-right: 0px; }
-    /* line 129, ../../app/stylesheets/application.sass */
+    padding: 0; }
+    /* line 106, ../../app/stylesheets/application.sass */
     body.dashboard #header #account {
       display: inline;
       float: left;
       overflow: hidden;
-      width: 25%;
-      margin-right: 0;
-      margin-top: 1.5em; }
-      /* line 133, ../../app/stylesheets/application.sass */
+      width: 100%;
+      margin-right: 0; }
+      /* line 109, ../../app/stylesheets/application.sass */
       body.dashboard #header #account ul {
         margin: 0;
         padding: 0;
@@ -2353,14 +2302,79 @@ body.dashboard {
           /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
           body.dashboard #header #account ul li.last {
             padding-right: 0px; }
+    /* line 114, ../../app/stylesheets/application.sass */
+    body.dashboard #header #logo {
+      display: inline;
+      float: left;
+      overflow: hidden;
+      width: 16%;
+      margin-right: 0.833em; }
+      /* line 117, ../../app/stylesheets/application.sass */
+      body.dashboard #header #logo h1 {
+        margin-bottom: 0;
+        margin-left: .1em; }
+        /* line 120, ../../app/stylesheets/application.sass */
+        body.dashboard #header #logo h1 a {
+          text-decoration: none; }
+    /* line 123, ../../app/stylesheets/application.sass */
+    body.dashboard #header #menu, body.dashboard #header #menu2 {
+      display: inline;
+      float: left;
+      overflow: hidden;
+      width: 66%;
+      margin-right: 0;
+      font-size: larger;
+      margin-top: 1em; }
+      /* line 128, ../../app/stylesheets/application.sass */
+      body.dashboard #header #menu ul, body.dashboard #header #menu2 ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        overflow: hidden;
+        display: inline-block;
+        float: right;
+        margin: 0; }
+        /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
+        body.dashboard #header #menu ul, body.dashboard #header #menu2 ul {
+          display: block; }
+        /* line 50, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+        body.dashboard #header #menu ul li, body.dashboard #header #menu2 ul li {
+          list-style-type: none;
+          margin-left: 0px;
+          white-space: nowrap;
+          display: inline;
+          float: left;
+          padding-left: 4px;
+          padding-right: 4px; }
+          /* line 40, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+          body.dashboard #header #menu ul li.first, body.dashboard #header #menu2 ul li.first {
+            padding-left: 0px; }
+          /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
+          body.dashboard #header #menu ul li.last, body.dashboard #header #menu2 ul li.last {
+            padding-right: 0px; }
+    /* line 133, ../../app/stylesheets/application.sass */
+    body.dashboard #header #menu2 {
+      display: inline;
+      float: left;
+      overflow: hidden;
+      width: 16%;
+      margin-right: 0; }
   /* line 138, ../../app/stylesheets/application.sass */
   body.dashboard #content {
     display: inline;
     float: left;
     overflow: hidden;
-    width: 100%;
+    width: 83%;
     margin-right: 0; }
-  /* line 141, ../../app/stylesheets/application.sass */
+  /* line 140, ../../app/stylesheets/application.sass */
+  body.dashboard #sidebar {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 16%;
+    margin-right: 0; }
+  /* line 145, ../../app/stylesheets/application.sass */
   body.dashboard #footer {
     display: inline;
     float: left;
@@ -2369,14 +2383,14 @@ body.dashboard {
     margin-right: 0;
     margin-top: 3em;
     border-top: 1px solid #9bbbfa; }
-    /* line 146, ../../app/stylesheets/application.sass */
+    /* line 150, ../../app/stylesheets/application.sass */
     body.dashboard #footer p {
       float: right;
       margin-right: 1em; }
 
 
 
-/* line 156, ../../app/stylesheets/application.sass */
+/* line 160, ../../app/stylesheets/application.sass */
 #content.expenses ul {
   margin: 0;
   padding: 0;
@@ -2402,44 +2416,70 @@ body.dashboard {
     /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
     #content.expenses ul li.last {
       padding-right: 0px; }
-  /* line 159, ../../app/stylesheets/application.sass */
-  #content.expenses ul li {
+  /* line 163, ../../app/stylesheets/application.sass */
+  #content.expenses ul li.date {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 25%;
+    margin-right: 0.833em; }
+  /* line 165, ../../app/stylesheets/application.sass */
+  #content.expenses ul li.amount {
     display: inline;
     float: left;
     overflow: hidden;
     width: 16%;
     margin-right: 0.833em; }
-/* line 162, ../../app/stylesheets/application.sass */
-#content.expenses #new_expense {
-  display: inline;
-  float: left;
-  overflow: hidden;
-  width: 100%;
-  margin-right: 0; }
   /* line 167, ../../app/stylesheets/application.sass */
-  #content.expenses #new_expense ul li #expense_amount {
-    width: 50%; }
-  /* line 170, ../../app/stylesheets/application.sass */
-  #content.expenses #new_expense ul li #expense_tags_saved {
-    width: 90%; }
-  /* line 173, ../../app/stylesheets/application.sass */
-  #content.expenses #new_expense ul li .button {
+  #content.expenses ul li.category {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 20%;
+    margin-right: 0.833em; }
+  /* line 169, ../../app/stylesheets/application.sass */
+  #content.expenses ul li.tags {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 25%;
+    margin-right: 0; }
+  /* line 171, ../../app/stylesheets/application.sass */
+  #content.expenses ul li.buttons {
     display: inline;
     float: left;
     overflow: hidden;
     width: 4%;
     margin-right: 0; }
-/* line 176, ../../app/stylesheets/application.sass */
+/* line 174, ../../app/stylesheets/application.sass */
+#content.expenses #new_expense {
+  margin: 1em 0; }
+  /* line 176, ../../app/stylesheets/application.sass */
+  #content.expenses #new_expense input {
+    padding: 0; }
+  /* line 179, ../../app/stylesheets/application.sass */
+  #content.expenses #new_expense #expense_amount {
+    width: 70%; }
+  /* line 182, ../../app/stylesheets/application.sass */
+  #content.expenses #new_expense #expense_category_id, #content.expenses #new_expense #expense_tags_saved {
+    width: 100%; }
+/* line 186, ../../app/stylesheets/application.sass */
 #content.expenses #expenses {
   display: inline;
   float: left;
   overflow: hidden;
   width: 100%;
   margin-right: 0; }
-  /* line 179, ../../app/stylesheets/application.sass */
+  /* line 189, ../../app/stylesheets/application.sass */
   #content.expenses #expenses .header, #content.expenses #expenses .items, #content.expenses #expenses .item {
     display: inline;
     float: left;
     overflow: hidden;
     width: 100%;
     margin-right: 0; }
+  /* line 192, ../../app/stylesheets/application.sass */
+  #content.expenses #expenses ul.header {
+    margin-bottom: .5em; }
+    /* line 195, ../../app/stylesheets/application.sass */
+    #content.expenses #expenses ul.header li {
+      font-weight: bold; }

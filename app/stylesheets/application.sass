@@ -88,11 +88,8 @@ body.dashboard
   :width 100%
   
   #flash
-    :position relative
-    :float right
-    :z-index 1
-    :top -4em
-    :margin-right 1em
+    +column(24, last)
+    :text-align center
     
     .flash
       :margin 0
@@ -104,11 +101,18 @@ body.dashboard
   #header
     +column(24, last)
     :background = !lightblue
-    :padding 1em 0
+    :padding 0
     
+    #account
+      +column(24, last)      
+      
+      ul
+        +horizontal-list
+        :float right
+        :margin-right 1em
     
     #logo 
-      +column(6, last)    
+      +column(4)
       
       h1
         :margin-bottom 0
@@ -116,27 +120,27 @@ body.dashboard
         a
           :text-decoration none  
       
-    #menu
-      +column(12, last)
+    #menu, #menu2
+      +column(16, last)
       :font-size larger
       :margin-top 1em
       
       ul
         +horizontal-list
         :float right
-        :margin-right 1em
+        :margin 0
       
-    #account
-      +column(6, last)
-      :margin-top 1.5em
+    #menu2
+      +column(4, last)
       
-      ul
-        +horizontal-list
-        :float right
-        :margin-right 1em
+      
   
   #content
-    +column(24, last)
+    +column(20, last)
+  #sidebar
+    +column(4, last)
+  #content, #sidebar
+    
   
   #footer
     +column(24, last)
@@ -156,30 +160,41 @@ body.dashboard
   ul
     +horizontal-list
     
-    li
+    li.date
+      +column(6)
+    li.amount
       +column(4)
+    li.category
+      +column(5)
+    li.tags
+      +column(6, last)
+    li.buttons
+      +column(1, last)
 
   #new_expense
-    +column(24, last)        
+    :margin 1em 0
+    input
+      :padding 0
     
-    ul
-      li    
-        #expense_amount
-          :width 50%
-        
-        #expense_tags_saved
-          :width 90%
-        
-        .button
-          +column(1, last)
-      
+    #expense_amount
+      :width 70%
+    
+    #expense_category_id, #expense_tags_saved  
+      :width 100%
+    
+  
   #expenses
     +column(24, last)
     
     .header, .items, .item
       +column(24, last)
     
-    
+    ul.header
+      :margin-bottom .5em
+      
+      li
+        :font-weight bold
+        
     
     
     

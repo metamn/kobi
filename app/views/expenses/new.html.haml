@@ -1,19 +1,17 @@
-%h3
-  Cheltuieli
   
 - form_for @expense do |f|
   = f.error_messages
   %ul
     %li.date
-      = f.date_select :date
+      = f.date_select :date, :use_short_month => true
     %li.amount 
       = f.text_field :amount
       RON
     %li.category
       = select :expense, :category_id, Category.all.collect {|c| [c.name, c.id]}
-    %li.tag
+    %li.tags
       = f.text_field :tags_saved
-    %li.button
+    %li.buttons
       = f.submit "+"  
   
 = render :partial => "expenses/index"
