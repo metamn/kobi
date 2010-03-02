@@ -22,8 +22,8 @@
       %td
         = category.parent.name unless category.parent.nil?
       %td
-        = link_to t('activerecord.operations.category.edit'), edit_category_path(category)
+        = link_to t('activerecord.operations.edit'), edit_category_path(category)
       %td
-        = link_to t('activerecord.operations.category.destroy'), category, :confirm => t('activerecord.operations.category.confirm'), :method => :delete
+        = link_to t('activerecord.operations.destroy'), category, :confirm => t('activerecord.operations.confirm'), :method => :delete
 
 = link_to t('activerecord.operations.category.new'), new_category_path      

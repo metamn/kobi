@@ -5,8 +5,8 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.xml
   def index
-    @expenses = Expense.all
-
+    @expenses = Expense.sorted
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @expenses }
@@ -28,7 +28,8 @@ class ExpensesController < ApplicationController
   # GET /expenses/new.xml
   def new
     @expense = Expense.new
-    @expenses = Expense.all
+    @expenses = Expense.sorted
+    @categories = Category.roots
     
     respond_to do |format|
       format.html # new.html.erb
@@ -38,17 +39,20 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/1/edit
   def edit
-    @expense = Expense.find(params[:id])
+    @expense = Expense.find(params[:id])    
+    @categories = Category.roots
   end
 
   # POST /expenses
   # POST /expenses.xml
   def create
     @expense = Expense.new(params[:expense])
-
+    @expenses = Expense.sorted
+    @categories = Category.roots
+    
     respond_to do |format|
       if @expense.save
-        flash[:notice] = 'Expense was successfully created.'
+        flash[:notice] = t('activerecord.flash.created')
         format.html { redirect_to :action => "new" }
         format.xml  { render :xml => @expense, :status => :created, :location => @expense }
       else
@@ -62,10 +66,12 @@ class ExpensesController < ApplicationController
   # PUT /expenses/1.xml
   def update
     @expense = Expense.find(params[:id])
-
+    @expenses = Expense.sorted
+    @categories = Category.roots
+    
     respond_to do |format|
       if @expense.update_attributes(params[:expense])
-        flash[:notice] = 'Expense was successfully updated.'
+        flash[:notice] = t('activerecord.flash.updated')
         format.html { redirect_to :action => "new" }
         format.xml  { head :ok }
       else

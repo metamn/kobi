@@ -1,16 +1,16 @@
 #edit_expense
   - form_for @expense do |f|
     = f.error_messages
-    %ul
+    %ul.edit
       %li.date
         = f.date_select :date, :use_short_month => true
       %li.amount 
         = f.text_field :amount
         RON
       %li.category
-        = select :expense, :category_id, Category.all.collect {|c| [c.name, c.id]}
+        = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
       %li.tags
         = f.text_field :tags_saved
     %br
-    = f.submit "Modificare"  
-    = link_to "Cancel", new_expense_path
+    = f.submit t('activerecord.operations.edit')  
+    = link_to t('activerecord.operations.back'), new_expense_path

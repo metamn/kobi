@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @category = Category.new
-    @category_parents = Category.roots
+    @categories = Category.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +41,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
-    @category_parents = Category.roots
+    @categories = Category.all
   end
 
   # POST /categories
@@ -51,8 +51,8 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        flash[:notice] = 'Category was successfully created.'
-        format.html { redirect_to(@category) }
+        flash[:notice] = t('activerecord.flash.created')
+        format.html { redirect_to :action => 'index' }
         format.xml  { render :xml => @category, :status => :created, :location => @category }
       else
         format.html { render :action => "new" }
@@ -68,8 +68,8 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
-        flash[:notice] = 'Category was successfully updated.'
-        format.html { redirect_to(@category) }
+        flash[:notice] = t('activerecord.flash.updated')
+        format.html { redirect_to :action => 'index' }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

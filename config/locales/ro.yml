@@ -1,9 +1,14 @@
 ro:
+  menu:
+    account: Cont
+    logout: Iesire
+    informations: Informatii 
   dashboard:
     sidebar:
       additional_operations: Operatii aditionale
       suport: Suport
       suggestions: Sugestii
+      help: Ajutor
   activerecord:
     models:
       expense: Cheltuieli
@@ -23,18 +28,27 @@ ro:
         amount: Suma
         category: Categorie
         tags: Etichete
+        tags_saved: Etichete
       category:
         name: Categorie
         description: Descriere
-        parent: Apartine de
+        parent: Apartine de        
     operations:
       back: Inapoi
+      edit: Modificare
+      destroy: Stergere
+      confirm: Sunteti sigur?
+      new: Adaugare  
       category:
         new: Adaugare categorie
-        edit: Modificare
-        destroy: Stergere
-        confirm: Sunteti sigur?
+        edit: Modificare categorie      
+    flash:
+      created: Creat cu succes!
+      updated: Modificat cu succes!
     errors:
+      template:
+        header: Date invalide
+        body: Articolul nu s-a putut salva din cauza urmatoarelor erori
       messages:
         blank: Nu poate sa fie gol
         too_short: Prea scurt
@@ -47,6 +61,10 @@ ro:
           attributes:
             password:
               confirmation: Confirmare parola incorecta  
+        expense:
+          attributes:
+            amount:
+              not_a_number: Trebuie sa fie un numar
             
   
   formtastic:

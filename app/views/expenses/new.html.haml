@@ -12,19 +12,22 @@
     = t('dashboard.sidebar.suport')
   %ul
     %li 
-      = link_to t('dashboard.sidebar.suggestions'), "http://blog.kobi.ro/7/sugestii/"
+      = link_to t('dashboard.sidebar.suggestions'), "http://blog.kobi.ro/7/sugestii-pentru-cheltuieli/"
+    %li 
+      = link_to t('dashboard.sidebar.help'), "http://blog.kobi.ro/manual-de-utilizare/cheltuieli/"
   
 .block    
   - form_for @expense do |f|
     = f.error_messages
-    %ul
+    %ul.new
       %li.date
         = f.date_select :date, :use_short_month => true
       %li.amount 
         = f.text_field :amount
         RON
       %li.category
-        = select :expense, :category_id, Category.all.collect {|c| [c.name, c.id]}
+        -#= select :expense, :category_id, Category.all.collect {|c| [c.name, c.id]}
+        = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
       %li.tags
         = f.text_field :tags_saved
       %li.buttons

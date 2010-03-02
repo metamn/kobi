@@ -16,7 +16,7 @@
         %li.amount
           = expense.amount
         %li.category
-          = expense.category.name
+          = expense.category.name unless expense.category.nil?
         %li.tags
           = expense.tags_saved
         %li.buttons

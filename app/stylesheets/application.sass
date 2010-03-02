@@ -154,6 +154,18 @@ body.dashboard
     #body
       :background = !content
       :padding 0 .5em
+      
+    .errorExplanation
+      :border 1px solid indianRed
+      :color indianRed      
+      :margin-bottom 1em
+      
+      h2
+        :background indianRed
+        :padding .3em
+        
+      p
+        :padding 1em  
     
   #sidebar
     +column(4, last)
@@ -178,7 +190,7 @@ body.dashboard
 -# -------------------------------    
 
 #content.expenses
-  ul
+  ul.edit, ul.new, ul.header, ul.items
     +horizontal-list
     :margin 0
     :padding 0

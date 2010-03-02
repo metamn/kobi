@@ -10,10 +10,10 @@
           = current_user.name
           &nbsp;&bull;&nbsp;
         %li
-          = link_to "Cont", edit_registration_path(current_user)
+          = link_to t('menu.account'), edit_registration_path(current_user)
           &nbsp;&bull;&nbsp;
         %li 
-          = link_to "Iesire", destroy_session_path(current_user)
+          = link_to t('menu.logout'), destroy_session_path(current_user)
       
   .block
     #menu
@@ -24,6 +24,6 @@
     #menu2
       %ul
         %li
-          = link_to "Ajutor", "http://blog.kobi.ro"      
+          = link_to t('menu.informations'), "http://blog.kobi.ro"      
      
 
