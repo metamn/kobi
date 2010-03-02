@@ -11,6 +11,7 @@
 !background = #e5e5e5
 !content = #f2f2f2
 !content_shadow = #A5A5A5
+!border = #ddd
 
 
 -# General
@@ -194,8 +195,11 @@ body.dashboard
       +column(2, last)
       :float right
 
-  #new_expense
+  #new_expense, #edit_expense
     :padding 1em 0
+    :background lightyellow
+    :margin-bottom 2em
+    
     input
       :padding 0
     
@@ -206,7 +210,7 @@ body.dashboard
       :width 100%
     
   
-  #expenses
+  #index_expenses
     +column(24, last)
     :background inherit
     :padding-bottom 1em
@@ -219,6 +223,19 @@ body.dashboard
       
       li
         :font-weight bold
+        
+    .items
+      .item
+        :padding .2em 0
+        :border-bottom = 1px solid !border
+        
+      .even 
+        :background = !background
+      
+      .odd
+        :background = !content
+      
+      
         
     
     

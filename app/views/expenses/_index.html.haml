@@ -1,4 +1,4 @@
-#expenses
+#index_expenses
   %ul.header
     %li.date
       = t('activerecord.attributes.expense.date')
@@ -10,7 +10,7 @@
       = t('activerecord.attributes.expense.tags')
   %ul.items  
     - @expenses.each do |expense|
-      .item
+      .item{:class => "#{cycle('even', 'odd')} block"}
         %li.date
           = expense.date
         %li.amount
