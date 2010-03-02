@@ -2361,7 +2361,7 @@ body.dashboard {
     display: inline;
     float: left;
     overflow: hidden;
-    width: 83%;
+    width: 75%;
     margin-right: 0;
     -moz-box-shadow: 0.2em 0.2em 0.1em #a5a5a5;
     -webkit-box-shadow: 0.2em 0.2em 0.1em #a5a5a5;
@@ -2382,7 +2382,8 @@ body.dashboard {
     float: left;
     overflow: hidden;
     width: 16%;
-    margin-right: 0; }
+    margin-right: 0;
+    margin: 1.5em 1.5em 0; }
   /* line 163, ../../app/stylesheets/application.sass */
   body.dashboard #footer {
     display: inline;
@@ -2512,14 +2513,33 @@ body.dashboard {
   /* line 235, ../../app/stylesheets/application.sass */
   #content.expenses #index_expenses .items .odd {
     background: #f2f2f2; }
+  /* line 238, ../../app/stylesheets/application.sass */
+  #content.expenses #index_expenses #edit_expense {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    margin-right: 0; }
 
 
 
-/* line 245, ../../app/stylesheets/application.sass */
+/* line 247, ../../app/stylesheets/application.sass */
+#content.categories #body {
+  padding: 1.5em .5em !important; }
+/* line 250, ../../app/stylesheets/application.sass */
+#content.categories table {
+  padding: 1.5em 0; }
+  /* line 253, ../../app/stylesheets/application.sass */
+  #content.categories table tr.even td {
+    background: #e5e5e5; }
+
+
+
+/* line 262, ../../app/stylesheets/application.sass */
 .block {
   display: block;
   overflow: hidden; }
 
-/* line 249, ../../app/stylesheets/application.sass */
+/* line 266, ../../app/stylesheets/application.sass */
 .box {
   padding: 1.5em 1.5em 0; }

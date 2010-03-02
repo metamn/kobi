@@ -1,5 +1,12 @@
 - content_for :title do 
-  = controller.controller_name.capitalize
+  = t('activerecord.models.description.expense')
+  
+- content_for :sidebar do
+  %h4.title
+    =t('dashboard.sidebar.additional_operations')
+  %ul
+    %li
+      = link_to t('activerecord.models.category'), categories_path
   
 .block    
   - form_for @expense do |f|

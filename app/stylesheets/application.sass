@@ -140,7 +140,7 @@ body.dashboard
       
   
   #content
-    +column(20, last)
+    +column(18, last)
     :-moz-box-shadow = .2em .2em .1em !content_shadow
     :-webkit-box-shadow = .2em .2em .1em !content_shadow
     :margin 1.5em 1.5em 0
@@ -157,9 +157,9 @@ body.dashboard
     
   #sidebar
     +column(4, last)
-  #content, #sidebar
+    :margin 1.5em 1.5em 0
     
-  
+    
   #footer
     +column(24, last)
     :margin-top 3em
@@ -235,9 +235,26 @@ body.dashboard
       .odd
         :background = !content
       
-      
+    #edit_expense
+      +column(24, last)      
         
-    
+
+
+-# Categories
+-# -------------------------------     
+
+#content.categories
+  #body
+    :padding 1.5em .5em !important
+  
+  table
+    :padding 1.5em 0
+
+    tr.even td
+      :background = !background
+
+
+
     
 -# Common
 -# -------------------------------        

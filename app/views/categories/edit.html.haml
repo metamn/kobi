@@ -1,6 +1,6 @@
 - content_for :title do 
-  = t('activerecord.operations.category.new')
-
+  = t('activerecord.operations.category.edit')
+  
 - form_for(@category) do |f|
   = f.error_messages
   %p
@@ -20,5 +20,6 @@
       = select :category, :ancestry, @category_parents.collect {|c| [c.name, c.id]}, {:include_blank => true}
     
   
-  = f.submit t('activerecord.operations.category.new')
-  = link_to t('activerecord.operations.back'), categories_path 
+  = f.submit t('activerecord.operations.category.edit')
+  = link_to t('activerecord.operations.back'), categories_path   
+

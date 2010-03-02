@@ -1,7 +1,15 @@
 ro:
+  dashboard:
+    sidebar:
+      additional_operations: Operatii aditionale
+  
   activerecord:
     models:
       expense: Cheltuieli
+      category: Categorii cheltuieli
+      description:
+        expense: Lista cheltuielior
+        category: Categorii principale de cheltuieli
     attributes:
       user:
         name: Nume utilizator
@@ -14,6 +22,17 @@ ro:
         amount: Suma
         category: Categorie
         tags: Etichete
+      category:
+        name: Categorie
+        description: Descriere
+        parent: Apartine de
+    operations:
+      back: Inapoi
+      category:
+        new: Adaugare categorie
+        edit: Modificare
+        destroy: Stergere
+        confirm: Sunteti sigur?
     errors:
       messages:
         blank: Nu poate sa fie gol
