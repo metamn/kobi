@@ -2,7 +2,8 @@ ro:
   dashboard:
     sidebar:
       additional_operations: Operatii aditionale
-  
+      suport: Suport
+      suggestions: Sugestii
   activerecord:
     models:
       expense: Cheltuieli
