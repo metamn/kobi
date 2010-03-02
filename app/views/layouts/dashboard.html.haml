@@ -20,10 +20,12 @@
       = render :partial => "shared/header"
     #flash
       = render :partial => "shared/flash_messages"
-    #content{:class => controller.controller_name}       
-      = yield  
+    #content{:class => controller.controller_name}
+      #title
+        = yield :title
+      #body
+        = yield  
     #sidebar{:class => controller.controller_name}       
       = yield :sidebar  
     #footer
-      %p         
-        =link_to "Kobi Blog", "http://blog.kobi.ro"
+      

@@ -23457,3 +23457,1079 @@ Rendered expenses/_index (12.0ms)
 Rendered shared/_header (0.7ms)
 Rendered shared/_flash_messages (0.2ms)
 Completed in 145ms (View: 114, DB: 4) | 200 OK [http://localhost/expenses/new]
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:44:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.6ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (16.7ms)
+Rendered shared/_header (4.9ms)
+Rendered shared/_flash_messages (1.6ms)
+Completed in 276ms (View: 156, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:45:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (14.2ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 92ms (View: 55, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:46:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.8ms)
+Rendered shared/_header (5.5ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 167ms (View: 55, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:46:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.6ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 150ms (View: 46, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:47:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.1ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 74ms (View: 43, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:47:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.5ms)
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 78ms (View: 45, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:49:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (94.1ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 156ms (View: 125, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:49:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.1ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 74ms (View: 43, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 01:50:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.7ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 161ms (View: 131, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#edit (for 127.0.0.1 at 2010-03-02 01:51:14) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"registrations"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ; if controller_name != 'sessions' ;@output_buffer << ('
+'.html_safe!);@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.sessions.link'), new_session_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.registerable? && controller_name != 'registrations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.registrations.link'), new_registration_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.recoverable? && controller_name != 'passwords' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.passwords.link'), new_password_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.confirmable? && controller_name != 'confirmations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.confirmations.link'), new_confirmation_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.lockable? && controller_name != 'unlocks' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.unlocks.link'), new_unlock_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_devise_links (10.6ms)
+Completed in 195ms (View: 175, DB: 2) | 200 OK [http://localhost/cont/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#edit (for 127.0.0.1 at 2010-03-02 01:51:34) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"registrations"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (0.8ms)
+Completed in 47ms (View: 27, DB: 2) | 200 OK [http://localhost/cont/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 01:52:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+ __in_erb_template=true 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_header (0.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 120ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 01:59:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (11.1ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 38ms (View: 19, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 01:59:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (6.6ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 30ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:00:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (6.6ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 30ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:03:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (7.4ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 34ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:04:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (11.4ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 38ms (View: 19, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:05:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (12.2ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 41ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:05:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+
+ActionView::TemplateError (The line was indented 2 levels deeper than the previous line.) on line #19 of app/views/shared/_header.html.haml:
+16:           = link_to "Iesire", destroy_session_path(current_user)
+17:     
+18:     .block
+19:         #menu
+20:           %ul
+21:             %li
+22:               = link_to t('activerecord.models.expense'), new_expense_path      
+
+    app/views/shared/_header.html.haml:19
+    haml (2.2.17) lib/haml/precompiler.rb:180:in `precompile'
+    haml (2.2.17) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.17) lib/haml/template/plugin.rb:24:in `new'
+    haml (2.2.17) lib/haml/template/plugin.rb:24:in `compile'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.17) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/dashboard.html.haml:20:in `_run_haml_app47views47layouts47dashboard46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (77.2ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:06:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (12.4ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 42ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:06:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (11.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 40ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:06:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+
+ActionView::TemplateError (The line was indented 2 levels deeper than the previous line.) on line #3 of app/views/shared/_header.html.haml:
+1: .box
+2:   .block  
+3:       #logo
+4:         %h1
+5:           = link_to "Kobi", root_path
+6:           
+
+    app/views/shared/_header.html.haml:3
+    haml (2.2.17) lib/haml/precompiler.rb:180:in `precompile'
+    haml (2.2.17) lib/haml/engine.rb:114:in `initialize'
+    haml (2.2.17) lib/haml/template/plugin.rb:24:in `new'
+    haml (2.2.17) lib/haml/template/plugin.rb:24:in `compile'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    haml (2.2.17) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render'
+    app/views/layouts/dashboard.html.haml:20:in `_run_haml_app47views47layouts47dashboard46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (159.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:07:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (11.6ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 40ms (View: 20, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-02 02:08:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (6.3ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 29ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:08:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.5ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 74ms (View: 42, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:09:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.3ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 84ms (View: 52, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:11:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.7ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 85ms (View: 53, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:13:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.6ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+
+ActionView::TemplateError (undefined method `controller' for #<ExpensesController:0xb77e49e4>) on line #2 of app/views/expenses/new.html.haml:
+1: - content_for :title do 
+2:   = controller.controller.name
+3:   
+4:     
+5: - form_for @expense do |f|
+
+    app/views/expenses/new.html.haml:2:in `_run_haml_app47views47expenses47new46html46haml'
+    haml (2.2.17) lib/haml/helpers.rb:322:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:322:in `capture_haml_without_haml_xss'
+    haml (2.2.17) lib/haml/helpers.rb:523:in `with_haml_buffer'
+    haml (2.2.17) lib/haml/helpers.rb:318:in `capture_haml_without_haml_xss'
+    haml (2.2.17) rails/./lib/haml/helpers/xss_mods.rb:60:in `capture_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:87:in `capture'
+    app/views/expenses/new.html.haml:1:in `_run_haml_app47views47expenses47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/expenses_controller.rb:33:in `new'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (69.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:13:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.4ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 84ms (View: 51, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.8ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:16:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (12.5ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 161ms (View: 130, DB: 5) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:21:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.4ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 74ms (View: 43, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:22:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.6ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 81ms (View: 46, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:24:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (12.3ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 178ms (View: 146, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:25:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.2ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 96ms (View: 64, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:26:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.5ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 79ms (View: 45, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:28:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.5ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 79ms (View: 45, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:28:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (9.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (16.4ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (134.9ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 265ms (View: 167, DB: 28) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:30:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (12.6ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 84ms (View: 52, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:31:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.9ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 81ms (View: 46, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:35:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (13.3ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 171ms (View: 140, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:35:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (12.3ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 78ms (View: 45, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:37:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (12.3ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 88ms (View: 54, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:38:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (12.8ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 174ms (View: 49, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:38:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.8ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 74ms (View: 43, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:39:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (12.5ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 84ms (View: 48, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:40:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (13.6ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 174ms (View: 142, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:41:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.3ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 75ms (View: 43, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:41:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (17.0ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 101ms (View: 59, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:43:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.8ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 76ms (View: 43, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:44:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (17.7ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 86ms (View: 53, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:44:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (17.3ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 85ms (View: 53, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:46:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.9ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 84ms (View: 52, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:46:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.4ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 83ms (View: 51, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:47:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.4ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 86ms (View: 53, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-02 02:48:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+Rendered expenses/_index (11.8ms)
+Rendered shared/_header (0.7ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 165ms (View: 46, DB: 4) | 200 OK [http://localhost/expenses/new]

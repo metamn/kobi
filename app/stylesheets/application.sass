@@ -8,13 +8,15 @@
   
 !grayblue = #E5ECF9
 !lightblue = #9BBBFA
+!background = #e5e5e5
+!content = #f2f2f2
+!content_shadow = #A5A5A5
 
 
 -# General
 -# -------------------------------
 body
   :overflow auto !important
-
 
 
 
@@ -31,7 +33,7 @@ body.login
     +column(24, last)
     
     .logo-container 
-      :margin-top 10em  
+      :margin-top 5em  
       
       .logo
         :background = !lightblue
@@ -86,6 +88,7 @@ body.login
 body.dashboard
   +container  
   :width 100%
+  :background = !background
   
   #flash
     +column(24, last)
@@ -103,40 +106,54 @@ body.dashboard
     :background = !lightblue
     :padding 0
     
-    #account
-      +column(24, last)      
-      
-      ul
-        +horizontal-list
-        :float right
-        :margin-right 1em
-    
     #logo 
-      +column(4)
+      +column(12, last)
       
       h1
         :margin-bottom 0
         :margin-left .1em
         a
           :text-decoration none  
-      
-    #menu, #menu2
-      +column(16, last)
-      :font-size larger
-      :margin-top 1em
+    
+    #account
+      +column(12, last)      
       
       ul
         +horizontal-list
         :float right
         :margin 0
       
+    #menu, #menu2
+      +column(12, last)
+      :font-size larger
+      :margin-top 1em
+      
+      ul
+        +horizontal-list
+        :margin 0
+      
     #menu2
-      +column(4, last)
+      ul
+        :float right
       
       
   
   #content
     +column(20, last)
+    :-moz-box-shadow = .2em .2em .1em !content_shadow
+    :-webkit-box-shadow = .2em .2em .1em !content_shadow
+    :margin 1.5em 1.5em 0
+    
+    #title
+      :background = !grayblue
+      :padding 1em .5em
+      :font-size larger
+      :font-weight bold
+    
+    #body
+      :background = !content
+      :padding 0 .5em
+    
   #sidebar
     +column(4, last)
   #content, #sidebar
@@ -145,8 +162,7 @@ body.dashboard
   #footer
     +column(24, last)
     :margin-top 3em
-    :border-top = 1px solid !lightblue
-    
+        
     p
       :float right
       :margin-right 1em
@@ -159,20 +175,27 @@ body.dashboard
 #content.expenses
   ul
     +horizontal-list
+    :margin 0
+    :padding 0
+    
+    li
+      :margin 0
+      :padding 0
     
     li.date
       +column(6)
     li.amount
-      +column(4)
+      +column(5)
     li.category
       +column(5)
     li.tags
-      +column(6, last)
+      +column(5, last)
     li.buttons
-      +column(1, last)
+      +column(2, last)
+      :float right
 
   #new_expense
-    :margin 1em 0
+    :padding 1em 0
     input
       :padding 0
     
@@ -185,6 +208,8 @@ body.dashboard
   
   #expenses
     +column(24, last)
+    :background inherit
+    :padding-bottom 1em
     
     .header, .items, .item
       +column(24, last)
@@ -197,8 +222,16 @@ body.dashboard
         
     
     
+-# Common
+-# -------------------------------        
     
-    
-    
+.block
+  :display block
+  :overflow hidden
+  
+.box
+  :padding 1.5em 1.5em 0 
+  
+  
     
   

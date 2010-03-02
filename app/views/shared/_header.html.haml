@@ -1,26 +1,29 @@
-#account
-  %ul
-    %li
-      = current_user.name
-      &nbsp;&bull;&nbsp;
-    %li
-      = link_to "Cont", edit_registration_path(current_user)
-      &nbsp;&bull;&nbsp;
-    %li 
-      = link_to "Iesire", destroy_session_path(current_user)
+.box
+  .block  
+    #logo
+      %h1
+        = link_to "Kobi", root_path
+        
+    #account
+      %ul
+        %li
+          = current_user.name
+          &nbsp;&bull;&nbsp;
+        %li
+          = link_to "Cont", edit_registration_path(current_user)
+          &nbsp;&bull;&nbsp;
+        %li 
+          = link_to "Iesire", destroy_session_path(current_user)
+      
+  .block
+    #menu
+      %ul
+        %li
+          = link_to t('activerecord.models.expense'), new_expense_path      
 
-#logo
-  %h1
-    = link_to "Kobi", root_path
-    
-#menu
-  %ul
-    %li
-      = link_to t('activerecord.models.expense'), new_expense_path      
-
-#menu2
-  %ul
-    %li
-      = link_to "Ajutor", "http://blog.kobi.ro"      
+    #menu2
+      %ul
+        %li
+          = link_to "Ajutor", "http://blog.kobi.ro"      
      
 
