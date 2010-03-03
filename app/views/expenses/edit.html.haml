@@ -8,9 +8,9 @@
         = f.text_field :amount
         RON
       %li.category
-        = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
+        = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name, @expense.category.id)
       %li.tags
-        = f.text_field :tags_saved
+        = f.text_field :tag_list
     %br
     = f.submit t('activerecord.operations.edit')  
     = link_to t('activerecord.operations.back'), new_expense_path

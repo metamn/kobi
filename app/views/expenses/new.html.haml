@@ -29,7 +29,7 @@
         -#= select :expense, :category_id, Category.all.collect {|c| [c.name, c.id]}
         = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
       %li.tags
-        = f.text_field :tags_saved
+        = f.text_field :tag_list
       %li.buttons
         = f.submit " + "  
 

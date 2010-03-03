@@ -34057,3 +34057,979 @@ Rendering categories/index
 Rendered shared/_header (1.0ms)
 Rendered shared/_flash_messages (0.3ms)
 Completed in 123ms (View: 95, DB: 3) | 200 OK [http://localhost/categories]
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-03 19:07:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+ __in_erb_template=true 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_header (5.9ms)
+Rendered shared/_flash_messages (1.6ms)
+Completed in 119ms (View: 42, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:07:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'25') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mExpense Load (0.9ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (82.6ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 202ms (View: 157, DB: 5) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 19:07:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 57ms (View: 30, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 19:07:52) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 57ms (View: 26, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2010-03-03 19:07:56) [PUT]
+  Parameters: {"category"=>{"name"=>"Test3", "ancestry"=>"24", "description"=>""}, "commit"=>"Modificare", "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"25", "controller"=>"categories"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'Test3' AND "categories".id <> 25) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'Test3' AND "categories".id <> 25) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" WHERE (ancestry like E'25/%' or ancestry = E'25') [0m
+  [4;36;1mCategory Update (0.5ms)[0m   [0;1mUPDATE "categories" SET "updated_at" = '2010-03-03 17:07:56.546306', "ancestry" = E'24' WHERE "id" = 25[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 143ms (DB: 5) | 302 Found [http://localhost/categories/25]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 19:07:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 52ms (View: 25, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:07:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mExpense Load (0.8ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (3.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 76ms (View: 31, DB: 5) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 19:08:09) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"55", "tags"=>"alika, zolika", "category_id"=>"25"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+ActiveRecord::AssociationTypeMismatch (Tag(#-611199618) expected, got String(#-605658628)):
+  app/controllers/expenses_controller.rb:50:in `new'
+  app/controllers/expenses_controller.rb:50:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 19:10:06) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"55", "tags"=>"alika, zolika", "category_id"=>"25"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+ActiveRecord::AssociationTypeMismatch (Tag(#-611199618) expected, got String(#-605658628)):
+  app/controllers/expenses_controller.rb:50:in `new'
+  app/controllers/expenses_controller.rb:50:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (54.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 19:10:41) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"55", "tags"=>"alika, zolika", "category_id"=>"25"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+ActiveRecord::AssociationTypeMismatch (Tag(#-611199618) expected, got String(#-605658628)):
+  app/controllers/expenses_controller.rb:50:in `new'
+  app/controllers/expenses_controller.rb:50:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (61.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:11:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mExpense Load (0.7ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (2.9ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 93ms (View: 45, DB: 6) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 19:11:04) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"55", "category_id"=>"25", "tag_list"=>""}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date", "tags_saved", "category_id", "user_id", "category_saved") VALUES('2010-03-03 17:11:04.768983', '2010-03-03 17:11:04.768983', 55.0, '2010-03-03', NULL, 25, 2, NULL) RETURNING "id"[0m
+  [4;36;1mTagging Load (0.9ms)[0m   [0;1mSELECT * FROM "taggings" WHERE ("taggings"."taggable_type" = E'Expense' AND "taggings"."taggable_id" = 34) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 68ms (DB: 5) | 302 Found [http://localhost/expenses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:11:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mExpense Load (0.7ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+Rendered expenses/_index (6.4ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 155ms (View: 38, DB: 6) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mExpense Load (0.6ms)[0m   [0;1mSELECT * FROM "expenses" LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" [0m
+  [4;36;1mExpense Load (0.7ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 34) [0m
+  [4;35;1mTag Load (2.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 19:12:50) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"888", "category_id"=>"25", "tag_list"=>"alika, zolika, dezsoke"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date", "tags_saved", "category_id", "user_id", "category_saved") VALUES('2010-03-03 17:12:50.623925', '2010-03-03 17:12:50.623925', 888.0, '2010-03-03', NULL, 25, 2, NULL) RETURNING "id"[0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE E'alika' OR name LIKE E'zolika' OR name LIKE E'dezsoke') [0m
+  [4;36;1mTag Load (0.8ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'alika') LIMIT 1[0m
+  [4;35;1mSQL (44.3ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'alika') RETURNING "id"[0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'zolika') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'zolika') RETURNING "id"[0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'dezsoke') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'dezsoke') RETURNING "id"[0m
+  [4;36;1mTagging Load (0.8ms)[0m   [0;1mSELECT * FROM "taggings" WHERE ("taggings"."taggable_type" = E'Expense' AND "taggings"."taggable_id" = 35) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mTagging Load (0.5ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 1 AND "taggings".taggable_type = E'Expense' AND "taggings".taggable_id = 35 AND "taggings".context = E'tags' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-03-03 17:12:50.799677', 1, 35, E'tags', NULL, E'Expense') RETURNING "id"[0m
+  [4;36;1mTagging Load (1.0ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 2 AND "taggings".taggable_type = E'Expense' AND "taggings".taggable_id = 35 AND "taggings".context = E'tags' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-03-03 17:12:50.828390', 2, 35, E'tags', NULL, E'Expense') RETURNING "id"[0m
+  [4;36;1mTagging Load (0.6ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 3 AND "taggings".taggable_type = E'Expense' AND "taggings".taggable_id = 35 AND "taggings".context = E'tags' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-03-03 17:12:50.836857', 3, 35, E'tags', NULL, E'Expense') RETURNING "id"[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 277ms (DB: 72) | 302 Found [http://localhost/expenses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:12:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (13.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mExpense Load (0.8ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+Rendered expenses/_index (11.1ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 195ms (View: 117, DB: 19) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mExpense Load (1.0ms)[0m   [0mSELECT * FROM "expenses" [0m
+  [4;36;1mExpense Load (1.2ms)[0m   [0;1mSELECT * FROM "expenses" ORDER BY expenses.id DESC LIMIT 1[0m
+  [4;35;1mTag Load (1.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 19:13:44) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"000", "category_id"=>"25", "tag_list"=>"89, alika"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date", "tags_saved", "category_id", "user_id", "category_saved") VALUES('2010-03-03 17:13:44.324137', '2010-03-03 17:13:44.324137', 0.0, '2010-03-03', NULL, 25, 2, NULL) RETURNING "id"[0m
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT * FROM "tags" WHERE (name LIKE E'89' OR name LIKE E'alika') [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'89') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "tags" ("name") VALUES(E'89') RETURNING "id"[0m
+  [4;35;1mTagging Load (0.5ms)[0m   [0mSELECT * FROM "taggings" WHERE ("taggings"."taggable_type" = E'Expense' AND "taggings"."taggable_id" = 36) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mTagging Load (0.3ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 1 AND "taggings".taggable_type = E'Expense' AND "taggings".taggable_id = 36 AND "taggings".context = E'tags' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-03-03 17:13:44.342526', 1, 36, E'tags', NULL, E'Expense') RETURNING "id"[0m
+  [4;35;1mTagging Load (0.3ms)[0m   [0mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 4 AND "taggings".taggable_type = E'Expense' AND "taggings".taggable_id = 36 AND "taggings".context = E'tags' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-03-03 17:13:44.346843', 4, 36, E'tags', NULL, E'Expense') RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 78ms (DB: 8) | 302 Found [http://localhost/expenses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:13:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+Rendered expenses/_index (10.1ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 83ms (View: 39, DB: 6) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mExpense Load (0.9ms)[0m   [0;1mSELECT * FROM "expenses" ORDER BY expenses.id DESC LIMIT 1[0m
+  [4;35;1mTag Load (1.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:15:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mExpense Load (0.9ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+Rendered expenses/_index (22.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 103ms (View: 55, DB: 8) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:15:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mExpense Load (0.8ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+Rendered expenses/_index (20.8ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 100ms (View: 53, DB: 8) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 19:15:36) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"35", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 35 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND ((taggings.context = E'tags'))) [0m
+Completed in 75ms (View: 33, DB: 6) | 200 OK [http://localhost/expenses/35/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:16:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mExpense Load (0.9ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (22.2ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 103ms (View: 54, DB: 7) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:18:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (16.1ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 91ms (View: 44, DB: 7) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 19:18:39) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"35", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.6ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 35 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.3ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Completed in 84ms (View: 36, DB: 6) | 200 OK [http://localhost/expenses/35/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:18:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (3.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.4ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (17.5ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 99ms (View: 47, DB: 10) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 19:18:46) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"34", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 34 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Completed in 71ms (View: 27, DB: 5) | 200 OK [http://localhost/expenses/34/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#update (for 127.0.0.1 at 2010-03-03 19:18:56) [PUT]
+  Parameters: {"commit"=>"Modificare", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"55.0", "tags"=>"aha, zoli", "category_id"=>"25"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"34", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.6ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 34 AND ("expenses".user_id = 2)) [0m
+
+ActiveRecord::AssociationTypeMismatch (Tag(#-611199618) expected, got String(#-605658628)):
+  app/controllers/expenses_controller.rb:76:in `update'
+  app/controllers/expenses_controller.rb:75:in `update'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (62.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#update (for 127.0.0.1 at 2010-03-03 19:19:32) [PUT]
+  Parameters: {"commit"=>"Modificare", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"55.0", "tags"=>"aha, zoli", "category_id"=>"25"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"34", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 34 AND ("expenses".user_id = 2)) [0m
+
+ActiveRecord::AssociationTypeMismatch (Tag(#-611199618) expected, got String(#-605658628)):
+  app/controllers/expenses_controller.rb:76:in `update'
+  app/controllers/expenses_controller.rb:75:in `update'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (63.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 19:19:39) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"34", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 34 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Completed in 81ms (View: 36, DB: 6) | 200 OK [http://localhost/expenses/34/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#update (for 127.0.0.1 at 2010-03-03 19:19:46) [PUT]
+  Parameters: {"commit"=>"Modificare", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"55.0", "category_id"=>"25", "tag_list"=>"aha, ki"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"34", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 34 AND ("expenses".user_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE E'aha' OR name LIKE E'ki') [0m
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'aha') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'aha') RETURNING "id"[0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'ki') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'ki') RETURNING "id"[0m
+  [4;36;1mTagging Load (0.5ms)[0m   [0;1mSELECT * FROM "taggings" WHERE ("taggings"."taggable_type" = E'Expense' AND "taggings"."taggable_id" = 34) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mTagging Load (0.3ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 5 AND "taggings".taggable_type = E'Expense' AND "taggings".taggable_id = 34 AND "taggings".context = E'tags' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-03-03 17:19:46.935113', 5, 34, E'tags', NULL, E'Expense') RETURNING "id"[0m
+  [4;36;1mTagging Load (0.3ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 6 AND "taggings".taggable_type = E'Expense' AND "taggings".taggable_id = 34 AND "taggings".context = E'tags' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-03-03 17:19:46.939515', 6, 34, E'tags', NULL, E'Expense') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 162ms (DB: 8) | 302 Found [http://localhost/expenses/34]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:19:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mExpense Load (0.7ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (17.6ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 168ms (View: 47, DB: 7) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 19:19:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 50ms (View: 23, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 19:20:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 75ms (View: 34, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 19:20:08) [POST]
+  Parameters: {"category"=>{"name"=>"kkkkkkkk", "ancestry"=>"24", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'kkkkkkkk') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'kkkkkkkk', '2010-03-03 17:20:08.377789', '2010-03-03 17:20:08.377789', E'24', E'') RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 57ms (DB: 5) | 302 Found [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 19:20:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 136ms (View: 109, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:20:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.6ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (148.8ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 251ms (View: 182, DB: 8) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 19:20:17) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"35", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 35 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Completed in 66ms (View: 26, DB: 5) | 200 OK [http://localhost/expenses/35/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+** Erubis 2.6.5
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to DeviseCreateUsers (20100219102133)
+Migrating to DeviseAddUserName (20100219132406)
+Migrating to CreateExpenses (20100225112338)
+Migrating to ModifyExpenses (20100225114427)
+Migrating to ActsAsTaggableOnMigration (20100225130407)
+Migrating to AddTagsToExpenses (20100225184927)
+Migrating to AddTagsToExpenses2 (20100225185511)
+Migrating to CreateCategories (20100226075958)
+Migrating to AddAncestryToCategory (20100228142918)
+Migrating to AddCategoryToExpense (20100228143837)
+Migrating to ChnageForeignKeysForCategoryExpenses (20100228152347)
+Migrating to RedoCategoryExpensesRelation (20100301215007)
+Migrating to RedoCategoryExpensesRelationAgain (20100301215525)
+Migrating to AddExpensesToUser (20100303142502)
+Migrating to RemoveAdditionalFieldsFromExpenses (20100303172110)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (56.7ms)[0m   [0;1mALTER TABLE "expenses" DROP "tags_saved"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "expenses" DROP "category_saved"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100303172110')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:23:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (24.3ms)
+Rendered shared/_header (6.0ms)
+Rendered shared/_flash_messages (1.7ms)
+Completed in 300ms (View: 199, DB: 7) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (1.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 19:23:49) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"34", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 34 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Completed in 156ms (View: 37, DB: 6) | 200 OK [http://localhost/expenses/34/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:23:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mExpense Load (0.8ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (16.7ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 166ms (View: 47, DB: 7) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:24:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mExpense Load (0.7ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (16.7ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 163ms (View: 46, DB: 7) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 19:24:03) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"35", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.4ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 35 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Completed in 146ms (View: 29, DB: 5) | 200 OK [http://localhost/expenses/35/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 19:24:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;36;1mTag Load (1.1ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;35;1mExpense Load (0.9ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 34) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mTag Load (0.5ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 36) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Rendered expenses/_index (18.4ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 167ms (View: 123, DB: 8) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 19:24:37) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"35", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.4ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 35 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'27') [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'26') [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'24') [0m
+  [4;35;1mTag Load (1.1ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 35) AND ("taggings".taggable_type = E'Expense') AND (taggings.context = E'tags' AND taggings.tagger_id IS NULL)) [0m
+Completed in 151ms (View: 109, DB: 5) | 200 OK [http://localhost/expenses/35/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 19:25:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 62ms (View: 34, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 19:26:02) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 57ms (View: 27, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 19:26:32) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 138ms (View: 29, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 19:26:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 60ms (View: 28, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 19:26:46) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 48ms (View: 18, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 19:26:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 56ms (View: 26, DB: 3) | 200 OK [http://localhost/categories]

@@ -18,7 +18,7 @@
         %li.category
           = expense.category.name unless expense.category.nil?
         %li.tags
-          = expense.tags_saved
+          = expense.tag_list
         %li.buttons
           = link_to_remote 'Mod', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update"
           = link_to 'Sterge', expense, :confirm => 'Are you sure?', :method => :delete

@@ -48,6 +48,7 @@ class ExpensesController < ApplicationController
   def create
     params[:expense][:user_id] = current_user.id
     @expense = Expense.new(params[:expense])
+    
     @expenses = current_user.expenses.sorted
     @categories = Category.roots
     
@@ -67,6 +68,7 @@ class ExpensesController < ApplicationController
   # PUT /expenses/1.xml
   def update
     @expense = current_user.expenses.find(params[:id])
+    
     @expenses = current_user.expenses.sorted
     @categories = Category.roots
     

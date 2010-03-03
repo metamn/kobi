@@ -29,6 +29,7 @@ ro:
         category: Categorie
         tags: Etichete
         tags_saved: Etichete
+        tag_list: Etichete
       category:
         name: Categorie
         description: Descriere
