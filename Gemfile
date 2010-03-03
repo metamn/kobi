@@ -5,4 +5,6 @@ gem 'devise', '1.0.2'
 gem 'haml'
 gem 'compass'
 gem 'formtastic'
-
+gem 'acts-as-taggable-on'
+gem 'ancestry'
+gem 'validates_timeliness'
