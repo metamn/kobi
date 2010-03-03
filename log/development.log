@@ -31376,3 +31376,1551 @@ Rendered expenses/_index (2.0ms)
 Rendered shared/_header (1.0ms)
 Rendered shared/_flash_messages (0.2ms)
 Completed in 69ms (View: 29, DB: 3) | 200 OK [http://localhost/expenses/new]
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mExpense Load (182.7ms)[0m   [0;1mSELECT * FROM "expenses" LIMIT 1[0m
+** Erubis 2.6.5
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (30.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to DeviseCreateUsers (20100219102133)
+Migrating to DeviseAddUserName (20100219132406)
+Migrating to CreateExpenses (20100225112338)
+Migrating to ModifyExpenses (20100225114427)
+Migrating to ActsAsTaggableOnMigration (20100225130407)
+Migrating to AddTagsToExpenses (20100225184927)
+Migrating to AddTagsToExpenses2 (20100225185511)
+Migrating to CreateCategories (20100226075958)
+Migrating to AddAncestryToCategory (20100228142918)
+Migrating to AddCategoryToExpense (20100228143837)
+Migrating to ChnageForeignKeysForCategoryExpenses (20100228152347)
+Migrating to RedoCategoryExpensesRelation (20100301215007)
+Migrating to RedoCategoryExpensesRelationAgain (20100301215525)
+Migrating to AddExpensesToUser (20100303142502)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (34.7ms)[0m   [0;1mALTER TABLE "expenses" ADD COLUMN "user_id" integer[0m
+  [4;35;1mSQL (22.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100303142502')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-03 16:31:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (25.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-03 14:31:27.630931', "sign_in_count" = 56, "current_sign_in_at" = '2010-03-03 14:31:27.628903', "last_sign_in_at" = '2010-03-02 20:15:13.204502' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+ __in_erb_template=true 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_header (28.8ms)
+Rendered shared/_flash_messages (24.5ms)
+Completed in 1212ms (View: 629, DB: 27) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:31:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (63.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mExpense Load (1.4ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (65.3ms)
+Rendered shared/_header (1.9ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 272ms (View: 165, DB: 67) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 16:31:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (13.8ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 111ms (View: 70, DB: 16) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 16:31:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 57ms (View: 26, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 16:31:52) [POST]
+  Parameters: {"category"=>{"name"=>"Test", "parent"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (34.7ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'Test', '2010-03-03 14:31:52.180878', '2010-03-03 14:31:52.180878', NULL, E'') RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 159ms (DB: 38) | 302 Found [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 16:31:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 44ms (View: 17, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:31:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (3.2ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 75ms (View: 29, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 16:32:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 48ms (View: 18, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 16:32:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 45ms (View: 17, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 16:32:15) [POST]
+  Parameters: {"category"=>{"name"=>"tesssst", "parent"=>"18", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+NoMethodError (undefined method `child_ancestry' for "18":String):
+  ancestry (1.2.0) lib/ancestry/instance_methods.rb:102:in `parent='
+  app/controllers/categories_controller.rb:50:in `new'
+  app/controllers/categories_controller.rb:50:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (50.2ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 16:32:44) [POST]
+  Parameters: {"category"=>{"name"=>"tesssst", "parent"=>"18", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+NoMethodError (undefined method `child_ancestry' for "18":String):
+  ancestry (1.2.0) lib/ancestry/instance_methods.rb:102:in `parent='
+  app/controllers/categories_controller.rb:50:in `new'
+  app/controllers/categories_controller.rb:50:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 16:34:59) [POST]
+  Parameters: {"category"=>{"name"=>"tesssst", "parent"=>"18", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+NoMethodError (undefined method `child_ancestry' for "18":String):
+  ancestry (1.2.0) lib/ancestry/instance_methods.rb:102:in `parent='
+  app/controllers/categories_controller.rb:50:in `new'
+  app/controllers/categories_controller.rb:50:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (50.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 16:35:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 55ms (View: 25, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 16:35:07) [POST]
+  Parameters: {"category"=>{"name"=>"tesssst", "parent"=>"18", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+NoMethodError (undefined method `child_ancestry' for "18":String):
+  ancestry (1.2.0) lib/ancestry/instance_methods.rb:102:in `parent='
+  app/controllers/categories_controller.rb:50:in `new'
+  app/controllers/categories_controller.rb:50:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (62.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 16:37:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 133ms (View: 103, DB: 2) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 16:37:29) [POST]
+  Parameters: {"category"=>{"name"=>"tesssst", "ancestry"=>"18", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'tesssst', '2010-03-03 14:37:29.739686', '2010-03-03 14:37:29.739686', E'18', E'') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 45ms (DB: 3) | 302 Found [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 16:37:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 48ms (View: 20, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 16:38:00) [GET]
+  Parameters: {"action"=>"edit", "id"=>"19", "controller"=>"categories"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 133ms (View: 28, DB: 3) | 200 OK [http://localhost/categories/19/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2010-03-03 16:38:09) [PUT]
+  Parameters: {"category"=>{"name"=>"test", "ancestry"=>"18", "description"=>""}, "commit"=>"Modificare", "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"19", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Update (1.8ms)[0m   [0mUPDATE "categories" SET "updated_at" = '2010-03-03 14:38:09.391757', "name" = E'test' WHERE "id" = 19[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 40ms (DB: 5) | 302 Found [http://localhost/categories/19]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 16:38:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 49ms (View: 20, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:38:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.7ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (3.1ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 75ms (View: 30, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 16:38:28) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"123", "tags_saved"=>"alika", "category_id"=>"19"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+NameError (undefined local variable or method `current_user' for #<Expense:0xb73e0424>):
+  app/models/expense.rb:18:in `assign_current_user_to_expense'
+  app/controllers/expenses_controller.rb:54:in `create'
+  app/controllers/expenses_controller.rb:53:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+** Erubis 2.6.5
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mUser Load (2.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mExpense Load (1.0ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 16:44:25) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"123", "tags_saved"=>"alika", "category_id"=>"19"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+NameError (undefined local variable or method `current_user' for #<Expense:0xb71dbf98>):
+  app/models/expense.rb:18:in `assign_current_user_to_expense'
+  app/controllers/expenses_controller.rb:54:in `create'
+  app/controllers/expenses_controller.rb:53:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (63.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:44:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.7ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (2.9ms)
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 73ms (View: 28, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:44:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.7ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (3.2ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 77ms (View: 30, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 16:44:44) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"123", "tags_saved"=>"alika", "category_id"=>"19"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+NameError (undefined local variable or method `current_user' for #<Expense:0xb72889f0>):
+  app/models/expense.rb:18:in `assign_current_user_to_expense'
+  app/controllers/expenses_controller.rb:54:in `create'
+  app/controllers/expenses_controller.rb:53:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (83.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:45:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.9ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (3.4ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 84ms (View: 31, DB: 5) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 16:45:41) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"123", "tags_saved"=>"alika", "category_id"=>"19"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/models/expense.rb:18:in `assign_current_user_to_expense'
+  app/controllers/expenses_controller.rb:54:in `create'
+  app/controllers/expenses_controller.rb:53:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (62.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 16:49:08) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"123", "tags_saved"=>"alika", "category_id"=>"19"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+
+NameError (undefined local variable or method `current_user' for #<Expense:0xb708fa7c>):
+  app/models/expense.rb:18:in `assign_current_user_to_expense'
+  app/controllers/expenses_controller.rb:54:in `create'
+  app/controllers/expenses_controller.rb:53:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (63.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:52:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.7ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (2.9ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 76ms (View: 29, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 16:52:07) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"123", "tags_saved"=>"alika", "category_id"=>"19"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;36;1mSQL (37.4ms)[0m   [0;1mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date", "tags_saved", "category_id", "user_id", "category_saved") VALUES('2010-03-03 14:52:08.001701', '2010-03-03 14:52:08.001701', 123.0, '2010-03-03', E'alika', 19, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 100ms (DB: 41) | 302 Found [http://localhost/expenses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:52:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;35;1mExpense Load (0.7ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (3.1ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.4ms)
+Completed in 147ms (View: 30, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mExpense Load (1.2ms)[0m   [0mSELECT * FROM "expenses" [0m
+  [4;36;1mExpense Delete all (0.9ms)[0m   [0;1mDELETE FROM "expenses" [0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:53:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;35;1mExpense Load (0.7ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (3.4ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 152ms (View: 32, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 16:53:43) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"123", "tags_saved"=>"", "category_id"=>"19"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date", "tags_saved", "category_id", "user_id", "category_saved") VALUES('2010-03-03 14:53:43.687119', '2010-03-03 14:53:43.687119', 123.0, '2010-03-03', E'', 19, 2, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 59ms (DB: 4) | 302 Found [http://localhost/expenses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:53:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+Rendered expenses/_index (6.8ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 75ms (View: 31, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mExpense Load (0.6ms)[0m   [0;1mSELECT * FROM "expenses" [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#edit (for 127.0.0.1 at 2010-03-03 16:55:14) [GET]
+  Parameters: {"action"=>"edit", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"32", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 32 AND ("expenses".user_id = 2)) [0m
+Rendering expenses/edit
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+Completed in 71ms (View: 30, DB: 4) | 200 OK [http://localhost/expenses/32/edit?authenticity_token=LfIaK1K2jHWu%2BZErbCGLoRKoTNMv9oVlofrqjL9pzo8%3D]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#update (for 127.0.0.1 at 2010-03-03 16:55:21) [PUT]
+  Parameters: {"commit"=>"Modificare", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"123.0", "tags_saved"=>"aje", "category_id"=>"19"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"32", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mExpense Load (0.5ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses"."id" = 32 AND ("expenses".user_id = 2)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;36;1mExpense Update (0.4ms)[0m   [0;1mUPDATE "expenses" SET "tags_saved" = E'aje', "updated_at" = '2010-03-03 14:55:21.100161' WHERE "id" = 32[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 60ms (DB: 4) | 302 Found [http://localhost/expenses/32]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:55:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;35;1mExpense Load (0.9ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+Rendered expenses/_index (6.6ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 153ms (View: 34, DB: 5) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mExpense Load (0.6ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#destroy (for 127.0.0.1 at 2010-03-03 16:55:53) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"32", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mExpense Load (0.5ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses"."id" = 32 AND ("expenses".user_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTagging Load (35.0ms)[0m   [0;1mSELECT * FROM "taggings" WHERE ("taggings".taggable_id = 32 AND "taggings".taggable_type = E'Expense' AND (taggings.context = E'tags')) [0m
+  [4;35;1mTagging Load (0.6ms)[0m   [0mSELECT * FROM "taggings" WHERE ("taggings".taggable_id = 32 AND "taggings".taggable_type = E'Expense') [0m
+  [4;36;1mExpense Destroy (0.2ms)[0m   [0;1mDELETE FROM "expenses" WHERE "id" = 32[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 174ms (DB: 39) | 302 Found [http://localhost/expenses/32]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 16:55:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (3.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;35;1mExpense Load (0.7ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (2.9ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 138ms (View: 51, DB: 6) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mExpense Load (0.6ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-03 16:57:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-03-03 16:57:43) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ; if controller_name != 'sessions' ;@output_buffer << ('
+'.html_safe!);@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.sessions.link'), new_session_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.registerable? && controller_name != 'registrations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.registrations.link'), new_registration_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.recoverable? && controller_name != 'passwords' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.passwords.link'), new_password_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.confirmable? && controller_name != 'confirmations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.confirmations.link'), new_confirmation_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.lockable? && controller_name != 'unlocks' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.unlocks.link'), new_unlock_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_devise_links (18.5ms)
+Completed in 209ms (View: 188, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-03-03 16:57:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 78ms (View: 64, DB: 0) | 200 OK [http://localhost/cont/creare]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-03-03 16:58:01) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"j67auTRbXDN/BSqBVXaCjyDYdqrhskYxDEM8RWDigmg=", "controller"=>"registrations", "user"=>{"name"=>"test", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test@test.com"}}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'test@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'test') LIMIT 1[0m
+  [4;35;1mSQL (74.5ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "name", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES(E'42834da42d73ba750619be8b47922f0fda60478b', E'test', '2010-03-03 14:58:01.471419', '2010-03-03 14:58:01.471222', NULL, '2010-03-03 14:58:01.471419', NULL, NULL, E'OVktssU8YFqq0RyaMgvP', NULL, NULL, NULL, E'7pFjZZrM-2W_N0OFxb6R', NULL, NULL, E'test@test.com', NULL) RETURNING "id"[0m
+Sent mail to test@test.com
+
+Date: Wed, 3 Mar 2010 16:58:01 +0200
+From: hello.kobi@gmail.com
+To: test@test.com
+Subject: Confirmare cont
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Bine ati ajuns!
+</p>
+<p>
+  Multumim frumos pentru inregistrare.
+  <br />
+  <ul>
+    <li>
+      Nume utilizator:
+      <b>
+        test
+      </b>
+    </li>
+    <li>
+      Adresa email:
+      <b></b>
+      test@test.com
+    </li>
+  </ul>
+</p>
+<br />
+<p>
+  Contul Dvs. creat pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  va fi activat dupa confirmarea adresei Dvs. de email.
+</p>
+<p>
+  Activarea se face printr-un click la
+  <a href="http://localhost:3000/cont/confirmare?confirmation_token=7pFjZZrM-2W_N0OFxb6R">aceasta adresa</a>
+  (
+  http://localhost:3000/cont/confirmare?confirmation_token=7pFjZZrM-2W_N0OFxb6R
+  )
+</p>
+<br />
+<p>
+  <b>
+    IMPORTANT!
+  </b>
+  <br />
+  Kobi nu va trimite niciodata emailuri pentru schimbarea parolei sau al datelor personale.
+  Toate actiunile de acest gen trebuie sa fie initiate de catre Dvs. intr-un mod explicit pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  <br />
+  Daca totusi primiti emailuri de acest gen neinitiate de Dvs. va rugam sa-l ignorati, probabil sunt tentative malicioase.
+</p>
+<p>
+  Va multumim,
+  <br />
+  echipa Kobi.
+</p>
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+
+Net::SMTPAuthenticationError (530-5.5.1 Authentication Required. Learn more at                              
+):
+  /usr/lib/ruby/1.8/net/smtp.rb:930:in `check_response'
+  /usr/lib/ruby/1.8/net/smtp.rb:899:in `getok'
+  /usr/lib/ruby/1.8/net/smtp.rb:828:in `mailfrom'
+  /usr/lib/ruby/1.8/net/smtp.rb:653:in `sendmail'
+  /usr/lib/ruby/1.8/net/smtp.rb:526:in `start'
+  devise (1.0.2) lib/devise/models/confirmable.rb:60:in `send_confirmation_instructions'
+  devise (1.0.2) app/controllers/registrations_controller.rb:17:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (175.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-03-03 17:01:07) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"j67auTRbXDN/BSqBVXaCjyDYdqrhskYxDEM8RWDigmg=", "controller"=>"registrations", "user"=>{"name"=>"test", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test@test.com"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = E'test@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = E'test') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "users" ("encrypted_password", "name", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES(E'bc04d0dad309755c6596e7d4150512d792892fa8', E'test', '2010-03-03 15:01:07.889767', '2010-03-03 15:01:07.889658', NULL, '2010-03-03 15:01:07.889767', NULL, NULL, E'p9PG0auqn1cXhNHxmv4J', NULL, NULL, NULL, E'Tq5wWbygN8Q305pX_jlr', NULL, NULL, E'test@test.com', NULL) RETURNING "id"[0m
+Sent mail to test@test.com
+
+Date: Wed, 3 Mar 2010 17:01:07 +0200
+From: hello.kobi@gmail.com
+To: test@test.com
+Subject: Confirmare cont
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Bine ati ajuns!
+</p>
+<p>
+  Multumim frumos pentru inregistrare.
+  <br />
+  <ul>
+    <li>
+      Nume utilizator:
+      <b>
+        test
+      </b>
+    </li>
+    <li>
+      Adresa email:
+      <b></b>
+      test@test.com
+    </li>
+  </ul>
+</p>
+<br />
+<p>
+  Contul Dvs. creat pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  va fi activat dupa confirmarea adresei Dvs. de email.
+</p>
+<p>
+  Activarea se face printr-un click la
+  <a href="http://localhost:3000/cont/confirmare?confirmation_token=Tq5wWbygN8Q305pX_jlr">aceasta adresa</a>
+  (
+  http://localhost:3000/cont/confirmare?confirmation_token=Tq5wWbygN8Q305pX_jlr
+  )
+</p>
+<br />
+<p>
+  <b>
+    IMPORTANT!
+  </b>
+  <br />
+  Kobi nu va trimite niciodata emailuri pentru schimbarea parolei sau al datelor personale.
+  Toate actiunile de acest gen trebuie sa fie initiate de catre Dvs. intr-un mod explicit pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  <br />
+  Daca totusi primiti emailuri de acest gen neinitiate de Dvs. va rugam sa-l ignorati, probabil sunt tentative malicioase.
+</p>
+<p>
+  Va multumim,
+  <br />
+  echipa Kobi.
+</p>
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+
+Net::SMTPAuthenticationError (530-5.5.1 Authentication Required. Learn more at                              
+):
+  /usr/lib/ruby/1.8/net/smtp.rb:930:in `check_response'
+  /usr/lib/ruby/1.8/net/smtp.rb:899:in `getok'
+  /usr/lib/ruby/1.8/net/smtp.rb:828:in `mailfrom'
+  /usr/lib/ruby/1.8/net/smtp.rb:653:in `sendmail'
+  /usr/lib/ruby/1.8/net/smtp.rb:526:in `start'
+  devise (1.0.2) lib/devise/models/confirmable.rb:60:in `send_confirmation_instructions'
+  devise (1.0.2) app/controllers/registrations_controller.rb:17:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (158.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-03-03 17:01:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 41ms (View: 27, DB: 0) | 200 OK [http://localhost/cont/creare]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-03-03 17:01:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 42ms (View: 28, DB: 0) | 200 OK [http://localhost/cont/creare]
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-03-03 17:01:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/login
+Rendering registrations/new
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ; if controller_name != 'sessions' ;@output_buffer << ('
+'.html_safe!);@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.sessions.link'), new_session_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.registerable? && controller_name != 'registrations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.registrations.link'), new_registration_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.recoverable? && controller_name != 'passwords' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.passwords.link'), new_password_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.confirmable? && controller_name != 'confirmations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.confirmations.link'), new_confirmation_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.lockable? && controller_name != 'unlocks' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.unlocks.link'), new_unlock_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_devise_links (3.1ms)
+Completed in 74ms (View: 64, DB: 0) | 200 OK [http://localhost/cont/creare]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-03-03 17:01:44) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"j67auTRbXDN/BSqBVXaCjyDYdqrhskYxDEM8RWDigmg=", "controller"=>"registrations", "user"=>{"name"=>"test", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test@test.com"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'test@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = E'test') LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "name", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES(E'b2c4caf9505798f102f147de5f9d01d9256776c1', E'test', '2010-03-03 15:01:44.906521', '2010-03-03 15:01:44.858919', NULL, '2010-03-03 15:01:44.906521', NULL, NULL, E'zHQHUnbWT1kh8gIzEDmL', NULL, NULL, NULL, E'3YRCQBUnCj9RrtaFpmN9', NULL, NULL, E'test@test.com', NULL) RETURNING "id"[0m
+Sent mail to test@test.com
+
+Date: Wed, 3 Mar 2010 17:01:44 +0200
+From: hello.kobi@gmail.com
+To: test@test.com
+Subject: Confirmare cont
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Bine ati ajuns!
+</p>
+<p>
+  Multumim frumos pentru inregistrare.
+  <br />
+  <ul>
+    <li>
+      Nume utilizator:
+      <b>
+        test
+      </b>
+    </li>
+    <li>
+      Adresa email:
+      <b></b>
+      test@test.com
+    </li>
+  </ul>
+</p>
+<br />
+<p>
+  Contul Dvs. creat pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  va fi activat dupa confirmarea adresei Dvs. de email.
+</p>
+<p>
+  Activarea se face printr-un click la
+  <a href="http://localhost:3000/cont/confirmare?confirmation_token=3YRCQBUnCj9RrtaFpmN9">aceasta adresa</a>
+  (
+  http://localhost:3000/cont/confirmare?confirmation_token=3YRCQBUnCj9RrtaFpmN9
+  )
+</p>
+<br />
+<p>
+  <b>
+    IMPORTANT!
+  </b>
+  <br />
+  Kobi nu va trimite niciodata emailuri pentru schimbarea parolei sau al datelor personale.
+  Toate actiunile de acest gen trebuie sa fie initiate de catre Dvs. intr-un mod explicit pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  <br />
+  Daca totusi primiti emailuri de acest gen neinitiate de Dvs. va rugam sa-l ignorati, probabil sunt tentative malicioase.
+</p>
+<p>
+  Va multumim,
+  <br />
+  echipa Kobi.
+</p>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+
+ArgumentError (wrong number of arguments (3 for 2)):
+  /usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  devise (1.0.2) lib/devise/models/confirmable.rb:60:in `send_confirmation_instructions'
+  devise (1.0.2) app/controllers/registrations_controller.rb:17:in `create'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (166.5ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+** Erubis 2.6.5
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-03-03 17:16:56) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-03-03 15:16:56.107612', "remember_token" = NULL, "remember_created_at" = NULL WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 89ms (DB: 3) | 302 Found [http://localhost/cont/iesire]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-03 17:16:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-03-03 17:16:56) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+@output_buffer << (''.html_safe!); __in_erb_template=true ; if controller_name != 'sessions' ;@output_buffer << ('
+'.html_safe!);@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.sessions.link'), new_session_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.registerable? && controller_name != 'registrations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.registrations.link'), new_registration_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.recoverable? && controller_name != 'passwords' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.passwords.link'), new_password_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.confirmable? && controller_name != 'confirmations' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.confirmations.link'), new_confirmation_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << ('
+'.html_safe!); if devise_mapping.lockable? && controller_name != 'unlocks' 
+@output_buffer << ('  '.html_safe!);@output_buffer << (( link_to t('devise.unlocks.link'), new_unlock_path(resource_name) ).to_s);@output_buffer << ('<br />
+'.html_safe!); end 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_devise_links (3.2ms)
+Completed in 143ms (View: 122, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-03-03 17:16:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+Rendering template within layouts/login
+Rendering registrations/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 47ms (View: 33, DB: 0) | 200 OK [http://localhost/cont/creare]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-03-03 17:17:09) [POST]
+  Parameters: {"commit"=>"Inregistrare cont", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"registrations", "user"=>{"name"=>"test", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"test@test.com"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = E'test@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = E'test') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "users" ("encrypted_password", "name", "created_at", "confirmation_sent_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "confirmation_token", "remember_created_at", "current_sign_in_at", "email", "confirmed_at") VALUES(E'f71b5e7abe822b8f8d66093c0606a7e2bfb6ac52', E'test', '2010-03-03 15:17:09.505307', '2010-03-03 15:17:09.505199', NULL, '2010-03-03 15:17:09.505307', NULL, NULL, E'AR9neBCQeviPgRChGKmL', NULL, NULL, NULL, E'GrY3BJqOE95oQTQ15RVL', NULL, NULL, E'test@test.com', NULL) RETURNING "id"[0m
+Sent mail to test@test.com
+
+Date: Wed, 3 Mar 2010 17:17:09 +0200
+From: hello.kobi@gmail.com
+To: test@test.com
+Subject: Confirmare cont
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Bine ati ajuns!
+</p>
+<p>
+  Multumim frumos pentru inregistrare.
+  <br />
+  <ul>
+    <li>
+      Nume utilizator:
+      <b>
+        test
+      </b>
+    </li>
+    <li>
+      Adresa email:
+      <b></b>
+      test@test.com
+    </li>
+  </ul>
+</p>
+<br />
+<p>
+  Contul Dvs. creat pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  va fi activat dupa confirmarea adresei Dvs. de email.
+</p>
+<p>
+  Activarea se face printr-un click la
+  <a href="http://localhost:3000/cont/confirmare?confirmation_token=GrY3BJqOE95oQTQ15RVL">aceasta adresa</a>
+  (
+  http://localhost:3000/cont/confirmare?confirmation_token=GrY3BJqOE95oQTQ15RVL
+  )
+</p>
+<br />
+<p>
+  <b>
+    IMPORTANT!
+  </b>
+  <br />
+  Kobi nu va trimite niciodata emailuri pentru schimbarea parolei sau al datelor personale.
+  Toate actiunile de acest gen trebuie sa fie initiate de catre Dvs. intr-un mod explicit pe
+  <a href="http://kobi.ro">Kobi.ro</a>
+  <br />
+  Daca totusi primiti emailuri de acest gen neinitiate de Dvs. va rugam sa-l ignorati, probabil sunt tentative malicioase.
+</p>
+<p>
+  Va multumim,
+  <br />
+  echipa Kobi.
+</p>
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-03 15:17:14.937153', "sign_in_count" = 1, "current_sign_in_at" = '2010-03-03 15:17:14.935666', "current_sign_in_ip" = E'127.0.0.1', "last_sign_in_at" = '2010-03-03 15:17:14.935666', "last_sign_in_ip" = E'127.0.0.1' WHERE "id" = 20[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 5471ms (DB: 5) | 302 Found [http://localhost/cont]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-03 17:17:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+ __in_erb_template=true 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_header (5.9ms)
+Rendered shared/_flash_messages (1.8ms)
+Completed in 62ms (View: 41, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 17:17:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;35;1mExpense Load (0.8ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 20) AND ("expenses".user_id = 20) ORDER BY date DESC[0m
+Rendered expenses/_index (8.7ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 178ms (View: 51, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2010-03-03 17:17:38) [POST]
+  Parameters: {"commit"=>" + ", "expense"=>{"date(1i)"=>"2010", "date(2i)"=>"3", "date(3i)"=>"3", "amount"=>"999", "tags_saved"=>"masik user", "category_id"=>"19"}, "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "expenses" ("created_at", "updated_at", "amount", "date", "tags_saved", "category_id", "user_id", "category_saved") VALUES('2010-03-03 15:17:38.241136', '2010-03-03 15:17:38.241136', 999.0, '2010-03-03', E'masik user', 19, 20, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/expenses/new
+Completed in 138ms (DB: 4) | 302 Found [http://localhost/expenses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 17:17:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.7ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 20) AND ("expenses".user_id = 20) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+Rendered expenses/_index (5.7ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 143ms (View: 102, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#edit (for 127.0.0.1 at 2010-03-03 17:17:48) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"registrations"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/login
+Rendering registrations/edit
+Rendered shared/_devise_links (0.9ms)
+Completed in 80ms (View: 58, DB: 2) | 200 OK [http://localhost/cont/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:18:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 58ms (View: 29, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:18:10) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"19", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template categories/destroy.erb in view path app/views:/usr/lib/ruby/gems/1.8/gems/devise-1.0.2/app/views):
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:19:58) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"19", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Redirected to http://localhost:3000/categories
+Completed in 25ms (DB: 2) | 302 Found [http://localhost/categories/19]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:19:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 52ms (View: 21, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:20:03) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"19", "controller"=>"categories"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Redirected to http://localhost:3000/categories
+Completed in 26ms (DB: 4) | 302 Found [http://localhost/categories/19]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:20:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (2.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (1.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 63ms (View: 24, DB: 4) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:21:24) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"19", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Redirected to http://localhost:3000/categories
+Completed in 33ms (DB: 2) | 302 Found [http://localhost/categories/19]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:21:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 53ms (View: 22, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 17:21:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 20) AND ("expenses".user_id = 20) ORDER BY date DESC[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+Rendered expenses/_index (6.2ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 76ms (View: 31, DB: 5) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-03-03 17:21:34) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 20) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 2) | 302 Found [http://localhost/cont/iesire]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-03 17:21:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-03-03 17:21:35) [GET]
+  Parameters: {"unauthenticated"=>"true", "action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/login
+Rendering sessions/new
+Rendered shared/_devise_links (0.9ms)
+Completed in 40ms (View: 19, DB: 0) | 200 OK [http://localhost/cont/intrare?unauthenticated=true]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-03-03 17:21:41) [POST]
+  Parameters: {"commit"=>"Intrare in cont", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"sessions", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"cs@clair.ro"}}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = E'cs@clair.ro') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-03 15:21:41.311222', "sign_in_count" = 57, "current_sign_in_at" = '2010-03-03 15:21:41.310115', "last_sign_in_at" = '2010-03-03 14:31:27.628903' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 105ms (DB: 4) | 302 Found [http://localhost/cont/intrare]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-03 17:21:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+Rendered shared/_header (7.6ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 31ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 17:21:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;35;1mExpense Load (0.7ms)[0m   [0mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (3.0ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 72ms (View: 29, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:21:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 124ms (View: 21, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 17:21:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 52ms (View: 24, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 17:22:03) [POST]
+  Parameters: {"category"=>{"name"=>"teste", "ancestry"=>"18", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'teste', '2010-03-03 15:22:03.291927', '2010-03-03 15:22:03.291927', E'18', E'') RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 45ms (DB: 3) | 302 Found [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:22:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 54ms (View: 24, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:22:07) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"20", "controller"=>"categories"}
+  [4;36;1mUser Load (2.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 20) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (22.5ms)[0m   [0mSELECT * FROM "categories" WHERE (ancestry like E'18/20/%' or ancestry = E'18/20') [0m
+  [4;36;1mCategory Destroy (0.2ms)[0m   [0;1mDELETE FROM "categories" WHERE "id" = 20[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 68ms (DB: 32) | 302 Found [http://localhost/categories/20]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:22:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 120ms (View: 61, DB: 3) | 200 OK [http://localhost/categories]

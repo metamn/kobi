@@ -45,6 +45,7 @@ ro:
     flash:
       created: Creat cu succes!
       updated: Modificat cu succes!
+      not_allowed: Operatie nepermisa.
     errors:
       template:
         header: Date invalide

@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :expenses
+  
   # Include default devise modules. Others available are:
   # :http_authenticatable, :token_authenticatable, :lockable, :timeoutable and :activatable
   devise :registerable, :authenticatable, :confirmable, :recoverable,

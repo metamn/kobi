@@ -16,7 +16,7 @@
   %p  
     = f.label t('activerecord.attributes.category.parent')
     %br
-    = select :category, :parent, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true}
+    = f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true}
     
   
   = f.submit t('activerecord.operations.edit')

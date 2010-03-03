@@ -1,9 +1,7 @@
 class CategoriesController < ApplicationController
   layout "dashboard"
   
-  before_filter :check_admin
   
-
   # GET /categories
   # GET /categories.xml
   def index
@@ -81,8 +79,12 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.xml
   def destroy
-    @category = Category.find(params[:id])
-    @category.destroy
+    if is_admin? 
+      @category = Category.find(params[:id])
+      @category.destroy
+    else
+      flash[:notice] = t('activerecord.flash.not_allowed')
+    end
 
     respond_to do |format|
       format.html { redirect_to(categories_url) }

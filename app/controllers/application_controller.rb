@@ -15,9 +15,7 @@ class ApplicationController < ActionController::Base
   layout "login"
 
   # Temporarily checking if the user is admin
-  def check_admin
-    return if current_user.email == "cs@clair.ro"
-    flash[:notice] = "Sectiune accesibila numai pentru administratori"
-    redirect_to root_path
+  def is_admin?
+    current_user.email == "cs@clair.ro"    
   end
 end

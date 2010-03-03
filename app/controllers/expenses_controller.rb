@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.xml
   def index
-    @expenses = Expense.sorted
+    @expenses = current_user.expenses.sorted
     
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +16,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/1
   # GET /expenses/1.xml
   def show
-    @expense = Expense.find(params[:id])
+    @expense = current_user.expenses.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,8 +27,8 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   # GET /expenses/new.xml
   def new
-    @expense = Expense.new
-    @expenses = Expense.sorted
+    @expense = current_user.expenses.new
+    @expenses = current_user.expenses.sorted
     @categories = Category.roots
     
     respond_to do |format|
@@ -39,15 +39,16 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/1/edit
   def edit
-    @expense = Expense.find(params[:id])    
+    @expense = current_user.expenses.find(params[:id])    
     @categories = Category.roots
   end
 
   # POST /expenses
   # POST /expenses.xml
   def create
+    params[:expense][:user_id] = current_user.id
     @expense = Expense.new(params[:expense])
-    @expenses = Expense.sorted
+    @expenses = current_user.expenses.sorted
     @categories = Category.roots
     
     respond_to do |format|
@@ -65,8 +66,8 @@ class ExpensesController < ApplicationController
   # PUT /expenses/1
   # PUT /expenses/1.xml
   def update
-    @expense = Expense.find(params[:id])
-    @expenses = Expense.sorted
+    @expense = current_user.expenses.find(params[:id])
+    @expenses = current_user.expenses.sorted
     @categories = Category.roots
     
     respond_to do |format|
@@ -84,7 +85,7 @@ class ExpensesController < ApplicationController
   # DELETE /expenses/1
   # DELETE /expenses/1.xml
   def destroy
-    @expense = Expense.find(params[:id])
+    @expense = current_user.expenses.find(params[:id])
     @expense.destroy
 
     respond_to do |format|
