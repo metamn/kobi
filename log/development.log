@@ -32924,3 +32924,1136 @@ Rendering categories/index
 Rendered shared/_header (1.0ms)
 Rendered shared/_flash_messages (0.2ms)
 Completed in 120ms (View: 61, DB: 3) | 200 OK [http://localhost/categories]
+** Erubis 2.6.5
+  [4;36;1mSQL (9.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2010-03-03 17:28:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering dashboard/index
+** Erubis: src==<<'END'
+@output_buffer = ActionView::SafeBuffer.new;
+ __in_erb_template=true 
+@output_buffer << (''.html_safe!);@output_buffer.to_sEND
+Rendered shared/_header (5.9ms)
+Rendered shared/_flash_messages (1.6ms)
+Completed in 119ms (View: 42, DB: 13) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ExpensesController#new (for 127.0.0.1 at 2010-03-03 17:28:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"expenses"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/dashboard
+Rendering expenses/new
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."ancestry" IS NULL) [0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."ancestry" = E'18') [0m
+  [4;36;1mExpense Load (0.8ms)[0m   [0;1mSELECT * FROM "expenses" WHERE ("expenses".user_id = 2) AND ("expenses".user_id = 2) ORDER BY date DESC[0m
+Rendered expenses/_index (8.5ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 123ms (View: 79, DB: 4) | 200 OK [http://localhost/expenses/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:28:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 55ms (View: 28, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:28:47) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"18", "controller"=>"categories"}
+  [4;35;1mUser Load (4.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "categories" WHERE (ancestry like E'18/%' or ancestry = E'18') [0m
+  [4;35;1mCategory Destroy (0.2ms)[0m   [0mDELETE FROM "categories" WHERE "id" = 19[0m
+  [4;36;1mCategory Destroy (0.1ms)[0m   [0;1mDELETE FROM "categories" WHERE "id" = 18[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 69ms (DB: 7) | 302 Found [http://localhost/categories/18]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:28:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (2.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 45ms (View: 13, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 17:28:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 57ms (View: 26, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 17:28:54) [POST]
+  Parameters: {"category"=>{"name"=>"Test", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.collect) on line #19 of app/views/categories/new.html.haml:
+16:   %p  
+17:     = f.label t('activerecord.attributes.category.parent')
+18:     %br
+19:     = f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true}
+20:     
+21:   
+22:   = f.submit t('activerecord.operations.category.new')
+
+    app/views/categories/new.html.haml:19:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/categories/new.html.haml:4:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/categories_controller.rb:56:in `create'
+    app/controllers/categories_controller.rb:50:in `create'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mCategory Load (4.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'test', '2010-03-03 15:30:26.525242', '2010-03-03 15:30:26.525242', NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'test2', '2010-03-03 15:31:19.403080', '2010-03-03 15:31:19.403080', NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 17:35:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 46ms (View: 17, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 17:35:11) [POST]
+  Parameters: {"category"=>{"name"=>"Test", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'Test', '2010-03-03 15:35:11.900925', '2010-03-03 15:35:11.900925', NULL, E'') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 47ms (DB: 3) | 302 Found [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:35:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (3.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.5ms)
+Completed in 51ms (View: 22, DB: 5) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:35:19) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"21", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 21) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (1.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE (ancestry like E'21/%' or ancestry = E'21') [0m
+  [4;35;1mCategory Destroy (0.5ms)[0m   [0mDELETE FROM "categories" WHERE "id" = 21[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 40ms (DB: 5) | 302 Found [http://localhost/categories/21]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:35:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 55ms (View: 22, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:35:23) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"22", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 22) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" WHERE (ancestry like E'22/%' or ancestry = E'22') [0m
+  [4;35;1mCategory Destroy (0.2ms)[0m   [0mDELETE FROM "categories" WHERE "id" = 22[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 37ms (DB: 4) | 302 Found [http://localhost/categories/22]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:35:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 50ms (View: 19, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (13.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#destroy (for 127.0.0.1 at 2010-03-03 17:35:26) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"23", "controller"=>"categories"}
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 23) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "categories" WHERE (ancestry like E'23/%' or ancestry = E'23') [0m
+  [4;35;1mCategory Destroy (0.2ms)[0m   [0mDELETE FROM "categories" WHERE "id" = 23[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 38ms (DB: 18) | 302 Found [http://localhost/categories/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:35:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (3.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 42ms (View: 12, DB: 4) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 17:35:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 54ms (View: 20, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 17:35:36) [POST]
+  Parameters: {"category"=>{"name"=>"Test", "ancestry"=>"", "description"=>"aaa"}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'Test', '2010-03-03 15:35:36.885371', '2010-03-03 15:35:36.885371', NULL, E'aaa') RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 135ms (DB: 3) | 302 Found [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:35:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 43ms (View: 17, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 17:35:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 52ms (View: 19, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 17:35:50) [POST]
+  Parameters: {"category"=>{"name"=>"Test3", "ancestry"=>"24", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'Test3', '2010-03-03 15:35:50.209781', '2010-03-03 15:35:50.209781', E'24', E'') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 131ms (DB: 3) | 302 Found [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:35:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 47ms (View: 20, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 17:35:53) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 56ms (View: 26, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2010-03-03 17:35:56) [PUT]
+  Parameters: {"category"=>{"name"=>"Test3", "ancestry"=>"", "description"=>""}, "commit"=>"Modificare", "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.collect) on line #19 of app/views/categories/edit.html.haml:
+16:   %p  
+17:     = f.label t('activerecord.attributes.category.parent')
+18:     %br
+19:     = f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true}
+20:     
+21:   
+22:   = f.submit t('activerecord.operations.edit')
+
+    app/views/categories/edit.html.haml:19:in `_run_haml_app47views47categories47edit46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/categories/edit.html.haml:4:in `_run_haml_app47views47categories47edit46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/categories_controller.rb:74:in `update'
+    app/controllers/categories_controller.rb:68:in `update'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (68.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2010-03-03 17:36:16) [PUT]
+  Parameters: {"category"=>{"name"=>"Test3", "ancestry"=>"", "description"=>""}, "commit"=>"Modificare", "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 44ms (DB: 3) | 302 Found [http://localhost/categories/25]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:36:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 47ms (View: 20, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 17:36:19) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 51ms (View: 21, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2010-03-03 17:36:26) [PUT]
+  Parameters: {"category"=>{"name"=>"Test3", "ancestry"=>"", "description"=>""}, "commit"=>"Modificare", "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"25", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 41ms (DB: 3) | 302 Found [http://localhost/categories/25]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:36:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 133ms (View: 105, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 17:42:46) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 46ms (View: 18, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2010-03-03 17:42:49) [PUT]
+  Parameters: {"category"=>{"name"=>"Test3", "ancestry"=>"", "description"=>""}, "commit"=>"Modificare", "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (2.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" WHERE (ancestry like E'24/25/%' or ancestry = E'24/25') [0m
+  [4;36;1mCategory Update (0.4ms)[0m   [0;1mUPDATE "categories" SET "updated_at" = '2010-03-03 15:42:49.906717', "ancestry" = NULL WHERE "id" = 25[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 48ms (DB: 4) | 302 Found [http://localhost/categories/25]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:42:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 120ms (View: 94, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 17:43:14) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 46ms (View: 18, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2010-03-03 17:43:20) [PUT]
+  Parameters: {"category"=>{"name"=>"Test3", "ancestry"=>"24", "description"=>""}, "commit"=>"Modificare", "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"25", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" WHERE (ancestry like E'25/%' or ancestry = E'25') [0m
+  [4;35;1mCategory Update (0.4ms)[0m   [0mUPDATE "categories" SET "updated_at" = '2010-03-03 15:43:20.622145', "ancestry" = E'24' WHERE "id" = 25[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 47ms (DB: 4) | 302 Found [http://localhost/categories/25]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:43:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 24) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 124ms (View: 97, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" LIMIT 1[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2010-03-03 17:45:12) [GET]
+  Parameters: {"action"=>"edit", "id"=>"25", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/edit
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 46ms (View: 18, DB: 3) | 200 OK [http://localhost/categories/25/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#update (for 127.0.0.1 at 2010-03-03 17:45:20) [PUT]
+  Parameters: {"category"=>{"name"=>"Test3", "ancestry"=>"", "description"=>""}, "commit"=>"Modificare", "action"=>"update", "_method"=>"put", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "id"=>"25", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 25) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" WHERE (ancestry like E'24/25/%' or ancestry = E'24/25') [0m
+  [4;36;1mCategory Update (0.4ms)[0m   [0;1mUPDATE "categories" SET "updated_at" = '2010-03-03 15:45:20.689916', "ancestry" = NULL WHERE "id" = 25[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 45ms (DB: 4) | 302 Found [http://localhost/categories/25]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 17:45:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 120ms (View: 94, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 18:27:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+
+SyntaxError (/home/cs/work/kobi/app/models/category.rb:10: syntax error, unexpected ','
+...at_of :description, :with => , :allow_nil => true, :allow_bl...
+                              ^
+/home/cs/work/kobi/app/models/category.rb:10: Can't assign to true
+...:with => , :allow_nil => true, :allow_blank => true
+                              ^
+/home/cs/work/kobi/app/models/category.rb:10: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...w_nil => true, :allow_blank => true
+                              ^):
+  app/controllers/categories_controller.rb:30:in `new'
+  haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+  warden (0.9.3) lib/warden/manager.rb:34:in `call'
+  warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+  warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (52.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 18:28:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 46ms (View: 17, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:28:23) [POST]
+  Parameters: {"category"=>{"name"=>"alika we", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (2.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'alika we') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'alika we', '2010-03-03 16:28:23.708290', '2010-03-03 16:28:23.708290', NULL, E'') RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 49ms (DB: 4) | 302 Found [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 18:28:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 121ms (View: 94, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 18:28:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 47ms (View: 18, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:28:33) [POST]
+  Parameters: {"category"=>{"name"=>"alika.", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'alika.') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+
+ActionView::TemplateError (interning empty string) on line #5 of app/views/categories/new.html.haml:
+2:   = t('activerecord.operations.category.new')
+3: 
+4: - form_for(@category) do |f|
+5:   = f.error_messages
+6:   %p
+7:     = f.label t('activerecord.attributes.category.name')
+8:     %br
+
+    haml (2.2.17) lib/haml/helpers.rb:317:in `inject'
+    app/views/categories/new.html.haml:5:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/categories/new.html.haml:4:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/categories_controller.rb:57:in `create'
+    app/controllers/categories_controller.rb:51:in `create'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (87.1ms)
+Rendered rescues/_request_and_response (19.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:29:26) [POST]
+  Parameters: {"category"=>{"name"=>"a&^^", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (1.3ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'a&^^') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+
+ActionView::TemplateError (interning empty string) on line #5 of app/views/categories/new.html.haml:
+2:   = t('activerecord.operations.category.new')
+3: 
+4: - form_for(@category) do |f|
+5:   = f.error_messages
+6:   %p
+7:     = f.label t('activerecord.attributes.category.name')
+8:     %br
+
+    haml (2.2.17) lib/haml/helpers.rb:317:in `inject'
+    app/views/categories/new.html.haml:5:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/categories/new.html.haml:4:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/categories_controller.rb:57:in `create'
+    app/controllers/categories_controller.rb:51:in `create'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (175.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:33:34) [POST]
+  Parameters: {"category"=>{"name"=>"a&^^", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (1.5ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'a&^^') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.collect) on line #19 of app/views/categories/new.html.haml:
+16:   %p  
+17:     = f.label t('activerecord.attributes.category.parent')
+18:     %br
+19:     = f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true}
+20:     
+21:   
+22:   = f.submit t('activerecord.operations.category.new')
+
+    app/views/categories/new.html.haml:19:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/categories/new.html.haml:4:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/categories_controller.rb:57:in `create'
+    app/controllers/categories_controller.rb:51:in `create'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (72.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:34:24) [POST]
+  Parameters: {"category"=>{"name"=>"a&^^", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'a&^^') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.collect) on line #19 of app/views/categories/new.html.haml:
+16:   %p  
+17:     = f.label t('activerecord.attributes.category.parent')
+18:     %br
+19:     = f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true}
+20:     
+21:   
+22:   = f.submit t('activerecord.operations.category.new')
+
+    app/views/categories/new.html.haml:19:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/categories/new.html.haml:4:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/categories_controller.rb:57:in `create'
+    app/controllers/categories_controller.rb:51:in `create'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (85.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:35:39) [POST]
+  Parameters: {"category"=>{"name"=>"a&^^", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (1.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'a&^^') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 70ms (View: 27, DB: 4) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 18:37:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 136ms (View: 28, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:37:37) [POST]
+  Parameters: {"category"=>{"name"=>"a&^^", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'a&^^') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 53ms (View: 19, DB: 3) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:38:06) [POST]
+  Parameters: {"category"=>{"name"=>"a&^^", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'a&^^') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+
+ActionView::TemplateError (interning empty string) on line #5 of app/views/categories/new.html.haml:
+2:   = t('activerecord.operations.category.new')
+3: 
+4: - form_for(@category) do |f|
+5:   = f.error_messages
+6:   %p
+7:     = f.label t('activerecord.attributes.category.name')
+8:     %br
+
+    haml (2.2.17) lib/haml/helpers.rb:317:in `inject'
+    app/views/categories/new.html.haml:5:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/categories/new.html.haml:4:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/categories_controller.rb:58:in `create'
+    app/controllers/categories_controller.rb:52:in `create'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (171.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:38:16) [POST]
+  Parameters: {"category"=>{"name"=>"a&^^", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'a&^^') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+
+ActionView::TemplateError (interning empty string) on line #5 of app/views/categories/new.html.haml:
+2:   = t('activerecord.operations.category.new')
+3: 
+4: - form_for(@category) do |f|
+5:   = f.error_messages
+6:   %p
+7:     = f.label t('activerecord.attributes.category.name')
+8:     %br
+
+    haml (2.2.17) lib/haml/helpers.rb:317:in `inject'
+    app/views/categories/new.html.haml:5:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `call'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:164:in `form_for'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `call'
+    haml (2.2.17) lib/haml/helpers.rb:545:in `haml_bind_proc'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:170:in `form_for'
+    app/views/categories/new.html.haml:4:in `_run_haml_app47views47categories47new46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/categories_controller.rb:58:in `create'
+    app/controllers/categories_controller.rb:52:in `create'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.17) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+    warden (0.9.3) lib/warden/manager.rb:34:in `call'
+    warden (0.9.3) lib/warden/manager.rb:33:in `catch'
+    warden (0.9.3) lib/warden/manager.rb:33:in `call'
+
+Rendered rescues/_trace (97.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:38:32) [POST]
+  Parameters: {"category"=>{"name"=>"a&^^", "ancestry"=>"", "description"=>""}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'a&^^') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 161ms (View: 20, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 18:38:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 47ms (View: 19, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2010-03-03 18:39:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 50ms (View: 19, DB: 3) | 200 OK [http://localhost/categories/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:39:11) [POST]
+  Parameters: {"category"=>{"name"=>"alika ass", "ancestry"=>"", "description"=>"544%"}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'alika ass') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 58ms (View: 21, DB: 4) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.8ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:40:44) [POST]
+  Parameters: {"category"=>{"name"=>"alika ass", "ancestry"=>"", "description"=>"544%"}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (2.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'alika ass') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 66ms (View: 25, DB: 5) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:41:25) [POST]
+  Parameters: {"category"=>{"name"=>"alika ass", "ancestry"=>"", "description"=>"544%"}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'alika ass') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (0.9ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 55ms (View: 19, DB: 4) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:41:34) [POST]
+  Parameters: {"category"=>{"name"=>"alika ass8((", "ancestry"=>"", "description"=>"544%"}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'alika ass8((') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.1ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 146ms (View: 24, DB: 3) | 200 OK [http://localhost/categories]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:42:03) [POST]
+  Parameters: {"category"=>{"name"=>"alika ass8((", "ancestry"=>"", "description"=>"544%"}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;36;1mUser Load (3.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Load (1.3ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'alika ass8((') LIMIT 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/dashboard
+Rendering categories/new
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.2ms)
+Completed in 100ms (View: 26, DB: 8) | 200 OK [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2010-03-03 18:42:14) [POST]
+  Parameters: {"category"=>{"name"=>"asi", "ancestry"=>"", "description"=>"aaa"}, "commit"=>"Adaugare categorie", "action"=>"create", "authenticity_token"=>"LfIaK1K2jHWu+ZErbCGLoRKoTNMv9oVlofrqjL9pzo8=", "controller"=>"categories"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."name" = E'asi') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "ancestry", "description") VALUES(E'asi', '2010-03-03 16:42:14.329853', '2010-03-03 16:42:14.329853', NULL, E'aaa') RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed in 49ms (DB: 4) | 302 Found [http://localhost/categories]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2010-03-03 18:42:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/dashboard
+Rendering categories/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_flash_messages (0.3ms)
+Completed in 123ms (View: 95, DB: 3) | 200 OK [http://localhost/categories]

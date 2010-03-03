@@ -39,14 +39,16 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
-    @categories = Category.all
+    @categories = Category.all - [@category]
   end
 
   # POST /categories
   # POST /categories.xml
   def create
+    params[:category].delete(:ancestry) if params[:category][:ancestry] == ''
     @category = Category.new(params[:category])
-
+    @categories = Category.all
+    
     respond_to do |format|
       if @category.save
         flash[:notice] = t('activerecord.flash.created')
@@ -61,8 +63,14 @@ class CategoriesController < ApplicationController
 
   # PUT /categories/1
   # PUT /categories/1.xml
-  def update
+  def update    
     @category = Category.find(params[:id])
+    @categories = Category.all
+    
+    if params[:category][:ancestry] == ''
+      params[:category].delete(:ancestry)
+      @category.ancestry = nil
+    end
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
