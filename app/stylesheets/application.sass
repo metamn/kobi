@@ -5,9 +5,23 @@
 -# Colores
 -# -------------------------------
 
-  
-!grayblue = #E5ECF9
-!lightblue = #9BBBFA
+-# 1, dark and medium slate blue 
+!header = #483D8B 
+!menu = #7B68EE
+
+-# 2, dark blue
+!link = #00008B  	
+
+-# 3, lavender
+!resource_header = #E6E6FA
+
+-# 3a, Lemon chiffon
+!edit = #FFFACD
+
+-# 3b, Light green
+!success = #90EE90  	
+
+
 !background = #e5e5e5
 !content = #f2f2f2
 !content_shadow = #A5A5A5
@@ -18,6 +32,12 @@
 -# -------------------------------
 body
   :overflow auto !important
+  
+  a, a:visited
+    :color = !link
+    
+  a:active, a:hover
+    :color black
 
 
 
@@ -37,11 +57,13 @@ body.login
       :margin-top 5em  
       
       .logo
-        :background = !lightblue
+        :background = !header
+        :color = !background
         
         h1
           :margin 0
           :padding .5em
+          :color = !background
           
           .title 
             :font-size small
@@ -53,6 +75,7 @@ body.login
       
       .form
         +box
+        :background = !resource_header
         
         p  
           :padding .5em
@@ -78,8 +101,11 @@ body.login
       :text-align right
       
       .highlight
-        :background = !lightblue
-        :padding .2em
+        :background = !header
+        :padding .5em
+        
+        a, a:visited
+          :color = !background
   
   
         
@@ -91,10 +117,19 @@ body.dashboard
   :width 100%
   :background = !background
   
-  #flash
+  #flash.top
     +column(24, last)
     :text-align center
     
+  #flash.resource
+    :float right
+    :font-weight normal
+    :font-size small
+    
+    .success
+      :background = !success
+    
+  #flash.top, #flash.resource
     .flash
       :margin 0
       :border none
@@ -104,8 +139,12 @@ body.dashboard
   
   #header
     +column(24, last)
-    :background = !lightblue
+    :background = !header
     :padding 0
+    :color = !background
+    
+    a
+      :color = !background
     
     #logo 
       +column(12, last)
@@ -136,7 +175,23 @@ body.dashboard
     #menu2
       ul
         :float right
+        
+    #menu 
+      ul.main_menu
+        li
+          :background = !menu
+          :padding .5em .7em
+          :border-right = 2px solid !header
+          
+          a
+            :text-decoration none
+            :font-weight bold
       
+        li.active
+          :background = !background
+          
+          a
+            :color = !header
       
   
   #content
@@ -146,7 +201,7 @@ body.dashboard
     :margin 1.5em 1.5em 0
     
     #title
-      :background = !grayblue
+      :background = !resource_header
       :padding 1em .5em
       :font-size larger
       :font-weight bold
@@ -176,10 +231,7 @@ body.dashboard
     +column(4, last)
     :margin 1.5em 1.5em 0
     
-    h4
-      :margin-left 2em
-    ul
-      :margin-left 4em
+    
     
   #footer
     +column(24, last)
@@ -218,7 +270,7 @@ body.dashboard
 
   #new_expense, #edit_expense
     :padding 1em 0
-    :background lightyellow
+    :background = !edit
     :margin-bottom 2em
     
     input

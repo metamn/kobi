@@ -1,6 +1,6 @@
-- [:notice, :alert, :success, :error].each do |key|
+- messages.each do |key|
   - if flash[key]
-    %div{:class => "flash #{key}"}      
+    %div{:class => "flash #{key}"}
       = flash[key]
       %span.close
         [x]

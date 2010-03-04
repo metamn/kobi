@@ -17,9 +17,9 @@
       
   .block
     #menu
-      %ul
-        %li
-          = link_to t('activerecord.models.expense'), new_expense_path      
+      = semantic_menu :class => 'main_menu' do |root|
+        - root.add t('activerecord.models.expense'), new_expense_path        
+      
 
     #menu2
       %ul

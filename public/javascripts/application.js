@@ -7,13 +7,17 @@ $j = jQuery.noConflict();
 $j(document).ready(function(){
   
   // Close flash messages on dashboard
-  $j('#flash .close').click(function(event) {
-    $j('#flash').slideUp('slow');
+  $j('#flash.top .close').click(function(event) {
+    $j('#flash.top').slideUp('slow');
+  });
+  $j('#flash.resource .close').click(function(event) {
+    $j('#flash.resource').slideUp('slow');
   });
   
-  // Close flash message on dashboard after 3 sec
-  $j('#flash').delay(3000).slideUp('slow');
   
+  // Close flash message on dashboard after 3 sec
+  $j('#flash.top').delay(3000).slideUp('slow');
+  $j('#flash.resource').delay(3000).slideUp('slow');
 });
 
 

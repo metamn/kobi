@@ -54,7 +54,7 @@ class ExpensesController < ApplicationController
     
     respond_to do |format|
       if @expense.save
-        flash[:notice] = t('activerecord.flash.created')
+        flash[:success] = t('activerecord.flash.created')
         format.html { redirect_to :action => "new" }
         format.xml  { render :xml => @expense, :status => :created, :location => @expense }
       else
@@ -74,7 +74,7 @@ class ExpensesController < ApplicationController
     
     respond_to do |format|
       if @expense.update_attributes(params[:expense])
-        flash[:notice] = t('activerecord.flash.updated')
+        flash[:success] = t('activerecord.flash.updated')
         format.html { redirect_to :action => "new" }
         format.xml  { head :ok }
       else

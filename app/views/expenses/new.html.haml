@@ -1,5 +1,7 @@
 - content_for :title do 
   = t('activerecord.models.description.expense')
+  #flash.resource
+    = render :partial => "shared/flash_messages", :locals => {:messages => [:success, :error]}
   
 - content_for :sidebar do
   %h4.title
