@@ -47,6 +47,7 @@ ro:
       created: Creat cu succes!
       updated: Modificat cu succes!
       not_allowed: Operatie nepermisa.
+      deleted: Stergere cu succes!
     errors:
       template:
         header: Date invalide

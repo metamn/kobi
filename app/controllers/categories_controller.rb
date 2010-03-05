@@ -1,12 +1,20 @@
 class CategoriesController < ApplicationController
   layout "dashboard"
   
+  # getting all cats for index
+  # getting all cats for selectbox on new, create, update
+  before_filter :category_all, :only => [:index, :new, :create, :update]
+  
+  # setting current_user on create, update
+  before_filter :set_current_user, :only => [:create, :update]
+  
+  # checking permissions
+  before_filter :check_permission, :only => [:edit, :update, :destroy]
+    
   
   # GET /categories
   # GET /categories.xml
-  def index
-    @categories = Category.all
-
+  def index    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @categories }
@@ -28,8 +36,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @category = Category.new
-    @categories = Category.all
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @category }
@@ -46,9 +53,8 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.xml
   def create
-    params[:category].delete(:ancestry) if params[:category][:ancestry] == ''
-    @category = Category.new(params[:category])
-    @categories = Category.all
+    params[:category].delete(:ancestry) if params[:category][:ancestry] == ''    
+    @category = Category.new(params[:category])        
     
     respond_to do |format|
       if @category.save
@@ -65,14 +71,13 @@ class CategoriesController < ApplicationController
   # PUT /categories/1
   # PUT /categories/1.xml
   def update    
-    @category = Category.find(params[:id])
-    @categories = Category.all
+    @category = Category.find(params[:id])            
     @selected = @category.parent.nil? ? nil : @category.parent.id
     
     if params[:category][:ancestry] == ''
       params[:category].delete(:ancestry)
       @category.ancestry = nil
-    end
+    end    
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
@@ -89,16 +94,32 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.xml
   def destroy
-    if is_admin? 
-      @category = Category.find(params[:id])
-      @category.destroy
-    else
-      flash[:notice] = t('activerecord.flash.not_allowed')
-    end
-
+    @category = Category.find(params[:id])    
+    @category.destroy
+    flash[:notice] = t('activerecord.flash.deleted')
+  
     respond_to do |format|
       format.html { redirect_to(categories_url) }
       format.xml  { head :ok }
     end
   end
+  
+  
+  private
+    
+    def category_all
+      @categories = Category.all
+    end
+    
+    def set_current_user
+      params[:category][:user_id] = current_user.id
+    end
+   
+    def check_permission
+      @item = Category.find(params[:id])
+      if @item.user != current_user
+        flash[:notice] = t('activerecord.flash.not_allowed')
+        redirect_to :action => "index" and return
+      end
+    end    
 end
