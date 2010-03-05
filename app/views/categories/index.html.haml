@@ -26,4 +26,9 @@
       %td
         = link_to t('activerecord.operations.destroy'), category, :confirm => t('activerecord.operations.confirm'), :method => :delete
 
-= link_to t('activerecord.operations.category.new'), new_category_path      
+= link_to t('activerecord.operations.category.new'), new_category_path   
+
+%ul{:id => "sitemap"}
+  = render :partial => "category", :collection => Category.roots
+
+

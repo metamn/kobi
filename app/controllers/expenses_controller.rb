@@ -29,7 +29,7 @@ class ExpensesController < ApplicationController
   def new
     @expense = current_user.expenses.new
     @expenses = current_user.expenses.sorted
-    @categories = Category.roots
+    @categories = Category.all
     
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +40,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/1/edit
   def edit
     @expense = current_user.expenses.find(params[:id])    
-    @categories = Category.roots
+    @categories = Category.all
   end
 
   # POST /expenses
@@ -50,7 +50,7 @@ class ExpensesController < ApplicationController
     @expense = Expense.new(params[:expense])
     
     @expenses = current_user.expenses.sorted
-    @categories = Category.roots
+    @categories = Category.all
     
     respond_to do |format|
       if @expense.save
@@ -70,7 +70,7 @@ class ExpensesController < ApplicationController
     @expense = current_user.expenses.find(params[:id])
     
     @expenses = current_user.expenses.sorted
-    @categories = Category.roots
+    @categories = Category.all
     
     respond_to do |format|
       if @expense.update_attributes(params[:expense])

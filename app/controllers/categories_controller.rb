@@ -40,6 +40,7 @@ class CategoriesController < ApplicationController
   def edit
     @category = Category.find(params[:id])
     @categories = Category.all - [@category]
+    @selected = @category.parent.nil? ? nil : @category.parent.id
   end
 
   # POST /categories
@@ -66,6 +67,7 @@ class CategoriesController < ApplicationController
   def update    
     @category = Category.find(params[:id])
     @categories = Category.all
+    @selected = @category.parent.nil? ? nil : @category.parent.id
     
     if params[:category][:ancestry] == ''
       params[:category].delete(:ancestry)

@@ -24,8 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "compass", :source => "http://gemcutter.org"
   config.gem 'formtastic'  
-  config.gem "acts-as-taggable-on"
-  config.gem "ancestry"
+  config.gem "acts-as-taggable-on"  
   config.gem 'validates_timeliness'
   #config.gem 'exceptional', :version => '2.0.6'
 
