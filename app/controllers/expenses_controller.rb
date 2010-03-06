@@ -41,6 +41,7 @@ class ExpensesController < ApplicationController
   def edit
     @expense = current_user.expenses.find(params[:id])    
     @categories = Category.all
+    @selected = @expense.category.nil? ? nil : @expense.category.id
   end
 
   # POST /expenses

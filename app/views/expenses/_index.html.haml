@@ -12,14 +12,12 @@
     - @expenses.each do |expense|
       .item{:class => "#{cycle('even', 'odd')} block"}
         %li.date
-          = expense.date
+          = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
         %li.amount
           = expense.amount
         %li.category
-          = expense.category.name unless expense.category.nil?
+          = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
         %li.tags
-          = expense.tag_list
-        %li.buttons
-          = link_to_remote 'Mod', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
+          = expense.tag_list          
         %div{:id => "ajax-update-#{expense.id}"}
       

@@ -43,9 +43,10 @@ ro:
       ok: Ok
       category:
         new: Adaugare categorie
-        edit: Modificare categorie      
+        edit: Modificare categorie   
+        empty: Fara categorie   
     flash:
-      created: Creat cu succes!
+      created: Aduagat cu succes!
       updated: Modificat cu succes!
       not_allowed: Operatie nepermisa.
       deleted: Stergere cu succes!
