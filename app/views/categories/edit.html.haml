@@ -1,24 +1,21 @@
-- content_for :title do 
-  = t('activerecord.operations.category.edit')
-  
-- form_for(@category) do |f|
-  = f.error_messages
-  %p
-    = f.label t('activerecord.attributes.category.name')
-    %br
-    = f.text_field :name
-    
-  %p
-    = f.label t('activerecord.attributes.category.description')
-    %br
-    = f.text_area :description
-  
-  %p  
-    = f.label t('activerecord.attributes.category.parent')
-    %br
-    = f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true, :selected => @selected} 
-    
-  
-  = f.submit t('activerecord.operations.edit')
-  = link_to t('activerecord.operations.back'), categories_path   
+#edit_category 
+  - form_for(@category) do |f|
+    = f.error_messages
+    %ul.edit
+      %li.name
+        = f.label t('activerecord.attributes.category.name')
+        %br
+        = f.text_field :name      
+      %li.description
+        = f.label t('activerecord.attributes.category.description')
+        %br
+        = f.text_area :description    
+      %li.parent
+        = f.label t('activerecord.attributes.category.parent')
+        %br
+        = f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true, :selected => @selected} 
+      %li.buttons    
+        = f.submit t('activerecord.operations.edit')
+        = link_to t('activerecord.operations.back'), categories_path   
+        = link_to t('activerecord.operations.destroy'), @category, :confirm => t('activerecord.operations.confirm'), :method => :delete, :class => 'destroy'
 

@@ -1,32 +1,10 @@
 - content_for :title do 
   = t('activerecord.models.description.category')
+  #flash.resource
+    = render :partial => "shared/flash_messages", :locals => {:messages => [:success, :error]}
 
 
 = link_to t('activerecord.operations.category.new'), new_category_path
-  
-%table
-  %tr
-    %th
-      = t('activerecord.attributes.category.name')
-    %th
-      = t('activerecord.attributes.category.description')
-    %th
-      = t('activerecord.attributes.category.parent')
-      
-  - @categories.each do |category|
-    %tr{:class => cycle('even', 'odd')}
-      %td
-        = category.name
-      %td
-        = category.description
-      %td
-        = category.parent.name unless category.parent.nil?
-      %td
-        = link_to t('activerecord.operations.edit'), edit_category_path(category)
-      %td
-        = link_to t('activerecord.operations.destroy'), category, :confirm => t('activerecord.operations.confirm'), :method => :delete
-
-= link_to t('activerecord.operations.category.new'), new_category_path   
 
 %ul{:id => "sitemap"}
   = render :partial => "category", :collection => Category.roots

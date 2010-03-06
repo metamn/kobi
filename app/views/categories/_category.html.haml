@@ -1,5 +1,8 @@
 %li
-  = link_to category.name, ""
+  = link_to_remote category.name, :url => edit_category_path(category), :method=> :get, :update => "ajax-update-#{category.id}"
+  .description
+    = category.description
+  %div{:id => "ajax-update-#{category.id}"}
   - unless category.children.blank?
     %ul
       = render :partial => "category", :collection => category.children

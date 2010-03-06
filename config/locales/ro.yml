@@ -40,6 +40,7 @@ ro:
       destroy: Stergere
       confirm: Sunteti sigur?
       new: Adaugare  
+      ok: Ok
       category:
         new: Adaugare categorie
         edit: Modificare categorie      

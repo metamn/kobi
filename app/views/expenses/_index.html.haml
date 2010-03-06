@@ -20,7 +20,6 @@
         %li.tags
           = expense.tag_list
         %li.buttons
-          = link_to_remote 'Mod', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"
-          = link_to 'Sterge', expense, :confirm => 'Are you sure?', :method => :delete
+          = link_to_remote 'Mod', :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
         %div{:id => "ajax-update-#{expense.id}"}
       

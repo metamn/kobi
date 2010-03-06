@@ -11,6 +11,9 @@
         = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name, @expense.category.id)
       %li.tags
         = f.text_field :tag_list
-    %br
-    = f.submit t('activerecord.operations.edit')  
-    = link_to t('activerecord.operations.back'), new_expense_path
+      %li.buttons
+        = f.submit t('activerecord.operations.ok')  
+        %br
+        = link_to t('activerecord.operations.back'), new_expense_path
+        %br
+        = link_to t('activerecord.operations.destroy'), @expense, :confirm => t('activerecord.operations.confirm'), :method => :delete, :class => 'destroy'

@@ -19,13 +19,18 @@
 !edit = #FFFACD
 
 -# 3b, Light green
-!success = #90EE90  	
+!success = #90EE90 
+
+-# 3c, Light coral
+!error = #f08080 	
 
 
 !background = #e5e5e5
 !content = #f2f2f2
 !content_shadow = #A5A5A5
 !border = #ddd
+!black = #333
+
 
 
 -# General
@@ -37,7 +42,10 @@ body
     :color = !link
     
   a:active, a:hover
-    :color black
+    :color = !black
+    
+  a.destroy:active, a.destroy:hover
+    :color = !error !important
 
 
 
@@ -320,13 +328,63 @@ body.dashboard
   #body
     :padding 1.5em .5em !important
   
+  
+    ul#sitemap
+      li       
+        a
+          :text-decoration none
+          :color = !black
+          :font-size larger
+        
+        .description
+          :padding 0
+          :margin 0
+          :display inline
+          :font-size small
+          :margin-left 1em
+          :color = !content_shadow
+          :font-style italic
+          
+    #edit_category
+      :background = !edit
+      
+      ul.edit
+        +horizontal-list
+        :margin 0
+        :padding 0
+        :display inline
+        
+        li
+          :margin 0
+          :padding 0
+          :background = !edit
+          :font-size small
+        
+        li.name
+          +column(6)
+        li.description
+          +column(6)
+          :font-style normal
+          :color = !black
+        li.parent
+          +column(6)
+        li.buttons
+          +column(5, last)
+          :padding-top 2em
+          
+          a
+            :color = !link
+            :text-decoration underline
+            :padding 0
+            :margin 0
+            :font-size small  
+        
+        
   table
     :padding 1.5em 0
 
     tr.even td
       :background = !background
-
-
 
     
 -# Common

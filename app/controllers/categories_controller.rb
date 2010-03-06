@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  layout "dashboard"
+  layout "dashboard", :except => [:edit]
   
   # getting all cats for index
   # getting all cats for selectbox on new, create, update
@@ -58,7 +58,7 @@ class CategoriesController < ApplicationController
     
     respond_to do |format|
       if @category.save
-        flash[:notice] = t('activerecord.flash.created')
+        flash[:success] = t('activerecord.flash.created')
         format.html { redirect_to :action => 'index' }
         format.xml  { render :xml => @category, :status => :created, :location => @category }
       else
@@ -81,7 +81,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
-        flash[:notice] = t('activerecord.flash.updated')
+        flash[:success] = t('activerecord.flash.updated')
         format.html { redirect_to :action => 'index' }
         format.xml  { head :ok }
       else
@@ -96,7 +96,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])    
     @category.destroy
-    flash[:notice] = t('activerecord.flash.deleted')
+    flash[:success] = t('activerecord.flash.deleted')
   
     respond_to do |format|
       format.html { redirect_to(categories_url) }
@@ -118,7 +118,7 @@ class CategoriesController < ApplicationController
     def check_permission
       @item = Category.find(params[:id])
       if @item.user != current_user
-        flash[:notice] = t('activerecord.flash.not_allowed')
+        flash[:error] = t('activerecord.flash.not_allowed')
         redirect_to :action => "index" and return
       end
     end    
