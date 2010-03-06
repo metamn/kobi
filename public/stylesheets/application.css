@@ -2265,7 +2265,7 @@ body.dashboard {
   body.dashboard {
     display: block; }
   /* line 128, ../../app/stylesheets/application.sass */
-  body.dashboard #flash.top {
+  body.dashboard #flash-top {
     display: inline;
     float: left;
     overflow: hidden;
@@ -2273,12 +2273,12 @@ body.dashboard {
     margin-right: 0;
     text-align: center; }
   /* line 132, ../../app/stylesheets/application.sass */
-  body.dashboard #flash.resource {
+  body.dashboard #flash-resource {
     float: right;
     font-weight: normal;
     font-size: small; }
     /* line 137, ../../app/stylesheets/application.sass */
-    body.dashboard #flash.resource .success {
+    body.dashboard #flash-resource .success {
       background: #90ee90; }
   /* line 141, ../../app/stylesheets/application.sass */
   body.dashboard #flash.top .flash, body.dashboard #flash.resource .flash {

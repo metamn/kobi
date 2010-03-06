@@ -43,10 +43,13 @@ ro:
       ok: Ok
       category:
         new: Adaugare categorie
+        new_hint: Daca nu gasiti categoria potrivita
         edit: Modificare categorie   
         empty: Fara categorie   
         fix_date: Fixare data
-        remove_date: Anulare
+        fix_date_hint: Fixati aceasta data pentru a introduce mai usor cheltuielile din trecut
+        fix_date_ok: Data este fixata pentru 
+        remove_date: Anulare        
     flash:
       created: Aduagat cu succes!
       updated: Modificat cu succes!
