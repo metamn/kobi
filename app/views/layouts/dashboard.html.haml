@@ -21,8 +21,7 @@
   %body.dashboard 
     #header
       = render :partial => "shared/header"
-    #flash.top
-      = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert]}  
+    = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert], :role => 'top'}  
     #content{:class => controller.controller_name}
       #title
         = yield :title

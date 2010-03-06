@@ -14,8 +14,5 @@ class ApplicationController < ActionController::Base
   # Setting layouts
   layout "login"
 
-  # Temporarily checking if the user is admin
-  def is_admin?
-    current_user.email == "cs@clair.ro"    
-  end
+  
 end

@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  include ApplicationHelper
+  
   layout "dashboard", :except => [:edit]
   
   # getting all cats for index
@@ -108,7 +110,7 @@ class CategoriesController < ApplicationController
   private
     
     def category_all
-      @categories = Category.all
+      @categories = Category.sorted
     end
     
     def set_current_user
@@ -117,9 +119,9 @@ class CategoriesController < ApplicationController
    
     def check_permission
       @item = Category.find(params[:id])
-      if @item.user != current_user
+      unless (@item.user == current_user) || is_admin? 
         flash[:error] = t('activerecord.flash.not_allowed')
-        redirect_to :action => "index" and return
+        redirect_to :back and return
       end
     end    
 end

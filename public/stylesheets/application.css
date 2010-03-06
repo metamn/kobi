@@ -2590,12 +2590,12 @@ body.dashboard {
 /* line 328, ../../app/stylesheets/application.sass */
 #content.categories #body {
   padding: 1.5em .5em !important; }
-  /* line 334, ../../app/stylesheets/application.sass */
+  /* line 333, ../../app/stylesheets/application.sass */
   #content.categories #body ul#sitemap li a {
     text-decoration: none;
     color: #333333;
     font-size: larger; }
-  /* line 339, ../../app/stylesheets/application.sass */
+  /* line 338, ../../app/stylesheets/application.sass */
   #content.categories #body ul#sitemap li .description {
     padding: 0;
     margin: 0;
@@ -2604,10 +2604,10 @@ body.dashboard {
     margin-left: 1em;
     color: #a5a5a5;
     font-style: italic; }
-  /* line 348, ../../app/stylesheets/application.sass */
+  /* line 347, ../../app/stylesheets/application.sass */
   #content.categories #body #edit_category {
     background: #fffacd; }
-    /* line 351, ../../app/stylesheets/application.sass */
+    /* line 350, ../../app/stylesheets/application.sass */
     #content.categories #body #edit_category ul.edit {
       margin: 0;
       padding: 0;
@@ -2636,20 +2636,20 @@ body.dashboard {
         /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
         #content.categories #body #edit_category ul.edit li.last {
           padding-right: 0px; }
-      /* line 357, ../../app/stylesheets/application.sass */
+      /* line 356, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li {
         margin: 0;
         padding: 0;
         background: #fffacd;
         font-size: small; }
-      /* line 363, ../../app/stylesheets/application.sass */
+      /* line 362, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li.name {
         display: inline;
         float: left;
         overflow: hidden;
         width: 25%;
         margin-right: 0.833em; }
-      /* line 365, ../../app/stylesheets/application.sass */
+      /* line 364, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li.description {
         display: inline;
         float: left;
@@ -2658,14 +2658,14 @@ body.dashboard {
         margin-right: 0.833em;
         font-style: normal;
         color: #333333; }
-      /* line 369, ../../app/stylesheets/application.sass */
+      /* line 368, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li.parent {
         display: inline;
         float: left;
         overflow: hidden;
         width: 25%;
         margin-right: 0.833em; }
-      /* line 371, ../../app/stylesheets/application.sass */
+      /* line 370, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li.buttons {
         display: inline;
         float: left;
@@ -2673,27 +2673,31 @@ body.dashboard {
         width: 20%;
         margin-right: 0;
         padding-top: 2em; }
-        /* line 375, ../../app/stylesheets/application.sass */
+        /* line 374, ../../app/stylesheets/application.sass */
         #content.categories #body #edit_category ul.edit li.buttons a {
           color: #00008b;
           text-decoration: underline;
           padding: 0;
           margin: 0;
           font-size: small; }
-/* line 383, ../../app/stylesheets/application.sass */
+/* line 382, ../../app/stylesheets/application.sass */
 #content.categories table {
   padding: 1.5em 0; }
-  /* line 386, ../../app/stylesheets/application.sass */
+  /* line 385, ../../app/stylesheets/application.sass */
   #content.categories table tr.even td {
     background: #e5e5e5; }
 
 
 
-/* line 393, ../../app/stylesheets/application.sass */
+/* line 392, ../../app/stylesheets/application.sass */
 .block {
   display: block;
   overflow: hidden; }
 
-/* line 397, ../../app/stylesheets/application.sass */
+/* line 396, ../../app/stylesheets/application.sass */
 .box {
   padding: 1.5em 1.5em 0; }
+
+/* line 399, ../../app/stylesheets/application.sass */
+a.inactive {
+  cursor: default !important; }
