@@ -28,6 +28,9 @@ class ExpensesController < ApplicationController
   # GET /expenses/new.xml
   def new
     @expense = current_user.expenses.new
+    set_fixed_date if params[:month]
+    remove_fixed_date if params[:remove_date]
+    @expense.date = session[:date] unless session[:date].blank?
     @expenses = current_user.expenses.sorted
     @categories = Category.all
     
@@ -96,4 +99,15 @@ class ExpensesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+    
+    def set_fixed_date
+      session[:date] = Date.new(params[:year].to_i, params[:month].to_i, params[:day].to_i)
+    end
+  
+    def remove_fixed_date
+      session[:date] = nil
+    end
+  
 end

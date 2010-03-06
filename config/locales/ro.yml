@@ -45,6 +45,8 @@ ro:
         new: Adaugare categorie
         edit: Modificare categorie   
         empty: Fara categorie   
+        fix_date: Fixare data
+        remove_date: Anulare
     flash:
       created: Aduagat cu succes!
       updated: Modificat cu succes!
@@ -70,6 +72,8 @@ ro:
           attributes:
             amount:
               not_a_number: Trebuie sa fie un numar
+            date:
+              on_or_before: Nu se poate adauga cheltuieili pentru viitor
             
   
   formtastic:

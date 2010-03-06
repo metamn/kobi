@@ -17,18 +17,22 @@
     %li 
       = link_to t('dashboard.sidebar.help'), "http://blog.kobi.ro/manual-de-utilizare/cheltuieli/"
   
-.block    
+.block
   - form_for @expense do |f|
     = f.error_messages
     %ul.new
       %li.date
         = f.date_select :date, :use_short_month => true
+        %br
+        = link_to_remote t('activerecord.operations.category.fix_date'), :url => {:controller => 'expenses', :action => 'new' }, :with => "'day='+$F('expense_date_3i')+'&month='+$F('expense_date_2i')+'&year='+$F('expense_date_1i')"
+        = link_to_remote t('activerecord.operations.category.remove_date'), :url => {:controller => 'expenses', :action => 'new', :remove_date => '1'}
       %li.amount 
         = f.text_field :amount
         RON
-      %li.category
-        -#= select :expense, :category_id, Category.all.collect {|c| [c.name, c.id]}
+      %li.category        
         = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
+        %br
+        = link_to t('activerecord.operations.category.new'), new_category_path
       %li.tags
         = f.text_field :tag_list
       %li.buttons
