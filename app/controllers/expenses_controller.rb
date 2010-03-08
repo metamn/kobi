@@ -1,6 +1,9 @@
 class ExpensesController < ApplicationController
   layout "dashboard", :except => [:edit]
   
+  # Populating the accordion for the views
+  before_filter :accordion, :only => [:new, :create, :update]
+  
   
   # GET /expenses
   # GET /expenses.xml
@@ -29,7 +32,7 @@ class ExpensesController < ApplicationController
   def new
     @expense = current_user.expenses.new    
     @expense.date = session[:date] unless session[:date].blank?    
-    @expenses = current_user.expenses.sorted
+    @expenses = current_user.expenses.current
     @categories = Category.all
     
     respond_to do |format|
@@ -106,12 +109,22 @@ class ExpensesController < ApplicationController
   end
   
   private
+  
+    # Generating items for accordion
+    def accordion
+      @current = current_user.expenses.current
+      @today = current_user.expenses.today
+      @yesterday = current_user.expenses.yesterday
+      @before_yesterday = current_user.expenses.before_yesterday
+    end
     
+    # Fixing a date for batch input
     def set_fixed_date
       session[:date] = Date.new(params[:year].to_i, params[:month].to_i, params[:day].to_i)
       flash[:success] = t('activerecord.operations.category.fix_date_ok') + " #{session[:date].to_s}"
     end
   
+    # Removing fixed date for batch input
     def remove_fixed_date
       session[:date] = nil
       flash[:success] = t('activerecord.operations.category.fix_date_ok') + " #{Date.today.to_s}"

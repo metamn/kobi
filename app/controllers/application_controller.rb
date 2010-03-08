@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password, :password_confirmation
   
-  # Authentication is manadatory for everybody => Login page is the main page
+  # Authentication is manadatory for everybody 
   before_filter :authenticate_user!
   
   # Setting layouts

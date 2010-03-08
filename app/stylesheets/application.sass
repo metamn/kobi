@@ -25,11 +25,15 @@
 !error = #f08080 	
 
 
+-# from Compass/Blueprint
+!black = #333
+
+
 !background = #e5e5e5
 !content = #f2f2f2
 !content_shadow = #A5A5A5
+!white_gray = #f9f9f9
 !border = #ddd
-!black = #333
 
 
 
@@ -216,7 +220,7 @@ body.dashboard
     
     #body
       :background = !content
-      :padding 0 .5em
+      :padding 0
       
     .errorExplanation
       :border 1px solid indianRed
@@ -297,7 +301,7 @@ body.dashboard
   #index_expenses
     +column(24, last)
     :background inherit
-    :padding-bottom 1em
+    :padding 0 .5em 1em .5em
     
     .header, .items, .item
       +column(24, last)
@@ -310,17 +314,21 @@ body.dashboard
         
     .items
       .item
-        :padding .2em 0
+        :padding .5em 0
         :border-bottom = 1px solid !border
         
       .even 
-        :background = !background
-      
-      .odd
         :background = !content
       
+      .odd
+        :background = !background
+      
     #edit_expense
-      +column(24, last)      
+      +column(24, last)     
+      
+    #accordion
+      :margin-top 2em
+       
         
 
 
@@ -387,6 +395,41 @@ body.dashboard
 
     tr.even td
       :background = !background
+
+
+
+
+-# jQuery UI Smoothness theme
+-# -------------------------------
+
+.ui-widget 
+  :font-family inherit
+  :font-size inherit
+        
+.ui-state-active, .ui-widget-content .ui-state-active
+  :background = !content
+  :border none
+
+.ui-state-default, .ui-widget-content .ui-state-default
+  :background = !content
+  :border none
+
+  
+.ui-accordion .ui-accordion-content
+  :padding .5em .15em 0
+  :background = !white_gray
+  :border-top = 1px solid !border
+  
+  .items
+    .even 
+      :background = !white_gray !important
+      
+    .odd
+      :background = !content !important
+
+.ui-widget-content
+  :border none
+
 
     
 -# Common

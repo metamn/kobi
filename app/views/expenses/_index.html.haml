@@ -8,16 +8,70 @@
       = t('activerecord.attributes.expense.category')
     %li.tags
       = t('activerecord.attributes.expense.tags')
-  %ul.items  
-    - @expenses.each do |expense|
-      .item{:class => "#{cycle('even', 'odd')} block"}
-        %li.date
-          = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
-        %li.amount
-          = expense.amount
-        %li.category
-          = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
-        %li.tags
-          = expense.tag_list          
-        %div{:id => "ajax-update-#{expense.id}"}
-      
+  
+  
+  .clear
+  
+  #accordion
+    %h3
+      = link_to "Recent adaugate si modificate", ''  
+    %div
+      %ul.items  
+        - @current.each do |expense|
+          .item{:class => "#{cycle('even', 'odd')} block"}
+            %li.date
+              = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
+            %li.amount
+              = expense.amount
+            %li.category
+              = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
+            %li.tags
+              = expense.tag_list          
+            %div{:id => "ajax-update-#{expense.id}"}
+  
+    
+    %h3
+      = link_to "Azi", ''  
+    %div
+      %ul.items  
+        - @today.each do |expense|
+          .item{:class => "#{cycle('even', 'odd')} block"}
+            %li.date
+              = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
+            %li.amount
+              = expense.amount
+            %li.category
+              = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
+            %li.tags
+              = expense.tag_list          
+            %div{:id => "ajax-update-#{expense.id}"}
+    %h3
+      = link_to "Ieri", ''  
+    %div  
+      %ul.items  
+        - @yesterday.each do |expense|
+          .item{:class => "#{cycle('even', 'odd')} block"}
+            %li.date
+              = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
+            %li.amount
+              = expense.amount
+            %li.category
+              = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
+            %li.tags
+              = expense.tag_list          
+            %div{:id => "ajax-update-#{expense.id}"}
+    %h3
+      = link_to "Alaltaieri", ''  
+    %div
+      %ul.items  
+        - @before_yesterday.each do |expense|
+          .item{:class => "#{cycle('even', 'odd')} block"}
+            %li.date
+              = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
+            %li.amount
+              = expense.amount
+            %li.category
+              = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
+            %li.tags
+              = expense.tag_list          
+            %div{:id => "ajax-update-#{expense.id}"}

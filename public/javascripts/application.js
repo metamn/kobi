@@ -18,6 +18,13 @@ $j(document).ready(function(){
   // Close flash message on dashboard after 3 sec
   $j('#flash.top').delay(3000).slideUp('slow');
   $j('#flash.resource').delay(3000).slideUp('slow');
+  
+  
+  // Init accordion for expenses
+  $j(function() {
+		$j("#accordion").accordion();
+	});
+
 });
 
 
