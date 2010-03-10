@@ -112,10 +112,10 @@ class ExpensesController < ApplicationController
   
     # Generating items for accordion
     def accordion
-      @current = current_user.expenses.current
-      @today = current_user.expenses.today
-      @yesterday = current_user.expenses.yesterday
-      @before_yesterday = current_user.expenses.before_yesterday
+      @current = current_user.expenses.current.sorted
+      @today = current_user.expenses.today.sorted
+      @yesterday = current_user.expenses.yesterday.sorted
+      @before_yesterday = current_user.expenses.before_yesterday.sorted
     end
     
     # Fixing a date for batch input

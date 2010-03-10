@@ -2534,7 +2534,7 @@ body.dashboard {
     float: right; }
 /* line 283, ../../app/stylesheets/application.sass */
 #content.expenses #new_expense, #content.expenses #edit_expense {
-  padding: 1em 0;
+  padding: 1em 0.5em;
   background: #fffacd;
   margin-bottom: 2em; }
   /* line 288, ../../app/stylesheets/application.sass */
