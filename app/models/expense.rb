@@ -10,6 +10,7 @@ class Expense < ActiveRecord::Base
   validates_numericality_of :amount
   validates_format_of :tag_list, :with => /([a-zA-Z]+,)?[a-zA-Z]+/, :message => 'Numai caractere alfanumerice', :allow_nil => true, :allow_blank => true
   
+  default_scope :include => [:category, :tags]
   named_scope :sorted, :order => "date DESC" 
   named_scope :current, :conditions => ["created_at >= ? OR updated_at >= ?", Date.today, Date.today]
   named_scope :dated, lambda { |start_date, end_date|

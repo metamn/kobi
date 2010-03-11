@@ -21,10 +21,20 @@ $j(document).ready(function(){
   
   
   // Init accordion for expenses
-  $j(function() {
-		$j("#accordion").accordion();
-	});
+  //$j(function() {
+	//	$j("#accordion").accordion();
+	//});
 
+  
+  // Accordion effect for Expenses
+  // Initialli close all divs
+  $j("#accordion > div").hide();
+  
+  // Toggle div on click
+  $j('#accordion h3').click(function(event) {
+    $j(this).next().toggle();
+  });
+  
 });
 
 

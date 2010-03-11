@@ -34,6 +34,7 @@
 !content_shadow = #A5A5A5
 !white_gray = #f9f9f9
 !border = #ddd
+!gray = #808080
 
 
 
@@ -283,8 +284,7 @@ body.dashboard
   #new_expense, #edit_expense
     :padding 1em 0.5em
     :background = !edit
-    :margin-bottom 2em
-    
+        
     input
       :padding 0
     
@@ -300,34 +300,58 @@ body.dashboard
   
   #index_expenses
     +column(24, last)
-    :background inherit
-    :padding 0 .5em 1em .5em
+    :background inherit    
     
     .header, .items, .item
       +column(24, last)
+      
+    .items, #accordion
+      :padding 1em 0.5em
     
     ul.header
-      :margin-bottom .5em
+      :padding 0 .5em
+      :background = !content_shadow
       
       li
         :font-weight bold
-        
-    .items
-      .item
+        :padding 1em 0
+        :text-transform uppercase
+        :color = !content    
+    
+    ul
+      li
         :padding .5em 0
-        :border-bottom = 1px solid !border
         
+      li.tags
+        :border-right none
+      
+        
+    .items                  
       .even 
         :background = !content
       
       .odd
         :background = !background
-      
-    #edit_expense
-      +column(24, last)     
+        :border-top = 1px solid !border
       
     #accordion
       :margin-top 2em
+      
+      h3
+        :border-bottom = 1px solid !border
+        :padding-bottom .2em
+        :cursor pointer
+        :text-transform lowercase
+        :color = !gray
+        
+      div
+        ul
+          :padding-bottom 2em
+    
+    
+    #edit_expense
+      +column(24, last)     
+      
        
         
 
@@ -395,40 +419,6 @@ body.dashboard
 
     tr.even td
       :background = !background
-
-
-
-
--# jQuery UI Smoothness theme
--# -------------------------------
-
-.ui-widget 
-  :font-family inherit
-  :font-size inherit
-        
-.ui-state-active, .ui-widget-content .ui-state-active
-  :background = !content
-  :border none
-
-.ui-state-default, .ui-widget-content .ui-state-default
-  :background = !content
-  :border none
-
-  
-.ui-accordion .ui-accordion-content
-  :padding .5em .15em 0
-  :background = !white_gray
-  :border-top = 1px solid !border
-  
-  .items
-    .even 
-      :background = !white_gray !important
-      
-    .odd
-      :background = !content !important
-
-.ui-widget-content
-  :border none
 
 
     
