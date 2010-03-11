@@ -2615,24 +2615,43 @@ body.dashboard {
 /* line 363, ../../app/stylesheets/application.sass */
 #content.categories #body {
   padding: 1.5em .5em !important; }
-  /* line 368, ../../app/stylesheets/application.sass */
-  #content.categories #body ul#sitemap li a {
-    text-decoration: none;
-    color: #333333;
-    font-size: larger; }
-  /* line 373, ../../app/stylesheets/application.sass */
-  #content.categories #body ul#sitemap li .description {
-    padding: 0;
-    margin: 0;
-    display: inline;
-    font-size: small;
-    margin-left: 1em;
-    color: #a5a5a5;
-    font-style: italic; }
-  /* line 382, ../../app/stylesheets/application.sass */
+  /* line 366, ../../app/stylesheets/application.sass */
+  #content.categories #body ul {
+    list-style-type: none; }
+  /* line 369, ../../app/stylesheets/application.sass */
+  #content.categories #body ul#accordion {
+    margin: 1em 0; }
+    /* line 372, ../../app/stylesheets/application.sass */
+    #content.categories #body ul#accordion .border {
+      border-top: 1px solid #dddddd; }
+    /* line 375, ../../app/stylesheets/application.sass */
+    #content.categories #body ul#accordion li {
+      padding-top: .5em;
+      margin-bottom: .5em; }
+      /* line 379, ../../app/stylesheets/application.sass */
+      #content.categories #body ul#accordion li .toggle {
+        font-size: larger;
+        margin-right: .5em;
+        cursor: pointer;
+        color: #a5a5a5; }
+      /* line 384, ../../app/stylesheets/application.sass */
+      #content.categories #body ul#accordion li a {
+        text-decoration: none;
+        color: #333333;
+        font-size: larger; }
+      /* line 389, ../../app/stylesheets/application.sass */
+      #content.categories #body ul#accordion li .description {
+        padding: 0;
+        margin: 0;
+        display: inline;
+        font-size: small;
+        margin-left: 1em;
+        color: #a5a5a5;
+        font-style: italic; }
+  /* line 398, ../../app/stylesheets/application.sass */
   #content.categories #body #edit_category {
     background: #fffacd; }
-    /* line 385, ../../app/stylesheets/application.sass */
+    /* line 401, ../../app/stylesheets/application.sass */
     #content.categories #body #edit_category ul.edit {
       margin: 0;
       padding: 0;
@@ -2661,20 +2680,20 @@ body.dashboard {
         /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
         #content.categories #body #edit_category ul.edit li.last {
           padding-right: 0px; }
-      /* line 391, ../../app/stylesheets/application.sass */
+      /* line 407, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li {
         margin: 0;
         padding: 0;
         background: #fffacd;
         font-size: small; }
-      /* line 397, ../../app/stylesheets/application.sass */
+      /* line 413, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li.name {
         display: inline;
         float: left;
         overflow: hidden;
         width: 25%;
         margin-right: 0.833em; }
-      /* line 399, ../../app/stylesheets/application.sass */
+      /* line 415, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li.description {
         display: inline;
         float: left;
@@ -2683,14 +2702,14 @@ body.dashboard {
         margin-right: 0.833em;
         font-style: normal;
         color: #333333; }
-      /* line 403, ../../app/stylesheets/application.sass */
+      /* line 419, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li.parent {
         display: inline;
         float: left;
         overflow: hidden;
         width: 25%;
         margin-right: 0.833em; }
-      /* line 405, ../../app/stylesheets/application.sass */
+      /* line 421, ../../app/stylesheets/application.sass */
       #content.categories #body #edit_category ul.edit li.buttons {
         display: inline;
         float: left;
@@ -2698,31 +2717,31 @@ body.dashboard {
         width: 20%;
         margin-right: 0;
         padding-top: 2em; }
-        /* line 409, ../../app/stylesheets/application.sass */
+        /* line 425, ../../app/stylesheets/application.sass */
         #content.categories #body #edit_category ul.edit li.buttons a {
           color: #00008b;
           text-decoration: underline;
           padding: 0;
           margin: 0;
           font-size: small; }
-/* line 417, ../../app/stylesheets/application.sass */
+/* line 433, ../../app/stylesheets/application.sass */
 #content.categories table {
   padding: 1.5em 0; }
-  /* line 420, ../../app/stylesheets/application.sass */
+  /* line 436, ../../app/stylesheets/application.sass */
   #content.categories table tr.even td {
     background: #e5e5e5; }
 
 
 
-/* line 428, ../../app/stylesheets/application.sass */
+/* line 444, ../../app/stylesheets/application.sass */
 .block {
   display: block;
   overflow: hidden; }
 
-/* line 432, ../../app/stylesheets/application.sass */
+/* line 448, ../../app/stylesheets/application.sass */
 .box {
   padding: 1.5em 1.5em 0; }
 
-/* line 435, ../../app/stylesheets/application.sass */
+/* line 451, ../../app/stylesheets/application.sass */
 a.inactive {
   cursor: default !important; }

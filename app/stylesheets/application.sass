@@ -363,8 +363,24 @@ body.dashboard
   #body
     :padding 1.5em .5em !important 
   
-    ul#sitemap
-      li       
+    ul
+      :list-style-type none
+      
+    ul#accordion
+      :margin 1em 0
+      
+      .border
+        :border-top = 1px solid !border     
+      
+      li  
+        :padding-top .5em
+        :margin-bottom .5em
+        
+        .toggle
+          :font-size larger
+          :margin-right .5em
+          :cursor pointer
+          :color = !content_shadow         
         a
           :text-decoration none
           :color = !black
