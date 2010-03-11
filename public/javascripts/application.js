@@ -5,31 +5,7 @@
 $j = jQuery.noConflict();
 
 $j(document).ready(function(){
-  
-  // Close flash messages on dashboard
-  $j('#flash.top .close').click(function(event) {
-    $j('#flash.top').slideUp('slow');
-  });
-  $j('#flash.resource .close').click(function(event) {
-    $j('#flash.resource').slideUp('slow');
-  });
-    
-  // Close flash message on dashboard after 3 sec
-  $j('#flash.top').delay(3000).slideUp('slow');
-  $j('#flash.resource').delay(3000).slideUp('slow');
-  
-  
-  
-  // Accordion effect for Expenses
-  // Initialli close all divs
-  $j("#accordion > div").hide();
-  
-  // Toggle div on click
-  $j('#accordion h3').click(function(event) {
-    $j(this).next().toggle();
-  });
-  
-  
+
   // Accordion effect for Categories
   // Initially close all subcats
   $j("ul#accordion li > ul").hide();
@@ -45,6 +21,33 @@ $j(document).ready(function(){
       $j(this).parent().removeClass('border');
     }
   });
+  
+
+  // Accordion effect for Expenses
+  // Initialli close all divs
+  $j("#accordion > div").hide();
+  
+  // Toggle div on click
+  $j('#accordion h3').click(function(event) {
+    $j(this).next().toggle();
+  });
+  
+
+   
+  // Flash messages  
+  // Close flash messages on dashboard
+  $j('#flash.top .close').click(function(event) {
+    $j('#flash.top').slideUp('slow');
+  });
+  $j('#flash.resource .close').click(function(event) {
+    $j('#flash.resource').slideUp('slow');
+  });
+    
+  // Close flash message on dashboard after 3 sec
+  $j('#flash.top').delay(3000).slideUp('slow');
+  $j('#flash.resource').delay(3000).slideUp('slow');
+  
+  
   
 });
 

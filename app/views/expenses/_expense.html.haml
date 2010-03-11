@@ -1,12 +1,12 @@
-%ul.items  
-  - expenses.each do |expense|
-    .item{:class => "#{cycle('even', 'odd')} block"}
-      %li.date
-        = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
-      %li.amount
-        = expense.amount
-      %li.category
-        = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
-      %li.tags
-        = expense.tag_list          
-      %div{:id => "ajax-update-#{expense.id}"}
+- update_divid = "ajax-update-#{divid}-#{expense.id}"
+
+.item{:class => "#{cycle('even', 'odd')} block"}
+  %li.date
+    = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => update_divid          
+  %li.amount
+    = expense.amount
+  %li.category
+    = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
+  %li.tags
+    = expense.tag_list          
+  %div{:id => update_divid}

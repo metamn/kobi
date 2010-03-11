@@ -1,2 +1,2 @@
-module ExpensesHelper
+module ExpensesHelper  
 end

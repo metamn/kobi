@@ -19,6 +19,17 @@ class ApplicationController < ActionController::Base
   
 
 
+
+  # Common actions
+  # -------------------------------
+  
+  # Updating a div with ""
+  # - used to close a div via a Prototype AJAX call
+  # - Example: closing an Update div when user clicks on "Back"
+  def close
+    render :text => ""
+  end
+
   private
   
     def redirect_to_https

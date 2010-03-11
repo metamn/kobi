@@ -1,14 +1,15 @@
 class ExpensesController < ApplicationController
   layout "dashboard", :except => [:edit]
   
-  # Populating the accordion for the views
+  # Populating the views
   before_filter :accordion, :only => [:new, :create, :update]
+  before_filter :category, :only => [:new, :edit, :create, :update]
   
   
   # GET /expenses
   # GET /expenses.xml
   def index
-    @expenses = current_user.expenses.sorted
+    @expenses = current_user.expenses
     
     respond_to do |format|
       format.html # index.html.erb
@@ -32,8 +33,6 @@ class ExpensesController < ApplicationController
   def new
     @expense = current_user.expenses.new    
     @expense.date = session[:date] unless session[:date].blank?    
-    @expenses = current_user.expenses.current
-    @categories = Category.all
     
     respond_to do |format|
       format.html # new.html.erb
@@ -44,7 +43,6 @@ class ExpensesController < ApplicationController
   # GET /expenses/1/edit
   def edit
     @expense = current_user.expenses.find(params[:id])    
-    @categories = Category.all
     @selected = @expense.category.nil? ? nil : @expense.category.id
   end
 
@@ -53,9 +51,6 @@ class ExpensesController < ApplicationController
   def create
     params[:expense][:user_id] = current_user.id
     @expense = Expense.new(params[:expense])
-    
-    @expenses = current_user.expenses.sorted
-    @categories = Category.all
     
     respond_to do |format|
       if @expense.save
@@ -73,9 +68,6 @@ class ExpensesController < ApplicationController
   # PUT /expenses/1.xml
   def update
     @expense = current_user.expenses.find(params[:id])
-    
-    @expenses = current_user.expenses.sorted
-    @categories = Category.all
     
     respond_to do |format|
       if @expense.update_attributes(params[:expense])
@@ -110,12 +102,28 @@ class ExpensesController < ApplicationController
   
   private
   
+    def category
+      @categories = Category.all
+    end
+  
     # Generating items for accordion
     def accordion
-      @current = current_user.expenses.current.sorted
-      @today = current_user.expenses.today.sorted
-      @yesterday = current_user.expenses.yesterday.sorted
-      @before_yesterday = current_user.expenses.before_yesterday.sorted
+      @current = current_user.expenses.current
+      @today = current_user.expenses.today
+      @yesterday = current_user.expenses.yesterday
+      @before_yesterday = current_user.expenses.before_yesterday
+      @this_week = current_user.expenses.this_week
+      @last_week = current_user.expenses.last_week 
+      @this_month = current_user.expenses.this_month 
+      
+      @accordion_items = [
+        [t('date.today'), @today, @today.suma],
+        [t('date.yesterday'), @yesterday, @yesterday.suma],
+        [t('date.before_yesterday'), @before_yesterday, @before_yesterday.suma],
+        [t('date.this_week'), @this_week, @this_week.suma],
+        [t('date.last_week'), @last_week, @last_week.suma], 
+        [t('date.this_month'), @this_month, @this_month.suma]
+      ]          
     end
     
     # Fixing a date for batch input

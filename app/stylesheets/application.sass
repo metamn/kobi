@@ -344,6 +344,11 @@ body.dashboard
         :text-transform lowercase
         :color = !gray
         
+        .sum
+          :float right
+          :font-size small
+          :margin-top .5em
+        
       div
         ul
           :padding-bottom 2em
@@ -397,6 +402,7 @@ body.dashboard
           
     #edit_category
       :background = !edit
+      :padding .5em
       
       ul.edit
         +horizontal-list
@@ -450,5 +456,5 @@ body.dashboard
   
 a.inactive 
   :cursor default !important 
-    
   
+

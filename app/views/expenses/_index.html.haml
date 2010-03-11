@@ -10,64 +10,12 @@
       = t('activerecord.attributes.expense.tags')
   
   
-  %ul.items  
-    - @current.each do |expense|
-      .item{:class => "#{cycle('even', 'odd')} block"}
-        %li.date
-          = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
-        %li.amount
-          = expense.amount
-        %li.category
-          = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
-        %li.tags
-          = expense.tag_list          
-        %div{:id => "ajax-update-#{expense.id}"}
+  %ul.items
+    = render :partial => 'expense', :collection => @current, :locals => {:divid => 'current'}
   
   .clear
   
-  #accordion   
-    %h3
-      Azi  
-    %div
-      %ul.items  
-        - @today.each do |expense|
-          .item{:class => "#{cycle('even', 'odd')} block"}
-            %li.date
-              = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
-            %li.amount
-              = expense.amount
-            %li.category
-              = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
-            %li.tags
-              = expense.tag_list          
-            %div{:id => "ajax-update-#{expense.id}"}
-    %h3
-      Ieri  
-    %div  
-      %ul.items  
-        - @yesterday.each do |expense|
-          .item{:class => "#{cycle('even', 'odd')} block"}
-            %li.date
-              = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
-            %li.amount
-              = expense.amount
-            %li.category
-              = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
-            %li.tags
-              = expense.tag_list          
-            %div{:id => "ajax-update-#{expense.id}"}
-    %h3
-      Alaltaieri
-    %div
-      %ul.items  
-        - @before_yesterday.each do |expense|
-          .item{:class => "#{cycle('even', 'odd')} block"}
-            %li.date
-              = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => "ajax-update-#{expense.id}"          
-            %li.amount
-              = expense.amount
-            %li.category
-              = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
-            %li.tags
-              = expense.tag_list          
-            %div{:id => "ajax-update-#{expense.id}"}
+  #accordion    
+    - @accordion_items.each do |k, v, s|
+      = render :partial => 'accordion', :locals => {:title => k, :items => v, :sum => s}
+    
