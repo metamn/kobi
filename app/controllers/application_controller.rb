@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   layout "login"
 
   # Redirect to https
-  before_filter :redirect_to_https
+  # before_filter :redirect_to_https
   
 
 
