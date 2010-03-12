@@ -19,19 +19,22 @@
   = stylesheet_link_tag 'application', :media => 'screen, projection'
   
   %body.dashboard 
-    #header
+    #header.block
       = render :partial => "shared/header"
+    #menu.block
+      = render :partial => "shared/menu"
     #flash-top.flash 
-      = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert], :role => 'top'}  
-    #content{:class => controller.controller_name}
-      #titlebar.block
-        #title
-          = yield :title
-        #flash-resource.flash
-          = yield :flash
-      #body
-        = yield  
-    #sidebar{:class => controller.controller_name}       
-      = yield :sidebar  
+      = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert]}
+    %div{:class => "#{controller.controller_name}"}  
+      #content
+        #titlebar.block
+          #title
+            = yield :title
+          #flash-resource.flash
+            = yield :flash
+        #body
+          = yield  
+      #sidebar{:class => controller.controller_name}       
+        = yield :sidebar  
     #footer
       

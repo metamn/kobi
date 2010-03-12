@@ -1,29 +1,17 @@
-.box
-  .block  
-    #logo
-      %h1
-        = link_to "Kobi", dashboard_path
-        
-    #account
-      %ul
-        %li
-          = current_user.name
-          &nbsp;&bull;&nbsp;
-        %li
-          = link_to t('menu.account'), edit_registration_path(current_user)
-          &nbsp;&bull;&nbsp;
-        %li 
-          = link_to t('menu.logout'), destroy_session_path(current_user)
-      
-  .block
-    #menu
-      = semantic_menu :class => 'main_menu' do |root|
-        - root.add t('activerecord.models.expense'), new_expense_path  
-      
-
-    #menu2
-      %ul
-        %li
-          = link_to t('menu.informations'), "http://blog.kobi.ro"      
-     
+ 
+#logo
+  %h1
+    = link_to "Kobi", dashboard_path
+    
+#account
+  %ul
+    %li
+      = current_user.name
+      &nbsp;&bull;&nbsp;
+    %li
+      = link_to t('menu.account'), edit_registration_path(current_user)
+      &nbsp;&bull;&nbsp;
+    %li 
+      = link_to t('menu.logout'), destroy_session_path(current_user)
+  
 

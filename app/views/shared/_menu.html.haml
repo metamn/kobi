@@ -1,0 +1,11 @@
+#resources
+  = semantic_menu :class => 'main_menu' do |root|
+    - root.add t('activerecord.models.expense'), new_expense_path  
+  
+
+#info
+  %ul
+    %li
+      = link_to t('menu.informations'), "http://blog.kobi.ro"      
+     
+

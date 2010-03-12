@@ -12,6 +12,6 @@
   - f.buttons do  
     = f.commit_button :modify    
 
-= render :partial => "shared/devise_links"
-
-= link_to "Desfintare cont", registration_path(resource_name), :method => :delete, :confirm => 'Sunteti sigur?'
+.links
+  = render :partial => "shared/devise_links"
+  = link_to t('devise.registrations.delete'), registration_path(resource_name), :method => :delete, :confirm => t('activerecord.operations.confirm')

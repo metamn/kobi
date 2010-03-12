@@ -123,6 +123,69 @@ body.dashboard
   :width 100%
   :background = !background
   
+    
+  #header
+    +column(24, last)
+    :background = !header    
+    :color = !background
+    
+    a
+      :color = !background
+    
+    #logo 
+      +column(12, last)
+      
+      h1
+        :margin .1em .6em
+        a
+          :text-decoration none  
+    
+    #account
+      +column(12, last)      
+      
+      ul
+        +horizontal-list
+        :float right
+        :margin .5em
+  
+  #menu
+    +column(24, last)
+    :background = !header 
+    :font-size larger
+    :padding-top 1em
+    
+    a
+      :color = !background   
+      
+    ul
+      +horizontal-list
+      :margin 0      
+        
+    #resources
+      +column(18, last)
+      
+      ul.main_menu
+        :margin 0 1.5em        
+        li
+          :background = !menu
+          :padding .5em .7em
+          :border-right = 2px solid !header          
+          a
+            :text-decoration none
+            :font-weight bold
+      
+        li.active
+          :background = !background          
+          a
+            :color = !header
+  
+    #info
+      +column(6, last)
+      ul
+        :float right
+        :margin .5em
+    
+  
   .flash
     .message
       :padding .1em 0
@@ -148,69 +211,12 @@ body.dashboard
     .success
       :background = !success
       :border none
-  
-  #header
-    +column(24, last)
-    :background = !header
-    :padding 0
-    :color = !background
-    
-    a
-      :color = !background
-    
-    #logo 
-      +column(12, last)
-      
-      h1
-        :margin-bottom 0
-        :margin-left .1em
-        a
-          :text-decoration none  
-    
-    #account
-      +column(12, last)      
-      
-      ul
-        +horizontal-list
-        :float right
-        :margin 0
-      
-    #menu, #menu2
-      +column(12, last)
-      :font-size larger
-      :margin-top 1em
-      
-      ul
-        +horizontal-list
-        :margin 0
-      
-    #menu2
-      ul
-        :float right
-        
-    #menu 
-      ul.main_menu
-        li
-          :background = !menu
-          :padding .5em .7em
-          :border-right = 2px solid !header
-          
-          a
-            :text-decoration none
-            :font-weight bold
-      
-        li.active
-          :background = !background
-          
-          a
-            :color = !header
       
   
   #content
-    +column(18, last)
+    +column(17, last)    
     :-moz-box-shadow = .2em .2em .1em !content_shadow
-    :-webkit-box-shadow = .2em .2em .1em !content_shadow
-    :margin 1.5em 1.5em 0
+    :-webkit-box-shadow = .2em .2em .1em !content_shadow    
     
     #titlebar
       :background = !resource_header
@@ -248,9 +254,10 @@ body.dashboard
         :color = !error
     
   #sidebar
-    +column(4, last)
-    :margin 1.5em 1.5em 0
+    +column(5, last)
     
+  #content, #sidebar
+    :margin 2em 0 2em 2em
     
     
   #footer
@@ -265,107 +272,107 @@ body.dashboard
     
 -# Expenses
 -# -------------------------------    
-
-#content.expenses
-  ul.edit, ul.new, ul.header, ul.items
-    +horizontal-list
-    :margin 0
-    :padding 0
-    
-    li
+.expenses
+  #content
+    ul.edit, ul.new, ul.header, ul.items
+      +horizontal-list
       :margin 0
       :padding 0
-    
-    li.date
-      +column(6)
-    li.amount
-      +column(5)
-    li.category
-      +column(5)
-    li.tags
-      +column(5, last)
-    li.buttons
-      +column(2, last)
-      :float right
-
-  #new_expense, #edit_expense
-    :padding 1em 0.5em
-    :background = !edit
-        
-    input
-      :padding 0
-    
-    #expense_amount
-      :width 70%
-    
-    #expense_category_id, #expense_tags_saved  
-      :width 100%
-    
-    #expense_tag_list
-      :width 97%
-    
-    .errorExplanation
-      h2
-        :color = !edit
-  
-  #index_expenses
-    +column(24, last)
-    :background inherit    
-    
-    .header, .items, .item
-      +column(24, last)
-      
-    .items, #accordion
-      :padding 1em 0.5em
-    
-    ul.header
-      :padding 0 .5em
-      :background = !content_shadow
       
       li
-        :font-weight bold
-        :padding 1em 0
-        :text-transform uppercase
-        :color = !content    
-    
-    ul
-      li
-        :padding .5em 0
-        
+        :margin 0
+        :padding 0
+      
+      li.date
+        +column(6)
+      li.amount
+        +column(5)
+      li.category
+        +column(5)
       li.tags
-        :border-right none
+        +column(5, last)
+      li.buttons
+        +column(2, last)
+        :float right
+
+    #new_expense, #edit_expense
+      :padding 1em 0.5em
+      :background = !edit
+          
+      input
+        :padding 0
       
-        
-    .items                  
-      .even 
-        :background = !content
+      #expense_amount
+        :width 70%
       
-      .odd
-        :background = !background
-        :border-top = 1px solid !border
+      #expense_category_id, #expense_tags_saved  
+        :width 100%
       
-    #accordion
-      :margin-top 2em
+      #expense_tag_list
+        :width 97%
       
-      h3
-        :border-bottom = 1px solid !border
-        :padding-bottom .2em
-        :cursor pointer
-        :text-transform lowercase
-        :color = !gray
-        
-        .sum
-          :float right
-          :font-size small
-          :margin-top .5em
-        
-      div
-        ul
-          :padding-bottom 2em
+      .errorExplanation
+        h2
+          :color = !edit
     
-    
-    #edit_expense
-      +column(24, last)     
+    #index_expenses
+      +column(24, last)
+      :background inherit    
+      
+      .header, .items, .item
+        +column(24, last)
+        
+      .items, #accordion
+        :padding 1em 0.5em
+      
+      ul.header
+        :padding 0 .5em
+        :background = !content_shadow
+        
+        li
+          :font-weight bold
+          :padding 1em 0
+          :text-transform uppercase
+          :color = !content    
+      
+      ul
+        li
+          :padding .5em 0
+          
+        li.tags
+          :border-right none
+        
+          
+      .items                  
+        .even 
+          :background = !content
+        
+        .odd
+          :background = !background
+          :border-top = 1px solid !border
+        
+      #accordion
+        :margin-top 2em
+        
+        h3
+          :border-bottom = 1px solid !border
+          :padding-bottom .2em
+          :cursor pointer
+          :text-transform lowercase
+          :color = !gray
+          
+          .sum
+            :float right
+            :font-size small
+            :margin-top .5em
+          
+        div
+          ul
+            :padding-bottom 2em
+      
+      
+      #edit_expense
+        +column(24, last)     
       
        
         
@@ -374,93 +381,94 @@ body.dashboard
 -# Categories
 -# -------------------------------     
 
-#content.categories
-  #body
-    :padding 1.5em .5em !important 
-    
+.categories
+  #content
+    #body
+      :padding 1.5em .5em !important 
       
-    ul
-      :list-style-type none
-      
-    ul#accordion
-      :margin 1em 0
-      
-      .border
-        :border-top = 1px solid !border     
-      
-      li  
-        :padding-top .5em
-        :margin-bottom .5em
         
-        .toggle
-          :font-size larger          
-          :cursor pointer
-          :color = !content_shadow 
+      ul
+        :list-style-type none
         
-        .spacer
-          :min-width 1em
-            
-        .toggle, .spacer
-          :margin-right .5em
-                  
-        a
-          :text-decoration none
-          :color = !black
-          :font-size larger
+      ul#accordion
+        :margin 1em 0
         
-        .description
-          :padding 0
-          :margin 0
-          :display inline
-          :font-size small
-          :margin-left 1em
-          :color = !content_shadow
-          :font-style italic
+        .border
+          :border-top = 1px solid !border     
+        
+        li  
+          :padding-top .5em
+          :margin-bottom .5em
           
-    #edit_category
-      +column(24, last)
-      :background = !edit
-      :padding .5em
-      
-      #category_name, #category_description 
-        :width 80%
-      
-      #category_ancestry
-        :width 81%
-        
-      #category_description
-        :height 10em
-      
-      .column1
-        +column(11)
-        +append(1)
-        
-        .item
-          :margin-bottom 1em
-        
-      .column2 
-        +column(11, last)
-        +prepend(1)  
+          .toggle
+            :font-size larger          
+            :cursor pointer
+            :color = !content_shadow 
           
-        .item
-          :margin-bottom 2em
+          .spacer
+            :min-width 1em
+              
+          .toggle, .spacer
+            :margin-right .5em
+                    
+          a
+            :text-decoration none
+            :color = !black
+            :font-size larger
           
-        ul
-          :margin 0 1em
-          
-          li
-            :margin 0
+          .description
             :padding 0
-      
-    #new_category   
-      #category_name, #category_description 
-        :width 40%
-      
-      #category_ancestry
-        :width 41%
+            :margin 0
+            :display inline
+            :font-size small
+            :margin-left 1em
+            :color = !content_shadow
+            :font-style italic
+            
+      #edit_category
+        +column(24, last)
+        :background = !edit
+        :padding .5em
         
-      #category_description
-        :height 10em
+        #category_name, #category_description 
+          :width 80%
+        
+        #category_ancestry
+          :width 81%
+          
+        #category_description
+          :height 10em
+        
+        .column1
+          +column(11)
+          +append(1)
+          
+          .item
+            :margin-bottom 1em
+          
+        .column2 
+          +column(11, last)
+          +prepend(1)  
+            
+          .item
+            :margin-bottom 2em
+            
+          ul
+            :margin 0 1em
+            
+            li
+              :margin 0
+              :padding 0
+        
+      #new_category   
+        #category_name, #category_description 
+          :width 40%
+        
+        #category_ancestry
+          :width 41%
+          
+        #category_description
+          :height 10em
         
   
     
