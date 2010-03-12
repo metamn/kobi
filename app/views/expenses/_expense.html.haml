@@ -2,7 +2,7 @@
 
 .item{:class => "#{cycle('even', 'odd')} block"}
   %li.date
-    = link_to_remote expense.date, :url => edit_expense_path(expense), :method=> :get, :update => update_divid          
+    = link_to_remote l(expense.date), :url => edit_expense_path(expense), :method=> :get, :update => update_divid          
   %li.amount
     = expense.amount
   %li.category

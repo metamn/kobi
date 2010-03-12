@@ -3,9 +3,9 @@ class CategoriesController < ApplicationController
   
   layout "dashboard", :except => [:edit]
   
-  # getting all cats for index
-  # getting all cats for selectbox on new, create, update
-  before_filter :category_all, :only => [:index, :new, :create, :update]
+  # getting cats for selectbox on new, create, update
+  before_filter :children, :only => [:new, :update, :create]
+  before_filter :roots, :only => [:index, :new, :edit, :update, :create]
   
   # setting current_user on create, update
   before_filter :set_current_user, :only => [:create, :update]
@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
   
   # GET /categories
   # GET /categories.xml
-  def index    
+  def index        
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @categories }
@@ -48,7 +48,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
-    @categories = Category.all - [@category]
+    @categories = Category.has_children - [@category]    
     @selected = @category.parent.nil? ? nil : @category.parent.id
   end
 
@@ -109,8 +109,13 @@ class CategoriesController < ApplicationController
   
   private
     
-    def category_all
-      @categories = Category.sorted
+    # getting cats for option_groups_from_collection_for_select
+    def children
+      @categories = Category.has_children
+    end
+    
+    def roots
+      @roots = Category.roots
     end
     
     def set_current_user

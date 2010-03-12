@@ -50,6 +50,8 @@ ro:
         fix_date_hint: Fixati aceasta data pentru a introduce mai usor cheltuielile din trecut
         fix_date_ok: Data este fixata pentru 
         remove_date: Anulare        
+        show_all: Vezi toate categoriile
+        roots: Categorii principale
     flash:
       created: Aduagat cu succes!
       updated: Modificat cu succes!

@@ -33,7 +33,7 @@ class ExpensesController < ApplicationController
   def new
     @expense = current_user.expenses.new    
     @expense.date = session[:date] unless session[:date].blank?    
-    
+        
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @expense }
@@ -88,6 +88,7 @@ class ExpensesController < ApplicationController
     @expense.destroy
 
     respond_to do |format|
+      flash[:success] = t('activerecord.flash.deleted')
       format.html { redirect_to :action => 'new' }
       format.xml  { head :ok }
     end
@@ -97,13 +98,13 @@ class ExpensesController < ApplicationController
   def fixed_date    
     set_fixed_date if params[:month]
     remove_fixed_date if params[:remove_date]
-    render :partial => "shared/flash_messages", :locals => {:messages => [:success], :role => 'resource'}    
+    render :partial => "shared/flash_messages", :locals => {:messages => [:success]}    
   end
   
   private
   
     def category
-      @categories = Category.all
+      @categories = Category.has_children
     end
   
     # Generating items for accordion
@@ -129,13 +130,13 @@ class ExpensesController < ApplicationController
     # Fixing a date for batch input
     def set_fixed_date
       session[:date] = Date.new(params[:year].to_i, params[:month].to_i, params[:day].to_i)
-      flash[:success] = t('activerecord.operations.category.fix_date_ok') + " #{session[:date].to_s}"
+      flash[:success] = t('activerecord.operations.category.fix_date_ok') + " #{l(session[:date]).to_s}"
     end
   
     # Removing fixed date for batch input
     def remove_fixed_date
       session[:date] = nil
-      flash[:success] = t('activerecord.operations.category.fix_date_ok') + " #{Date.today.to_s}"
+      flash[:success] = t('activerecord.operations.category.fix_date_ok') + " #{l(Date.today).to_s}"
     end
   
 end

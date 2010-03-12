@@ -10,6 +10,11 @@ $j(document).ready(function(){
   // Initially close all subcats
   $j("ul#accordion li > ul").hide();
   
+  // Show all subcats on click
+  $j('.categories .show_all').click(function(event) {
+    $j("ul#accordion li > ul").show();
+  });
+  
   // Toggle subcats on click
   $j('ul#accordion .toggle').click(function(event) {
     $j(this).siblings().last().toggle();
@@ -36,16 +41,16 @@ $j(document).ready(function(){
    
   // Flash messages  
   // Close flash messages on dashboard
-  $j('#flash.top .close').click(function(event) {
-    $j('#flash.top').slideUp('slow');
+  $j('#flash-top .close').click(function(event) {
+    $j('#flash-top').slideUp('slow');
   });
-  $j('#flash.resource .close').click(function(event) {
-    $j('#flash.resource').slideUp('slow');
+  $j('#flash-resource .close').click(function(event) {
+    $j('#flash-resource').slideUp('slow');
   });
     
   // Close flash message on dashboard after 3 sec
-  $j('#flash.top').delay(3000).slideUp('slow');
-  $j('#flash.resource').delay(3000).slideUp('slow');
+  $j('#flash-top').delay(3000).slideUp('slow');
+  $j('#flash-resource').delay(3000).slideUp('slow');
   
   
   

@@ -1,11 +1,14 @@
 - content_for :title do 
   = t('activerecord.models.description.category')
-  = render :partial => "shared/flash_messages", :locals => {:messages => [:error, :success], :role => 'resource'}
+- content_for :flash do 
+  = render :partial => "shared/flash_messages", :locals => {:messages => [:error, :success]}
 
 
-= link_to t('activerecord.operations.category.new'), new_category_path
+= link_to t('activerecord.operations.category.new'), new_category_path 
+%span.show_all.link
+  = t('activerecord.operations.category.show_all')
 
 %ul{:id => "accordion"}
-  = render :partial => "category", :collection => Category.roots.sorted
+  = render :partial => "category", :collection => @roots
 
 

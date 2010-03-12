@@ -21,8 +21,8 @@
 -# 3b, Light green
 !success = #90EE90 
 
--# 3c, Light coral
-!error = #f08080 	
+-# 3c, Indian red
+!error = #CD5C5C 	
 
 
 -# from Compass/Blueprint
@@ -130,25 +130,31 @@ body.dashboard
   :width 100%
   :background = !background
   
+  .flash
+    .message
+      :padding .1em 0
+      :margin 0
+      
+      .close
+        :cursor pointer
+    
+  
   #flash-top
     +column(24, last)
     :text-align center
     
+    .notice
+      :background = !edit
+      :border none
+    
   #flash-resource
-    :float right
+    :text-align right    
     :font-weight normal
     :font-size small
     
     .success
       :background = !success
-    
-  #flash.top, #flash.resource
-    .flash
-      :margin 0
       :border none
-      :padding .2em 1em
-    .close
-      :cursor pointer
   
   #header
     +column(24, last)
@@ -213,32 +219,40 @@ body.dashboard
     :-webkit-box-shadow = .2em .2em .1em !content_shadow
     :margin 1.5em 1.5em 0
     
-    #title
+    #titlebar
       :background = !resource_header
+      :color = !header
       :padding 1em .5em
       :font-size larger
       :font-weight bold
+      
+      #title
+        +column(16, last)
+        
+      #flash 
+        +column(8, last)
     
     #body
       :background = !content
       :padding 0
       
     .errorExplanation
-      :border 1px solid indianRed
-      :color indianRed      
+      :border = 1px solid !error
+      :color = !error      
       :margin-bottom 1em      
       
       h2
-        :background indianRed
-        :padding .3em
+        :background = !error
+        :padding .3em     
+        :color = !content   
         
       p
         :padding 1em  
         
     .fieldWithErrors
       input, textarea, select
-        :border 1px solid indianRed
-        :color indianRed
+        :border = 2px solid !error
+        :color = !error
     
   #sidebar
     +column(4, last)
@@ -297,6 +311,9 @@ body.dashboard
     #expense_tag_list
       :width 97%
     
+    .errorExplanation
+      h2
+        :color = !edit
   
   #index_expenses
     +column(24, last)
@@ -367,7 +384,8 @@ body.dashboard
 #content.categories
   #body
     :padding 1.5em .5em !important 
-  
+    
+      
     ul
       :list-style-type none
       
@@ -382,10 +400,16 @@ body.dashboard
         :margin-bottom .5em
         
         .toggle
-          :font-size larger
-          :margin-right .5em
+          :font-size larger          
           :cursor pointer
-          :color = !content_shadow         
+          :color = !content_shadow 
+        
+        .spacer
+          :min-width 1em
+            
+        .toggle, .spacer
+          :margin-right .5em
+                  
         a
           :text-decoration none
           :color = !black
@@ -401,48 +425,51 @@ body.dashboard
           :font-style italic
           
     #edit_category
+      +column(24, last)
       :background = !edit
       :padding .5em
       
-      ul.edit
-        +horizontal-list
-        :margin 0
-        :padding 0
-        :display inline
+      #category_name, #category_description 
+        :width 80%
+      
+      #category_ancestry
+        :width 81%
         
-        li
-          :margin 0
-          :padding 0
-          :background = !edit
-          :font-size small
+      #category_description
+        :height 10em
+      
+      .column1
+        +column(11)
+        +append(1)
         
-        li.name
-          +column(6)
-        li.description
-          +column(6)
-          :font-style normal
-          :color = !black
-        li.parent
-          +column(6)
-        li.buttons
-          +column(5, last)
-          :padding-top 2em
+        .item
+          :margin-bottom 1em
+        
+      .column2 
+        +column(11, last)
+        +prepend(1)  
           
-          a
-            :color = !link
-            :text-decoration underline
-            :padding 0
+        .item
+          :margin-bottom 2em
+          
+        ul
+          :margin 0 1em
+          
+          li
             :margin 0
-            :font-size small  
+            :padding 0
+      
+    #new_category   
+      #category_name, #category_description 
+        :width 40%
+      
+      #category_ancestry
+        :width 41%
         
+      #category_description
+        :height 10em
         
-  table
-    :padding 1.5em 0
-
-    tr.even td
-      :background = !background
-
-
+  
     
 -# Common
 -# -------------------------------        
@@ -457,4 +484,7 @@ body.dashboard
 a.inactive 
   :cursor default !important 
   
-
+.link
+  :color = !link
+  :text-decoration underline
+  :cursor pointer

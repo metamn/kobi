@@ -1,22 +1,28 @@
 #edit_category 
   - form_for(@category) do |f|
-    = f.error_messages
-    %ul.edit
-      %li.name
+    = f.error_messages    
+    .column1
+      .item
         = f.label t('activerecord.attributes.category.name')
         %br
         = f.text_field :name      
-      %li.description
+      .item
         = f.label t('activerecord.attributes.category.description')
         %br
         = f.text_area :description    
-      %li.parent
+    .column2
+      .item
         = f.label t('activerecord.attributes.category.parent')
         %br
-        = f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true, :selected => @selected} 
-      %li.buttons    
+        -#= f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true, :selected => @selected} 
+        = f.select :ancestry, option_group_for_roots(@roots, @category) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name), {:include_blank => true, :selected => @selected}
+      .item
         = f.submit t('activerecord.operations.edit')
-        = link_to t('activerecord.operations.destroy'), @category, :confirm => t('activerecord.operations.confirm'), :method => :delete, :class => 'destroy'
-        = link_to_remote t('activerecord.operations.back'), :url => {:controller => 'application', :action => 'close'}, :update => "ajax-update-#{@category.id}"   
-        
-
+        %br
+        %ul
+          %li
+            = link_to t('activerecord.operations.destroy'), @category, :confirm => t('activerecord.operations.confirm'), :method => :delete, :class => 'destroy'
+          %li
+            = link_to_remote t('activerecord.operations.back'), :url => {:controller => 'application', :action => 'close'}, :update => "ajax-update-#{@category.id}", :html => {:class => 'link'}           
+    
+    

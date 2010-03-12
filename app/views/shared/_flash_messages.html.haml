@@ -1,8 +1,7 @@
-%div{:id => "flash-#{role}"}
-  %div{:id => "flash", :class => "#{role}"}
-    - messages.each do |key|
-      - if flash[key]
-        %div{:class => "flash #{key}"}
-          = flash[key]
-          %span.close
-            [x]
+- messages.each do |key|
+  - if flash[key]
+    %span{:class => "message"}
+      %span{:class => "#{key}"}
+        = flash[key]
+        %span.close
+          [x]

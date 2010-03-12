@@ -1,6 +1,10 @@
 %li
-  %span.toggle
-    +
+  - if category.children.blank?
+    %span.spacer
+      &nbsp;&nbsp;&nbsp;&nbsp;  
+  - else
+    %span.toggle
+      + 
   - if (category.user == current_user) || is_admin?
     = link_to_remote category.name, :url => edit_category_path(category), :method=> :get, :update => "ajax-update-#{category.id}", :html => {:title => t('activerecord.operations.category.edit')}
   - else
