@@ -60,67 +60,57 @@ body
 body.login
   +container
   
-  #header
-    +column(24, last)
-  
-  #content
-    +column(24, last)
+  #header, #content, #footer
+    +column(8, last)
+    +prepend(8)
     
-    .logo-container 
-      :margin-top 5em  
+  #header  
+    :margin-top 5em
       
+    .box
+      +box
+      :margin-bottom 0
+      :background = !header
+      :color = !background
+            
       .logo
-        :background = !header
-        :color = !background
+        +column(8, last)
         
         h1
-          :margin 0
-          :padding .5em
           :color = !background
-          
-          .title 
-            :font-size small
-            :float right
       
-    .form-container, .logo-container
-      +column(8, last)
-      +prepend(8)  
+      .title
+        +column(16, last)
+        :text-align right
       
-      .form
-        +box
-        :background = !resource_header
+  #content
+    .form
+      +box
+      :background = !resource_header
         
-        p  
-          :padding .5em
-          :margin-bottom 1em
-          
-        #user_name, #user_email, #user_password, #user_password_confirmation, #user_current_password
-          :width 70%          
-          :font-size large
-          :padding .2em 0
-          
-        label
-          :font-size small
-          :font-weight normal
-          
+      p  
+        :padding .5em
+        :margin-bottom 1em
         
+      #user_name, #user_email, #user_password, #user_password_confirmation, #user_current_password
+        :width 70%          
+        :font-size large
+        :padding .2em 0
+        
+      label
+        :font-size small
+        :font-weight normal
         
   #footer
-    +column(24, last)
-    
-    .footer-container
-      +column(8, last)
-      +prepend(8)
-      :text-align right
+    .highlight
+      :background = !header
+      :padding .5em
+      :float right
       
-      .highlight
-        :background = !header
-        :padding .5em
-        
-        a, a:visited
-          :color = !background
-  
-  
+      a, a:visited
+        :color = !background
+
+
         
 
 -# Dashboard

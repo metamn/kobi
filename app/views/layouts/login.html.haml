@@ -13,20 +13,15 @@
   = stylesheet_link_tag 'application', :media => 'screen, projection'
   %body.login    
     #header
-     
-    #content
-      .logo-container
+      .box.block
         .logo
           %h1
             Kobi
-            %span.title
-              = yield :title
-
-      .form-container
-        .form
-          = yield
-    
-    #footer
-      .footer-container         
-        %span.highlight
-          =link_to t('menu.informations'), "http://blog.kobi.ro"
+        .title
+          = yield :title
+    #content.block      
+      .form
+        = yield    
+    #footer.block
+      %span.highlight
+        = link_to t('menu.informations'), "http://blog.kobi.ro"
