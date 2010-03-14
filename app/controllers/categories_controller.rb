@@ -42,6 +42,7 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @category }
+      format.js {render :partial => 'new', :layout => false}
     end
   end
 
@@ -63,9 +64,12 @@ class CategoriesController < ApplicationController
         flash[:success] = t('activerecord.flash.created')
         format.html { redirect_to :action => 'index' }
         format.xml  { render :xml => @category, :status => :created, :location => @category }
+        format.js 
       else
+        flash[:error] = t('activerecord.flash.error')
         format.html { render :action => "new" }
         format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
+        format.js 
       end
     end
   end

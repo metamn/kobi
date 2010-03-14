@@ -6,6 +6,7 @@ $j = jQuery.noConflict();
 
 $j(document).ready(function(){
 
+  
   // Accordion effect for Categories
   // Initially close all subcats
   $j("ul#accordion li > ul").hide();

@@ -25,7 +25,7 @@
       %li.date
         = f.date_select :date, :use_short_month => true
         %br
-        = link_to_remote t('activerecord.operations.category.fix_date'), :url => {:controller => 'expenses', :action => 'fixed_date' }, :with => "'day='+$F('expense_date_3i')+'&month='+$F('expense_date_2i')+'&year='+$F('expense_date_1i')", :html => {:title => t('activerecord.operations.category.fix_date_hint')}, :update => "flash-resource"
+        = link_to_remote t('activerecord.operations.category.fix_date'), :url => {:controller => 'expenses', :action => 'fixed_date' }, :update => "flash-resource", :with => "'day='+$F('expense_date_3i')+'&month='+$F('expense_date_2i')+'&year='+$F('expense_date_1i')", :html => {:title => t('activerecord.operations.category.fix_date_hint')}
         = link_to_remote t('activerecord.operations.category.remove_date'), :url => {:controller => 'expenses', :action => 'fixed_date', :remove_date => '1'}, :update => "flash-resource"
       %li.amount 
         = f.text_field :amount
@@ -33,11 +33,13 @@
       %li.category        
         = f.select :category_id, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
         %br
-        = link_to t('activerecord.operations.category.new'), new_category_path, :title => t('activerecord.operations.category.new_hint')
+        = link_to_remote t('activerecord.operations.category.new'), :url => {:controller => 'categories', :action => 'new'}, :update => "expense-new-category", :html => {:title => t('activerecord.operations.category.new_hint')}               
       %li.tags
         = f.text_field :tag_list
       %li.buttons
         = f.submit " + "  
+.block
+  %div{:id => "expense-new-category"}
 
 .block  
   = render :partial => "expenses/index"

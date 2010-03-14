@@ -57,6 +57,7 @@ ro:
       updated: Modificat cu succes!
       not_allowed: Operatie nepermisa.
       deleted: Stergere cu succes!
+      error: Operatie esuata!
     errors:
       template:
         header: Date invalide

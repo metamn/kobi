@@ -1,0 +1,23 @@
+- content_for :title do 
+  = t('activerecord.operations.category.new')
+
+- remote_form_for(@category) do |f|
+  = f.error_messages
+  %p
+    = f.label t('activerecord.attributes.category.name')
+    %br
+    = f.text_field :name
+    
+  %p
+    = f.label t('activerecord.attributes.category.description')
+    %br
+    = f.text_area :description  
+  
+  %p  
+    = f.label t('activerecord.attributes.category.parent')
+    %br
+    = f.select :ancestry, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name), {:include_blank => true}
+    
+  
+  = f.submit t('activerecord.operations.category.new')
+  = link_to_remote t('activerecord.operations.back'), :url => {:action => :close}, :update => 'expense-new-category' 
