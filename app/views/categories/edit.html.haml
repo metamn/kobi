@@ -14,7 +14,6 @@
       .item
         = f.label t('activerecord.attributes.category.parent')
         %br
-        -#= f.select :ancestry, @categories.collect {|c| [c.name, c.id]}, {:include_blank => true, :selected => @selected} 
         = f.select :ancestry, option_group_for_roots(@roots, @category) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name), {:include_blank => true, :selected => @selected}
       .item
         = f.submit t('activerecord.operations.edit')

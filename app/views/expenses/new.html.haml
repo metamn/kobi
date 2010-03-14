@@ -31,7 +31,7 @@
         = f.text_field :amount
         RON
       %li.category        
-        = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
+        = f.select :category_id, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
         %br
         = link_to t('activerecord.operations.category.new'), new_category_path, :title => t('activerecord.operations.category.new_hint')
       %li.tags

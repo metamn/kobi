@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => 'welcome'
   map.dashboard 'dashboard', :controller => 'dashboard', :action => 'index'
-    
+     
   map.devise_for  :users, :as => 'cont', 
                   :path_names => {
                     :sign_in => 'intrare', 

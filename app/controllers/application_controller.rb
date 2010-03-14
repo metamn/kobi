@@ -18,8 +18,7 @@ class ApplicationController < ActionController::Base
   # before_filter :redirect_to_https
   
 
-
-
+  
   # Common actions
   # -------------------------------
   
@@ -36,8 +35,9 @@ class ApplicationController < ActionController::Base
       redirect_to :protocol => "https://" unless (request.ssl? or local_request? or request.post? or ENV["RAILS_ENV"]=="development")   
     end
     
+    # Redirecting users after signing in
     def after_sign_in_path_for(resource)
-      dashboard_path
+      new_expense_path
     end
 
 end

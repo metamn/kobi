@@ -105,6 +105,7 @@ class ExpensesController < ApplicationController
   
     def category
       @categories = Category.has_children
+      @roots = Category.roots
     end
   
     # Generating items for accordion

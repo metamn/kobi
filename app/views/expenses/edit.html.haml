@@ -8,7 +8,7 @@
         = f.text_field :amount
         RON
       %li.category
-        = f.select :category_id, option_groups_from_collection_for_select(@categories, :children, :name, :id, :name, @selected)
+        = f.select :category_id, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name, @selected)
       %li.tags
         = f.text_field :tag_list
       %li.buttons

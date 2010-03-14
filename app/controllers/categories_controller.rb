@@ -109,7 +109,7 @@ class CategoriesController < ApplicationController
   
   private
     
-    # getting cats for option_groups_from_collection_for_select
+    # Getting cats for option_groups_from_collection_for_select
     def children
       @categories = Category.has_children
     end
