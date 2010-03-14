@@ -1,0 +1,2 @@
+page.replace_html 'flash-resource', :partial => 'shared/flash_messages', :locals => {:messages => [:success]} 
+flash.discard

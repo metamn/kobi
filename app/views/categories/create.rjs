@@ -1,7 +1,7 @@
 if flash[:success]
   page.replace_html 'expense-new-category', ''
   page.replace_html "expense_category_id", option_group_for_roots(Category.roots, nil) + option_groups_from_collection_for_select(Category.has_children, :children, :name, :id, :name)
-  page.replace_html "flash-resource", "<span class='message'><span class='success'>" + flash[:success] + "</div></div>"  
+  page.replace_html "flash-resource", :partial => 'shared/flash_messages', :locals => {:messages => [:success]} 
 else
   page.replace_html 'expense-new-category', :partial => 'new'
 end

@@ -25,8 +25,8 @@
       %li.date
         = f.date_select :date, :use_short_month => true
         %br
-        = link_to_remote t('activerecord.operations.category.fix_date'), :url => {:controller => 'expenses', :action => 'fixed_date' }, :update => "flash-resource", :with => "'day='+$F('expense_date_3i')+'&month='+$F('expense_date_2i')+'&year='+$F('expense_date_1i')", :html => {:title => t('activerecord.operations.category.fix_date_hint')}
-        = link_to_remote t('activerecord.operations.category.remove_date'), :url => {:controller => 'expenses', :action => 'fixed_date', :remove_date => '1'}, :update => "flash-resource"
+        = link_to_remote t('activerecord.operations.category.fix_date'), :url => {:controller => 'expenses', :action => 'fixed_date' }, :with => "'day='+$F('expense_date_3i')+'&month='+$F('expense_date_2i')+'&year='+$F('expense_date_1i')", :html => {:title => t('activerecord.operations.category.fix_date_hint')}
+        = link_to t('activerecord.operations.category.remove_date'), :controller => 'expenses', :action => 'new', :remove_date => '1'
       %li.amount 
         = f.text_field :amount
         RON

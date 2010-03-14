@@ -31,7 +31,8 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   # GET /expenses/new.xml
   def new
-    @expense = current_user.expenses.new    
+    @expense = current_user.expenses.new 
+    remove_fixed_date if params[:remove_date]
     @expense.date = session[:date] unless session[:date].blank?    
         
     respond_to do |format|
@@ -97,8 +98,10 @@ class ExpensesController < ApplicationController
   # Setting & removing fixed date inputs
   def fixed_date    
     set_fixed_date if params[:month]
-    remove_fixed_date if params[:remove_date]
-    render :partial => "shared/flash_messages", :locals => {:messages => [:success]}    
+    
+    respond_to do |format|
+      format.js
+    end    
   end
   
   private
@@ -131,7 +134,7 @@ class ExpensesController < ApplicationController
     # Fixing a date for batch input
     def set_fixed_date
       session[:date] = Date.new(params[:year].to_i, params[:month].to_i, params[:day].to_i)
-      flash[:success] = t('activerecord.operations.category.fix_date_ok') + " #{l(session[:date]).to_s}"
+      flash[:success] = t('activerecord.operations.category.fix_date_ok') + " #{l(session[:date]).to_s}"      
     end
   
     # Removing fixed date for batch input

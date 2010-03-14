@@ -19,7 +19,7 @@
   
   = stylesheet_link_tag 'application', :media => 'screen, projection'
   
-  %body.dashboard 
+  %body{:id => 'dashboard', :class => 'dashboard'} 
     #header.block
       = render :partial => "shared/header"
     #menu.block
