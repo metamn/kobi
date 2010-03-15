@@ -165,7 +165,7 @@ body.dashboard
     #resources
       +column(18, last)
       
-      ul.main_menu
+      ul
         :margin 0 1.5em        
         li
           :background = !menu
@@ -175,28 +175,48 @@ body.dashboard
             :text-decoration none
             :font-weight bold
       
-        li.active
+        li.selected
           :background = !background          
           a
-            :color = !header
-  
+            :color = !header  
     #info
       +column(6, last)
       ul
         :float right
         :margin .5em
     
-  
-  
-  #flash-top
-    +column(24, last)   
-    :text-align center
+  #submenu
+    +column(17, last)
+    +append(5)
     
-    .notice
-      :background = !edit
-      :border none
+    .navigation    
+      +column(16, last)
       
-    
+      ul
+        +horizontal-list
+        :margin .2em 2em        
+        li
+          :margin-right .1em
+          :padding .5em .7em          
+          a
+            :color = !menu
+            :text-decoration none                 
+        li.selected
+          :background = !background         
+          a.selected          
+            :color = !header
+  
+    #flash-top
+      +column(8, last)   
+      :text-align center
+      
+      .notice
+        :background = !edit
+        :border none
+  
+  
+  #content, #sidebar
+    :margin 0em 0 2em 2em   
     
   #content
     +column(17, last)    
@@ -250,8 +270,6 @@ body.dashboard
   #sidebar
     +column(5, last)
     
-  #content, #sidebar
-    :margin 2em 0 2em 2em
     
     
   #footer

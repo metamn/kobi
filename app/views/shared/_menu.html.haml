@@ -1,8 +1,6 @@
 #resources
-  = semantic_menu :class => 'main_menu' do |root|
-    - root.add t('activerecord.models.expense'), new_expense_path  
-  
-
+  = render_navigation :level => 1
+      
 #info
   %ul
     %li

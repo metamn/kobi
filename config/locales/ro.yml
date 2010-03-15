@@ -3,6 +3,9 @@ ro:
     account: Cont
     logout: Iesire
     informations: Informatii 
+    expenses:
+      all: Cautare
+      new: Adaugare      
   dashboard:
     sidebar:
       additional_operations: Operatii aditionale
@@ -14,7 +17,7 @@ ro:
       expense: Cheltuieli
       category: Categorii cheltuieli
       description:
-        expense: Lista cheltuielior
+        expense: Adaugare cheltuieli
         category: Categorii principale de cheltuieli
     attributes:
       user:

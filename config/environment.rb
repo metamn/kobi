@@ -27,6 +27,7 @@ Rails::Initializer.run do |config|
   config.gem "acts-as-taggable-on"  
   config.gem 'validates_timeliness'
   #config.gem 'exceptional', :version => '2.0.6'
+  config.gem 'simple-navigation'
 
 
 

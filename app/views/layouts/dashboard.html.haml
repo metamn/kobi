@@ -25,8 +25,12 @@
       = render :partial => "shared/header"
     #menu.block
       = render :partial => "shared/menu"
-    #flash-top.flash 
-      = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert]}
+    #submenu.block
+      .navigation
+        = render_navigation :level => 2      
+      #flash-top.flash 
+        = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert]}
+        
     %div{:class => "#{controller.controller_name}"}  
       #content
         #titlebar.block
