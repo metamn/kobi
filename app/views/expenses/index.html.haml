@@ -24,11 +24,13 @@
       %li.date
         = f.label :date_gte, t('expenses.search.start_date')
         %br
-        -#= f.date_select :date_gte, :use_short_month => true
+        = f.date_select :date_gte, :use_short_month => true
+        -#= f.text_field :date_gte
         %br
         = f.label :date_lte, t('expenses.search.end_date')
         %br
-        -#= f.date_select :date_lte, :use_short_month => true
+        = f.date_select :date_lte, :use_short_month => true
+        -#= f.text_field :date_lte
       %li.amount
         = f.label :amount_gte, t('expenses.search.start_amount')
         %br
@@ -44,7 +46,7 @@
       %li.tags
         = f.label :tags_name_equals, t('expenses.search.tags')
         %br
-        = f.collection_select :tags_name_equals, @tags, :id, :name, :include_blank => true
+        = f.collection_select :tags_name_equals, @tags, :name, :name, :include_blank => true
       %li.buttons
         = f.submit 'Search'
       
@@ -69,5 +71,14 @@
         %li.category
           = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
         %li.tags
-          = expense.tag_list          
+          = expense.tag_list   
+
+.block
+  %ul.stats
+    %li.date
+      = @count
+      = t('expenses.search.count')
+    %li
+      = @sum
+      = t('expenses.search.sum')       
         

@@ -9,10 +9,16 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.xml
   def index
+    convert_date if (params[:search] && params[:search]['date_lte(1i)'])
     @search = current_user.expenses.search(params[:search]) 
     @expenses = @search.all
+    @count = @expenses.count
+    @sum = @search.sum('amount')
     @categories = Category.all
     @tags = Tag.all
+    #TODO
+    #Tag.all replaced with current_user.tags
+     
     
     respond_to do |format|
       format.html # index.html.erb
@@ -108,6 +114,15 @@ class ExpensesController < ApplicationController
   end
   
   private
+  
+    # Combines date_select params into a text_field for Searchlogic
+    def convert_date
+      params[:search][:date_lte] = params[:search]['date_lte(1i)'].to_s + "-" + params[:search]['date_lte(2i)'].to_s + "-" + params[:search]['date_lte(3i)'].to_s
+      params[:search][:date_gte] = params[:search]['date_gte(1i)'].to_s + "-" + params[:search]['date_gte(2i)'].to_s + "-" + params[:search]['date_gte(3i)'].to_s
+      ['date_lte(1i)', 'date_lte(2i)', 'date_lte(3i)', 'date_gte(1i)', 'date_gte(2i)', 'date_gte(3i)'].each do |d|
+        params[:search].delete(d)
+      end      
+    end
   
     def category
       @categories = Category.has_children

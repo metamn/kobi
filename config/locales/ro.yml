@@ -15,7 +15,9 @@ ro:
       start_amount: De la
       end_amount: Pana la
       category: Din categoriile
-      tags: Din etichetele      
+      tags: Din etichetele
+      count: rezultate 
+      sum: RON in total      
   dashboard:
     sidebar:
       additional_operations: Operatii aditionale

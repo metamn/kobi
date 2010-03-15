@@ -298,7 +298,7 @@ body.dashboard
 -# -------------------------------    
 .expenses
   #content
-    ul.edit, ul.new, ul.header, ul.items, ul.search
+    ul.edit, ul.new, ul.header, ul.items, ul.search, ul.stats
       +horizontal-list
       :margin 0
       :padding 0
@@ -318,6 +318,15 @@ body.dashboard
       li.buttons
         +column(2, last)
         :float right
+        
+    ul.stats
+      :margin 1em 0      
+      li
+        :font-weight bold
+        
+    ul.items, #accordion, ul.stats
+      :padding 1em 0.5em !important
+      
 
     #new_expense, #edit_expense, #search_expense
       :padding 1em 0.5em
@@ -345,9 +354,7 @@ body.dashboard
       
       .header, .items, .item
         +column(24, last)
-        
-      .items, #accordion
-        :padding 1em 0.5em
+      
       
       ul
         li
@@ -387,8 +394,6 @@ body.dashboard
       #edit_expense
         +column(24, last)
         
-      
-      #search_expense
       
        
         
