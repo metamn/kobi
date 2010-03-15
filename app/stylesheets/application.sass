@@ -213,18 +213,17 @@ body.dashboard
       #title
         +column(16, last)      
         
-      #flash 
-        +column(8, last)
-        
-        #flash-resource
-          :text-align right    
-          :font-weight normal
-          :font-size small
+      #flash-resource 
+        +column(8, last)        
+        :text-align right    
+        :font-weight normal
+        :font-size small
           
-          .success
-            :background = !success
-            :border none
-      
+        .success
+          :background = !success
+          :border none
+          
+          
     
     #body
       :background = !content
@@ -270,7 +269,12 @@ body.dashboard
     :margin 0
     
     .close
-      :cursor pointer     
+      :cursor pointer
+      
+    a.link
+      :text-decoration none
+      :color = !black 
+           
     
     
 -# Expenses

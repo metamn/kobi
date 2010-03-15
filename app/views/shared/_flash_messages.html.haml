@@ -3,4 +3,4 @@
     %span{:class => "message"}
       %span{:class => "#{key}"}
         = flash[key]
-        = link_to_remote '[x]', :url => {:action => :close}, :update => 'flash-resource'
+        = link_to_remote '[x]', :url => {:action => :close}, :update => 'flash-resource', :html => {:class => 'link'}

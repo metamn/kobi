@@ -12,6 +12,7 @@
   .description
     = category.description
   %div{:id => "ajax-update-#{category.id}"}
+  
   - unless category.children.blank?
     %ul
       = render :partial => "category", :collection => category.children
