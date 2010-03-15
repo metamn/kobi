@@ -28,6 +28,7 @@ Rails::Initializer.run do |config|
   config.gem 'validates_timeliness'
   #config.gem 'exceptional', :version => '2.0.6'
   config.gem 'simple-navigation'
+  config.gem 'searchlogic'
 
 
 

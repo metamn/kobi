@@ -5,7 +5,17 @@ ro:
     informations: Informatii 
     expenses:
       all: Cautare
-      new: Adaugare      
+      new: Adaugare
+  expenses:
+    title: 
+      all: Cautare si arhiva cheltuieli
+    search:
+      start_date: Incepand cu
+      end_date: Pana la
+      start_amount: De la
+      end_amount: Pana la
+      category: Din categoriile
+      tags: Din etichetele      
   dashboard:
     sidebar:
       additional_operations: Operatii aditionale

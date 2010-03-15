@@ -1,5 +1,5 @@
 - content_for :title do 
-  = t('activerecord.models.description.expense')
+  = t('expenses.title.all')
 - content_for :flash do
   = render :partial => "shared/flash_messages", :locals => {:messages => [:success, :error]}
   
@@ -17,6 +17,36 @@
       = link_to t('dashboard.sidebar.suggestions'), "http://blog.kobi.ro/7/sugestii-pentru-cheltuieli/"
     %li 
       = link_to t('dashboard.sidebar.help'), "http://blog.kobi.ro/manual-de-utilizare/cheltuieli/"
+
+#search_expense.block
+  - form_for @search do |f|
+    %ul.search
+      %li.date
+        = f.label :date_gte, t('expenses.search.start_date')
+        %br
+        -#= f.date_select :date_gte, :use_short_month => true
+        %br
+        = f.label :date_lte, t('expenses.search.end_date')
+        %br
+        -#= f.date_select :date_lte, :use_short_month => true
+      %li.amount
+        = f.label :amount_gte, t('expenses.search.start_amount')
+        %br
+        = f.text_field :amount_gte, :size => 6
+        %br
+        = f.label :amount_lte, t('expenses.search.end_amount')
+        %br
+        = f.text_field :amount_lte, :size => 6
+      %li.category
+        = f.label :category_id_equals, t('expenses.search.category')
+        %br
+        = f.collection_select :category_id_equals, @categories, :id, :name, :include_blank => true
+      %li.tags
+        = f.label :tags_name_equals, t('expenses.search.tags')
+        %br
+        = f.collection_select :tags_name_equals, @tags, :id, :name, :include_blank => true
+      %li.buttons
+        = f.submit 'Search'
       
 .block
   %ul.header

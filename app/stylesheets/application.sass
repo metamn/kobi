@@ -190,8 +190,7 @@ body.dashboard
     +append(5)
     
     .navigation    
-      +column(16, last)
-      
+      +column(16, last)      
       ul
         +horizontal-list
         :margin .2em 2em        
@@ -299,7 +298,7 @@ body.dashboard
 -# -------------------------------    
 .expenses
   #content
-    ul.edit, ul.new, ul.header, ul.items
+    ul.edit, ul.new, ul.header, ul.items, ul.search
       +horizontal-list
       :margin 0
       :padding 0
@@ -320,7 +319,7 @@ body.dashboard
         +column(2, last)
         :float right
 
-    #new_expense, #edit_expense
+    #new_expense, #edit_expense, #search_expense
       :padding 1em 0.5em
       :background = !edit
           
@@ -350,23 +349,12 @@ body.dashboard
       .items, #accordion
         :padding 1em 0.5em
       
-      ul.header
-        :padding 0 .5em
-        :background = !content_shadow
-        
-        li
-          :font-weight bold
-          :padding 1em 0
-          :text-transform uppercase
-          :color = !content    
-      
       ul
         li
           :padding .5em 0
           
         li.tags
-          :border-right none
-        
+          :border-right none        
           
       .items                  
         .even 
@@ -397,7 +385,10 @@ body.dashboard
       
       
       #edit_expense
-        +column(24, last)     
+        +column(24, last)
+        
+      
+      #search_expense
       
        
         
@@ -499,6 +490,19 @@ body.dashboard
     
 -# Common
 -# -------------------------------        
+
+-# List header for Expenses
+ul.header
+  :padding 0 .5em !important
+  :background = !content_shadow
+  
+  li
+    :font-weight bold
+    :padding 1em 0 !important
+    :text-transform uppercase
+    :color = !content 
+
+
     
 .block
   :display block

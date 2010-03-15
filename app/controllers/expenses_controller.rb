@@ -9,7 +9,10 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.xml
   def index
-    @expenses = current_user.expenses
+    @search = current_user.expenses.search(params[:search]) 
+    @expenses = @search.all
+    @categories = Category.all
+    @tags = Tag.all
     
     respond_to do |format|
       format.html # index.html.erb
