@@ -327,7 +327,7 @@ body.dashboard
     ul.items, #accordion, ul.stats
       :padding 1em 0.5em !important
       
-
+    
     #new_expense, #edit_expense, #search_expense
       :padding 1em 0.5em
       :background = !edit
@@ -348,28 +348,29 @@ body.dashboard
         h2
           :color = !edit
     
-    #index_expenses
+     
+    #index_expenses, #search_expenses
       +column(24, last)
       :background inherit    
       
       .header, .items, .item
-        +column(24, last)
+        +column(24, last)     
       
-      
-      ul
-        li
-          :padding .5em 0
-          
-        li.tags
-          :border-right none        
-          
-      .items                  
+      ul.items
+        :margin 0
+                          
         .even 
           :background = !content
         
         .odd
           :background = !background
           :border-top = 1px solid !border
+          
+        ul.item
+          :margin 0
+          
+          li
+            :padding .5em 0
         
       #accordion
         :margin-top 2em
@@ -385,16 +386,14 @@ body.dashboard
             :float right
             :font-size small
             :margin-top .5em
-          
-        div
-          ul
-            :padding-bottom 2em
-      
+         
+        ul.items
+          :padding 0 !important
+          :margin-bottom 2em 
+             
       
       #edit_expense
         +column(24, last)
-        
-      
        
         
 

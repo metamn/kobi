@@ -1,6 +1,6 @@
 - update_divid = "ajax-update-#{divid}-#{expense.id}"
 
-.item{:class => "#{cycle('even', 'odd')} block"}
+%ul.item{:class => "#{cycle('even', 'odd')} block"}
   %li.date
     = link_to_remote l(expense.date), :url => edit_expense_path(expense), :method=> :get, :update => update_divid          
   %li.amount
@@ -8,5 +8,7 @@
   %li.category
     = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
   %li.tags
-    = expense.tag_list          
-  %div{:id => update_divid}
+    = expense.tag_list  
+   
+
+%div{:id => update_divid, :class => 'ajax-update'}

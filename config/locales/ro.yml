@@ -8,7 +8,7 @@ ro:
       new: Adaugare
   expenses:
     title: 
-      all: Cautare si arhiva cheltuieli
+      all: Cautare in arhiva cheltuieli
     search:
       start_date: Incepand cu
       end_date: Pana la
@@ -56,6 +56,7 @@ ro:
       confirm: Sunteti sigur?
       new: Adaugare  
       ok: Ok
+      search: Cautare
       category:
         new: Adaugare categorie
         new_hint: Daca nu gasiti categoria potrivita

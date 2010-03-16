@@ -48,9 +48,9 @@
         %br
         = f.collection_select :tags_name_equals, @tags, :name, :name, :include_blank => true
       %li.buttons
-        = f.submit 'Search'
+        = f.submit t('activerecord.operations.search')
       
-.block
+#search_expenses
   %ul.header
     %li.date
       = t('activerecord.attributes.expense.date')
@@ -61,17 +61,8 @@
     %li.tags
       = t('activerecord.attributes.expense.tags')
   
-  %ul.items    
-    - @expenses.each do |expense|
-      .item{:class => "#{cycle('even', 'odd')} block"}
-        %li.date
-          = l(expense.date)
-        %li.amount
-          = expense.amount
-        %li.category
-          = expense.category.blank? ? t('activerecord.operations.category.empty') : expense.category.name
-        %li.tags
-          = expense.tag_list   
+  %ul.items        
+    = render :partial => 'expense', :collection => @expenses, :locals => {:divid => 'expenses'}  
 
 .block
   %ul.stats
