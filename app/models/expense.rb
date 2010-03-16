@@ -1,5 +1,5 @@
 class Expense < ActiveRecord::Base
-  acts_as_taggable_on :tags   
+  acts_as_taggable_on :tags, :dependent => :nullify   
   belongs_to :category
   belongs_to :user
    

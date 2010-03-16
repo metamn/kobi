@@ -15,9 +15,7 @@ class ExpensesController < ApplicationController
     @count = @expenses.count
     @sum = @search.sum('amount')
     @categories = Category.all
-    @tags = Tag.all
-    #TODO
-    #Tag.all replaced with current_user.tags
+    @tags = current_user.owned_tags
      
     
     respond_to do |format|
@@ -64,6 +62,8 @@ class ExpensesController < ApplicationController
     
     respond_to do |format|
       if @expense.save
+        # Attaching tags to the current user
+        current_user.tag(@expense, :with => params[:expense][:tag_list], :on => :tags) unless params[:expense][:tag_list].blank?        
         flash[:success] = t('activerecord.flash.created')
         format.html { redirect_to :action => "new" }
         format.xml  { render :xml => @expense, :status => :created, :location => @expense }
