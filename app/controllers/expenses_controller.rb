@@ -9,7 +9,7 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.xml
   def index
-    convert_date if (params[:search] && params[:search]['date_lte(1i)'])
+    #convert_date if (params[:search] && params[:search]['date_lte(1i)'])
     @search = current_user.expenses.search(params[:search]) 
     @expenses = @search.all
     @count = @expenses.count
