@@ -15,8 +15,8 @@ class ExpensesController < ApplicationController
     @count = @expenses.count
     @sum = @search.sum('amount')
     @categories = Category.all
-    @tags = current_user.owned_tags
-     
+    #@tags = current_user.owned_tags
+    @tags = Tag.all 
     
     respond_to do |format|
       format.html # index.html.erb
