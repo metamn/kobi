@@ -63,7 +63,7 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       if @expense.save
         # Attaching tags to the current user
-        current_user.tag(@expense, :with => params[:expense][:tag_list], :on => :tags) unless params[:expense][:tag_list].blank?        
+        add_tags_to_current user unless params[:expense][:tag_list].blank?
         flash[:success] = t('activerecord.flash.created')
         format.html { redirect_to :action => "new" }
         format.xml  { render :xml => @expense, :status => :created, :location => @expense }
@@ -81,6 +81,8 @@ class ExpensesController < ApplicationController
     
     respond_to do |format|
       if @expense.update_attributes(params[:expense])
+        # Attaching tags to the current user
+        add_tags_to_current user unless params[:expense][:tag_list].blank?
         flash[:success] = t('activerecord.flash.updated')
         format.html { redirect_to :action => "new" }
         format.xml  { head :ok }
@@ -115,6 +117,11 @@ class ExpensesController < ApplicationController
   
   private
   
+    # Expense tags are associated with the current user
+    def add_tags_to_current_user
+      current_user.tag(@expense, :with => params[:expense][:tag_list], :on => :tags)         
+    end
+    
     # Combines date_select params into a text_field for Searchlogic
     def convert_date
       params[:search][:date_lte] = params[:search]['date_lte(1i)'].to_s + "-" + params[:search]['date_lte(2i)'].to_s + "-" + params[:search]['date_lte(3i)'].to_s
