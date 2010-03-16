@@ -63,7 +63,7 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       if @expense.save
         # Attaching tags to the current user
-        add_tags_to_current user unless params[:expense][:tag_list].blank?
+        add_tags_to_current_user unless params[:expense][:tag_list].blank?
         flash[:success] = t('activerecord.flash.created')
         format.html { redirect_to :action => "new" }
         format.xml  { render :xml => @expense, :status => :created, :location => @expense }
@@ -82,7 +82,7 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       if @expense.update_attributes(params[:expense])
         # Attaching tags to the current user
-        add_tags_to_current user unless params[:expense][:tag_list].blank?
+        add_tags_to_current_user unless params[:expense][:tag_list].blank?
         flash[:success] = t('activerecord.flash.updated')
         format.html { redirect_to :action => "new" }
         format.xml  { head :ok }
