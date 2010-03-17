@@ -67,8 +67,9 @@
   .block
     %ul.stats
       %li.date
-        = @count
-        = t('expenses.search.count')
+        -#= @count
+        -#= t('expenses.search.count')
+        &nbsp;
       %li
         = @sum
         = t('expenses.search.sum')       

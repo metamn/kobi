@@ -12,7 +12,8 @@ class ExpensesController < ApplicationController
     convert_date if (params[:search] && params[:search]['date_lte(1i)'])
     @search = current_user.expenses.search(params[:search]) 
     @expenses = @search.all.uniq
-    @count = @search.all.uniq.count
+    # TODO Count does not working in HEroku
+    #@count = @expenses.count
     @sum = @expenses.inject(0){|sum, item| sum + item.amount}
     @categories = Category.all
     @tags = current_user.owned_tags 
@@ -51,6 +52,7 @@ class ExpensesController < ApplicationController
   def edit
     @expense = current_user.expenses.find(params[:id])    
     @selected = @expense.category.nil? ? nil : @expense.category.id
+    @referrer = request.env['HTTP_REFERER']
   end
 
   # POST /expenses
@@ -83,11 +85,11 @@ class ExpensesController < ApplicationController
         # Attaching tags to the current user
         add_tags_to_current_user(@expense) unless params[:expense][:tag_list].blank?
         flash[:success] = t('activerecord.flash.updated')
-        format.html { redirect_to :action => "new" }
-        format.xml  { head :ok }
+        format.html { redirect_to :back }
+        format.xml  { head :ok }        
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @expense.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @expense.errors, :status => :unprocessable_entity }        
       end
     end
   end
@@ -100,7 +102,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       flash[:success] = t('activerecord.flash.deleted')
-      format.html { redirect_to :action => 'new' }
+      format.html { redirect_to :back }
       format.xml  { head :ok }
     end
   end

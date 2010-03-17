@@ -14,6 +14,7 @@
       %li.buttons
         = f.submit t('activerecord.operations.ok')  
         %br
-        = link_to t('activerecord.operations.back'), new_expense_path
+        = link_to t('activerecord.operations.back'), @referrer
+        -#= link_to_remote t('activerecord.operations.back'), :url => {:controller => 'application', :action => 'close'}, :update => "$F('edit_expense').previous()", :html => {:class => 'link'}           
         %br
         = link_to t('activerecord.operations.destroy'), @expense, :confirm => t('activerecord.operations.confirm'), :method => :delete, :class => 'destroy'
