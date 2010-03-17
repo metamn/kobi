@@ -12,7 +12,7 @@ class ExpensesController < ApplicationController
     convert_date if (params[:search] && params[:search]['date_lte(1i)'])
     @search = current_user.expenses.search(params[:search]) 
     @expenses = @search.all.uniq
-    @count = 0 #@expenses.count
+    @count = @search.all.uniq.count
     @sum = @expenses.inject(0){|sum, item| sum + item.amount}
     @categories = Category.all
     @tags = current_user.owned_tags 
