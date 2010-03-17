@@ -64,12 +64,12 @@
   %ul.items        
     = render :partial => 'expense', :collection => @expenses, :locals => {:divid => 'expenses'}  
 
-.block
-  %ul.stats
-    %li.date
-      -#= @count
-      = t('expenses.search.count')
-    %li
-      -#= @sum
-      = t('expenses.search.sum')       
+  .block
+    %ul.stats
+      %li.date
+        = @count
+        = t('expenses.search.count')
+      %li
+        = @sum
+        = t('expenses.search.sum')       
         

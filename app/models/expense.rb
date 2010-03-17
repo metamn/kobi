@@ -10,7 +10,7 @@ class Expense < ActiveRecord::Base
   validates_numericality_of :amount
   validates_format_of :tag_list, :with => /([a-zA-Z]+,)?[a-zA-Z]+/, :message => 'Numai caractere alfanumerice', :allow_nil => true, :allow_blank => true
   
-  default_scope :include => [:category, :tags], :order => 'date DESC'
+  default_scope :include => [:category], :order => 'date DESC'
   named_scope :current, :conditions => ["created_at >= ? OR updated_at >= ?", Date.today, Date.today], :order => 'updated_at DESC'
   named_scope :dated, lambda { |start_date, end_date|
     {:conditions => ["date >= ? AND date <= ?", start_date, end_date]}
@@ -23,7 +23,7 @@ class Expense < ActiveRecord::Base
   named_scope :this_month, :conditions => ["date >= ? AND date < ?", Date.today - Date.today.mday + 1, Date.tomorrow]
   
   
-  # amounts added up for a collection of Expenses 
+  # Amounts added up for a collection of Expenses 
   def self.suma
     sum('amount')
   end
