@@ -52,6 +52,10 @@ class ExpensesController < ApplicationController
   def edit
     @expense = current_user.expenses.find(params[:id])    
     @selected = @expense.category.nil? ? nil : @expense.category.id
+    
+    # The URL for the 'back' button to close the update div
+    # - ApplicationController/close cannot be used because the divid is dynamic && link_to_remote :update cannot scrap DOM ids / find out dynamic div ids
+    # - jQuery cannot be used because the update form is generated on the fly, after the page/jquery is loaded 
     @referrer = request.env['HTTP_REFERER']
   end
 
