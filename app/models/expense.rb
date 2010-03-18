@@ -3,7 +3,7 @@ class Expense < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
   belongs_to :payment_method
-  
+  belongs_to :expense_type
    
   
   validates_presence_of :date, :amount

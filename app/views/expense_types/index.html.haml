@@ -1,0 +1,24 @@
+- content_for :title do 
+  = t('activerecord.models.description.expense_type')
+- content_for :flash do 
+  = render :partial => "shared/flash_messages", :locals => {:messages => [:error, :success]}
+  
+%table
+  %tr
+    %th
+      = t('activerecord.attributes.expense_type.name')
+    %th
+      = t('activerecord.attributes.expense_type.description')
+
+  - @expense_types.each do |expense_type|
+    %tr{:class => "#{cycle('even', 'odd')}"}
+      %td
+        = expense_type.name
+      %td
+        = expense_type.description
+      %td
+        = link_to t('activerecord.operations.edit'), edit_expense_type_path(expense_type)
+      %td
+        = link_to t('activerecord.operations.destroy'), expense_type, :method => :delete, :confirm => t('activerecord.operations.confirm'), :class => 'destroy'  
+%br
+= link_to t('activerecord.operations.new'), new_expense_type_path

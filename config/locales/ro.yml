@@ -29,10 +29,12 @@ ro:
       expense: Cheltuieli
       category: Categorii cheltuieli
       payment_method: Metode de plata
+      expense_type: Tip cheltuieli
       description:
         expense: Adaugare cheltuieli
         category: Categorii principale de cheltuieli
         payment_method: Metode de plata
+        expense_type: Tipuri de cheltuieli
     attributes:
       user:
         name: Nume utilizator
@@ -53,6 +55,9 @@ ro:
         parent: Apartine de        
       payment_method:
         name: Metoda de plata
+        description: Descriere
+      expense_type:
+        name: Tip cheltuieala
         description: Descriere
     operations:
       back: Inapoi

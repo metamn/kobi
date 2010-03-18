@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :expense_types
+
   map.resources :payment_methods
 
   map.resources :categories
