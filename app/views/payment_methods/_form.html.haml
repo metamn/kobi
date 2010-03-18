@@ -1,0 +1,14 @@
+- form_for(@payment_method) do |f|
+  = f.error_messages
+  %p
+    = f.label t('activerecord.attributes.payment_method.name')
+    %br
+    = f.text_field :name
+  %p
+    = f.label t('activerecord.attributes.payment_method.description')
+    %br
+    = f.text_area :description
+  %p
+    = f.submit button_text
+    = link_to t('activerecord.operations.back'), payment_methods_path
+ 

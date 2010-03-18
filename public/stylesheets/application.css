@@ -2551,7 +2551,13 @@ body.dashboard {
 
 
 
-/* line 301, ../../app/stylesheets/application.sass */
+/* line 299, ../../app/stylesheets/application.sass */
+#dashboard-content {
+  padding: 1em; }
+
+
+
+/* line 308, ../../app/stylesheets/application.sass */
 .expenses #content ul.edit, .expenses #content ul.new, .expenses #content ul.header, .expenses #content ul.items, .expenses #content ul.search, .expenses #content ul.stats {
   margin: 0;
   padding: 0;
@@ -2579,39 +2585,39 @@ body.dashboard {
     /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal_list.sass */
     .expenses #content ul.edit li.last, .expenses #content ul.new li.last, .expenses #content ul.header li.last, .expenses #content ul.items li.last, .expenses #content ul.search li.last, .expenses #content ul.stats li.last {
       padding-right: 0px; }
-  /* line 306, ../../app/stylesheets/application.sass */
+  /* line 313, ../../app/stylesheets/application.sass */
   .expenses #content ul.edit li, .expenses #content ul.new li, .expenses #content ul.header li, .expenses #content ul.items li, .expenses #content ul.search li, .expenses #content ul.stats li {
     margin: 0;
     padding: 0; }
-  /* line 310, ../../app/stylesheets/application.sass */
+  /* line 317, ../../app/stylesheets/application.sass */
   .expenses #content ul.edit li.date, .expenses #content ul.new li.date, .expenses #content ul.header li.date, .expenses #content ul.items li.date, .expenses #content ul.search li.date, .expenses #content ul.stats li.date {
     display: inline;
     float: left;
     overflow: hidden;
     width: 25%;
     margin-right: 0.833em; }
-  /* line 312, ../../app/stylesheets/application.sass */
+  /* line 319, ../../app/stylesheets/application.sass */
   .expenses #content ul.edit li.amount, .expenses #content ul.new li.amount, .expenses #content ul.header li.amount, .expenses #content ul.items li.amount, .expenses #content ul.search li.amount, .expenses #content ul.stats li.amount {
     display: inline;
     float: left;
     overflow: hidden;
     width: 20%;
     margin-right: 0.833em; }
-  /* line 314, ../../app/stylesheets/application.sass */
+  /* line 321, ../../app/stylesheets/application.sass */
   .expenses #content ul.edit li.category, .expenses #content ul.new li.category, .expenses #content ul.header li.category, .expenses #content ul.items li.category, .expenses #content ul.search li.category, .expenses #content ul.stats li.category {
     display: inline;
     float: left;
     overflow: hidden;
     width: 20%;
     margin-right: 0.833em; }
-  /* line 316, ../../app/stylesheets/application.sass */
+  /* line 323, ../../app/stylesheets/application.sass */
   .expenses #content ul.edit li.tags, .expenses #content ul.new li.tags, .expenses #content ul.header li.tags, .expenses #content ul.items li.tags, .expenses #content ul.search li.tags, .expenses #content ul.stats li.tags {
     display: inline;
     float: left;
     overflow: hidden;
     width: 20%;
     margin-right: 0; }
-  /* line 318, ../../app/stylesheets/application.sass */
+  /* line 325, ../../app/stylesheets/application.sass */
   .expenses #content ul.edit li.buttons, .expenses #content ul.new li.buttons, .expenses #content ul.header li.buttons, .expenses #content ul.items li.buttons, .expenses #content ul.search li.buttons, .expenses #content ul.stats li.buttons {
     display: inline;
     float: left;
@@ -2619,35 +2625,35 @@ body.dashboard {
     width: 8%;
     margin-right: 0;
     float: right; }
-/* line 322, ../../app/stylesheets/application.sass */
+/* line 329, ../../app/stylesheets/application.sass */
 .expenses #content ul.stats {
   margin: 1em 0; }
-  /* line 324, ../../app/stylesheets/application.sass */
+  /* line 331, ../../app/stylesheets/application.sass */
   .expenses #content ul.stats li {
     font-weight: bold; }
-/* line 327, ../../app/stylesheets/application.sass */
+/* line 334, ../../app/stylesheets/application.sass */
 .expenses #content ul.items, .expenses #content #accordion, .expenses #content ul.stats {
   padding: 1em 0.5em !important; }
-/* line 331, ../../app/stylesheets/application.sass */
+/* line 338, ../../app/stylesheets/application.sass */
 .expenses #content #new_expense, .expenses #content #edit_expense, .expenses #content #search_expense {
   padding: 1em 0.5em;
   background: #fffacd; }
-  /* line 335, ../../app/stylesheets/application.sass */
+  /* line 342, ../../app/stylesheets/application.sass */
   .expenses #content #new_expense input, .expenses #content #edit_expense input, .expenses #content #search_expense input {
     padding: 0; }
-  /* line 338, ../../app/stylesheets/application.sass */
+  /* line 345, ../../app/stylesheets/application.sass */
   .expenses #content #new_expense #expense_amount, .expenses #content #edit_expense #expense_amount, .expenses #content #search_expense #expense_amount {
     width: 70%; }
-  /* line 341, ../../app/stylesheets/application.sass */
+  /* line 348, ../../app/stylesheets/application.sass */
   .expenses #content #new_expense #expense_category_id, .expenses #content #new_expense #expense_tags_saved, .expenses #content #edit_expense #expense_category_id, .expenses #content #edit_expense #expense_tags_saved, .expenses #content #search_expense #expense_category_id, .expenses #content #search_expense #expense_tags_saved {
     width: 100%; }
-  /* line 344, ../../app/stylesheets/application.sass */
+  /* line 351, ../../app/stylesheets/application.sass */
   .expenses #content #new_expense #expense_tag_list, .expenses #content #edit_expense #expense_tag_list, .expenses #content #search_expense #expense_tag_list {
     width: 97%; }
-  /* line 348, ../../app/stylesheets/application.sass */
+  /* line 355, ../../app/stylesheets/application.sass */
   .expenses #content #new_expense .errorExplanation h2, .expenses #content #edit_expense .errorExplanation h2, .expenses #content #search_expense .errorExplanation h2 {
     color: #fffacd; }
-/* line 352, ../../app/stylesheets/application.sass */
+/* line 359, ../../app/stylesheets/application.sass */
 .expenses #content #index_expenses, .expenses #content #search_expenses {
   display: inline;
   float: left;
@@ -2655,49 +2661,49 @@ body.dashboard {
   width: 100%;
   margin-right: 0;
   background: inherit; }
-  /* line 356, ../../app/stylesheets/application.sass */
+  /* line 363, ../../app/stylesheets/application.sass */
   .expenses #content #index_expenses .header, .expenses #content #index_expenses .items, .expenses #content #index_expenses .item, .expenses #content #search_expenses .header, .expenses #content #search_expenses .items, .expenses #content #search_expenses .item {
     display: inline;
     float: left;
     overflow: hidden;
     width: 100%;
     margin-right: 0; }
-  /* line 359, ../../app/stylesheets/application.sass */
+  /* line 366, ../../app/stylesheets/application.sass */
   .expenses #content #index_expenses ul.items, .expenses #content #search_expenses ul.items {
     margin: 0; }
-    /* line 362, ../../app/stylesheets/application.sass */
+    /* line 369, ../../app/stylesheets/application.sass */
     .expenses #content #index_expenses ul.items .even, .expenses #content #search_expenses ul.items .even {
       background: #f2f2f2; }
-    /* line 365, ../../app/stylesheets/application.sass */
+    /* line 372, ../../app/stylesheets/application.sass */
     .expenses #content #index_expenses ul.items .odd, .expenses #content #search_expenses ul.items .odd {
       background: #e5e5e5;
       border-top: 1px solid #dddddd; }
-    /* line 369, ../../app/stylesheets/application.sass */
+    /* line 376, ../../app/stylesheets/application.sass */
     .expenses #content #index_expenses ul.items ul.item, .expenses #content #search_expenses ul.items ul.item {
       margin: 0; }
-      /* line 372, ../../app/stylesheets/application.sass */
+      /* line 379, ../../app/stylesheets/application.sass */
       .expenses #content #index_expenses ul.items ul.item li, .expenses #content #search_expenses ul.items ul.item li {
         padding: .5em 0; }
-  /* line 375, ../../app/stylesheets/application.sass */
+  /* line 382, ../../app/stylesheets/application.sass */
   .expenses #content #index_expenses #accordion, .expenses #content #search_expenses #accordion {
     margin-top: 2em; }
-    /* line 378, ../../app/stylesheets/application.sass */
+    /* line 385, ../../app/stylesheets/application.sass */
     .expenses #content #index_expenses #accordion h3, .expenses #content #search_expenses #accordion h3 {
       border-bottom: 1px solid #dddddd;
       padding-bottom: .2em;
       cursor: pointer;
       text-transform: lowercase;
       color: gray; }
-      /* line 385, ../../app/stylesheets/application.sass */
+      /* line 392, ../../app/stylesheets/application.sass */
       .expenses #content #index_expenses #accordion h3 .sum, .expenses #content #search_expenses #accordion h3 .sum {
         float: right;
         font-size: small;
         margin-top: .5em; }
-    /* line 390, ../../app/stylesheets/application.sass */
+    /* line 397, ../../app/stylesheets/application.sass */
     .expenses #content #index_expenses #accordion ul.items, .expenses #content #search_expenses #accordion ul.items {
       padding: 0 !important;
       margin-bottom: 2em; }
-  /* line 395, ../../app/stylesheets/application.sass */
+  /* line 402, ../../app/stylesheets/application.sass */
   .expenses #content #index_expenses #edit_expense, .expenses #content #search_expenses #edit_expense {
     display: inline;
     float: left;
@@ -2707,39 +2713,39 @@ body.dashboard {
 
 
 
-/* line 406, ../../app/stylesheets/application.sass */
+/* line 413, ../../app/stylesheets/application.sass */
 .categories #content #body {
   padding: 1.5em .5em !important; }
-  /* line 410, ../../app/stylesheets/application.sass */
+  /* line 417, ../../app/stylesheets/application.sass */
   .categories #content #body ul {
     list-style-type: none; }
-  /* line 413, ../../app/stylesheets/application.sass */
+  /* line 420, ../../app/stylesheets/application.sass */
   .categories #content #body ul#accordion {
     margin: 1em 0; }
-    /* line 416, ../../app/stylesheets/application.sass */
+    /* line 423, ../../app/stylesheets/application.sass */
     .categories #content #body ul#accordion .border {
       border-top: 1px solid #dddddd; }
-    /* line 419, ../../app/stylesheets/application.sass */
+    /* line 426, ../../app/stylesheets/application.sass */
     .categories #content #body ul#accordion li {
       padding-top: .5em;
       margin-bottom: .5em; }
-      /* line 423, ../../app/stylesheets/application.sass */
+      /* line 430, ../../app/stylesheets/application.sass */
       .categories #content #body ul#accordion li .toggle {
         font-size: larger;
         cursor: pointer;
         color: #a5a5a5; }
-      /* line 428, ../../app/stylesheets/application.sass */
+      /* line 435, ../../app/stylesheets/application.sass */
       .categories #content #body ul#accordion li .spacer {
         min-width: 1em; }
-      /* line 431, ../../app/stylesheets/application.sass */
+      /* line 438, ../../app/stylesheets/application.sass */
       .categories #content #body ul#accordion li .toggle, .categories #content #body ul#accordion li .spacer {
         margin-right: .5em; }
-      /* line 434, ../../app/stylesheets/application.sass */
+      /* line 441, ../../app/stylesheets/application.sass */
       .categories #content #body ul#accordion li a {
         text-decoration: none;
         color: #333333;
         font-size: larger; }
-      /* line 439, ../../app/stylesheets/application.sass */
+      /* line 446, ../../app/stylesheets/application.sass */
       .categories #content #body ul#accordion li .description {
         padding: 0;
         margin: 0;
@@ -2748,7 +2754,7 @@ body.dashboard {
         margin-left: 1em;
         color: #a5a5a5;
         font-style: italic; }
-  /* line 448, ../../app/stylesheets/application.sass */
+  /* line 455, ../../app/stylesheets/application.sass */
   .categories #content #body #edit_category {
     display: inline;
     float: left;
@@ -2757,16 +2763,16 @@ body.dashboard {
     margin-right: 0;
     background: #fffacd;
     padding: .5em; }
-    /* line 453, ../../app/stylesheets/application.sass */
+    /* line 460, ../../app/stylesheets/application.sass */
     .categories #content #body #edit_category #category_name, .categories #content #body #edit_category #category_description {
       width: 80%; }
-    /* line 456, ../../app/stylesheets/application.sass */
+    /* line 463, ../../app/stylesheets/application.sass */
     .categories #content #body #edit_category #category_ancestry {
       width: 81%; }
-    /* line 459, ../../app/stylesheets/application.sass */
+    /* line 466, ../../app/stylesheets/application.sass */
     .categories #content #body #edit_category #category_description {
       height: 10em; }
-    /* line 462, ../../app/stylesheets/application.sass */
+    /* line 469, ../../app/stylesheets/application.sass */
     .categories #content #body #edit_category .column1 {
       display: inline;
       float: left;
@@ -2774,10 +2780,10 @@ body.dashboard {
       width: 45%;
       margin-right: 0.833em;
       padding-right: 4%; }
-      /* line 466, ../../app/stylesheets/application.sass */
+      /* line 473, ../../app/stylesheets/application.sass */
       .categories #content #body #edit_category .column1 .item {
         margin-bottom: 1em; }
-    /* line 469, ../../app/stylesheets/application.sass */
+    /* line 476, ../../app/stylesheets/application.sass */
     .categories #content #body #edit_category .column2 {
       display: inline;
       float: left;
@@ -2785,54 +2791,56 @@ body.dashboard {
       width: 45%;
       margin-right: 0;
       padding-left: 4%; }
-      /* line 473, ../../app/stylesheets/application.sass */
+      /* line 480, ../../app/stylesheets/application.sass */
       .categories #content #body #edit_category .column2 .item {
         margin-bottom: 2em; }
-      /* line 476, ../../app/stylesheets/application.sass */
+      /* line 483, ../../app/stylesheets/application.sass */
       .categories #content #body #edit_category .column2 ul {
         margin: 0 1em; }
-        /* line 479, ../../app/stylesheets/application.sass */
+        /* line 486, ../../app/stylesheets/application.sass */
         .categories #content #body #edit_category .column2 ul li {
           margin: 0;
           padding: 0; }
-  /* line 484, ../../app/stylesheets/application.sass */
+  /* line 491, ../../app/stylesheets/application.sass */
   .categories #content #body #new_category #category_name, .categories #content #body #new_category #category_description {
     width: 40%; }
-  /* line 487, ../../app/stylesheets/application.sass */
+  /* line 494, ../../app/stylesheets/application.sass */
   .categories #content #body #new_category #category_ancestry {
     width: 41%; }
-  /* line 490, ../../app/stylesheets/application.sass */
+  /* line 497, ../../app/stylesheets/application.sass */
   .categories #content #body #new_category #category_description {
     height: 10em; }
 
 
 
 
-/* line 499, ../../app/stylesheets/application.sass */
+
+
+/* line 511, ../../app/stylesheets/application.sass */
 ul.header {
   padding: 0 .5em !important;
   background: #a5a5a5; }
-  /* line 503, ../../app/stylesheets/application.sass */
+  /* line 515, ../../app/stylesheets/application.sass */
   ul.header li {
     font-weight: bold;
     padding: 1em 0 !important;
     text-transform: uppercase;
     color: #f2f2f2; }
 
-/* line 511, ../../app/stylesheets/application.sass */
+/* line 523, ../../app/stylesheets/application.sass */
 .block {
   display: block;
   overflow: hidden; }
 
-/* line 515, ../../app/stylesheets/application.sass */
+/* line 527, ../../app/stylesheets/application.sass */
 .box {
   padding: 1.5em 1.5em 0; }
 
-/* line 518, ../../app/stylesheets/application.sass */
+/* line 530, ../../app/stylesheets/application.sass */
 a.inactive {
   cursor: default !important; }
 
-/* line 521, ../../app/stylesheets/application.sass */
+/* line 533, ../../app/stylesheets/application.sass */
 .link {
   color: #00008b;
   text-decoration: underline;

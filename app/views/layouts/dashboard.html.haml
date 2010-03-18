@@ -28,6 +28,7 @@
     #submenu.block
       .navigation
         = render_navigation :level => 2      
+        &nbsp;
       #flash-top.flash 
         = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert]}
         

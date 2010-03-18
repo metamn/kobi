@@ -1,0 +1,24 @@
+- content_for :title do 
+  = t('activerecord.models.description.payment_method')
+- content_for :flash do 
+  = render :partial => "shared/flash_messages", :locals => {:messages => [:error, :success]}
+  
+%table
+  %tr
+    %th
+      = t('activerecord.attributes.payment_method.name')
+    %th
+      = t('activerecord.attributes.payment_method.description')
+
+  - @payment_methods.each do |payment_method|
+    %tr{:class => "#{cycle('even', 'odd')}"}
+      %td
+        = payment_method.name
+      %td
+        = payment_method.description
+      %td
+        = link_to t('activerecord.operations.edit'), edit_payment_method_path(payment_method)
+      %td
+        = link_to t('activerecord.operations.destroy'), payment_method, :method => :delete, :confirm => t('activerecord.operations.confirm'), :class => 'destroy'  
+%br
+= link_to t('activerecord.operations.new'), new_payment_method_path

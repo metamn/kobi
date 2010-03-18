@@ -2,6 +2,8 @@ class Expense < ActiveRecord::Base
   acts_as_taggable_on :tags, :dependent => :nullify   
   belongs_to :category
   belongs_to :user
+  belongs_to :payment_method
+  
    
   
   validates_presence_of :date, :amount

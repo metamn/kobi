@@ -30,11 +30,10 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :expenses, t('activerecord.models.expense'), new_expense_path do |expenses|
       expenses.item :new, t('menu.expenses.new'), new_expense_path
-      expenses.item :index, t('menu.expenses.all'), expenses_path
-      expenses.item :categories, t('activerecord.models.category'), categories_path
+      expenses.item :index, t('menu.expenses.all'), expenses_path      
     end
     
-    primary.item :statistics, 'Statistici', root_path
+    primary.item :statistics, 'Statistici', dashboard_path
     
     
     # You can also specify a condition-proc that needs to be fullfilled to display an item.

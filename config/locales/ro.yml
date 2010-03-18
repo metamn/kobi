@@ -28,9 +28,11 @@ ro:
     models:
       expense: Cheltuieli
       category: Categorii cheltuieli
+      payment_method: Metode de plata
       description:
         expense: Adaugare cheltuieli
         category: Categorii principale de cheltuieli
+        payment_method: Metode de plata
     attributes:
       user:
         name: Nume utilizator
@@ -49,6 +51,9 @@ ro:
         name: Categorie
         description: Descriere
         parent: Apartine de        
+      payment_method:
+        name: Metoda de plata
+        description: Descriere
     operations:
       back: Inapoi
       edit: Modificare
@@ -57,6 +62,7 @@ ro:
       new: Adaugare  
       ok: Ok
       search: Cautare
+      show: Arata
       category:
         new: Adaugare categorie
         new_hint: Daca nu gasiti categoria potrivita
