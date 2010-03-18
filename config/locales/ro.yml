@@ -64,6 +64,7 @@ ro:
       edit: Modificare
       destroy: Stergere
       confirm: Sunteti sigur?
+      confirm_category: Vor fi sterse si subcategoriile. Sunteti sigur?
       new: Adaugare  
       ok: Ok
       search: Cautare
@@ -105,6 +106,7 @@ ro:
           attributes:
             amount:
               not_a_number: Trebuie sa fie un numar
+              greater_than: Trebuie sa fie mai mare ca 0
             date:
               on_or_before: Nu se poate adauga cheltuieili pentru viitor
             

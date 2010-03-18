@@ -20,7 +20,7 @@
         %br
         %ul
           %li
-            = link_to t('activerecord.operations.destroy'), @category, :confirm => t('activerecord.operations.confirm'), :method => :delete, :class => 'destroy'
+            = link_to t('activerecord.operations.destroy'), @category, :confirm => t('activerecord.operations.confirm_category'), :method => :delete, :class => 'destroy'
           %li
             = link_to_remote t('activerecord.operations.back'), :url => {:controller => 'application', :action => 'close'}, :update => "ajax-update-#{@category.id}", :html => {:class => 'link'}           
     

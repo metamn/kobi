@@ -9,7 +9,7 @@ class Expense < ActiveRecord::Base
   validates_presence_of :date, :amount, :user, :category, :payment_method, :expense_type
   validates_presence_of :category, :message => "nu poate sa fie gol. Va rugam creati mai intai categorii pentru cheltuieli"
   validates_date :date, :on_or_before => Date.today
-  validates_numericality_of :amount
+  validates_numericality_of :amount, :greater_than => 0
   validates_format_of :tag_list, :with => /([a-zA-Z]+,)?[a-zA-Z]+/, :message => 'Numai caractere alfanumerice', :allow_nil => true, :allow_blank => true
   
   default_scope :include => [:category], :order => 'date DESC'
