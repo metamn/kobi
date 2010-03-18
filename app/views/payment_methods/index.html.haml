@@ -17,8 +17,8 @@
       %td
         = payment_method.description
       %td
-        = link_to t('activerecord.operations.edit'), edit_payment_method_path(payment_method)
+        = link_to_if is_admin?, t('activerecord.operations.edit'), edit_payment_method_path(payment_method)
       %td
-        = link_to t('activerecord.operations.destroy'), payment_method, :method => :delete, :confirm => t('activerecord.operations.confirm'), :class => 'destroy'  
+        = link_to_if is_admin?, t('activerecord.operations.destroy'), payment_method, :method => :delete, :confirm => t('activerecord.operations.confirm'), :class => 'destroy'  
 %br
 = link_to t('activerecord.operations.new'), new_payment_method_path

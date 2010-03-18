@@ -1,5 +1,12 @@
 class PaymentMethodsController < ApplicationController
+  include ApplicationHelper
+  
   layout "dashboard"
+  
+  
+  # checking permissions
+  before_filter :check_permission, :only => [:edit, :update, :destroy]
+  
   
   # GET /payment_methods
   # GET /payment_methods.xml
@@ -85,4 +92,13 @@ class PaymentMethodsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+    def check_permission
+      @item = PaymentMethod.find(params[:id])
+      unless is_admin? 
+        flash[:error] = t('activerecord.flash.not_allowed')
+        redirect_to :back and return
+      end
+    end    
 end

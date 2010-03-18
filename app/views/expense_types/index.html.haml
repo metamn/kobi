@@ -17,8 +17,8 @@
       %td
         = expense_type.description
       %td
-        = link_to t('activerecord.operations.edit'), edit_expense_type_path(expense_type)
+        = link_to_if is_admin?, t('activerecord.operations.edit'), edit_expense_type_path(expense_type) 
       %td
-        = link_to t('activerecord.operations.destroy'), expense_type, :method => :delete, :confirm => t('activerecord.operations.confirm'), :class => 'destroy'  
+        = link_to_if is_admin?, t('activerecord.operations.destroy'), expense_type, :method => :delete, :confirm => t('activerecord.operations.confirm'), :class => 'destroy' if is_admin?
 %br
 = link_to t('activerecord.operations.new'), new_expense_type_path
