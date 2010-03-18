@@ -7,6 +7,10 @@
       %li.amount 
         = f.text_field :amount
         RON
+        %br
+        = f.select :payment_method_id, @payment_methods.collect {|p| [p.name, p.id]}
+        %br
+        = f.select :expense_type_id, @expense_types.collect {|p| [p.name, p.id]}  
       %li.category
         = f.select :category_id, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name, @selected)
       %li.tags

@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
   
   # Populating the views
   before_filter :accordion, :only => [:new, :create, :update]
-  before_filter :category, :only => [:new, :edit, :create, :update]
+  before_filter :relations, :only => [:new, :edit, :create, :update]
   
   
   # GET /expenses
@@ -136,9 +136,12 @@ class ExpensesController < ApplicationController
       end      
     end
   
-    def category
+    def relations
       @categories = Category.has_children
       @roots = Category.roots
+      
+      @expense_types = ExpenseType.all
+      @payment_methods = PaymentMethod.all
     end
   
     # Generating items for accordion

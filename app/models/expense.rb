@@ -6,7 +6,7 @@ class Expense < ActiveRecord::Base
   belongs_to :expense_type
    
   
-  validates_presence_of :date, :amount
+  validates_presence_of :date, :amount, :user, :category, :payment_method, :expense_type
   validates_presence_of :category, :message => "nu poate sa fie gol. Va rugam creati mai intai categorii pentru cheltuieli"
   validates_date :date, :on_or_before => Date.today
   validates_numericality_of :amount

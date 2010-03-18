@@ -30,12 +30,20 @@
       %li.amount 
         = f.text_field :amount
         RON
+        %br
+        -#= t('activerecord.attributes.payment_method.name')
+        -#%br
+        = f.select :payment_method_id, @payment_methods.collect {|p| [p.name, p.id]}
+        %br
+        -#= t('activerecord.attributes.expense_type.name')
+        -#%br
+        = f.select :expense_type_id, @expense_types.collect {|p| [p.name, p.id]}        
       %li.category        
         = f.select :category_id, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
         %br
         = link_to_remote t('activerecord.operations.category.new'), :url => {:controller => 'categories', :action => 'new'}, :update => "expense-new-category", :html => {:title => t('activerecord.operations.category.new_hint')}               
       %li.tags
-        = f.text_field :tag_list
+        = f.text_field :tag_list        
       %li.buttons
         = f.submit " + "  
 .block
