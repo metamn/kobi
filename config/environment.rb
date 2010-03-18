@@ -36,14 +36,7 @@ Rails::Initializer.run do |config|
   # :all can be used as a placeholder for all plugins not explicitly named  
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
   
-  # unload Heroku Gmail sending plugin in development
-  unless Rails.env == "production"
-    config.plugins = config.plugin_locators.map do |locator|
-                      locator.new(Rails::Initializer.new(config)).plugins
-                    end.flatten.map{|p| p.name.to_sym}
-    config.plugins -= [:gmail_smtp]
-  end
-
+ 
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
