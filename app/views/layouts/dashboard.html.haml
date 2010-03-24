@@ -3,10 +3,10 @@
   %head
     %title
       Kobi 
-  -#= javascript_include_tag "prototype"
-  -#= javascript_include_tag "jquery"
-  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js"
-  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"  
+  = javascript_include_tag "prototype"
+  = javascript_include_tag "jquery"
+  -#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js"
+  -#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"  
   -#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"  
   = javascript_include_tag "application"
  
@@ -32,16 +32,26 @@
       #flash-top.flash 
         = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert]}
         
-    %div{:class => "#{controller.controller_name}"}  
-      #content
-        #titlebar.block
-          #title
-            = yield :title
-          #flash-resource.flash
-            = yield :flash
-        #body
-          = yield  
-      #sidebar{:class => controller.controller_name}       
-        = yield :sidebar  
+    %div{:class => "#{controller.controller_name}"} 
+      - unless @single_column 
+        #content
+          #titlebar.block
+            #title
+              = yield :title
+            #flash-resource.flash
+              = yield :flash
+          #body
+            = yield  
+        #sidebar{:class => controller.controller_name}       
+          = yield :sidebar  
+      - else
+        #content.wide
+          #titlebar.block
+            #title
+              = yield :title
+            #flash-resource.flash
+              = yield :flash
+          #body
+            = yield    
     #footer
       

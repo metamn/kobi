@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   include ApplicationHelper
   
-  layout "dashboard", :except => [:edit]
+  layout "resource", :except => [:edit]
   
   # getting cats for selectbox on new, create, update
   before_filter :children, :only => [:new, :update, :create]
@@ -17,6 +17,9 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.xml
   def index        
+  
+    @description = t('activerecord.models.category')
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @categories }
@@ -38,6 +41,8 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @category = Category.new
+    
+    @description = t('activerecord.operations.category.new')
     
     respond_to do |format|
       format.html # new.html.erb

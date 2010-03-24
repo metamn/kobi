@@ -1,0 +1,21 @@
+
+- content_for :title do 
+  = @description
+- content_for :flash do
+  = render :partial => "shared/flash_messages", :locals => {:messages => [:success, :error]}
+
+- content_for :sidebar do
+  %h4.title
+    = t('menu.additional_operations')
+  = render_navigation :level => 3
+      
+  %h4.title
+    = t('dashboard.sidebar.suport')
+  %ul
+    %li 
+      = link_to t('dashboard.sidebar.suggestions'), "http://blog.kobi.ro/7/sugestii-pentru-cheltuieli/"
+    %li 
+      = link_to t('dashboard.sidebar.help'), "http://blog.kobi.ro/manual-de-utilizare/cheltuieli/"
+  
+
+= render :file => 'layouts/dashboard'

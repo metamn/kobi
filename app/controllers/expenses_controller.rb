@@ -1,10 +1,9 @@
 class ExpensesController < ApplicationController
-  layout "dashboard", :except => [:edit]
+  layout "resource", :except => [:edit]
   
   # Populating the views
   before_filter :accordion, :only => [:new, :create, :update]
   before_filter :relations, :only => [:new, :edit, :create, :update]
-  
   
   # GET /expenses
   # GET /expenses.xml
@@ -16,7 +15,10 @@ class ExpensesController < ApplicationController
     #@count = @expenses.count
     @sum = @expenses.inject(0){|sum, item| sum + item.amount}
     @categories = Category.all
-    @tags = current_user.owned_tags 
+    @tags = current_user.owned_tags
+    
+    @description = t('menu.expenses.index.description') 
+    @single_column = true
     
     respond_to do |format|
       format.html # index.html.erb
@@ -40,7 +42,9 @@ class ExpensesController < ApplicationController
   def new
     @expense = current_user.expenses.new 
     remove_fixed_date if params[:remove_date]
-    @expense.date = session[:date] unless session[:date].blank?    
+    @expense.date = session[:date] unless session[:date].blank?  
+    
+    @description = t('menu.expenses.new.description')   
         
     respond_to do |format|
       format.html # new.html.erb

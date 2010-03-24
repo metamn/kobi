@@ -216,7 +216,11 @@ body.dashboard
   
   #content, #sidebar
     :margin 0em 0 2em 2em   
-    
+  
+  #content.wide
+    +column(23, last)
+    :margin-right 2em
+      
   #content
     +column(17, last)    
     :-moz-box-shadow = .2em .2em .1em !content_shadow

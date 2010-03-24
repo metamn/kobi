@@ -29,8 +29,12 @@ SimpleNavigation::Configuration.run do |navigation|
     # options - can be used to specify attributes that will be included in the rendered navigation item (e.g. id, class etc.)
     #
     primary.item :expenses, t('activerecord.models.expense'), new_expense_path do |expenses|
-      expenses.item :new, t('menu.expenses.new'), new_expense_path
-      expenses.item :index, t('menu.expenses.all'), expenses_path      
+      expenses.item :new, t('menu.expenses.new.title'), new_expense_path do |additional|
+        additional.item :category, t('activerecord.models.category'), categories_path
+        additional.item :expense_types, t('activerecord.models.expense_type'), expense_types_path
+        additional.item :payment_methods, t('activerecord.models.payment_method'), payment_methods_path
+      end
+      expenses.item :index, t('menu.expenses.index.title'), expenses_path           
     end
     
     primary.item :statistics, 'Statistici', dashboard_path

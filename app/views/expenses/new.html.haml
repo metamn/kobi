@@ -1,27 +1,5 @@
-- content_for :title do 
-  = t('activerecord.models.description.expense')
-- content_for :flash do
-  = render :partial => "shared/flash_messages", :locals => {:messages => [:success, :error]}
   
-- content_for :sidebar do
-  %h4.title
-    = t('dashboard.sidebar.additional_operations')
-  %ul
-    %li
-      = link_to t('activerecord.models.category'), categories_path
-    %li
-      = link_to t('activerecord.models.payment_method'), payment_methods_path
-    %li
-      = link_to t('activerecord.models.expense_type'), expense_types_path
-      
-  %h4.title
-    = t('dashboard.sidebar.suport')
-  %ul
-    %li 
-      = link_to t('dashboard.sidebar.suggestions'), "http://blog.kobi.ro/7/sugestii-pentru-cheltuieli/"
-    %li 
-      = link_to t('dashboard.sidebar.help'), "http://blog.kobi.ro/manual-de-utilizare/cheltuieli/"
-  
+
 .block
   - form_for @expense do |f|
     = f.error_messages

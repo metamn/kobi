@@ -1,6 +1,2 @@
-- content_for :title do 
-  = t('activerecord.models.description.expense_type')
-- content_for :flash do 
-  = render :partial => "shared/flash_messages", :locals => {:messages => [:error, :success]}
   
 = render :partial => 'form', :locals => {:button_text => t('activerecord.operations.new')}

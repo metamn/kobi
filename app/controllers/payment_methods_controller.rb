@@ -1,7 +1,7 @@
 class PaymentMethodsController < ApplicationController
   include ApplicationHelper
   
-  layout "dashboard"
+  layout "resource"
   
   
   # checking permissions
@@ -12,7 +12,8 @@ class PaymentMethodsController < ApplicationController
   # GET /payment_methods.xml
   def index
     @payment_methods = PaymentMethod.all
-
+    @description = t('activerecord.models.description.payment_method')
+      
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @payment_methods }
@@ -34,6 +35,7 @@ class PaymentMethodsController < ApplicationController
   # GET /payment_methods/new.xml
   def new
     @payment_method = PaymentMethod.new
+    @description = t('activerecord.operations.payment_method.new')
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,6 +46,7 @@ class PaymentMethodsController < ApplicationController
   # GET /payment_methods/1/edit
   def edit
     @payment_method = PaymentMethod.find(params[:id])
+    @description = t('activerecord.operations.payment_method.edit')
   end
 
   # POST /payment_methods

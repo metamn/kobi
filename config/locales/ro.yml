@@ -3,12 +3,15 @@ ro:
     account: Cont
     logout: Iesire
     informations: Informatii 
+    additional_operations: Operatii aditionale
     expenses:
-      all: Cautare
-      new: Adaugare
+      index: 
+        title: Arhiva
+        description: Cautare in arhiva cheltuieli        
+      new: 
+        title: Inregistrare
+        description: Adaugare si modificare cheltuieli      
   expenses:
-    title: 
-      all: Cautare in arhiva cheltuieli
     search:
       start_date: Incepand cu
       end_date: Pana la
@@ -20,7 +23,6 @@ ro:
       sum: RON in total      
   dashboard:
     sidebar:
-      additional_operations: Operatii aditionale
       suport: Suport
       suggestions: Sugestii
       help: Ajutor
@@ -31,7 +33,7 @@ ro:
       payment_method: Metode de plata
       expense_type: Tip cheltuieli
       description:
-        expense: Adaugare cheltuieli
+        expense: Adaugare si modificare cheltuieli
         category: Categorii principale de cheltuieli
         payment_method: Metode de plata
         expense_type: Tipuri de cheltuieli
@@ -80,6 +82,12 @@ ro:
         remove_date: Anulare        
         show_all: Vezi toate categoriile
         roots: Categorii principale
+      expense_type:
+        new: Adaugare tip cheltuieala
+        edit: Modificare tip cheltuieala
+      payment_method:
+        new: Adaugare metoda de plata
+        edit: Modificare metoda de plata
     flash:
       created: Aduagat cu succes!
       updated: Modificat cu succes!

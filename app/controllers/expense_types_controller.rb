@@ -1,7 +1,7 @@
 class ExpenseTypesController < ApplicationController
   include ApplicationHelper
 
-  layout "dashboard"
+  layout "resource"
   
   # checking permissions
   before_filter :check_permission, :only => [:edit, :update, :destroy]
@@ -10,7 +10,8 @@ class ExpenseTypesController < ApplicationController
   # GET /expense_types.xml
   def index
     @expense_types = ExpenseType.all
-
+    @description = t('activerecord.models.description.expense_type')
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @expense_types }
@@ -32,6 +33,7 @@ class ExpenseTypesController < ApplicationController
   # GET /expense_types/new.xml
   def new
     @expense_type = ExpenseType.new
+    @description = t('activerecord.operations.expense_type.new')
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,6 +44,7 @@ class ExpenseTypesController < ApplicationController
   # GET /expense_types/1/edit
   def edit
     @expense_type = ExpenseType.find(params[:id])
+    @description = t('activerecord.operations.expense_type.edit')
   end
 
   # POST /expense_types
