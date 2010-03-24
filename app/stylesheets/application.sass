@@ -204,6 +204,7 @@ body.dashboard
           :background = !background         
           a.selected          
             :color = !header
+            :font-weight bold
   
     #flash-top
       +column(8, last)   
@@ -272,6 +273,11 @@ body.dashboard
     
   #sidebar
     +column(5, last)
+    
+    ul
+      li.selected
+        a.selected
+          :font-weight bold
     
     
     
