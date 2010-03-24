@@ -16,6 +16,8 @@ class ExpensesController < ApplicationController
     @sum = @expenses.inject(0){|sum, item| sum + item.amount}
     @categories = Category.all
     @tags = current_user.owned_tags
+    @expense_types = ExpenseType.all
+    @payment_method = PaymentMethod.all
     
     @description = t('menu.expenses.index.description') 
     @single_column = true

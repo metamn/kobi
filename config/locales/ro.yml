@@ -31,7 +31,7 @@ ro:
       expense: Cheltuieli
       category: Categorii cheltuieli
       payment_method: Metode de plata
-      expense_type: Tip cheltuieli
+      expense_type: Tip cheltuieala
       description:
         expense: Adaugare si modificare cheltuieli
         category: Categorii principale de cheltuieli
@@ -48,9 +48,7 @@ ro:
         date: Data
         amount: Suma
         category: Categorie
-        tags: Etichete
-        tags_saved: Etichete
-        tag_list: Etichete
+        tags: Etichete        
       category:
         name: Categorie
         description: Descriere
@@ -71,11 +69,11 @@ ro:
       ok: Ok
       search: Cautare
       show: Arata
+      empty: Fara valoare
       category:
         new: Adaugare categorie
         new_hint: Daca nu gasiti categoria potrivita
-        edit: Modificare categorie   
-        empty: Fara categorie   
+        edit: Modificare categorie              
         fix_date: Fixare data
         fix_date_hint: Fixati aceasta data pentru a introduce mai usor cheltuielile din trecut
         fix_date_ok: Data este fixata pentru 

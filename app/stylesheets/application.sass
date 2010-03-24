@@ -360,6 +360,24 @@ body.dashboard
       .errorExplanation
         h2
           :color = !edit
+          
+    #search_expense, #search_expenses
+      li.date
+        +column(6)
+      li.amount
+        +column(3)
+      li.category
+        +column(3)
+      li.tags
+        +column(3)
+      li.expense_type
+        +column(3)
+      li.payment_method
+        +column(3, last)
+      li.buttons
+        +column(2, last)
+        :float right
+        
     
      
     #index_expenses, #search_expenses

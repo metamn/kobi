@@ -28,6 +28,14 @@
         = f.label :tags_name_equals, t('expenses.search.tags')
         %br
         = f.collection_select :tags_name_equals, @tags, :name, :name, :include_blank => true
+      %li.expense_type
+        = f.label :expense_type_id_equals, t('activerecord.models.expense_type')
+        %br
+        = f.collection_select :expense_type_id_equals, @expense_types, :id, :name, :include_blank => true
+      %li.payment_method
+        = f.label :payment_method_id_equals, t('activerecord.models.payment_method')
+        %br
+        = f.collection_select :payment_method_id_equals, @payment_method, :id, :name, :include_blank => true
       %li.buttons
         = f.submit t('activerecord.operations.search')
       
@@ -41,9 +49,13 @@
       = t('activerecord.attributes.expense.category')
     %li.tags
       = t('activerecord.attributes.expense.tags')
+    %li.expense_type
+      = t('activerecord.models.expense_type')
+    %li.payment_method
+      = t('activerecord.models.payment_method')
   
   %ul.items        
-    = render :partial => 'expense', :collection => @expenses, :locals => {:divid => 'expenses'}  
+    = render :partial => 'expense', :collection => @expenses, :locals => {:divid => 'expenses', :wide => true}  
 
   .block
     %ul.stats
