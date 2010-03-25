@@ -2800,7 +2800,7 @@ body.dashboard {
       .categories #content #body ul#accordion li .toggle, .categories #content #body ul#accordion li .spacer {
         margin-right: .5em; }
       /* line 465, ../../app/stylesheets/application.sass */
-      .categories #content #body ul#accordion li a {
+      .categories #content #body ul#accordion li a, .categories #content #body ul#accordion li .category_name {
         text-decoration: none;
         color: #333333;
         font-size: larger; }
@@ -2892,20 +2892,28 @@ ul.header {
     text-transform: uppercase;
     color: #f2f2f2; }
 
-/* line 554, ../../app/stylesheets/application.sass */
+/* line 552, ../../app/stylesheets/application.sass */
+.left {
+  float: left; }
+
+/* line 555, ../../app/stylesheets/application.sass */
+.right {
+  float: right; }
+
+/* line 558, ../../app/stylesheets/application.sass */
 .block {
   display: block;
   overflow: hidden; }
 
-/* line 558, ../../app/stylesheets/application.sass */
+/* line 562, ../../app/stylesheets/application.sass */
 .box {
   padding: 1.5em 1.5em 0; }
 
-/* line 561, ../../app/stylesheets/application.sass */
+/* line 565, ../../app/stylesheets/application.sass */
 a.inactive {
   cursor: default !important; }
 
-/* line 564, ../../app/stylesheets/application.sass */
+/* line 568, ../../app/stylesheets/application.sass */
 .link {
   color: #00008b;
   text-decoration: underline;

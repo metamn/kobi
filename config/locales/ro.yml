@@ -70,6 +70,8 @@ ro:
       search: Cautare
       show: Arata
       empty: Fara valoare
+      expenses:
+        show_all: Pentru cheltuielile mai vechi consultati arhiva.
       category:
         new: Adaugare categorie
         new_hint: Daca nu gasiti categoria potrivita
@@ -132,7 +134,7 @@ ro:
   date:
     formats:
       default: "%d-%m-%Y"
-      short: "%d %b"
+      short: "%d %B"
       long: "%d %B %Y"
 #      only_day: "%e"
 

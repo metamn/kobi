@@ -18,4 +18,7 @@
   #accordion    
     - @accordion_items.each do |k, v, s|
       = render :partial => 'accordion', :locals => {:title => k, :items => v, :sum => s}
+      
+    %p.right
+      = link_to t('activerecord.operations.expenses.show_all'), expenses_path
     
