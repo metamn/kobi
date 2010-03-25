@@ -153,12 +153,12 @@ class ExpensesController < ApplicationController
     # Generating items for accordion
     def accordion
       @current = current_user.expenses.current
-      @today = current_user.expenses.today
-      @yesterday = current_user.expenses.yesterday
-      @before_yesterday = current_user.expenses.before_yesterday
-      @this_week = current_user.expenses.this_week
-      @last_week = current_user.expenses.last_week 
-      @this_month = current_user.expenses.this_month 
+      @today = current_user.expenses.today.order_by_date
+      @yesterday = current_user.expenses.yesterday.order_by_date
+      @before_yesterday = current_user.expenses.before_yesterday.order_by_date
+      @this_week = current_user.expenses.this_week.order_by_date
+      @last_week = current_user.expenses.last_week.order_by_date
+      @this_month = current_user.expenses.this_month.order_by_date 
       
       @accordion_items = [
         [t('date.today'), @today, @today.suma],

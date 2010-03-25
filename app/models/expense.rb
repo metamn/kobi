@@ -12,8 +12,9 @@ class Expense < ActiveRecord::Base
   validates_numericality_of :amount, :greater_than => 0
   validates_format_of :tag_list, :with => /([a-zA-Z]+,)?[a-zA-Z]+/, :message => 'Numai caractere alfanumerice', :allow_nil => true, :allow_blank => true
   
-  default_scope :include => [:category], :order => 'date DESC'
-  named_scope :current, :conditions => ["created_at >= ? OR updated_at >= ?", Date.today, Date.today], :order => 'updated_at DESC'
+  default_scope :include => [:category]
+  named_scope :order_by_date, :order => 'date DESC'
+  named_scope :current, :conditions => ["updated_at >= ?", Date.today], :order => 'updated_at DESC'
   named_scope :dated, lambda { |start_date, end_date|
     {:conditions => ["date >= ? AND date <= ?", start_date, end_date]}
   }

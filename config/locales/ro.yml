@@ -10,7 +10,7 @@ ro:
         description: Cautare in arhiva cheltuieli        
       new: 
         title: Inregistrare
-        description: Adaugare si modificare cheltuieli      
+        description: Inregistrare si modificare cheltuieli      
   expenses:
     search:
       start_date: Incepand cu
