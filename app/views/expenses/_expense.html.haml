@@ -1,4 +1,6 @@
 - update_divid = "ajax-update-#{divid}-#{expense.id}"
+- expense_type = expense.expense_type.blank? ? t('activerecord.operations.empty') : expense.expense_type.name
+- payment_method = expense.payment_method.blank? ? t('activerecord.operations.empty') : expense.payment_method.name     
 
 %div{:id => "update-#{divid}-#{expense.id}"}
   %ul.item{:class => "#{cycle('even', 'odd')} block"}
@@ -12,8 +14,14 @@
       = expense.tag_list  
     - if wide
       %li.expense_type
-        = expense.expense_type.blank? ? t('activerecord.operations.empty') : expense.expense_type.name
+        = expense_type
       %li.payment_method
-        = expense.payment_method.blank? ? t('activerecord.operations.empty') : expense.payment_method.name     
+        = payment_method
+    - else
+      %li.other
+        = expense_type
+        %br
+        = payment_method
+    
 
   %div{:id => update_divid, :class => 'ajax-update'}
