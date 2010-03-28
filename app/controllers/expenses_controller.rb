@@ -56,13 +56,13 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/1/edit
   def edit
-    @expense = current_user.expenses.find(params[:id])    
+    @expense = current_user.expenses.find(params[:id])
+    @divid = params[:divid] || divid          
     @selected = @expense.category.nil? ? nil : @expense.category.id
     
-    # The URL for the 'back' button to close the update div
-    # - ApplicationController/close cannot be used because the divid is dynamic && link_to_remote :update cannot scrap DOM ids / find out dynamic div ids
-    # - jQuery cannot be used because the update form is generated on the fly, after the page/jquery is loaded 
-    @referrer = request.env['HTTP_REFERER']
+    # edit/update is an ajax call, it will be managed through rjs, where on errors 'edit' partial is reloaded 
+    # so we need '_edit' instead of 'edit' here
+    render :partial => 'edit'
   end
 
   # POST /expenses
@@ -88,7 +88,12 @@ class ExpensesController < ApplicationController
   # PUT /expenses/1
   # PUT /expenses/1.xml
   def update
-    @expense = current_user.expenses.find(params[:id])
+    @expense = current_user.expenses.find(params[:id])    
+    # Getting which div to close
+    @divid = params[:expense][:divid]
+    params[:expense].delete('divid')
+    @close = "ajax-update-#{@divid}-#{@expense.id}"
+    @update = "update-#{@divid}-#{@expense.id}"
     
     respond_to do |format|
       if @expense.update_attributes(params[:expense])
@@ -96,10 +101,12 @@ class ExpensesController < ApplicationController
         add_tags_to_current_user(@expense) unless params[:expense][:tag_list].blank?
         flash[:success] = t('activerecord.flash.updated')
         format.html { redirect_to :back }
-        format.xml  { head :ok }        
+        format.xml  { head :ok } 
+        format.js 
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @expense.errors, :status => :unprocessable_entity }        
+        format.js
       end
     end
   end
@@ -117,6 +124,9 @@ class ExpensesController < ApplicationController
     end
   end
   
+  # Additional Ajax calls
+  # ---------------------
+  
   # Setting & removing fixed date inputs
   def fixed_date    
     set_fixed_date if params[:month]
@@ -125,6 +135,18 @@ class ExpensesController < ApplicationController
       format.js
     end    
   end
+  
+  # Closing an update div
+  def close
+    @divid = params[:divid]
+    @id = params[:id]    
+    
+    respond_to do |format|
+      format.js
+    end 
+  end
+  
+  
   
   private
   
@@ -142,6 +164,7 @@ class ExpensesController < ApplicationController
       end      
     end
   
+    # Getting categories, expense types, payment methods
     def relations
       @categories = Category.has_children
       @roots = Category.roots

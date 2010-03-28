@@ -16,8 +16,7 @@ class CategoriesController < ApplicationController
   
   # GET /categories
   # GET /categories.xml
-  def index        
-  
+  def index       
     @description = t('activerecord.models.category')
     
     respond_to do |format|
@@ -40,8 +39,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   # GET /categories/new.xml
   def new
-    @category = Category.new
-    
+    @category = Category.new    
     @description = t('activerecord.operations.category.new')
     
     respond_to do |format|

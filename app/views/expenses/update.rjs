@@ -1,0 +1,9 @@
+if flash[:success]
+  page.replace_html @close, ''
+  page.replace_html "flash-resource", :partial => 'shared/flash_messages', :locals => {:messages => [:success]}  
+  page.replace_html @update, :partial => 'expense', :locals => {:expense => @expense, :divid => 'current', :wide => false}
+else
+  page.replace_html @close, :partial => 'edit', :locals => {:divid => @divid}
+end
+
+flash.discard

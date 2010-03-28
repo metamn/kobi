@@ -1,19 +1,19 @@
 - update_divid = "ajax-update-#{divid}-#{expense.id}"
 
-%ul.item{:class => "#{cycle('even', 'odd')} block"}
-  %li.date
-    = link_to_remote l(expense.date, :format => :short), :url => edit_expense_path(expense), :method=> :get, :update => update_divid          
-  %li.amount
-    = expense.amount
-  %li.category
-    = expense.category.blank? ? t('activerecord.operations.empty') : expense.category.name
-  %li.tags
-    = expense.tag_list  
-  - if wide
-    %li.expense_type
-      = expense.expense_type.blank? ? t('activerecord.operations.empty') : expense.expense_type.name
-    %li.payment_method
-      = expense.payment_method.blank? ? t('activerecord.operations.empty') : expense.payment_method.name
-   
+%div{:id => "update-#{divid}-#{expense.id}"}
+  %ul.item{:class => "#{cycle('even', 'odd')} block"}
+    %li.date
+      = link_to_remote l(expense.date, :format => :short), :url => edit_expense_path(:id => expense.id, :divid => "#{divid}"), :method => :get, :update => update_divid                
+    %li.amount
+      = expense.amount
+    %li.category
+      = expense.category.blank? ? t('activerecord.operations.empty') : expense.category.name
+    %li.tags
+      = expense.tag_list  
+    - if wide
+      %li.expense_type
+        = expense.expense_type.blank? ? t('activerecord.operations.empty') : expense.expense_type.name
+      %li.payment_method
+        = expense.payment_method.blank? ? t('activerecord.operations.empty') : expense.payment_method.name     
 
-%div{:id => update_divid, :class => 'ajax-update'}
+  %div{:id => update_divid, :class => 'ajax-update'}

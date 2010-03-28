@@ -29,6 +29,7 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain 
 } 
 
+# Local plugins
 # Do not load Gmail SMTP in development
 config.plugins = config.plugin_locators.map do |locator|
   locator.new(Rails::Initializer.new(config)).plugins
@@ -36,4 +37,4 @@ end.flatten.map{|p| p.name.to_sym}
 config.plugins -= [:gmail_smtp]
 
 # Local gems
-config.gem "pg_query_analyzer"
+# config.gem "pg_query_analyzer"
