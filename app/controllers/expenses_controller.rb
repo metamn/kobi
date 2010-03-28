@@ -58,7 +58,7 @@ class ExpensesController < ApplicationController
   def edit
     @expense = current_user.expenses.find(params[:id])
     @divid = params[:divid] || divid          
-    @selected = @expense.category.nil? ? nil : @expense.category.id
+    @selected = @expense.category.nil? ? nil : @expense.category
     
     # edit/update is an ajax call, it will be managed through rjs, where on errors 'edit' partial is reloaded 
     # so we need '_edit' instead of 'edit' here
@@ -69,6 +69,7 @@ class ExpensesController < ApplicationController
   # POST /expenses.xml
   def create
     params[:expense][:user_id] = current_user.id
+    check_subcats
     @expense = Expense.new(params[:expense])
     
     respond_to do |format|
@@ -89,11 +90,7 @@ class ExpensesController < ApplicationController
   # PUT /expenses/1.xml
   def update
     @expense = current_user.expenses.find(params[:id])    
-    # Getting which div to close
-    @divid = params[:expense][:divid]
-    params[:expense].delete('divid')
-    @close = "ajax-update-#{@divid}-#{@expense.id}"
-    @update = "update-#{@divid}-#{@expense.id}"
+    get_divid_to_close
     
     respond_to do |format|
       if @expense.update_attributes(params[:expense])
@@ -150,6 +147,28 @@ class ExpensesController < ApplicationController
   
   private
   
+    # Checking if there are subcats selected
+    # - from a cat and many subcats just the last subcat will be used
+    def check_subcats
+      for i in 1..50
+        catid = "category_id_#{i}".to_sym
+        if params[:expense][catid]  
+          params[:expense][:category_id] = params[:expense][catid] unless params[:expense][catid] == "" 
+          params[:expense].delete catid
+        else
+          break
+        end 
+      end      
+    end
+    
+    # Getting which div to close with Ajax (on updating expense)
+    def get_divid_to_close
+      @divid = params[:expense][:divid]
+      params[:expense].delete('divid')
+      @close = "ajax-update-#{@divid}-#{@expense.id}"
+      @update = "update-#{@divid}-#{@expense.id}"
+    end
+  
     # Expense tags are associated with the current user
     def add_tags_to_current_user(expense)
       current_user.tag(expense, :with => params[:expense][:tag_list], :on => :tags)         
@@ -165,10 +184,8 @@ class ExpensesController < ApplicationController
     end
   
     # Getting categories, expense types, payment methods
-    def relations
-      @categories = Category.has_children
-      @roots = Category.roots
-      
+    def relations      
+      @roots = Category.roots      
       @expense_types = ExpenseType.all
       @payment_methods = PaymentMethod.all
     end

@@ -1,8 +1,6 @@
-  
-
 .block
   - form_for @expense do |f|
-    = f.error_messages
+    = f.error_messages    
     %ul.new
       %li.date
         = f.date_select :date, :use_short_month => true
@@ -21,15 +19,21 @@
         -#%br
         = f.select :expense_type_id, @expense_types.collect {|p| [p.name, p.id]}        
       %li.category        
-        = f.select :category_id, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name)
+        = f.select :category_id, @roots.collect {|p| [p.name, p.id]}
         %br
+        %div{:id => 'expense_subcat_1'}
         = link_to_remote t('activerecord.operations.category.new'), :url => {:controller => 'categories', :action => 'new'}, :update => "expense-new-category", :html => {:title => t('activerecord.operations.category.new_hint')}               
       %li.tags
         = f.text_field :tag_list        
       %li.buttons
         = f.submit " + "  
+  
+  = observe_field 'expense_category_id', :url => {:controller => 'categories', :action => 'subcat'}, :with => "'id=' + value + '&level=1'"
+      
 .block
   %div{:id => "expense-new-category"}
 
 .block  
   = render :partial => "expenses/index"
+  
+

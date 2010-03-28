@@ -114,6 +114,17 @@ class CategoriesController < ApplicationController
   end
   
   
+  # Ajax calls
+  # ----------
+  
+  # Insert a new combobox with children of a category
+  def subcat
+    @category = Category.find(params[:id])
+    @level = params[:level]
+    @subcat = @category.children    
+  end
+  
+  
   private
     
     # Getting cats for option_groups_from_collection_for_select

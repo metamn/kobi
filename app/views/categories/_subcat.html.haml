@@ -1,0 +1,7 @@
+- unless subcat.blank?
+  = select :expense, "category_id_#{level}", subcat.collect {|p| [p.name, p.id]}, {:include_blank => true}    
+  - l = level.to_i + 1
+  %br
+  %div{:id => "expense_subcat_#{l}"}
+  = observe_field "expense_category_id_#{level}", :url => {:controller => 'categories', :action => 'subcat'}, :with => "'id=' + value + '&level=#{l}'"
+  
