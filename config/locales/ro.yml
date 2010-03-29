@@ -72,6 +72,7 @@ ro:
       empty: Fara valoare
       expenses:
         show_all: Pentru cheltuielile mai vechi consultati arhiva.
+        edit: Modificare cheltuieala
       category:
         new: Adaugare categorie
         new_hint: Daca nu gasiti categoria potrivita

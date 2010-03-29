@@ -1,4 +1,0 @@
-= select :expense, :category_id, roots.collect {|p| [p.name, p.id]}
-%br
-%div{:id => 'expense_subcat_1'}
-= observe_field 'expense_category_id', :url => {:controller => 'categories', :action => 'subcat'}, :with => "'id=' + value + '&level=1'"

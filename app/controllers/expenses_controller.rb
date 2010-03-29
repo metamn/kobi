@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
-  layout "resource", :except => [:edit]
-  
+  layout 'resource', :except => [:edit]
+    
   # Populating the views
   before_filter :accordion, :only => [:new, :create, :update]
   before_filter :relations, :only => [:new, :edit, :create, :update]
@@ -57,10 +57,10 @@ class ExpensesController < ApplicationController
   # GET /expenses/1/edit
   def edit
     @expense = current_user.expenses.find(params[:id])
-    @divid = params[:divid] || divid          
+    @divid = params[:divid] || divid
     @selected = @expense.category.nil? ? nil : @expense.category
     
-    # edit/update is an ajax call, it will be managed through rjs, where on errors 'edit' partial is reloaded 
+    # edit/update is an ajax call, it will be managed through rjs, where on errors 'edit' partial is reloaded
     # so we need '_edit' instead of 'edit' here
     render :partial => 'edit'
   end
@@ -101,7 +101,7 @@ class ExpensesController < ApplicationController
         format.xml  { head :ok } 
         format.js 
       else
-        format.html { render :action => "edit" }
+        format.html { render :action => 'edit' }
         format.xml  { render :xml => @expense.errors, :status => :unprocessable_entity }        
         format.js
       end
@@ -126,11 +126,7 @@ class ExpensesController < ApplicationController
   
   # Setting & removing fixed date inputs
   def fixed_date    
-    set_fixed_date if params[:month]
-    
-    respond_to do |format|
-      format.js
-    end    
+    set_fixed_date if params[:month]     
   end
   
   # Closing an update div
@@ -185,7 +181,8 @@ class ExpensesController < ApplicationController
   
     # Getting categories, expense types, payment methods
     def relations      
-      @roots = Category.roots      
+      @roots = Category.roots  
+      @categories = Category.has_children    
       @expense_types = ExpenseType.all
       @payment_methods = PaymentMethod.all
     end

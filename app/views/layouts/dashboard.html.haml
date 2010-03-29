@@ -3,21 +3,25 @@
   %head
     %title
       Kobi 
-  = javascript_include_tag "prototype"
-  = javascript_include_tag "jquery"
-  -#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js"
-  -#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"  
+  -#= javascript_include_tag "prototype"
+  -#= javascript_include_tag "jquery"
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js"
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js"
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"  
   -#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"  
+  
+  = javascript_include_tag 'redbox'
   = javascript_include_tag "application"
  
   
   = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
   = stylesheet_link_tag 'print.css', :media => 'print'
   /[if IE]
-    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'  
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'    
   
   -#= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css"  
   
+  = stylesheet_link_tag 'redbox'  
   = stylesheet_link_tag 'application', :media => 'screen, projection'
   
   %body{:id => 'dashboard', :class => 'dashboard'} 

@@ -6,20 +6,21 @@
       %ul.edit
         %li.date
           = f.date_select :date, :use_short_month => true
-        %li.amount 
+        %li.amount
           = f.text_field :amount
           RON
           %br
           = f.select :payment_method_id, @payment_methods.collect {|p| [p.name, p.id]}
           %br
-          = f.select :expense_type_id, @expense_types.collect {|p| [p.name, p.id]}  
+          = f.select :expense_type_id, @expense_types.collect {|p| [p.name, p.id]}
         %li.category
-          = render :partial => 'selected', :locals => {:selected => @selected, :roots => @roots}
+          = f.select :category_id, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name, @selected)
         %li.tags
           = f.text_field :tag_list
         %li.buttons
-          = f.submit t('activerecord.operations.ok')  
+          = f.submit t('activerecord.operations.ok')
           %br
-          = link_to_remote t('activerecord.operations.back'), :url => {:controller => 'expenses', :action => 'close', :id => @expense.id, :divid => @divid}, :html => {:class => 'link'}           
+          = link_to_remote t('activerecord.operations.back'), :url => {:controller => 'expenses', :action => 'close', :id => @expense.id, :divid => @divid}, :html => {:class => 'link'}
           %br
           = link_to t('activerecord.operations.destroy'), @expense, :confirm => t('activerecord.operations.confirm'), :method => :delete, :class => 'destroy'
+ 
