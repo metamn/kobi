@@ -58,7 +58,7 @@ class ExpensesController < ApplicationController
   def edit
     @expense = current_user.expenses.find(params[:id])
     @divid = params[:divid] || divid
-    @selected = @expense.category.nil? ? nil : @expense.category
+    @selected = @expense.category.nil? ? nil : @expense.category.id
     
     # edit/update is an ajax call, it will be managed through rjs, where on errors 'edit' partial is reloaded
     # so we need '_edit' instead of 'edit' here
@@ -132,11 +132,7 @@ class ExpensesController < ApplicationController
   # Closing an update div
   def close
     @divid = params[:divid]
-    @id = params[:id]    
-    
-    respond_to do |format|
-      format.js
-    end 
+    @id = params[:id]        
   end
   
   
