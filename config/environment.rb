@@ -24,7 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "compass", :source => "http://gemcutter.org"
   config.gem 'formtastic'  
-  config.gem 'acts-as-taggable-on'
+  config.gem 'acts-as-taggable-on', :version => '1.1.7'
   config.gem 'validates_timeliness'
   #config.gem 'exceptional', :version => '2.0.6'
   config.gem 'simple-navigation'
