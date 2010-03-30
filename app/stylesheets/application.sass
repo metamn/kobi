@@ -78,7 +78,7 @@ body.login
       .logo
         +column(8, last)
         
-        h2
+        h1
           :color = !background
       
       .title
@@ -135,20 +135,19 @@ body.dashboard
       :color = !background
     
     #logo 
-      +column(12, last)
+      :float left
       
-      h2
+      h1
         :margin .1em .6em            
         a
           :text-decoration none  
          
     
     #account
-      +column(12, last)      
+      :float right
       
       ul
-        +horizontal-list        
-        :float right
+        +horizontal-list                
         :margin .5em
   
   #menu
