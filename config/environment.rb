@@ -21,14 +21,14 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "warden", :version => "0.9.3"
   config.gem "devise", :version => "1.0.2"
-  config.gem "haml"
-  config.gem "compass", :source => "http://gemcutter.org"
-  config.gem 'formtastic'  
+  config.gem "haml", :version => "2.2.22"
+  config.gem "compass", :version => '0.8.17'
+  config.gem 'formtastic', :version => '0.9.1'  
   config.gem 'acts-as-taggable-on', :version => '1.1.7'
-  config.gem 'validates_timeliness'
+  config.gem 'validates_timeliness', :version => '2.3.1'
   #config.gem 'exceptional', :version => '2.0.6'
-  config.gem 'simple-navigation'
-  config.gem 'searchlogic'
+  config.gem 'simple-navigation', :version => '2.4.1'
+  config.gem 'searchlogic', :version => '2.4.12'
 
 
 
