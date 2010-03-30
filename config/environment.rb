@@ -21,7 +21,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "warden", :version => "0.9.3"
   config.gem "devise", :version => "1.0.2"
-  config.gem "haml", :version => "2.2.22"
+  config.gem "haml"
   config.gem "compass", :source => "http://gemcutter.org"
   config.gem 'formtastic'  
   config.gem 'acts-as-taggable-on'
