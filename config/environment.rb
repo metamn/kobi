@@ -52,8 +52,17 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   config.i18n.default_locale = :ro
   
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp 
 end
+
+ActionMailer::Base.smtp_settings = {  
+    :address => "mail.messagingengine.com",  
+    :port => 25,  
+    :user_name => "hello@kobi.ro",  
+    :password => "mchrro10",  
+    :domain => 'kobi.ro',
+    :authentication => :login 
+  } 
 
 
 
