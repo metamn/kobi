@@ -230,10 +230,10 @@ body.dashboard
         :font-weight bold
         
         #title
-          +column(16, last)      
+          :float left      
           
         #flash-resource 
-          +column(8, last)        
+          :float right        
           :text-align right    
           :font-weight normal
           :font-size small
@@ -268,8 +268,7 @@ body.dashboard
           
       
     #sidebar
-      +column(4, last)
-      
+      +column(4, last)      
       ul
         li.selected
           a.selected
@@ -325,6 +324,7 @@ body.dashboard
       li.buttons
         +column(2, last)
         :float right
+        :margin-top .5em
       
       li.other
         +column(2, last)
@@ -336,7 +336,10 @@ body.dashboard
         
     ul.items, #accordion, ul.stats
       :padding 1em 0.5em !important
-      
+     
+    ul.items
+      #edit_expense
+        :padding 1em 0  
     
     #new_expense, #edit_expense, #search_expense
       :padding 1em 0.5em
@@ -376,7 +379,7 @@ body.dashboard
       li.buttons
         +column(2, last)
         :float right
-        
+        :margin-top 1.7em
     
      
     #index_expenses, #search_expenses
@@ -509,16 +512,19 @@ body.dashboard
               :margin 0
               :padding 0
         
-      #new_category   
-        #category_name, #category_description 
-          :width 40%
-        
-        #category_ancestry
-          :width 41%
-          
-        #category_description
-          :height 10em
+#new_category   
+  #category_name, #category_description 
+    :width 40%
+  
+  #category_ancestry
+    :width 41%
+    
+  #category_description
+    :height 10em
 
+#expense-new-category
+  #new_category
+    :padding 1em
 
 
 -# Payment methods
@@ -529,6 +535,7 @@ body.dashboard
 -# -------------------------------
 #dashboard-content
   :padding 1em    
+  :margin-left 40%
     
     
       

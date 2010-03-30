@@ -39,10 +39,10 @@
       - unless @single_column 
         #main
           #titlebar.block
-            #title
-              = yield :title
             #flash-resource.flash
               = yield :flash
+            #title
+              = yield :title            
           #body
             = yield  
         #sidebar{:class => controller.controller_name}       

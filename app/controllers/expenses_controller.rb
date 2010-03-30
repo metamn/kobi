@@ -9,7 +9,7 @@ class ExpensesController < ApplicationController
   # GET /expenses.xml
   def index
     convert_date if (params[:search] && params[:search]['date_lte(1i)'])
-    @search = current_user.expenses.search(params[:search]) 
+    @search = current_user.expenses.order_by_date.search(params[:search]) 
     @expenses = @search.all.uniq
     # TODO Count does not working in HEroku
     #@count = @expenses.count
@@ -58,7 +58,11 @@ class ExpensesController < ApplicationController
   def edit
     @expense = current_user.expenses.find(params[:id])
     @divid = params[:divid] || divid
+    @wide ||= params[:wide]
+     
     @selected = @expense.category.nil? ? nil : @expense.category.id
+    @selected_et = @expense.expense_type.nil? ? nil : @expense.expense_type.id
+    @selected_pm = @expense.payment_method.nil? ? nil : @expense.payment_method.id
     
     # edit/update is an ajax call, it will be managed through rjs, where on errors 'edit' partial is reloaded
     # so we need '_edit' instead of 'edit' here
