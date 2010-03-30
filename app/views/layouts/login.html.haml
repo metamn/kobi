@@ -11,17 +11,24 @@
   = stylesheet_link_tag 'formtastic', :media => 'screen, projection'
   
   = stylesheet_link_tag 'application', :media => 'screen, projection'
-  %body.login    
-    #header
-      .box.block
-        .logo
-          %h1
-            Kobi
-        .title
-          = yield :title
-    #content.block      
-      .form
-        = yield    
-    #footer.block
-      %span.highlight
-        = link_to t('menu.informations'), "http://blog.kobi.ro"
+  %body.login  
+    .col
+      &nbsp;
+    
+    .col
+      #header
+        .box.block
+          .logo
+            %h1
+              Kobi
+          .title
+            = yield :title
+      #content.block      
+        .form
+          = yield    
+      #footer.block
+        %span.highlight
+          = link_to t('menu.informations'), "http://blog.kobi.ro"
+    
+    .col
+      &nbsp;

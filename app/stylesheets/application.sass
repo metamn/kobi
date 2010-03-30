@@ -60,9 +60,11 @@ body
 body.login
   +container
   
-  #header, #content, #footer
+  .col
     +column(8, last)
-    +prepend(8)
+  
+  #header, #content, #footer
+    +column(24, last)    
     
   #header  
     :margin-top 5em
@@ -223,6 +225,7 @@ body.dashboard
     +column(23, last)
     :margin-right 2em
       
+  
   #content
     +column(17, last)    
     :-moz-box-shadow = .2em .2em .1em !content_shadow
