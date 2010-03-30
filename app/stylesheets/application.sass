@@ -365,24 +365,26 @@ body.dashboard
           
     #search_expense, #search_expenses
       li.date
-        +column(6)
+        +column(5)
       li.amount
         +column(3)
       li.category
-        +column(3)
+        +column(4)
       li.tags
-        +column(3)
+        +column(4)
       li.expense_type
         +column(3)
       li.payment_method
         +column(3, last)
       li.buttons
-        +column(2, last)
+        +column(1, last)
         :float right
-        :margin-top 1.7em
+        :margin-top 1.5em
     
+    #search_expenses
+      :background = !content
      
-    #index_expenses, #search_expenses
+    #index_expenses, #search_expenses 
       +column(24, last)
       :background inherit    
       
@@ -525,6 +527,8 @@ body.dashboard
 #expense-new-category
   #new_category
     :padding 1em
+
+
 
 
 -# Payment methods
