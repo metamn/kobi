@@ -127,12 +127,20 @@ class ExpensesController < ApplicationController
   # Setting & removing fixed date inputs
   def fixed_date    
     set_fixed_date if params[:month]     
+    
+    respond_to do |format|
+      format.js
+    end 
   end
   
   # Closing an update div
   def close
     @divid = params[:divid]
-    @id = params[:id]        
+    @id = params[:id]
+    
+    respond_to do |format|
+      format.js
+    end         
   end
   
   

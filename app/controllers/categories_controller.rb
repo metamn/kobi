@@ -121,7 +121,11 @@ class CategoriesController < ApplicationController
   def subcat
     @category = Category.find(params[:id])
     @level = params[:level]
-    @subcat = @category.children    
+    @subcat = @category.children  
+    
+    respond_to do |format|
+      format.js
+    end  
   end
   
   
