@@ -35,9 +35,9 @@
       #flash-permanent.flash
         = render :partial => "shared/flash_messages", :locals => {:messages => [:permanent]}
           
-    %div{:class => "#{controller.controller_name}"} 
+    %div{:id => 'content', :class => "block #{controller.controller_name}"} 
       - unless @single_column 
-        #content
+        #main
           #titlebar.block
             #title
               = yield :title
@@ -48,7 +48,7 @@
         #sidebar{:class => controller.controller_name}       
           = yield :sidebar  
       - else
-        #content.wide
+        #main.wide
           #titlebar.block
             #title
               = yield :title
@@ -56,5 +56,5 @@
               = yield :flash
           #body
             = yield    
-    #footer
+    #footer.block
       

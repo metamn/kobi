@@ -129,23 +129,19 @@ body.dashboard
   #header
     +column(24, last)
     :background = !header    
-    :color = !background
-    
+    :color = !background    
     a
       :color = !background
     
     #logo 
-      :float left
-      
+      :float left      
       h1
         :margin .1em .6em            
         a
-          :text-decoration none  
-         
+          :text-decoration none           
     
     #account
-      :float right
-      
+      :float right      
       ul
         +horizontal-list                
         :margin .5em
@@ -154,18 +150,15 @@ body.dashboard
     +column(24, last)
     :background = !header 
     :font-size larger
-    :padding-top 1em
-    
+    :padding-top 1em    
     a
-      :color = !background   
-      
+      :color = !background         
     ul
       +horizontal-list
       :margin 0      
         
     #resources
-      +column(18, last)
-      
+      :float left      
       ul
         :margin 0 1.5em        
         li
@@ -181,9 +174,8 @@ body.dashboard
           a
             :color = !header  
     #info
-      +column(6, last)
+      :float right      
       ul
-        :float right
         :margin .5em
     
   #submenu
@@ -215,77 +207,75 @@ body.dashboard
         :background = !edit
         :border none
         
-  
-  
-  #content, #sidebar
-    :margin 0em 0 2em 2em   
-  
-  #content.wide
-    +column(23, last)
-    :margin-right 2em
-      
-  
   #content
-    +column(17, last)    
-    :-moz-box-shadow = .2em .2em .1em !content_shadow
-    :-webkit-box-shadow = .2em .2em .1em !content_shadow    
+    +column(24, last)
+  
+    #main, #sidebar, #main.wide
+      :margin 0 2em 2em   
     
-    #titlebar
-      :background = !resource_header
-      :color = !header
-      :padding 1em .5em
-      :font-size larger
-      :font-weight bold
+    #main.wide
+      +column(23, last)
+      :margin-right 1em  
+        
+    #main
+      +column(19, last)    
+      :-moz-box-shadow = .2em .2em .1em !content_shadow
+      :-webkit-box-shadow = .2em .2em .1em !content_shadow    
       
-      #title
-        +column(16, last)      
+      #titlebar
+        :background = !resource_header
+        :color = !header
+        :padding 1em .5em
+        :font-size larger
+        :font-weight bold
         
-      #flash-resource 
-        +column(8, last)        
-        :text-align right    
-        :font-weight normal
-        :font-size small
+        #title
+          +column(16, last)      
           
-        .success
-          :background = !success
-          :border none
-          
-          
-    
-    #body
-      :background = !content
-      :padding 0
+        #flash-resource 
+          +column(8, last)        
+          :text-align right    
+          :font-weight normal
+          :font-size small
+            
+          .success
+            :background = !success
+            :border none           
       
-    .errorExplanation
-      :border = 1px solid !error
-      :color = !error      
-      :margin-bottom 1em   
-      :display inline-block
-      :width 98%   
+      #body
+        :background = !content
+        :padding 0
+        
+      .errorExplanation
+        :border = 1px solid !error
+        :color = !error      
+        :margin-bottom 1em   
+        :display inline-block
+        :width 98%   
+        
+        h2
+          :background = !error
+          :padding .3em     
+          :color = !content   
+          
+        p
+          :padding 1em  
+          
+      .fieldWithErrors
+        input, textarea, select
+          :border = 2px solid !error
+          :color = !error
+          
       
-      h2
-        :background = !error
-        :padding .3em     
-        :color = !content   
-        
-      p
-        :padding 1em  
-        
-    .fieldWithErrors
-      input, textarea, select
-        :border = 2px solid !error
-        :color = !error
-        
-    
-  #sidebar
-    +column(5, last)
-    
-    ul
-      li.selected
-        a.selected
-          :font-weight bold
-    
-    
+    #sidebar
+      +column(4, last)
+      
+      ul
+        li.selected
+          a.selected
+            :font-weight bold
+      
+      
     
   #footer
     +column(24, last)
@@ -314,7 +304,7 @@ body.dashboard
 -# Expenses
 -# -------------------------------    
 .expenses
-  #content
+  #main
     ul.edit, ul.new, ul.header, ul.items, ul.search, ul.stats
       +horizontal-list
       :margin 0
@@ -441,7 +431,7 @@ body.dashboard
 -# -------------------------------     
 
 .categories
-  #content
+  #main
     #body
       :padding 1.5em .5em !important 
       
