@@ -2275,7 +2275,7 @@ body.dashboard {
       display: inline;
       float: left;
       overflow: hidden;
-      width: 45%;
+      width: 50%;
       margin-right: 0; }
       /* line 140, ../../app/stylesheets/application.sass */
       body.dashboard #header #logo h1 {
@@ -2299,7 +2299,7 @@ body.dashboard {
         overflow: hidden;
         display: inline-block;
         float: right;
-        margin: .5em; }
+        padding: .5em; }
         /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
         body.dashboard #header #account ul {
           display: block; }
