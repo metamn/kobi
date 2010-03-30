@@ -23,7 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "devise", :version => "1.0.2"
   config.gem "haml", :version => "2.2.22"
   config.gem "compass", :version => '0.8.17'
-  config.gem 'formtastic', :version => '0.9.1'  
+  config.gem 'formtastic', :version => '0.9.7'  
   config.gem 'acts-as-taggable-on', :version => '1.1.7'
   config.gem 'validates_timeliness', :version => '2.3.1'
   #config.gem 'exceptional', :version => '2.0.6'
