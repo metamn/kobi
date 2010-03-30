@@ -2275,7 +2275,7 @@ body.dashboard {
       display: inline;
       float: left;
       overflow: hidden;
-      width: 50%;
+      width: 45%;
       margin-right: 0; }
       /* line 140, ../../app/stylesheets/application.sass */
       body.dashboard #header #logo h1 {
