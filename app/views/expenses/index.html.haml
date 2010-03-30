@@ -5,12 +5,12 @@
       %li.date
         = f.label :date_gte, t('expenses.search.start_date')
         %br
-        = f.date_select :date_gte, :use_short_month => true
+        = f.date_select :date_gte, :use_short_month => true, :discard_year => true
         -#= f.text_field :date_gte
         %br
         = f.label :date_lte, t('expenses.search.end_date')
         %br
-        = f.date_select :date_lte, :use_short_month => true
+        = f.date_select :date_lte, :use_short_month => true, :discard_year => true
         -#= f.text_field :date_lte
       %li.amount
         = f.label :amount_gte, t('expenses.search.start_amount')

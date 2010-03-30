@@ -5,7 +5,7 @@
     .block
       %ul.edit
         %li.date
-          = f.date_select :date, :use_short_month => true
+          = f.date_select :date, :use_short_month => true, :discard_year => true
         %li.amount
           = f.text_field :amount
           RON

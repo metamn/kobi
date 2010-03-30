@@ -2667,7 +2667,7 @@ body.dashboard {
   display: inline;
   float: left;
   overflow: hidden;
-  width: 20%;
+  width: 12%;
   margin-right: 0.833em; }
 /* line 369, ../../app/stylesheets/application.sass */
 .expenses #main #search_expense li.amount, .expenses #main #search_expenses li.amount {
@@ -2709,7 +2709,7 @@ body.dashboard {
   display: inline;
   float: left;
   overflow: hidden;
-  width: 4%;
+  width: 12%;
   margin-right: 0;
   float: right;
   margin-top: 1.5em; }
@@ -2743,7 +2743,7 @@ body.dashboard {
       border-top: 1px solid #dddddd; }
     /* line 404, ../../app/stylesheets/application.sass */
     .expenses #main #index_expenses ul.items ul.item, .expenses #main #search_expenses ul.items ul.item {
-      margin: 0; }
+      margin: 0 .5em 0 0; }
       /* line 407, ../../app/stylesheets/application.sass */
       .expenses #main #index_expenses ul.items ul.item li, .expenses #main #search_expenses ul.items ul.item li {
         padding: .5em 0; }
