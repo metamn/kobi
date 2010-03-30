@@ -37,6 +37,7 @@ class ApplicationController < ActionController::Base
     
     # Redirecting users after signing in
     def after_sign_in_path_for(resource)
+      flash[:permanent] = t('devise.confirmations.instructions') if current_user.confirmed_at.nil?
       new_expense_path
     end
 

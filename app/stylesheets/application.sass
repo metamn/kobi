@@ -206,13 +206,14 @@ body.dashboard
             :color = !header
             :font-weight bold
   
-    #flash-top
+    #flash-top, #flash-permanent
       +column(8, last)   
       :text-align center
       
-      .notice
+      .notice, .permanent
         :background = !edit
         :border none
+        
   
   
   #content, #sidebar

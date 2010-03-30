@@ -20,6 +20,7 @@ ro:
       link: "Nu ati primit email-ul de confirmare?"
       send_instructions: 'In urmatoarele minute veti primi un email pentru activarea contului.'
       confirmed: 'Contul Dvs. a fost activat cu succes. Intrare in cont cu success.'
+      instructions: "Emailul Dvs. trebuie confirmat in 24 ore"
     registrations:
       link: 'Inregistrare cont'
       signed_up: 'Inregistrare cont cu succes.'

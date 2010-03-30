@@ -32,7 +32,9 @@
         &nbsp;
       #flash-top.flash 
         = render :partial => "shared/flash_messages", :locals => {:messages => [:notice, :alert]}
-        
+      #flash-permanent.flash
+        = render :partial => "shared/flash_messages", :locals => {:messages => [:permanent]}
+          
     %div{:class => "#{controller.controller_name}"} 
       - unless @single_column 
         #content
