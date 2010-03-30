@@ -16,7 +16,7 @@
   %p  
     = f.label t('activerecord.attributes.category.parent')
     %br
-    = f.select :ancestry, option_group_for_roots(@roots, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name), {:include_blank => true}
+    = f.select :ancestry, option_group_for_roots(@roots, nil, nil) + option_groups_from_collection_for_select(@categories, :children, :name, :id, :name), {:include_blank => true}
     
   
   = f.submit t('activerecord.operations.category.new')
