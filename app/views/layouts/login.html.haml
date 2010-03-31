@@ -32,3 +32,5 @@
     
     .col
       &nbsp;
+      
+    = render :partial => 'shared/ga' if RAILS_ENV == 'production'

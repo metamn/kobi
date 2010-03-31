@@ -6,4 +6,5 @@ module ApplicationHelper
     current_user.email == "cs@clair.ro"    
   end
   
+  
 end

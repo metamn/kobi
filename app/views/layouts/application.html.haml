@@ -21,4 +21,5 @@
       %p         
         %span.highlight
           hello.kobi@gmail.com
-        
+    
+    = render :partial => 'shared/ga' if RAILS_ENV == 'production'
