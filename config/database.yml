@@ -49,6 +49,15 @@ production:
   pool: 5
   username: cs
   password:
+  
+staging:
+  adapter: postgresql
+  encoding: unicode
+  database: kobi_staging
+  pool: 5
+  username: cs
+  password: cs-kobi
+  
 
 cucumber:
   <<: *TEST
