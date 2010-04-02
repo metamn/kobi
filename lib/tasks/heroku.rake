@@ -15,8 +15,20 @@ begin
       result = system(cmd)
       raise("Error dumping Postgress: #{$?}") unless result
       
+      puts "Compress dump file ..."
+      tar_file = "db-#{date}.tar.gz"
+      cmd = "tar -cvzf #{tar_file} #{backup_file}"
+      result = system(cmd)
+      raise("Error compressing dump file: #{$?}") unless result
+      
+      puts "Encrypt tar file ..."
+      enc_file = "db-#{date}.tar.gz.enc"
+      cmd = "openssl enc -blowfish -in #{tar_file} -out #{enc_file}"
+      result = system(cmd)
+      raise("Error encrypting tar file: #{$?}") unless result
+            
       puts "Move to Dropbox ..."
-      cmd = "mv #{backup_file} ~/Dropbox/kobi/"
+      cmd = "mv #{enc_file} ~/Dropbox/kobi/"
       result = system(cmd)
       raise("Error moving to Dropbox: #{$?}") unless result
       
