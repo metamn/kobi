@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
   
     # If not admin redirects to login
     def check_admin
-      redirect_to new_session_path unless is_admin?
+      redirect_to destroy_session_path(current_user) unless is_admin?
     end
   
     # Force https to all pages
