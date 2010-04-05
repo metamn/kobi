@@ -1,0 +1,34 @@
+%table
+  %tr
+    %th
+      = t('activerecord.attributes.user.name')
+    %th
+      = t('activerecord.attributes.user.email')
+    %th
+      = t('activerecord.attributes.user.created_at')
+    %th
+      = t('activerecord.attributes.user.confirmed_at')
+    %th
+      = t('activerecord.attributes.user.last_sign_in_at')
+    %th
+      = t('activerecord.attributes.user.sign_in_count')
+    %th
+      = t('activerecord.attributes.user.expenses_count')
+    
+  - @users.each do |user|
+    %tr{:class => "#{cycle('even', 'odd')}"}
+      %td
+        = user.name
+      %td
+        = user.email
+      %td
+        = l(user.created_at, :format => :short)
+      %td
+        = l(user.confirmed_at, :format => :short) unless user.confirmed_at.blank?
+      %td
+        = l(user.last_sign_in_at, :format => :short) unless user.last_sign_in_at.blank?
+      %td
+        = user.sign_in_count
+      %td
+        = user.expenses.count
+        

@@ -16,4 +16,8 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
   validates_format_of :name, :with => /^[\d\w\s-]+$/i, :message => "Poate contine numai caracterele a..z, A..Z, 0..9, spatiu si -"
+  
+  # Named scopes
+  named_scope :order_by_date, :order => 'created_at DESC'
+  named_scope :with_eager_loading, :include => [:expenses, :categories] 
 end

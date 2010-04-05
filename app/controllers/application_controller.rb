@@ -31,6 +31,12 @@ class ApplicationController < ActionController::Base
 
   private
   
+    # If not admin redirects to login
+    def check_admin
+      redirect_to new_session_path unless is_admin?
+    end
+  
+    # Force https to all pages
     def redirect_to_https
       redirect_to :protocol => "https://" unless (request.ssl? or local_request? or request.post? or ENV["RAILS_ENV"]=="development")   
     end

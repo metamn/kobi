@@ -44,6 +44,11 @@ ro:
         password: Parola
         password_confirmation: Confirmare parola
         remember_me: Tine ma minte
+        created_at: Creat
+        confirmed_at: Confirmat
+        sign_in_count: Intrari in cont
+        expenses_count: Nr. cheltuieli
+        last_sign_in_at: Ultima intrare
       expense:
         date: Data
         amount: Suma
