@@ -1,0 +1,31 @@
+#top.block
+  #col-1
+    %h2
+      = t('welcome.marketing.strapline')
+    
+    %p.usp-1
+      = t('welcome.marketing.usp_1')
+      
+    %p.usp-2
+      = t('welcome.marketing.usp_2')
+      
+    .signup.block
+      .button-1
+        .button
+          = t('welcome.marketing.signup')
+        
+      .button-2
+        .button
+          = t('welcome.marketing.login')
+    
+  #col-2
+    .video
+      %object{:width => "470", :height => "400"}
+        %param{:name => "movie", :value => "http://www.youtube.com/v/p-GIZ5sFak4&hl=en_US&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999&hd=1"}
+        %param{:name => "allowFullScreen", :value => "true"}
+        %param{:name => "allowscriptaccess", :value => "always"}
+        %embed{:src => "http://www.youtube.com/v/p-GIZ5sFak4&hl=en_US&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999&hd=1", :type => "application/x-shockwave-flash", :allowscriptaccess => "always", :allowfullscreen =>"true", :width => "470", :height => "400"}
+        
+#middle.block
+  #comments
+    comments here
