@@ -32,7 +32,23 @@ begin
       result = system(cmd)
       raise("Error moving to Dropbox: #{$?}") unless result
       
+      puts "Removing temp files ..."
+      cmd = "rm db-*"
+      result = system(cmd)
+      raise("Error removing temp files: #{$?}") unless result
+      
       puts "... done"
+    end
+    
+    desc "Pushing local development database to staging server"
+    task :restore do
+      
+      puts "Uploading dev database to staging server ..."      
+      cmd = "heroku db:push --app kobi-staging"
+      result = system(cmd)
+      raise("Error uploading db to staging: #{$?}") unless result
+      
+      puts "... done"    
     end
   end
 end
