@@ -50,6 +50,24 @@
 !red = #D04936
 !yellow = #EBDA62
 !green = #9DC83D
+!green_light = #36D537
+
+
+
+-# Fonts
+-# -------------------------------
+
+@font-face
+  :font-family 'RalewayThin'
+  :src url(fonts/raleway/raleway_thin.eot)
+  :src local('☺'), url("fonts/raleway/raleway_thin.woff") format("woff"), url("fonts/raleway/raleway_thin.ttf") format("truetype"), url("fonts/raleway/raleway_thin.svg#Raleway-Thin") format("svg")
+
+@font-face
+  :font-family 'MuseoSans500'
+  :src url('fonts/museo/museosans_500.eot')
+  :src local('☺'), url("fonts/museo/museosans_500.woff") format("woff"), url("fonts/museo/museosans_500.ttf") format("truetype"), url("fonts/museo/museosans_500.svg#MuseoSans-500") format("svg")
+
+
 
 
 -# General
@@ -65,8 +83,6 @@ body
     
   a.destroy:active, a.destroy:hover
     :color = !error !important
-
-
 
 
 
@@ -98,7 +114,7 @@ body.welcome
             :text-decoration none
             
           a:active, a:hover
-            :border-bottom = 2px solid !red
+            :border-bottom = 5px solid !yellow
       
   
   #content
@@ -109,9 +125,10 @@ body.welcome
     
     #top 
       :height 43em
-      :background = !yellow
       :border-bottom = 1px solid !border
-      
+      :background = !yellow
+      :font-family 'RalewayThin', sans-serif
+            
       #col-1
         +column(12, last)
         
@@ -133,22 +150,34 @@ body.welcome
         .signup
           :margin-top 2em
           
+          a, a:visited, a:active, a:hover
+            :color = !white_gray
+            :text-decoration none
+            :font-weight bold
+            :text-shadow 0 -1px 1px rgba(0, 0, 0, 0.25)
+            :font-size larger
+          
+          a:active, a:hover 
+            :background = !green_light
+                
           .button
-            :padding .5em 1em
-            :width 60%
+            :background = !green
+            :padding .75em 1.5em
+            :display inline-block
+            
+          .rounded
+            :-moz-border-radius .5em
+            
+          .shadow
+            :-moz-box-shadow 0 0 6px rgba(0, 0, 0, 0.5)
             
           .button-1
-            +column(12, last)
-            
-            .button
-              :background = !green
-              :margin-left 1.8em
+            :margin-left 1.5em
             
           .button-2
-            +column(12, last)
+            :margin-left 4.5em
             
-            .button
-              :background = !green
+            
 
       #col-2
         +column(12, last)
@@ -175,15 +204,17 @@ body.welcome
     :padding-bottom 2em
     :top -58.5em 
     :position relative
-    :margin-left 1.5em
+    :margin-left 1.5em    
     
     h1
       :margin  0
       :padding 0
+      :font-family 'RalewayThin', sans-serif
       
       a, a:visited, a:active
         :color = !white
         :text-decoration none
+        :text-shadow 0 -1px 1px rgba(0, 0, 0, 0.25)
       
   
         

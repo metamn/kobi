@@ -9,14 +9,9 @@
     %p.usp-2
       = t('welcome.marketing.usp_2')
       
-    .signup.block
-      .button-1
-        .button
-          = t('welcome.marketing.signup')
-        
-      .button-2
-        .button
-          = t('welcome.marketing.login')
+    .signup.block      
+      = link_to t('welcome.marketing.signup'), root_path, :class => 'button rounded shadow button-1'        
+      = link_to t('welcome.marketing.login'), root_path, :class => 'button rounded shadow button-2'
     
   #col-2
     .video

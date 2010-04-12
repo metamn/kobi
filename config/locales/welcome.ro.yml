@@ -4,8 +4,8 @@ ro:
       strapline: Cel mai usor mod de face economii
       usp_1: Uniq selling point 1
       usp_2: Uniq selling point 2
-      signup: Da, ma-inscriu!
-      login: Deja am cont
+      signup: Da, ma-inscriu! &raquo;
+      login: Deja am cont &raquo;
     menu:
       what_is_kobi: Ce este Kobi?
       why_signup: De ce sa ma inscriu?
