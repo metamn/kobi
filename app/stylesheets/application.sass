@@ -51,6 +51,7 @@
 !yellow = #EBDA62
 !green = #9DC83D
 !green_light = #36D537
+!violet_dark = #443432
 
 
 
@@ -95,8 +96,7 @@ body.welcome
     #menu
       :margin 5.7em 0 0
       :padding 0
-      :font-family 'MuseoSans500', sans-serif
-            
+                  
       ul
         +horizontal-list
         :float right
@@ -186,20 +186,47 @@ body.welcome
       :background = !white_gray
       :border-bottom = 1px solid !border
       
-      #comments
-        :margin-left 1.5em
-      
+      #comments        
+        #buttons
+          +column(1, last)
+          .jFlowPrev, .jFlowNext
+            :cursor pointer
+          
+        #items
+          +column(23, last)
+          
+    #bottom
+      #tour
+        :margin 2em 0
+        
+        #items
+          .item
+            +column(8, last)
+            :margin-bottom 2em
+            
+            h3, a, img
+              :padding-left 1.5em
+     
+      #faq
+        :margin 2em 0
+        
+        #accordion
+          :padding 0 1.5em 
+        
   #footer
-              
+    
+    #contact
+      +column(12, last)
+      
+    #social
+      +column(12, last)
+                
     
   #logo 
-    +column(2, last)
-    :width 10%
     :background = !red
-    :padding-top 4em
-    :padding-bottom 2em
-    :top -58.5em 
-    :position relative
+    :padding 4em .4em 2em 
+    :top .5em 
+    :position absolute
     :margin-left 1.5em    
     
     h1
@@ -739,3 +766,6 @@ a.inactive
   :color = !link
   :text-decoration underline
   :cursor pointer
+  
+.hidden 
+  :display none

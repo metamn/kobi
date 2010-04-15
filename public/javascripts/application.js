@@ -6,6 +6,20 @@ $j = jQuery.noConflict();
 
 $j(document).ready(function(){
 
+  // jqFlow
+  // - on Welcome > comments
+  $j("div#comments #panels").jFlow({
+    slides: "#comments #items",
+    width: "650px",
+    height: "313px"
+  });
+  setTimeout('changeSlide()', 5000);
+  
+  // jQuery UI Accordion  
+  // - for Welcome > faq
+  $j("#faq #accordion").accordion();
+
+
   // Accordion effect for Categories
   // Initially close all subcats
   $j("ul#accordion li > ul").hide();
@@ -47,4 +61,8 @@ $j(document).ready(function(){
   
 });
 
-
+// For jqFlow
+function changeSlide() {
+    $j('.jFlowNext').click();
+    setTimeout('changeSlide()', 5000);
+  }

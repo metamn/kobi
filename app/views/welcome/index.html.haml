@@ -22,5 +22,73 @@
         %embed{:src => "http://www.youtube.com/v/p-GIZ5sFak4&hl=en_US&fs=1&rel=0&color1=0x3a3a3a&color2=0x999999&hd=1", :type => "application/x-shockwave-flash", :allowscriptaccess => "always", :allowfullscreen =>"true", :width => "470", :height => "400"}
         
 #middle.block
-  #comments
-    comments here
+  #what-is-kobi
+    #comments.block
+      #panels.hidden
+        %span.jFlowControl
+          1
+        %span.jFlowControl
+          2
+        %span.jFlowControl
+          3  
+      #buttons
+        %span.jFlowPrev
+          <
+        %span.jFlowNext
+          >  
+      #items
+        %div
+          item 1
+        %div
+          item 2
+        %div
+          item 3
+          
+#bottom.block
+  #tour
+    #items
+      .block
+        .item
+          %h3
+            Inregistrare cheltuieli
+          %img{:src => 'http://farm5.static.flickr.com/4033/4478194037_4e4328d423_m.jpg'}
+        .item
+          %h3
+            Arhiva cheltuieli
+          %img{:src => 'http://farm5.static.flickr.com/4033/4478194037_4e4328d423_m.jpg'}
+        .item
+          %h3
+            Statistici cheltuieli
+          %img{:src => 'http://farm5.static.flickr.com/4033/4478194037_4e4328d423_m.jpg'}
+      .block
+        .item
+          %h3
+            Inregistrare venituri
+          %img{:src => 'http://farm5.static.flickr.com/4033/4478194037_4e4328d423_m.jpg'}
+        .item
+          %h3
+            Comparare
+          %img{:src => 'http://farm5.static.flickr.com/4033/4478194037_4e4328d423_m.jpg'}
+        .item
+          %h3
+            Analytics
+          %img{:src => 'http://farm5.static.flickr.com/4033/4478194037_4e4328d423_m.jpg'}
+      
+
+  #faq
+    #accordion
+      %h3
+        = link_to 'Securitate si confidentialitate', '#'
+      %div
+        Sec + Conf here ...
+    
+      %h3
+        = link_to 'Categorii si etichete', '#'
+      %div
+        Cat + Tag here ...    
+      
+      %h3
+        = link_to 'Aletelle', '#'
+      %div
+        Cat + Tag here ... 
+  
