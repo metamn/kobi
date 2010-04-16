@@ -7,15 +7,13 @@ namespace :heroku do
       date = Time.now.strftime("%Y-%m-%d_%H-%M-%S")
       backup_file = "db-#{date}.db"
       db = ENV['DATABASE_URL'].match(/postgres:\/\/([^:]+):([^@]+)@([^\/]+)\/(.+)/)
-      cmd = "PGPASSWORD=#{db[2]} pg_dump -Fc --username=#{db[1]} --host=#{db[3]} #{db[4]} > tmp/#{backup_file}"
-      raise("Error dumping Postgress: #{$?}") unless result
+      system "PGPASSWORD=#{db[2]} pg_dump -Fc --username=#{db[1]} --host=#{db[3]} #{db[4]} > tmp/#{backup_file}"
       
       puts "Move backup file to Dropbox ..."
       require "dropbox"
       d = DropBox.new("cs@clair.ro", "almafa-12")
       d.create("tmp/#{backup_file}", "/kobi")
-      cmd = "rm tmp/#{backup_file}"
-      raise("Error moving to Dropbox: #{$?}") unless result  
+      system "rm tmp/#{backup_file}"      
     end
   
   end
