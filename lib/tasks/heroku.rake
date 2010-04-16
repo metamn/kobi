@@ -12,8 +12,14 @@ namespace :heroku do
       puts "Move backup file to Dropbox ..."
       require "dropbox"
       d = DropBox.new("cs@clair.ro", "almafa-12")
-      d.create("tmp/#{backup_file}", "/kobi")
+      d.create("tmp/#{backup_file}", "kobi")
       system "rm tmp/#{backup_file}"      
+    end
+    
+    task :dropbox do
+      require "dropbox"
+      d = DropBox.new("cs@clair.ro", "almafa-12")
+      d.create("tmp/ro.yml", "kobi")
     end
   
   end
