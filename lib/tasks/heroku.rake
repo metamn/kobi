@@ -9,17 +9,24 @@ namespace :heroku do
       db = ENV['DATABASE_URL'].match(/postgres:\/\/([^:]+):([^@]+)@([^\/]+)\/(.+)/)
       system "PGPASSWORD=#{db[2]} pg_dump -Fc --username=#{db[1]} --host=#{db[3]} #{db[4]} > tmp/#{backup_file}"
       
+      puts "Encrypting backup file ..."
+      require 'crypt/blowfish'
+      blowfish = Crypt::Blowfish.new("cs-33-kobi")
+      crypt_file = "#{backup_file}.enc"
+      blowfish.encrypt_file("tmp/#{backup_file}", "tmp/#{crypt_file}")      
+      
       puts "Move backup file to Dropbox ..."
       require "dropbox"
       d = DropBox.new("cs@clair.ro", "almafa-12")
-      d.create("tmp/#{backup_file}", "kobi")
-      system "rm tmp/#{backup_file}"      
+      d.create("tmp/#{crypt_file}", "kobi")
+      system "rm tmp/#{backup_file} tmp/#{crypt_file}"      
     end
     
-    task :dropbox do
-      require "dropbox"
-      d = DropBox.new("cs@clair.ro", "almafa-12")
-      d.create("tmp/ro.yml", "kobi")
+    task :test do
+      puts "Encrypting backup file ..."
+      require 'crypt/blowfish'
+      blowfish = Crypt::Blowfish.new("cs-33-kobi")      
+      blowfish.encrypt_file("tmp/ro.yml", "tmp/ro.yml.enc") 
     end
   
   end
