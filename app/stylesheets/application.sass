@@ -89,6 +89,14 @@ body.welcome
   +container
   :background = !white_gray
   
+  h3, h4
+    :text-transform uppercase
+    :font-family 'Lucida Grande', serif
+    
+  p
+    :font-family 'Monospace'
+    
+  
   #header
     +column(24, last)
     :margin-top 3em    
@@ -121,9 +129,7 @@ body.welcome
       +prepend(1)
       :text-align right
       
-      h3
-        :text-transform uppercase
-        :font-family 'Lucida Grande', serif
+      h3        
         :font-size 1.7em
         :letter-spacing .1em
         :margin 0 0 .3em
@@ -160,14 +166,17 @@ body.welcome
       ol
         :margin-top 2em
         :float right
-        :margin-right 10em
+        :margin-right 7.5em
         :font-size 1.1em
         :list-style-position inside
                 
         li
           :margin-bottom 1em
           :border-bottom = 1px inset !content_shadow
-          :color #444
+          
+          a, a:visited
+            :color #444
+            :text-decoration none
           
          
   
@@ -176,102 +185,38 @@ body.welcome
     :-moz-box-shadow = 0px 5px 10px !content_shadow
     :-webkit-box-shadow = 0px 5px 10px !content_shadow
     :box-shadow = 0px 5px 10px !content_shadow   
+    :background = !white
     
-    #top 
-      :height 43em
-      :border-bottom = 1px solid !border
-      :background = !yellow
-      :font-family 'MuseoSans500', sans-serif
-            
-      #col-1
-        +column(12, last)
-        
-        h2
-          :margin-left 1em 
-        
-        .usp-1, .usp-2
-          :text-align center
-        
-        h2
-          :margin-top 4em
-          
-        .usp-1
-          :margin-top 3em
-          
-        .usp-2
-          :margin-top 2em
-          
-        .signup
-          :margin-top 2em
-          
-          a, a:visited, a:active, a:hover
-            :color = !white_gray
-            :text-decoration none
-            :font-weight bold
-            :text-shadow 0 -1px 1px rgba(0, 0, 0, 0.25)
-            :font-size larger
-          
-          a:active, a:hover 
-            :background = !green_light
-                
-          .button
-            :background = !green
-            :padding .75em 1.5em
-            :display inline-block
-            
-          .rounded
-            :-moz-border-radius .5em
-            
-          .shadow
-            :-moz-box-shadow 0 0 6px rgba(0, 0, 0, 0.5)
-            
-          .button-1
-            :margin-left 1.5em
-            
-          .button-2
-            :margin-left 4.5em
-            
-            
-
-      #col-2
-        +column(12, last)
-        
-        .video
-          :margin-top 4.5em
-    
-    #middle
-      :height 8.6em
-      :background = !white_gray
-      :border-bottom = 1px solid !border
+    #uniques
+      :padding 4.5em 1.5em
       
-      #comments        
-        #buttons
-          +column(1, last)
-          .jFlowPrev, .jFlowNext
-            :cursor pointer
-          
-        #items
-          +column(23, last)
-          
-    #bottom
-      #tour
-        :margin 2em 0
+      .col-1, .col-2
+        +column(7)
+        +colborder
         
-        #items
-          .item
-            +column(8, last)
-            :margin-bottom 2em
-            
-            h3, a, img
-              :padding-left 1.5em
-     
-      #faq
-        :margin 2em 0
+      .col-3
+        +column(8, last) 
         
-        #accordion
-          :padding 0 1.5em 
+      .col-1
+        h4
+          :margin-left 1em
+        p
+          :margin-left 1.3em
+          
+      .col-2
+        h4, p
+          :text-align center
+        h4
+          :margin-bottom 2.5em
+          
+      .col-3
+        h4, p
+          :text-align right
+      
         
   #footer
+    +column(24, last)
+    :margin-top 3em
     
     #contact
       +column(12, last)

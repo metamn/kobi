@@ -2,8 +2,9 @@ ro:
   welcome:
     marketing:
       strapline: Cel mai usor mod de face economii
-      usp_1: Uniq selling point 1
-      usp_2: Uniq selling point 2
+      usp_1: Confidenta in finantele personale
+      usp_2: Clarviziune in afaceri
+      usp_3: Totul intr-un mod securizat si usor de folosit
       signup: Da, ma-inscriu! &raquo;
       login: Deja am cont &raquo;
     menu:
