@@ -87,19 +87,61 @@ body
 
 body.welcome
   +container
-  :width 790px
-  :background transparent url(/images/stripe.png)
+  :background = !white_gray
   
   #header
-    +column(24, last)    
+    +column(24, last)
+    :margin-top 3em    
+    
+  #left
+    +column(12, last)
+    
+    .box
+      +column(5, last)
+      :height 12em
+      
+    .logo
+      :background = !red
+      :text-align center
+      :margin-top 3em
+        
+      h1
+        :margin  2em 0 0
+        :padding 0
+        
+        a, a:visited, a:active
+          :color = !white
+          :text-decoration none
+          :text-shadow 0 -1px 1px rgba(0, 0, 0, 0.25) 
+          
+          
+    .strapline
+      :margin-top 4em
+      +column(9, last)
+      +prepend(1)
+      :text-align right
+      
+      h3
+        :text-transform uppercase
+        :font-family 'Lucida Grande', serif
+        :font-size 1.7em
+        :letter-spacing .1em
+        :margin 0 0 .3em
+        
+           
+    
+  #right
+    +column(12, last)
     
     #menu
-      :margin 5.7em 0 0
+      +column(24, last)
+      :margin 4em 0 0
       :padding 0
                   
       ul
         +horizontal-list
         :float right
+        :font-size 1.1em
         
         li
           :padding-left 1.15em
@@ -110,8 +152,24 @@ body.welcome
             :text-decoration none
             
           a:active, a:hover
-            :border-bottom = 5px solid !yellow
+            :border-bottom = 5px solid !black
       
+    #uniques
+      +column(24, last)
+      
+      ol
+        :margin-top 2em
+        :float right
+        :margin-right 10em
+        :font-size 1.1em
+        :list-style-position inside
+                
+        li
+          :margin-bottom 1em
+          :border-bottom = 1px inset !content_shadow
+          :color #444
+          
+         
   
   #content
     +column(24, last)
@@ -222,22 +280,6 @@ body.welcome
       +column(12, last)
                 
     
-  #logo 
-    :background = !red
-    :padding 4em .4em 2em 
-    :top .5em 
-    :position absolute
-    :margin-left 1.5em    
-    
-    h1
-      :margin  0
-      :padding 0
-      :font-family 'MuseoSans500', sans-serif
-      
-      a, a:visited, a:active
-        :color = !white
-        :text-decoration none
-        :text-shadow 0 -1px 1px rgba(0, 0, 0, 0.25)
       
   
         

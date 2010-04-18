@@ -19,12 +19,9 @@
     #header
       = render :partial => 'shared/welcome/header'    
     #content
-      = yield    
+      -#= yield    
     #footer
-      = render :partial => 'shared/welcome/footer'
-    #logo      
-      %h1
-        = link_to "Kobi", root_path  
-      
+      -#= render :partial => 'shared/welcome/footer'
+          
     
     = render :partial => 'shared/ga' if RAILS_ENV == 'production'

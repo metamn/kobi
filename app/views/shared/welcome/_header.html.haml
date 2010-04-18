@@ -1,13 +1,36 @@
-  
-#menu
-  %ul
-    %li
-      = link_to t('welcome.menu.what_is_kobi'), '#what-is-kobi'    
-    %li
-      = link_to t('welcome.menu.tour'), '#tour'
-    %li
-      = link_to t('welcome.menu.faq'), '#faq'        
-    %li
-      = link_to t('welcome.menu.contact'), '#contact'
-    %li
-      = link_to t('welcome.menu.blog'), 'http://blog.kobi.ro'
+#left
+  .box.logo
+    %h1
+      = link_to "Kobi", root_path  
+      
+  .strapline
+    %h3.part-1
+      Cel mai usor
+    %h3.part-2
+      mod de a face
+    %h3.part-3 
+      economii  
+    
+
+#right    
+  #menu
+    %ul
+      %li
+        = link_to t('welcome.menu.what_is_kobi'), '#what-is-kobi'    
+      %li
+        = link_to t('welcome.menu.tour'), '#tour'
+      %li
+        = link_to t('welcome.menu.faq'), '#faq'        
+      %li
+        = link_to t('welcome.menu.contact'), '#contact'
+      %li
+        = link_to t('welcome.menu.blog'), 'http://blog.kobi.ro'
+        
+  #uniques
+    %ol
+      %li
+        Confidenta in finantele personale
+      %li
+        Clarviziune in afaceri
+      %li
+        Totul intr-un mod securizat si usor de folosit
