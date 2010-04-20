@@ -91,15 +91,15 @@ body.welcome
   
   h3, h4
     :text-transform uppercase
-    :font-family 'Lucida Grande', serif
+    :font-family "Palatino Linotype", Palatino, serif
     
   p
-    :font-family 'Monospace'
+    :font-family "Courier New", Courier, monospace
     
   
   #header
     +column(24, last)
-    :margin-top 3em    
+    :margin 3em 0 2em 0    
     
   #left
     +column(12, last)
@@ -150,34 +150,25 @@ body.welcome
         :font-size 1.1em
         
         li
-          :padding-left 1.15em
+          :padding 1em
           :background white
+          :border-bottom 1px solid #B5D84E
           
           a, a:visited
             :color = !black
             :text-decoration none
             
           a:active, a:hover
-            :border-bottom = 5px solid !black
+            :border-bottom = 1px solid !black
+        
+        li.last
+          :padding 1em .5em 1em 1.5em
+            
+        li.active 
+          :background #B5D84E
+          :height 2em
       
-    #uniques
-      +column(24, last)
-      
-      ol
-        :margin-top 2em
-        :float right
-        :margin-right 7.5em
-        :font-size 1.1em
-        :list-style-position inside
-                
-        li
-          :margin-bottom 1em
-          :border-bottom = 1px inset !content_shadow
-          
-          a, a:visited
-            :color #444
-            :text-decoration none
-          
+              
          
   
   #content
@@ -189,6 +180,7 @@ body.welcome
     
     #uniques
       :padding 4.5em 1.5em
+      
       
       .col-1, .col-2
         +column(7)
@@ -205,14 +197,55 @@ body.welcome
           
       .col-2
         h4, p
-          :text-align center
-        h4
-          :margin-bottom 2.5em
+          :text-align center        
           
       .col-3
         h4, p
-          :text-align right
+          :text-align right 
+          
+      h4
+        :height 2.5em         
+        
+          
+    #tour
+      :height 30em
       
+      .nav-left
+        +column(1, last)
+        
+      .slides
+        +column(22, last)
+        
+      .nav-right
+        +column(1, last)
+        
+      .nav-left, .nav-right
+        :font-size 10em
+        :padding-top .6em
+        :color = !border 
+        
+      .slides
+        .slide
+          :padding 4.5em 1.5em
+          
+    #faq
+      +column(24, last)
+      
+      .video
+        +column(11, last)
+        +colborder
+        
+      .faq
+        +column(12, last)  
+     
+    .spacer
+      :margin 2.5em
+      :color #eee
+      :background #eee
+      :border none
+      :height 1px
+      
+       
         
   #footer
     +column(24, last)

@@ -16,21 +16,14 @@
   #menu
     %ul
       %li
-        = link_to t('welcome.menu.what_is_kobi'), '#what-is-kobi'    
-      %li
+        = link_to t('welcome.menu.what_is_kobi'), '#what-is-kobi', :class=> 'active'    
+      %li.active
         = link_to t('welcome.menu.tour'), '#tour'
       %li
         = link_to t('welcome.menu.faq'), '#faq'        
       %li
         = link_to t('welcome.menu.contact'), '#contact'
-      %li
+      %li.last
         = link_to t('welcome.menu.blog'), 'http://blog.kobi.ro'
         
-  #uniques
-    %ol
-      %li
-        = link_to t('welcome.marketing.usp_1'), '#what-is-kobi' 
-      %li
-        = link_to t('welcome.marketing.usp_2'), '#what-is-kobi' 
-      %li
-        = link_to t('welcome.marketing.usp_3'), '#what-is-kobi' 
+        
