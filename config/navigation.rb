@@ -39,6 +39,14 @@ SimpleNavigation::Configuration.run do |navigation|
     
     primary.item :statistics, 'Statistici', dashboard_path
     
+    primary.item :welcome, 'welcome', root_path, :if => Proc.new { controller_name == 'welcome' } do |welcome|
+      welcome.item :what_is_kobi, t('welcome.menu.what_is_kobi'), root_path
+      welcome.item :tour, t('welcome.menu.tour'), root_path
+      welcome.item :faq, t('welcome.menu.faq'), root_path
+      welcome.item :tour, t('welcome.menu.contact'), root_path
+      welcome.item :tour, t('welcome.menu.blog'), root_path
+    end
+    
     
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,
