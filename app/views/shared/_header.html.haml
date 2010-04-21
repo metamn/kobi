@@ -1,19 +1,20 @@
-#account  
-  %ul
-    %li
-      = current_user.name
-      &nbsp;&bull;&nbsp;
-    %li
-      = link_to t('menu.account'), edit_registration_path(current_user)
-      &nbsp;&bull;&nbsp;
-    %li 
-      = link_to t('menu.logout'), destroy_session_path(current_user)
-
- 
 #logo
-  %h1
-    = link_to "Kobi", dashboard_path
-    
+  .logo
+    %h1
+      = link_to "Kobi", root_path  
+#links  
+  #account.block  
+    %ul
+      %li
+        = current_user.name
+        &nbsp;&bull;&nbsp;
+      %li
+        = link_to t('menu.account'), edit_registration_path(current_user)
+        &nbsp;&bull;&nbsp;
+      %li 
+        = link_to t('menu.logout'), destroy_session_path(current_user)
+  #menu.block
+    = render :partial => "shared/menu"
 
   
 

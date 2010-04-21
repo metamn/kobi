@@ -28,18 +28,18 @@ SimpleNavigation::Configuration.run do |navigation|
     # url - the address that the generated item links to. You can also use url_helpers (named routes, restful routes helper, url_for etc.)
     # options - can be used to specify attributes that will be included in the rendered navigation item (e.g. id, class etc.)
     #
-    primary.item :expenses, t('activerecord.models.expense'), new_expense_path do |expenses|
-      expenses.item :new, t('menu.expenses.new.title'), new_expense_path do |additional|
-        additional.item :category, t('activerecord.models.category'), categories_path
-        additional.item :expense_types, t('activerecord.models.expense_type'), expense_types_path
-        additional.item :payment_methods, t('activerecord.models.payment_method'), payment_methods_path
-      end
-      expenses.item :index, t('menu.expenses.index.title'), expenses_path           
-    end
     
-    primary.item :statistics, 'Statistici', dashboard_path
+    primary.item :dashboard, t('menu.dashboard.index'), dashboard_path do |dashboard|
+      dashboard.item :expenses, t('activerecord.models.expense'), expenses_path do |expenses|
+        expenses.item :archive, t('menu.expenses.index.title'), expenses_path
+        expenses.item :register, t('menu.expenses.new.title'), new_expense_path
+      end              
+      dashboard.item :statistics, t('menu.statistics'), expenses_path
+      dashboard.item :account, t('menu.account'), edit_registration_path(current_user) unless current_user.blank?
+      dashboard.item :logout, t('menu.logout'), destroy_session_path(current_user) unless current_user.blank?
+    end      
     
-    primary.item :welcome, 'welcome', root_path, :if => Proc.new { welcome_menu? } do |welcome|
+    primary.item :welcome, 'welcome', root_path do |welcome|
       welcome.item :tour, t('welcome.menu.tour'), root_path
       welcome.item :faq, t('welcome.menu.faq'), root_path
       welcome.item :register, t('welcome.menu.register'), new_user_registration_path      

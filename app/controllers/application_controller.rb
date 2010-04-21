@@ -11,9 +11,7 @@ class ApplicationController < ActionController::Base
   # Authentication is manadatory for everybody 
   before_filter :authenticate_user!
   
-  # Setting layouts
-  layout "welcome"
-
+ 
   # Redirect to https
   # before_filter :redirect_to_https
   

@@ -7,7 +7,7 @@
 - content_for :sidebar do
   %h4.title
     = t('menu.additional_operations')
-  = render_navigation :level => 3
+  = render_navigation :level => 2
       
   %h4.title
     = t('dashboard.sidebar.suport')
@@ -18,4 +18,4 @@
       = link_to t('dashboard.sidebar.help'), "http://blog.kobi.ro/manual-de-utilizare/cheltuieli/"
   
 
-= render :file => 'layouts/dashboard'
+= render :file => 'layouts/application'

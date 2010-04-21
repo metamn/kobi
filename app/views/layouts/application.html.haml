@@ -6,20 +6,23 @@
   = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
   = stylesheet_link_tag 'print.css', :media => 'print'
   /[if IE]
-    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
-  
-  = stylesheet_link_tag 'formtastic', :media => 'screen, projection'
-  
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'    
+  = stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css"
+  = stylesheet_link_tag 'formtastic', :media => 'screen, projection'  
   = stylesheet_link_tag 'application', :media => 'screen, projection'
-  %body    
+  
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"  
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"
+  = javascript_include_tag 'jquery.flow.1.1.min'
+  = javascript_include_tag 'application'
+  
+  %body.welcome    
     #header
-     
+      = render :partial => 'shared/welcome/header'    
     #content
-      = yield
-    
+      = yield    
     #footer
-      %p         
-        %span.highlight
-          hello.kobi@gmail.com
+      -#= render :partial => 'shared/welcome/footer'
+          
     
     = render :partial => 'shared/ga' if RAILS_ENV == 'production'

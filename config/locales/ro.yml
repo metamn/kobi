@@ -1,9 +1,12 @@
 ro:
   menu:
-    account: Cont
+    account: Contul meu
     logout: Iesire
     informations: Informatii 
     additional_operations: Operatii aditionale
+    statistics: Statistici
+    dashboard:
+      index: Panoul de control    
     expenses:
       index: 
         title: Arhiva
