@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user!
   
   # Setting layouts
-  layout "login"
+  layout "welcome"
 
   # Redirect to https
   # before_filter :redirect_to_https

@@ -1,17 +1,22 @@
-- content_for :title do
-  = t 'devise.registrations.modify'
-  
-- semantic_form_for resource_name, resource, :url => registration_path(resource_name), :html => { :method => :put } do |f|
-  - f.error_messages
-  - f.inputs do 
-    = f.input :name
-    = f.input :email
-    = f.input :password
-    = f.input :password_confirmation 
-    = f.input :current_password
-  - f.buttons do  
-    = f.commit_button :modify    
 
-.links
-  = render :partial => "shared/devise_links"
-  = link_to t('devise.registrations.delete'), registration_path(resource_name), :method => :delete, :confirm => t('activerecord.operations.confirm')
+#login
+  .content  
+    - semantic_form_for resource_name, resource, :url => registration_path(resource_name), :html => { :method => :put } do |f|
+      - f.error_messages
+      - f.inputs do 
+        = f.input :name
+        = f.input :email
+        = f.input :password
+        = f.input :password_confirmation 
+        = f.input :current_password
+      - f.buttons do  
+        = f.commit_button :modify    
+
+    .links
+      = render :partial => "shared/devise_links"
+      = link_to t('devise.registrations.delete'), registration_path(resource_name), :method => :delete, :confirm => t('activerecord.operations.confirm')
+    
+#info
+  .content
+    %h3
+      = t('devise.registrations.modify')    

@@ -39,11 +39,11 @@ SimpleNavigation::Configuration.run do |navigation|
     
     primary.item :statistics, 'Statistici', dashboard_path
     
-    primary.item :welcome, 'welcome', root_path, :if => Proc.new { controller_name == 'welcome' } do |welcome|
-      welcome.item :what_is_kobi, t('welcome.menu.what_is_kobi'), root_path
+    primary.item :welcome, 'welcome', root_path, :if => Proc.new { welcome_menu? } do |welcome|
       welcome.item :tour, t('welcome.menu.tour'), root_path
       welcome.item :faq, t('welcome.menu.faq'), root_path
-      welcome.item :tour, t('welcome.menu.contact'), root_path
+      welcome.item :register, t('welcome.menu.register'), new_user_registration_path      
+      welcome.item :contact, t('welcome.menu.contact'), root_path
       welcome.item :tour, t('welcome.menu.blog'), root_path
     end
     

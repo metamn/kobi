@@ -257,73 +257,47 @@ body.welcome
     #social
       +column(12, last)
                 
-    
-      
-  
         
 
 -# Login
 -# -------------------------------
 
-body.login
-  +container
-  
-  .col
-    +column(8, last)
-  
-  #header, #content, #footer
-    +column(24, last)    
-    
-  #header  
-    :margin-top 5em
-      
-    .box
-      +box
-      :margin-bottom 0
-      :background = !header
-      :color = !background
-            
-      .logo
-        +column(8, last)
-        
-        h1
-          :color = !background
-      
-      .title
-        +column(16, last)
-        :text-align right
-      
-  #content
-    .form
-      +box
+body.welcome        
+  #content  
+    #login
+      +column(12, last)      
       :background = !resource_header
-        
-      p  
-        :padding .5em
-        :margin-bottom 1em
-        
-      #user_name, #user_email, #user_password, #user_password_confirmation, #user_current_password
-        :width 70%          
-        :font-size large
-        :padding .2em 0
-        
-      label
-        :font-size small
-        :font-weight normal
-        
+      
+      .content
+        +box
+        :margin 0
+        :padding 3em 1.5em
+          
+        p  
+          :padding .5em
+          :margin-bottom 1em
+          
+        #user_name, #user_email, #user_password, #user_password_confirmation, #user_current_password
+          :width 70%          
+          :font-size large
+          :padding .2em 0
+          
+        label
+          :font-size small
+          :font-weight normal
+          
       .links
         :text-align left
-        
-  #footer
-    .highlight
-      :background = !header
-      :padding .5em
-      :float right
+  
+    #info
+      +column(12, last)
       
-      a, a:visited
-        :color = !background
-
-
+      .content
+        :margin 0
+        :padding 1.5em
+              
+        h3
+          :text-align center      
         
 
 -# Dashboard

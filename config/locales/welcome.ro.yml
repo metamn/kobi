@@ -8,10 +8,9 @@ ro:
       signup: Da, ma-inscriu! &raquo;
       login: Deja am cont &raquo;
     menu:
-      what_is_kobi: Ce va ofera Kobi?
+      register: Intrare in cont
       faq: Intrebari frecvente      
       tour: Take the tour
       contact: Contact
       blog: Blog
-      
       

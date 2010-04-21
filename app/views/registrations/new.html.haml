@@ -1,14 +1,18 @@
-- content_for :title do
-  = t 'devise.registrations.link'
-  
-- semantic_form_for resource_name, resource, :url => registration_path(resource_name) do |f|
-  - f.error_messages
-  - f.inputs do 
-    = f.input :name
-    = f.input :email
-    = f.input :password
-    = f.input :password_confirmation 
-  - f.buttons do  
-    = f.commit_button :create    
-.links
-  = render :partial => "shared/devise_links"
+#login
+  .content  
+    - semantic_form_for resource_name, resource, :url => registration_path(resource_name) do |f|
+      - f.error_messages
+      - f.inputs do 
+        = f.input :name
+        = f.input :email
+        = f.input :password
+        = f.input :password_confirmation 
+      - f.buttons do  
+        = f.commit_button :create    
+    .links
+      = render :partial => "shared/devise_links"
+    
+#info
+  .content
+    %h3
+      = t('devise.registrations.link')
