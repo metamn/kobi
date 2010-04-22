@@ -5,6 +5,7 @@ ro:
     informations: Informatii 
     additional_operations: Operatii aditionale
     statistics: Statistici
+    manual: Ghid de utilizare
     dashboard:
       index: Panoul de control    
     expenses:
@@ -46,6 +47,7 @@ ro:
         email: Adresa email
         password: Parola
         password_confirmation: Confirmare parola
+        current_password: Parola curenta
         remember_me: Tine ma minte
         created_at: Creat
         confirmed_at: Confirmat

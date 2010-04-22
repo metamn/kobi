@@ -19,10 +19,10 @@
   %body.welcome    
     #header
       = render :partial => 'shared/welcome/header'    
-    #content
+    %div{:id => 'content', :class => "#{controller.controller_name} #{controller.action_name}"}
       = yield    
     #footer
-      -#= render :partial => 'shared/welcome/footer'
+      = render :partial => 'shared/welcome/footer'
           
     
     = render :partial => 'shared/ga' if RAILS_ENV == 'production'

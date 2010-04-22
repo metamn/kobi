@@ -31,10 +31,15 @@ SimpleNavigation::Configuration.run do |navigation|
     
     primary.item :dashboard, t('menu.dashboard.index'), dashboard_path do |dashboard|
       dashboard.item :expenses, t('activerecord.models.expense'), expenses_path do |expenses|
-        expenses.item :archive, t('menu.expenses.index.title'), expenses_path
-        expenses.item :register, t('menu.expenses.new.title'), new_expense_path
+        expenses.item :register, t('menu.expenses.new.title'), new_expense_path do |register|
+          register.item :categories, t('activerecord.models.category'), categories_path
+          register.item :expense_types, t('activerecord.models.expense_type'), expense_types_path
+          register.item :categories, t('activerecord.models.payment_method'), payment_methods_path
+        end
+        expenses.item :archive, t('menu.expenses.index.title'), expenses_path        
+        expenses.item :statistics, t('menu.statistics'), dashboard_path
       end              
-      dashboard.item :statistics, t('menu.statistics'), expenses_path
+      dashboard.item :manual, t('menu.manual'), dashboard_path
       dashboard.item :account, t('menu.account'), edit_registration_path(current_user) unless current_user.blank?
       dashboard.item :logout, t('menu.logout'), destroy_session_path(current_user) unless current_user.blank?
     end      
